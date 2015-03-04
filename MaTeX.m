@@ -17,10 +17,15 @@ BlackFrame::usage = "Use FrameStyle -> BlackFrame to get the default frame style
 
 Begin["`Private`"] (* Begin Private Context *)
 
+debugPrint
+
 BlackFrame = Directive[AbsoluteThickness[0.5], Black];
 
 pdflatex = "/usr/texbin/pdflatex";
 gs = "/usr/local/bin/gs";
+
+debugPrint["Ghostscript: ", gs]
+debugPrint["pdfLaTeX: ", pdflatex]
 
 (* Verify external dependencies: *)
 
@@ -47,6 +52,7 @@ If[Not@FileExistsQ[pdflatex],
 ranid[] := StringJoin@RandomChoice[CharacterRange["a", "z"], 16]
 
 dirpath = FileNameJoin[{$TemporaryDirectory, StringJoin["MaTeX_", ranid[]]}]
+debugPrint["Creating temporary directory: ", dirpath]
 CreateDirectory[dirpath]
 
 template = StringTemplate@"\
