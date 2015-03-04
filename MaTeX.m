@@ -102,14 +102,14 @@ iMaTeX[tex_String] :=
       logfile = FileNameJoin[{dirpath, name <> ".log"}];
       auxfile = FileNameJoin[{dirpath, name <> ".aux"}];
 
-      return = RunProcess[{pdflatex, "-halt-on-error", "-interaction=nonstopmode", "-output-directory=" <> dirpath, texfile}, All, ProcessDirectory -> dirpath];
+      return = RunProcess[{pdflatex, "-halt-on-error", "-interaction=nonstopmode", texfile}, ProcessDirectory -> dirpath];
       If[return["ExitCode"] != 0,
         Message[MaTeX::texerr, parseTeXError[return["StandardOutput"]]];
         cleanup[];
         Return[$Failed]
       ];
 
-      return = RunProcess[{gs, "-o", pdfgsfile, "-dNoOutputFonts", "-sDEVICE=pdfwrite", pdffile}, All, ProcessDirectory -> dirpath];
+      return = RunProcess[{gs, "-o", pdfgsfile, "-dNoOutputFonts", "-sDEVICE=pdfwrite", pdffile}, ProcessDirectory -> dirpath];
       If[return["ExitCode"] != 0,
         Message[MaTeX::gserr];
         cleanup[];
