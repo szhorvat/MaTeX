@@ -14,7 +14,7 @@ For now, `MaTeX` always uses 12 pt fonts.  Use the `Magnification` option to get
 
 ##Notes on performance
 
-The limiting factor in the speed of `MaTeX`-calls is running the `pdflatex` process.  This cannot be sped up further.  However, MaTeX caches results, making subsequent calls with the same TeX code near-instantaneous.
+The limiting factor in the speed of `MaTeX`-calls is running the `pdflatex` process, which might take as long as a second and cannot be sped up further.  However, MaTeX caches results, making subsequent calls with the same TeX code near-instantaneous.
 
 ##Feedback
 
