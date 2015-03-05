@@ -34,7 +34,7 @@ If[Not@DirectoryQ[$applicationDataDirectory], CreateDirectory[$applicationDataDi
 
 $configFile = FileNameJoin[{$applicationDataDirectory, "config.m"}]
 
-If[FileExistsQ[$configFile], $config = Import[$configFile, "Package"]];
+If[FileExistsQ[$configFile], $config = Import[$configFile, "Package"], $config = <||>];
 
 $config = Join[<| "pdfLaTeX" -> None, "Ghostscript" -> None, "CacheSize" -> 50 |>, $config]
 Export[$configFile, $config, "Package"]
