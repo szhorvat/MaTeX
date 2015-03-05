@@ -2,8 +2,9 @@
 (* Created by IntelliJ IDEA http://wlplugin.halirutan.de/ *)
 
 (* :Title: MaTeX *)
-(* :Context: MaTeX` *)
 (* :Author: Szabolcs Horvát *)
+(* :Context: MaTeX` *)
+(* :Version: 0.1 *)
 (* :Date: 2015-03-04 *)
 
 (* :Mathematica Version: 10 *)
