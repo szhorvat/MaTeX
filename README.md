@@ -8,7 +8,7 @@ Use `MaTeX[texcode]` or `MaTeX[expression]` to typeset using LaTeX.  The latter 
 
 The LaTeX code is interpreted in math mode.  Remember to escape backlashes when writing LaTeX code in Mathematica strings, e.g. 
 
-    MaTeX["\\sum_{k=1}^{\\infty} \frac{1}{k}"]
+    MaTeX["\\sum_{k=1}^{\\infty} \\frac{1}{k}"]
 
 For now, `MaTeX` always uses 12 pt fonts.  Use the `Magnification` option to get larger output.  For example, `MaTeX["\\sin x", Magnification -> 16/12]` will give 16 pt size.
 
