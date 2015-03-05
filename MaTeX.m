@@ -2,7 +2,7 @@
 (* Created by IntelliJ IDEA http://wlplugin.halirutan.de/ *)
 
 (* :Title: MaTeX *)
-(* :Author: Szabolcs Horvát *)
+(* :Author: Szabolcs Horvát <szhorvat@gmail.com> *)
 (* :Context: MaTeX` *)
 (* :Version: 0.1 *)
 (* :Date: 2015-03-04 *)
@@ -34,7 +34,7 @@ If[Not@DirectoryQ[$applicationDataDirectory], CreateDirectory[$applicationDataDi
 
 $configFile = FileNameJoin[{$applicationDataDirectory, "config.m"}]
 
-If[FileExistsQ[$configFile], $config = Import[$configFile, "Package"], $config = <||>];
+If[FileExistsQ[$configFile], $config = Import[$configFile, "Package"], $config = <||>]
 
 $config = Join[<| "pdfLaTeX" -> None, "Ghostscript" -> None, "CacheSize" -> 50 |>, $config]
 Export[$configFile, $config, "Package"]
@@ -79,12 +79,12 @@ checkConfig[] :=
     $configOK = pdflatexOK && gsOK;
   ]
 
-checkConfig[] (* check configuration *)
+checkConfig[] (* check configuration and set $configOK *)
 
 debugPrint["Configuration: ", $config]
 debugPrint["Confguration is valid: ", $configOK]
 
-ConfigureMaTeX::badkey = "Unknown configuration key ``";
+ConfigureMaTeX::badkey = "Unknown configuration key: ``"
 
 ConfigureMaTeX[rules___Rule] :=
     (Scan[
@@ -113,16 +113,17 @@ template = StringTemplate@"\
 \\end{document}
 ";
 
-parseTeXError[err_String] := StringJoin@Riffle[
-  StringDrop[#, 2] & /@ Select[
-    StringSplit[err, "\n"],
-    StringMatchQ[#, "! *"] &
-  ],
-  "\n"
-]
+parseTeXError[err_String] :=
+    StringJoin@Riffle[
+      StringDrop[#, 2] & /@ Select[
+        StringSplit[err, "\n"],
+        StringMatchQ[#, "! *"] &
+      ],
+      "\n"
+    ]
 
 
-cache = <||>;
+cache = <||>
 
 SetAttributes[store, HoldFirst]
 store[memoStore_, key_, value_] :=
@@ -139,10 +140,10 @@ Options[MaTeX] = {
   Magnification -> 1
 }
 
-MaTeX::gserr = "Error while running Ghostscript.";
-MaTeX::texerr = "Error while running LaTeX:\n``";
-MaTeX::importerr = "Failed to import PDF.  This is unexpected.  Please go to https://github.com/szhorvat/MaTeX for instructions on how to report this problem.";
-MaTeX::invopt = "Invalid option value: ``";
+MaTeX::gserr = "Error while running Ghostscript."
+MaTeX::texerr = "Error while running LaTeX:\n``"
+MaTeX::importerr = "Failed to import PDF.  This is unexpected.  Please go to https://github.com/szhorvat/MaTeX for instructions on how to report this problem."
+MaTeX::invopt = "Invalid option value: ``"
 
 iMaTeX[tex_String, preamble_, display_] :=
     Module[{key, cleanup, name, content, texfile, pdffile, pdfgsfile, logfile, auxfile, return, result},
@@ -207,10 +208,10 @@ MaTeX[tex_String, opt:OptionsPattern[]] :=
       If[result === $Failed || TrueQ[mag == 1], result, Style[result, Magnification -> mag]]
     ]
 
-MaTeX[tex_, opt:OptionsPattern] := MaTeX[ToString@TeXForm[tex], opt]
+MaTeX[tex_, opt:OptionsPattern[]] := MaTeX[ToString@TeXForm[tex], opt]
 
 
-BlackFrame = Directive[AbsoluteThickness[0.5], Black];
+BlackFrame = Directive[AbsoluteThickness[0.5], Black]
 
 End[] (* End Private Context *)
 
