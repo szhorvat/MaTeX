@@ -138,7 +138,7 @@ store[memoStore_, key_, value_] :=
     value
     )
 
-MaTeXClearCache[] := (cache = <||>;)
+ClearMaTeXCache[] := (cache = <||>;)
 
 Options[MaTeX] = {
   "Preamble" -> {"\\usepackage{amsmath,amssymb}"},
