@@ -7,6 +7,8 @@ Create LaTeX labels in *Mathematica*.
  - Place [`MaTeX.m`](https://github.com/szhorvat/MaTeX/raw/master/MaTeX.m) in the directory opened by `SystemOpen@FileNameJoin[{$UserBaseDirectory, "Applications"}]`.
  - Make sure that a TeX system and Ghostscript 9.15 or later are installed.  For OS X, get Ghostscript from [here](http://pages.uoregon.edu/koch/).
  - Evalate ``Needs["MaTeX`"]`` and follow the instructions on how to configure the path to the `pdflatex` and Ghostscript executables.  *Note:* On Windows systems use the command line Ghostscript executable, i.e. the one with the name ending in `c`: `gswin32c.exe` or `gswin64c.exe`.
+ 
+**Update:** Nasser Abbasi has provided [detailed installation instructions for Windows systems](https://dl.dropboxusercontent.com/u/38623/using_matex_updated.pdf).  Thank you!
 
 
 ##Usage
