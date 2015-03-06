@@ -141,7 +141,7 @@ store[memoStore_, key_, value_] :=
 MaTeXClearCache[] := (cache = <||>;)
 
 Options[MaTeX] = {
-  "Preamble" -> {"\\usepackage{amsmath}"},
+  "Preamble" -> {"\\usepackage{amsmath,amssymb}"},
   "DisplayStyle" -> True,
   Magnification -> 1
 }
