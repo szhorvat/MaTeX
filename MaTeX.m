@@ -39,12 +39,14 @@ If[FileExistsQ[$configFile], $config = Import[$configFile, "Package"], $config =
 $config = Join[<| "pdfLaTeX" -> None, "Ghostscript" -> None, "CacheSize" -> 50 |>, $config]
 Export[$configFile, $config, "Package"]
 
+(* True if file exists and is not a directory *)
+fileQ[file_] := FileExistsQ[file] && Not@DirectoryQ[file]
 
 checkConfig[] :=
   Module[{pdflatex, gs, pdflatexOK, gsOK, cacheSizeOK, gsver},
     pdflatex = $config["pdfLaTeX"];
     If[StringQ[pdflatex],
-      If[FileExistsQ[pdflatex],
+      If[fileQ[pdflatex],
         pdflatexOK = True,
         Print["pdfLaTeX is not found at " <> pdflatex];
         pdflatexOK = False
@@ -57,7 +59,7 @@ checkConfig[] :=
 
     gs = $config["Ghostscript"];
     If[StringQ[gs],
-      If[FileExistsQ[gs],
+      If[fileQ[gs],
         gsOK = True,
         Print["Ghostscript is not found at " <> gs];
         gsOK = False
@@ -159,7 +161,7 @@ iMaTeX[tex_String, preamble_, display_] :=
         Return[cache[key]]
       ];
 
-      cleanup[] := If[FileExistsQ[#], DeleteFile[#]]& /@ {texfile, pdffile, pdfgsfile, logfile, auxfile};
+      cleanup[] := If[fileQ[#], DeleteFile[#]]& /@ {texfile, pdffile, pdfgsfile, logfile, auxfile};
       name = ranid[];
 
       content = <|
