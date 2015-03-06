@@ -2,6 +2,8 @@
 
 Create LaTeX labels in *Mathematica*.
 
+See [the blog post](http://szhorvat.net/pelican/latex-typesetting-in-mathematica.html) about MaTeX.
+
 ##Installation
 
  - Place [`MaTeX.m`](https://github.com/szhorvat/MaTeX/raw/master/MaTeX.m) in the directory opened by `SystemOpen@FileNameJoin[{$UserBaseDirectory, "Applications"}]`.
