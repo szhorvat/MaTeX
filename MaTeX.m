@@ -41,7 +41,7 @@ Export[$configFile, $config, "Package"]
 
 
 checkConfig[] :=
-  Module[{pdflatex, gs, pdflatexOK, gsOK, gsver},
+  Module[{pdflatex, gs, pdflatexOK, gsOK, cacheSizeOK, gsver},
     pdflatex = $config["pdfLaTeX"];
     If[StringQ[pdflatex],
       If[FileExistsQ[pdflatex],
@@ -76,7 +76,13 @@ checkConfig[] :=
 
     If[!gsOK, Print["Please configure Ghostscript using ConfigureMaTeX[\"Ghostscript\" -> \"path to gs executable...\"]"]];
 
-    $configOK = pdflatexOK && gsOK;
+    If[Not@TrueQ@NonNegative[$config["CacheSize"]],
+      Print["CacheSize must be a nonnegative number.  Please update the configuration using ConfigureMaTeX[\"CacheSize\" -> ...]."];
+      cacheSizeOK = False,
+      cacheSizeOK = True
+    ];
+
+    $configOK = pdflatexOK && gsOK && cacheSizeOK;
   ]
 
 checkConfig[] (* check configuration and set $configOK *)
