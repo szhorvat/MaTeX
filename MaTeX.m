@@ -112,7 +112,7 @@ debugPrint["Creating temporary directory: ", dirpath]
 CreateDirectory[dirpath]
 
 template = StringTemplate@"\
-\\documentclass[12pt]{standalone}
+\\documentclass[12pt,border=0.5pt]{standalone}
 `preamble`
 \\begin{document}
 \\strut$`display` `tex`$
