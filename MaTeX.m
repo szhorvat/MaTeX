@@ -124,7 +124,7 @@ $scalingFactor = 5;
 
 template = StringTemplate["\
 \\mag=" <> IntegerString@Round[1000 $scalingFactor] <> "
-\\documentclass[12pt,border=0.5pt]{standalone}
+\\documentclass[12pt,border=1pt]{standalone}
 \\usepackage[utf8]{inputenc}
 \\usepackage{lmodern}
 `preamble`
@@ -204,7 +204,7 @@ iMaTeX[tex_String, preamble_, display_, fontsize_] :=
         Return[$Failed]
       ];
 
-      depth = 72.27/72*(getDepth[return["StandardOutput"]] + 0.5); (* location of the baseline relative to the bottom, in points *)
+      depth = 72.27/72*(getDepth[return["StandardOutput"]] + 1); (* location of the baseline relative to the bottom, in points *)
 
       return = RunProcess[{$config["Ghostscript"], "-o", pdfgsfile, "-dNoOutputFonts", "-sDEVICE=pdfwrite", pdffile}, ProcessDirectory -> dirpath];
       If[return["ExitCode"] != 0,
