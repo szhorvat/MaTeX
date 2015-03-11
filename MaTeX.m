@@ -13,9 +13,16 @@
 
 BeginPackage["MaTeX`"]
 
-MaTeX::usage = "MaTeX[texcode] will compile texcode using LaTeX and import the result into Mathematica as graphics.  texcode must be a string containing valid math-mode LaTeX code."
-BlackFrame::usage = "Use FrameStyle -> BlackFrame to get the default frame style in black instead of gray."
-ConfigureMaTeX::usage = "ConfigureMaTeX[\"key1\" -> \"value1\", \"key2\" -> \"value2\", ...] will set configuration options for MaTeX."
+MaTeX::usage = "\
+MaTeX[\"texcode\"] will compile texcode using LaTeX and import the result into Mathematica as graphics.  texcode must be a string containing valid math-mode LaTeX code.
+MaTeX[expression] will convert expression to LaTeX using TeXForm, then compile it and import it back to Mathematica."
+
+BlackFrame::usage = "BlackFrame is a setting for FrameStyle or AxesStyle that produces the default look in black instead of gray."
+
+ConfigureMaTeX::usage = "\
+ConfigureMaTeX[\"key1\" \[Rule] \"value1\", \"key2\" \[Rule] \"value2\", ...] will set configuration options for MaTeX and store them permanently.
+ConfigureMaTeX[] returns the current configuration."
+
 ClearMaTeXCache::usage = "ClearMaTeXCache[] will clear MaTeX's cache."
 
 Begin["`Private`"] (* Begin Private Context *)
