@@ -120,10 +120,8 @@ dirpath = FileNameJoin[{$TemporaryDirectory, StringJoin["MaTeX_", ranid[]]}]
 debugPrint["Creating temporary directory: ", dirpath]
 CreateDirectory[dirpath]
 
-$scalingFactor = 5;
 
 template = StringTemplate["\
-\\mag=" <> IntegerString@Round[1000 $scalingFactor] <> "
 \\documentclass[12pt,border=1pt]{standalone}
 \\usepackage[utf8]{inputenc}
 \\usepackage{lmodern}
@@ -133,9 +131,11 @@ template = StringTemplate["\
 \\newbox\\MaTeXbox
 \\setbox\\MaTeXbox\\hbox{\\strut$`display` `tex`$}%
 \\typeout{MATEXDEPTH:\\the\\dp\\MaTeXbox}%
+\\typeout{MATEXHEIGHT:\\the\\ht\\MaTeXbox}%
+\\typeout{MATEXWIDTH:\\the\\wd\\MaTeXbox}%
 \\unhbox\\MaTeXbox
 \\end{document}
-"];
+"]
 
 parseTeXError[err_String] :=
     StringJoin@Riffle[
@@ -146,7 +146,7 @@ parseTeXError[err_String] :=
       "\n"
     ]
 
-getDepth[log_String] := Interpreter["Number"]@First@StringCases[log, RegularExpression["MATEXDEPTH:(.+?)pt"] -> "$1"]
+getDimensions[log_String] := Interpreter["Number"]@First@StringCases[log, RegularExpression["MATEX"<>#<>":(.+?)pt"] -> "$1"]& /@ {"WIDTH", "HEIGHT", "DEPTH"}
 
 extractOption[g_, opt_] := opt /. Options[g, opt]
 
@@ -175,7 +175,10 @@ MaTeX::importerr = "Failed to import PDF.  This is unexpected.  Please go to htt
 MaTeX::invopt = "Invalid option value: ``"
 
 iMaTeX[tex_String, preamble_, display_, fontsize_] :=
-    Module[{key, cleanup, name, content, texfile, pdffile, pdfgsfile, logfile, auxfile, return, result, depth, size},
+    Module[{key, cleanup, name, content,
+            texfile, pdffile, pdfgsfile, logfile, auxfile,
+            return, result,
+            width, height, depth},
 
       key = {tex, Sort[preamble], display, fontsize};
       If[KeyExistsQ[cache, key],
@@ -204,7 +207,10 @@ iMaTeX[tex_String, preamble_, display_, fontsize_] :=
         Return[$Failed]
       ];
 
-      depth = 72.27/72*(getDepth[return["StandardOutput"]] + 1); (* location of the baseline relative to the bottom, in points *)
+      {width, height, depth} = getDimensions[return["StandardOutput"]];
+      width  += 2;
+      height += depth+2;
+      {width, height, depth} *= 72/72.27; (* correct for PostScript point *)
 
       return = RunProcess[{$config["Ghostscript"], "-o", pdfgsfile, "-dNoOutputFonts", "-sDEVICE=pdfwrite", pdffile}, ProcessDirectory -> dirpath];
       If[return["ExitCode"] != 0,
@@ -221,8 +227,7 @@ iMaTeX[tex_String, preamble_, display_, fontsize_] :=
       ];
 
       result = First[result];
-      size = 1./$scalingFactor extractOption[result, ImageSize];
-      result = Show[result, ImageSize -> size, BaselinePosition -> Scaled[depth / Last[size]]];
+      result = Show[result, ImageSize -> {width, height}, BaselinePosition -> Scaled[depth/height]];
 
       store[cache, key, result]
     ]
