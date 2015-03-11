@@ -226,11 +226,15 @@ MaTeX[tex_String, opt:OptionsPattern[]] :=
       preamble = OptionValue["Preamble"];
       If[Not@VectorQ[preamble, StringQ],
         Message[MaTeX::invopt, "Preamble" -> preamble];
-        Return[$Failed];
+        Return[$Failed]
       ];
-      If[Not@MatchQ[OptionValue["DisplayStyle"], True|False],
+      If[Not@BooleanQ@OptionValue["DisplayStyle"],
         Message[MaTeX::invopt, "DisplayStyle" -> OptionValue["DisplayStyle"]];
-        Return[$Failed];
+        Return[$Failed]
+      ];
+      If[Not[NumberQ@OptionValue[FontSize] && TrueQ@Positive@OptionValue[FontSize]],
+        Message[MaTeX::invopt, FontSize -> OptionValue[FontSize]];
+        Return[$Failed]
       ];
       mag = OptionValue[Magnification];
       result = iMaTeX[tex, preamble, OptionValue["DisplayStyle"], OptionValue[FontSize]];
