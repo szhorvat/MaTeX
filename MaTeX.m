@@ -36,7 +36,7 @@ $configFile = FileNameJoin[{$applicationDataDirectory, "config.m"}]
 
 If[FileExistsQ[$configFile], $config = Import[$configFile, "Package"], $config = <||>]
 
-$config = Join[<| "pdfLaTeX" -> None, "Ghostscript" -> None, "CacheSize" -> 50 |>, $config]
+$config = Join[<| "pdfLaTeX" -> None, "Ghostscript" -> None, "CacheSize" -> 100 |>, $config]
 Export[$configFile, $config, "Package"]
 
 (* True if file exists and is not a directory *)
