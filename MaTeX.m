@@ -237,8 +237,12 @@ MaTeX[tex_String, opt:OptionsPattern[]] :=
         Return[$Failed]
       ];
       mag = OptionValue[Magnification];
+      If[Not[NumericQ[mag] && TrueQ@Positive[mag]],
+        Message[MaTeX::invopt, Magnification -> mag];
+        Return[$Failed]
+      ];
       result = iMaTeX[tex, preamble, OptionValue["DisplayStyle"], OptionValue[FontSize]];
-      If[result === $Failed || TrueQ[mag == 1], result, Style[result, Magnification -> mag]]
+      If[result === $Failed || TrueQ[mag == 1], result, Show[result, ImageSize -> N[mag] extractOption[result, ImageSize]]]
     ]
 
 MaTeX[tex_, opt:OptionsPattern[]] := MaTeX[ToString@TeXForm[tex], opt]
