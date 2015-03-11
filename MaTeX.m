@@ -136,7 +136,7 @@ parseTeXError[err_String] :=
       "\n"
     ]
 
-getDepth[log_String] := 72.27/72 Interpreter["Number"]@First@StringCases[log, RegularExpression["MATEXDEPTH:(.+?)pt"] -> "$1"]
+getDepth[log_String] := Interpreter["Number"]@First@StringCases[log, RegularExpression["MATEXDEPTH:(.+?)pt"] -> "$1"]
 
 extractOption[g_, opt_] := opt /. Options[g, opt]
 
@@ -192,7 +192,7 @@ iMaTeX[tex_String, preamble_, display_] :=
         Return[$Failed]
       ];
 
-      depth = getDepth[return["StandardOutput"]]; (* location of the baseline relative to the bottom *)
+      depth = 72.27/72*(getDepth[return["StandardOutput"]] + 0.5); (* location of the baseline relative to the bottom, in points *)
 
       return = RunProcess[{$config["Ghostscript"], "-o", pdfgsfile, "-dNoOutputFonts", "-sDEVICE=pdfwrite", pdffile}, ProcessDirectory -> dirpath];
       If[return["ExitCode"] != 0,
