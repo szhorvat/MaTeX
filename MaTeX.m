@@ -113,13 +113,19 @@ dirpath = FileNameJoin[{$TemporaryDirectory, StringJoin["MaTeX_", ranid[]]}]
 debugPrint["Creating temporary directory: ", dirpath]
 CreateDirectory[dirpath]
 
-template = StringTemplate@"\
+$scalingFactor = 5;
+
+template = StringTemplate["\
+\\mag=" <> IntegerString@Round[1000 $scalingFactor] <> "
 \\documentclass[12pt,border=0.5pt]{standalone}
 `preamble`
 \\begin{document}
-\\strut$`display` `tex`$
+\\newbox\\MaTeXbox
+\\setbox\\MaTeXbox\\hbox{\\strut$`display` `tex`$}%
+\\typeout{MATEXDEPTH:\\the\\dp\\MaTeXbox}%
+\\unhbox\\MaTeXbox
 \\end{document}
-";
+"];
 
 parseTeXError[err_String] :=
     StringJoin@Riffle[
@@ -129,6 +135,10 @@ parseTeXError[err_String] :=
       ],
       "\n"
     ]
+
+getDepth[log_String] := 72.27/72 Interpreter["Number"]@First@StringCases[log, RegularExpression["MATEXDEPTH:(.+?)pt"] -> "$1"]
+
+extractOption[g_, opt_] := opt /. Options[g, opt]
 
 
 cache = <||>
@@ -154,7 +164,7 @@ MaTeX::importerr = "Failed to import PDF.  This is unexpected.  Please go to htt
 MaTeX::invopt = "Invalid option value: ``"
 
 iMaTeX[tex_String, preamble_, display_] :=
-    Module[{key, cleanup, name, content, texfile, pdffile, pdfgsfile, logfile, auxfile, return, result},
+    Module[{key, cleanup, name, content, texfile, pdffile, pdfgsfile, logfile, auxfile, return, result, depth, size},
 
       key = {tex, Sort[preamble], display};
       If[KeyExistsQ[cache, key],
@@ -182,6 +192,8 @@ iMaTeX[tex_String, preamble_, display_] :=
         Return[$Failed]
       ];
 
+      depth = getDepth[return["StandardOutput"]]; (* location of the baseline relative to the bottom *)
+
       return = RunProcess[{$config["Ghostscript"], "-o", pdfgsfile, "-dNoOutputFonts", "-sDEVICE=pdfwrite", pdffile}, ProcessDirectory -> dirpath];
       If[return["ExitCode"] != 0,
         Message[MaTeX::gserr];
@@ -196,7 +208,11 @@ iMaTeX[tex_String, preamble_, display_] :=
         Return[$Failed]
       ];
 
-      store[cache, key, First[result]]
+      result = First[result];
+      size = 1./$scalingFactor extractOption[result, ImageSize];
+      result = Show[result, ImageSize -> size, BaselinePosition -> Scaled[depth / Last[size]]];
+
+      store[cache, key, result]
     ]
 
 MaTeX[tex_String, opt:OptionsPattern[]] :=
