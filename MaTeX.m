@@ -4,7 +4,7 @@
 (* :Title: MaTeX *)
 (* :Author: Szabolcs Horvát <szhorvat@gmail.com> *)
 (* :Context: MaTeX` *)
-(* :Version: 0.1 *)
+(* :Version: 0.2dev *)
 (* :Date: 2015-03-04 *)
 
 (* :Mathematica Version: 10 *)
