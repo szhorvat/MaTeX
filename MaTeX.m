@@ -119,8 +119,10 @@ template = StringTemplate["\
 \\mag=" <> IntegerString@Round[1000 $scalingFactor] <> "
 \\documentclass[12pt,border=0.5pt]{standalone}
 \\usepackage[utf8]{inputenc}
+\\usepackage{lmodern}
 `preamble`
 \\begin{document}
+\\fontsize{`fontsize`pt}{1.2em}\\selectfont
 \\newbox\\MaTeXbox
 \\setbox\\MaTeXbox\\hbox{\\strut$`display` `tex`$}%
 \\typeout{MATEXDEPTH:\\the\\dp\\MaTeXbox}%
@@ -156,6 +158,7 @@ ClearMaTeXCache[] := (cache = <||>;)
 Options[MaTeX] = {
   "Preamble" -> {"\\usepackage{amsmath,amssymb}"},
   "DisplayStyle" -> True,
+  FontSize -> 12,
   Magnification -> 1
 }
 
@@ -164,10 +167,10 @@ MaTeX::texerr = "Error while running LaTeX:\n``"
 MaTeX::importerr = "Failed to import PDF.  This is unexpected.  Please go to https://github.com/szhorvat/MaTeX for instructions on how to report this problem."
 MaTeX::invopt = "Invalid option value: ``"
 
-iMaTeX[tex_String, preamble_, display_] :=
+iMaTeX[tex_String, preamble_, display_, fontsize_] :=
     Module[{key, cleanup, name, content, texfile, pdffile, pdfgsfile, logfile, auxfile, return, result, depth, size},
 
-      key = {tex, Sort[preamble], display};
+      key = {tex, Sort[preamble], display, fontsize};
       If[KeyExistsQ[cache, key],
         Return[cache[key]]
       ];
@@ -178,7 +181,8 @@ iMaTeX[tex_String, preamble_, display_] :=
       content = <|
           "preamble" -> StringJoin@Riffle[preamble, "\n"],
           "tex" -> tex,
-          "display" -> If[display, "\\displaystyle", ""]
+          "display" -> If[display, "\\displaystyle", ""],
+          "fontsize" -> fontsize
           |>;
       texfile = Export[FileNameJoin[{dirpath, name <> ".tex"}], template[content], "Text", CharacterEncoding -> "UTF-8"];
       pdffile = FileNameJoin[{dirpath, name <> ".pdf"}];
@@ -229,7 +233,7 @@ MaTeX[tex_String, opt:OptionsPattern[]] :=
         Return[$Failed];
       ];
       mag = OptionValue[Magnification];
-      result = iMaTeX[tex, preamble, OptionValue["DisplayStyle"]];
+      result = iMaTeX[tex, preamble, OptionValue["DisplayStyle"], OptionValue[FontSize]];
       If[result === $Failed || TrueQ[mag == 1], result, Style[result, Magnification -> mag]]
     ]
 
