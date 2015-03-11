@@ -118,6 +118,7 @@ $scalingFactor = 5;
 template = StringTemplate["\
 \\mag=" <> IntegerString@Round[1000 $scalingFactor] <> "
 \\documentclass[12pt,border=0.5pt]{standalone}
+\\usepackage[utf8]{inputenc}
 `preamble`
 \\begin{document}
 \\newbox\\MaTeXbox
@@ -179,7 +180,7 @@ iMaTeX[tex_String, preamble_, display_] :=
           "tex" -> tex,
           "display" -> If[display, "\\displaystyle", ""]
           |>;
-      texfile = Export[FileNameJoin[{dirpath, name <> ".tex"}], template[content], "String"];
+      texfile = Export[FileNameJoin[{dirpath, name <> ".tex"}], template[content], "Text", CharacterEncoding -> "UTF-8"];
       pdffile = FileNameJoin[{dirpath, name <> ".pdf"}];
       pdfgsfile = FileNameJoin[{dirpath, name <> "-gs.pdf"}];
       logfile = FileNameJoin[{dirpath, name <> ".log"}];
