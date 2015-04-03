@@ -146,6 +146,10 @@ parseTeXError[err_String] :=
       "\n"
     ]
 
+(* This function is used to try to detect errors based on the log file.
+   It is necessary because on Windows RunProcess doesn't capture the correct exit code. *)
+texErrorQ[log_String] := Count[StringSplit[log, "\n"], line_ /; StringMatchQ[line, "! *"]] > 0
+
 getDimensions[log_String] := Interpreter["Number"]@First@StringCases[log, RegularExpression["MATEX"<>#<>":(.+?)pt"] -> "$1"]& /@ {"WIDTH", "HEIGHT", "DEPTH"}
 
 extractOption[g_, opt_] := opt /. Options[g, opt]
@@ -201,7 +205,8 @@ iMaTeX[tex_String, preamble_, display_, fontsize_] :=
       auxfile = FileNameJoin[{dirpath, name <> ".aux"}];
 
       return = RunProcess[{$config["pdfLaTeX"], "-halt-on-error", "-interaction=nonstopmode", texfile}, ProcessDirectory -> dirpath];
-      If[return["ExitCode"] != 0,
+
+      If[return["ExitCode"] != 0 || texErrorQ[return["StandardOutput"]] (* workaround for Windows version *),
         Message[MaTeX::texerr, parseTeXError[return["StandardOutput"]]];
         cleanup[];
         Return[$Failed]
