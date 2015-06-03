@@ -94,10 +94,32 @@ checkConfig[] :=
     $configOK = pdflatexOK && gsOK && cacheSizeOK;
   ]
 
+
+(* XeTeX won't work on OS X and possibly other systems unless texbin is in the system path.
+   This function appends that directory to the PATH environment variable if not already present. *)
+fixSystemPath[] :=
+    Module[{texpath, pathList, pathSeparator},
+      If[Not[$configOK], Return[$Failed]];
+      texpath = AbsoluteFileName@DirectoryName@ExpandFileName[MaTeX`Private`$config["pdfLaTeX"]];
+      pathSeparator = If[$OperatingSystem === "Windows", ";", ":"];
+      pathList = AbsoluteFileName /@ StringSplit[
+        Environment["PATH"],
+        pathSeparator
+      ];
+      If[Not@MemberQ[pathList, texpath],
+        SetEnvironment["PATH" -> Environment["PATH"] <> pathSeparator <> texpath]
+      ];
+      Environment["PATH"]
+    ]
+
+
 checkConfig[] (* check configuration and set $configOK *)
+debugPrint["System path: ", fixSystemPath[]]
+
 
 debugPrint["Configuration: ", $config]
 debugPrint["Confguration is valid: ", $configOK]
+
 
 ConfigureMaTeX::badkey = "Unknown configuration key: ``"
 
@@ -107,6 +129,7 @@ ConfigureMaTeX[rules___Rule] :=
       {rules}
     ];
     checkConfig[];
+    fixSystemPath[];
     Export[$configFile, $config, "Package"];
     Normal[$config]
     )
