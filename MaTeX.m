@@ -285,6 +285,8 @@ MaTeX[tex_String, opt:OptionsPattern[]] :=
       If[result === $Failed || TrueQ[mag == 1], result, Show[result, ImageSize -> N[mag] extractOption[result, ImageSize]]]
     ]
 
+MaTeX[tex_StringForm, opt:OptionsPattern[]] := MaTeX[ToString[tex], opt]
+
 MaTeX[tex_, opt:OptionsPattern[]] := MaTeX[ToString@TeXForm[tex], opt]
 
 
