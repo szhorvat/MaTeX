@@ -100,11 +100,11 @@ checkConfig[] :=
 fixSystemPath[] :=
     Module[{texpath, pathList, pathSeparator},
       If[Not[$configOK], Return[$Failed]];
-      texpath = AbsoluteFileName@DirectoryName@ExpandFileName[MaTeX`Private`$config["pdfLaTeX"]];
+      texpath = AbsoluteFileName@DirectoryName@ExpandFileName[$config["pdfLaTeX"]];
       pathSeparator = If[$OperatingSystem === "Windows", ";", ":"];
-      pathList = AbsoluteFileName /@ StringSplit[
-        Environment["PATH"],
-        pathSeparator
+      pathList = Quiet[
+        AbsoluteFileName /@ StringSplit[Environment["PATH"], pathSeparator],
+        {AbsoluteFileName::nffil}
       ];
       If[Not@MemberQ[pathList, texpath],
         SetEnvironment["PATH" -> Environment["PATH"] <> pathSeparator <> texpath]
