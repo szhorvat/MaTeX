@@ -27,6 +27,10 @@ The limiting factor in the speed of `MaTeX`-calls is running the `pdflatex` proc
 
 ##Revision history
 
+#### Version 0.3
+
+ - Bug fixes and other compatibility fixes: works with XeTeX and behaves better on Windows.  
+
 #### Version 0.2
 
  - Automatic baseline alignment.  MaTeX output is now perfectly aligned with Mathematica text.
