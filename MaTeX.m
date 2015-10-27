@@ -4,7 +4,7 @@
 (* :Title: MaTeX *)
 (* :Author: Szabolcs Horvát <szhorvat@gmail.com> *)
 (* :Context: MaTeX` *)
-(* :Version: 0.3 *)
+(* :Version: 1.0.0 *)
 (* :Date: 2015-03-04 *)
 
 (* :Mathematica Version: 10 *)
@@ -25,10 +25,12 @@ MaTeX[expression] will convert expression to LaTeX using TeXForm, then compile i
 BlackFrame::usage = "BlackFrame is a setting for FrameStyle or AxesStyle that produces the default look in black instead of gray."
 
 ConfigureMaTeX::usage = "\
-ConfigureMaTeX[\"key1\" \[Rule] \"value1\", \"key2\" \[Rule] \"value2\", ...] will set configuration options for MaTeX and store them permanently.
+ConfigureMaTeX[\"key1\" \[Rule] \"value1\", \"key2\" \[Rule] \"value2\", \[Ellipsis]] will set configuration options for MaTeX and store them permanently.
 ConfigureMaTeX[] returns the current configuration."
 
 ClearMaTeXCache::usage = "ClearMaTeXCache[] will clear MaTeX's cache."
+
+`Developer`$Version = "1.0.0 (October 27, 2015)";
 
 Begin["`Private`"] (* Begin Private Context *)
 
