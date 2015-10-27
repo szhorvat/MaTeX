@@ -10,6 +10,11 @@
 (* :Mathematica Version: 10 *)
 (* :Copyright: (c) 2015 Szabolcs Horvát *)
 
+(* Abort for old, unsupported versions of Mathematica *)
+If[$VersionNumber < 10,
+  Print["MaTeX requires Mathematica 10 or later."];
+  Abort[]
+]
 
 BeginPackage["MaTeX`"]
 
@@ -26,13 +31,6 @@ ConfigureMaTeX[] returns the current configuration."
 ClearMaTeXCache::usage = "ClearMaTeXCache[] will clear MaTeX's cache."
 
 Begin["`Private`"] (* Begin Private Context *)
-
-(* Abort for old, unsupported versions of Mathematica *)
-If[$VersionNumber < 10,
-  Print["MaTeX requires Mathematica 10 or later."];
-  Abort[]
-]
-
 
 (* Load and check persistent configuration *)
 
