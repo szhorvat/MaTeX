@@ -39,9 +39,31 @@ If[Not@DirectoryQ[$applicationDataDirectory], CreateDirectory[$applicationDataDi
 
 $configFile = FileNameJoin[{$applicationDataDirectory, "config.m"}]
 
+(* The following are best guess configurations for first-time setup *)
+
+$defaultConfigBase = <| "pdfLaTeX" -> None, "Ghostscript" -> None, "CacheSize" -> 100 |>;
+
+$defaultConfigOSX := <|
+    "Ghostscript" -> Quiet@Check[If[FileExistsQ["/usr/local/bin/gs"], "/usr/local/bin/gs", None], None],
+    "pdfLaTeX" -> Quiet@Check[If[FileExistsQ["/Library/TeX/texbin/pdflatex"], "/Library/TeX/texbin/pdflatex", None], None]
+|>;
+
+$defaultConfigLinux := <|
+    "Ghostscript" -> Quiet@Check[First@ReadList["!which gs", String, 1], None],
+    "pdfLaTeX" -> Quiet@Check[First@ReadList["!which pdflatex", String, 1], None]
+|>;
+
+$defaultConfig =
+    Switch[$OperatingSystem,
+      "MacOSX", Join[$defaultConfigBase, $defaultConfigOSX],
+      "Unix", Join[$defaultConfigBase, $defaultConfigLinux],
+      _, $defaultConfigBase
+    ]
+
+(* Load configuration, if it exists *)
 If[FileExistsQ[$configFile], $config = Import[$configFile, "Package"], $config = <||>]
 
-$config = Join[<| "pdfLaTeX" -> None, "Ghostscript" -> None, "CacheSize" -> 100 |>, $config]
+$config = Join[$defaultConfig, $config]
 Export[$configFile, $config, "Package"]
 
 (* True if file exists and is not a directory *)
