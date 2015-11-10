@@ -169,7 +169,6 @@ CreateDirectory[dirpath]
 template = StringTemplate["\
 \\documentclass[12pt,border=1pt]{standalone}
 \\usepackage[utf8]{inputenc}
-\\usepackage{lmodern}
 `preamble`
 \\begin{document}
 \\fontsize{`fontsize`pt}{1.2em}\\selectfont
@@ -212,7 +211,7 @@ store[memoStore_, key_, value_] :=
 ClearMaTeXCache[] := (cache = <||>;)
 
 Options[MaTeX] = {
-  "Preamble" -> {"\\usepackage{amsmath,amssymb}"},
+  "Preamble" -> {"\\usepackage{lmodern,exscale}", "\\usepackage{amsmath,amssymb}"},
   "DisplayStyle" -> True,
   FontSize -> 12,
   Magnification -> 1
