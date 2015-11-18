@@ -143,7 +143,8 @@ debugPrint["Configuration: ", $config]
 debugPrint["Confguration is valid: ", $configOK]
 
 
-ConfigureMaTeX::badkey = "Unknown configuration key: ``"
+ConfigureMaTeX::badkey = "Unknown configuration key: ``";
+SyntaxInformation[ConfigureMaTeX] = {"ArgumentsPattern" -> {OptionsPattern[]}, "OptionNames" -> {"pdfLaTeX", "Ghostscript", "CacheSize"}};
 
 ConfigureMaTeX[rules___Rule] :=
     (Scan[
@@ -208,14 +209,18 @@ store[memoStore_, key_, value_] :=
     value
     )
 
+
+SyntaxInformation[ClearMaTeXCache] = {"ArgumentsPattern" -> {}};
 ClearMaTeXCache[] := (cache = <||>;)
+
 
 Options[MaTeX] = {
   "Preamble" -> {"\\usepackage{lmodern,exscale}", "\\usepackage{amsmath,amssymb}"},
   "DisplayStyle" -> True,
   FontSize -> 12,
   Magnification -> 1
-}
+};
+SyntaxInformation[MaTeX] = {"ArgumentsPattern" -> {_, OptionsPattern[]}};
 
 MaTeX::gserr = "Error while running Ghostscript."
 MaTeX::texerr = "Error while running LaTeX:\n``"
