@@ -14,7 +14,7 @@ See [the blog post](http://szhorvat.net/pelican/latex-typesetting-in-mathematica
 
      On OS X, MacTeX 2015 and later already include a compatible version of Ghostscript. If you use an older TeX distribution that doesn't, get a recent Ghostscript from [Richard Koch's page](http://pages.uoregon.edu/koch/).
 
- - Evaluate ``Needs["MaTeX`"]`` and follow the instructions on how to configure the path to the `pdflatex` and Ghostscript executables.  *Note:* On Windows systems use the command line Ghostscript executable, i.e. the one with the name ending in c: `gswin32c.exe` or `gswin64c.exe`.
+ - Evaluate ``Needs["MaTeX`"]``.  MaTeX will attempt to auto-configure itself when it is loaded for the first time.  If auto-configuration fails, it will display instructions on how to configure the path to the `pdflatex` and Ghostscript executables manually.  *Note:* On Windows systems use the command line Ghostscript executable, i.e. the one with the name ending in c: `gswin32c.exe` or `gswin64c.exe`.
 
  - Test MaTeX using `MaTeX["x^2"]`.
 
@@ -34,6 +34,12 @@ The LaTeX code is interpreted in math mode.  Remember to escape backlashes (i.e.
 The limiting factor in the speed of `MaTeX` calls is running the `pdflatex` process, which might take as long as a second and cannot be sped up further.  However, MaTeX caches results, making subsequent calls with the same TeX code near-instantaneous.
 
 ##Revision history
+
+#### Version 1.1.0
+
+ - MaTeX now attempts to automatically detect the location of Ghostscript and pdflatex on first run
+ - Syntax highlighting for MaTeX functions (added SyntaxInformation)
+ - Minor bug fixes and reliability fixes
 
 #### Version 1.0.0
 
