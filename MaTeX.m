@@ -55,10 +55,42 @@ $defaultConfigLinux := <|
     "pdfLaTeX" -> Quiet@Check[First@ReadList["!which pdflatex", String, 1], None]
 |>;
 
+winFindGS[] :=
+    Quiet@Check[Module[{base, keys, vals, key, dll, exe},
+      base = "HKEY_LOCAL_MACHINE\\SOFTWARE\\GPL Ghostscript";
+      keys = Developer`EnumerateRegistrySubkeys[base];
+      If[keys === $Failed,
+        Return[None]
+      ];
+      key = Last@Sort[keys];
+      vals = Developer`ReadRegistryKeyValues[base <> "\\" <> key];
+      dll = Lookup[vals, "GS_DLL", $Failed];
+      If[dll === $Failed,
+        Return[None]
+      ];
+      If[Not@FileExistsQ[dll],
+        Return[None]
+      ];
+      Switch[FileNameTake[dll],
+        "gsdll64.dll", exe = "gswin64c.exe",
+        "gsdll32.dll", exe = "gswin32c.exe",
+        _, Return[None]
+      ];
+      FileNameJoin[{DirectoryName[dll], exe}]
+    ], None]
+
+winFindPL[] := Quiet@Check[First@ReadList["!where pdflatex.exe", String, 1], None]
+
+$defaultConfigWindows := <|
+    "Ghostscript" -> winFindGS[],
+    "pdfLaTeX" -> winFindPL[]
+|>;
+
 $defaultConfig =
     Switch[$OperatingSystem,
       "MacOSX", Join[$defaultConfigBase, $defaultConfigOSX],
       "Unix", Join[$defaultConfigBase, $defaultConfigLinux],
+      "Windows", Join[$defaultConfigBase, $defaultConfigWindows],
       _, $defaultConfigBase
     ]
 
