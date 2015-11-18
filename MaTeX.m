@@ -63,7 +63,11 @@ $defaultConfig =
     ]
 
 (* Load configuration, if it exists *)
-If[FileExistsQ[$configFile], $config = Import[$configFile, "Package"], $config = <||>]
+If[FileExistsQ[$configFile], $config = Import[$configFile, "Package"], $config = <||>];
+If[Not@AssociationQ[$config],
+  Print["The MaTeX configuration was corrupted so it has to be re-set. If you can reproduce this problem, please go to https://github.com/szhorvat/MaTeX and create a bug report."];
+  $config = <||>
+];
 
 $config = Join[$defaultConfig, $config]
 Export[$configFile, $config, "Package"]
