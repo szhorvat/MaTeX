@@ -86,7 +86,7 @@ $defaultConfigWindows := <|
     "pdfLaTeX" -> winFindPL[]
 |>;
 
-$defaultConfig =
+$defaultConfig :=
     Switch[$OperatingSystem,
       "MacOSX", Join[$defaultConfigBase, $defaultConfigOSX],
       "Unix", Join[$defaultConfigBase, $defaultConfigLinux],
@@ -101,7 +101,9 @@ If[Not@AssociationQ[$config],
   $config = <||>
 ];
 
-$config = Join[$defaultConfig, $config]
+If[Not@SubsetQ[Keys[$config], Keys[$defaultConfigBase]],
+  $config = Join[$defaultConfig, $config]
+];
 Export[$configFile, $config, "Package"]
 
 (* True if file exists and is not a directory *)
