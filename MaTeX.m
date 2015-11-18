@@ -162,7 +162,7 @@ fixSystemPath[] :=
       pathSeparator = If[$OperatingSystem === "Windows", ";", ":"];
       pathList = Quiet[
         AbsoluteFileName /@ StringSplit[Environment["PATH"], pathSeparator],
-        {AbsoluteFileName::nffil, AbsoluteFileName::fdnfnd}
+        {AbsoluteFileName::nffil, AbsoluteFileName::fdnfnd, General::fstr}
       ];
       If[Not@MemberQ[pathList, texpath],
         SetEnvironment["PATH" -> Environment["PATH"] <> pathSeparator <> texpath]
