@@ -4,7 +4,7 @@
 (* :Title: MaTeX *)
 (* :Author: Szabolcs Horvát <szhorvat@gmail.com> *)
 (* :Context: MaTeX` *)
-(* :Version: 1.1.0 *)
+(* :Version: 1.1.1 *)
 (* :Date: 2015-03-04 *)
 
 (* :Mathematica Version: 10 *)
@@ -14,6 +14,13 @@
 If[$VersionNumber < 10,
   Print["MaTeX requires Mathematica 10 or later."];
   Abort[]
+]
+
+If[$OperatingSystem === "Windows" && $VersionNumber == 10.0 && $SystemWordLength == 32,
+  Print[
+    "WARNING: MaTeX may not work with 32-bit versions of Mathematica 10.0 on Windows. " <>
+    "If you encounter problems, consider using a 64-bit version or upgrading to a later Mathematica version."
+  ]
 ]
 
 BeginPackage["MaTeX`"]
@@ -30,7 +37,7 @@ ConfigureMaTeX[] returns the current configuration."
 
 ClearMaTeXCache::usage = "ClearMaTeXCache[] will clear MaTeX's cache."
 
-`Developer`$Version = "1.1.0 (November 18, 2015)";
+`Developer`$Version = "1.1.1 (February 21, 2015)";
 
 Begin["`Private`"] (* Begin Private Context *)
 
@@ -76,10 +83,10 @@ winFindGS[] :=
         "gsdll32.dll", exe = "gswin32c.exe",
         _, Return[None]
       ];
-      FileNameJoin[{DirectoryName[dll], exe}]
+      AbsoluteFileName@FileNameJoin[{DirectoryName[dll], exe}]
     ], None]
 
-winFindPL[] := Quiet@Check[First@ReadList["!where pdflatex.exe", String, 1], None]
+winFindPL[] := Quiet@Check[AbsoluteFileName@First@ReadList["!where pdflatex.exe", String, 1], None]
 
 $defaultConfigWindows := <|
     "Ghostscript" -> winFindGS[],
@@ -136,7 +143,9 @@ checkConfig[] :=
     ];
 
     If[gsOK,
+      If[$OperatingSystem === "Windows", SetDirectory["\\"]]; (* workaround for Mathematica bug on Windows where RunProcess fails when run in directories with special chars in name *)
       gsver = StringTrim@RunProcess[{gs, "--version"}, "StandardOutput"];
+      If[$OperatingSystem === "Windows", ResetDirectory[]]; (* workaround for Mathematica bug on Windows where RunProcess fails when run in directories with special chars in name *)
       If[Not@OrderedQ[{{9,15}, FromDigits /@ StringSplit[gsver, "."]}],
         Print["Ghostscript version " <> gsver <> " found.  MaTeX requires Ghostscript 9.15 or later."];
         gsOK = False;
@@ -345,7 +354,9 @@ MaTeX[tex_String, opt:OptionsPattern[]] :=
         Message[MaTeX::invopt, Magnification -> mag];
         Return[$Failed]
       ];
+      If[$OperatingSystem === "Windows", SetDirectory["\\"]]; (* workaround for Mathematica bug on Windows where RunProcess fails when run in directories with special chars in name *)
       result = iMaTeX[tex, preamble, OptionValue["DisplayStyle"], OptionValue[FontSize]];
+      If[$OperatingSystem === "Windows", ResetDirectory[]]; (* workaround for Mathematica bug on Windows where RunProcess fails when run in directories with special chars in name *)
       If[result === $Failed || TrueQ[mag == 1], result, Show[result, ImageSize -> N[mag] extractOption[result, ImageSize]]]
     ]
 

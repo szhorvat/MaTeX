@@ -4,7 +4,7 @@ Create LaTeX labels in *Mathematica*.
 
 See [the blog post](http://szhorvat.net/pelican/latex-typesetting-in-mathematica.html) for a detailed introduction to MaTeX.
 
-##Installation
+## Installation
 
  - [Download the latest release](https://github.com/szhorvat/MaTeX/releases) and place `MaTeX.m` in the directory opened by `SystemOpen@FileNameJoin[{$UserBaseDirectory, "Applications"}]`.
 
@@ -21,7 +21,7 @@ See [the blog post](http://szhorvat.net/pelican/latex-typesetting-in-mathematica
 **Update:** Nasser Abbasi has provided [detailed installation instructions for Windows systems](https://dl.dropboxusercontent.com/u/38623/using_matex_updated.pdf).  Thank you!
 
 
-##Usage
+## Usage
 
 Use `MaTeX[texcode]` or `MaTeX[expression]` to typeset using LaTeX.  The latter will automatically apply `TeXForm` to `expression`.
 
@@ -29,11 +29,17 @@ The LaTeX code is interpreted in math mode.  Remember to escape backlashes (i.e.
 
     MaTeX["\\sum_{k=1}^{\\infty} \\frac{1}{k}"]
 
-##Notes on performance
+## Notes on performance
 
 The limiting factor in the speed of `MaTeX` calls is running the `pdflatex` process, which might take as long as a second and cannot be sped up further.  However, MaTeX caches results, making subsequent calls with the same TeX code near-instantaneous.
 
-##Revision history
+## Revision history
+
+#### Version 1.1.1
+
+ - Reliability fixes for Windows
+ - Windows: Work around Mathematica bug causing MaTeX to fail when the current directory has special characters in its name
+ - Windows: Ensure that autodetected paths do not use `/` as path separator
 
 #### Version 1.1.0
 
