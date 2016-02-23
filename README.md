@@ -35,6 +35,13 @@ The limiting factor in the speed of `MaTeX` calls is running the `pdflatex` proc
 
 ## Revision history
 
+#### Version 1.2.0
+
+ - Added `ContentPadding` option: `ContentPadding -> True` ensures that the the output height is at least one line height
+ - Added `LineSpacing` option
+ - The size of vertical borders is slightly different now: use `LineSpacing -> {0, 14.4}` to reproduce the older behaviour 
+ - Bug fixes
+
 #### Version 1.1.1
 
  - Reliability fixes for Windows
