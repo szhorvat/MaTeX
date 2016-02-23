@@ -41,6 +41,21 @@ ClearMaTeXCache::usage = "ClearMaTeXCache[] will clear MaTeX's cache."
 
 Begin["`Private`"] (* Begin Private Context *)
 
+
+(* workaround for Mathematica bug on Windows where RunProcess fails when run in directories with special chars in name *)
+If[$OperatingSystem === "Windows",
+  runProcess[args___] :=
+      Module[{res},
+        SetDirectory["\\"];
+        res = RunProcess[args];
+        ResetDirectory[];
+        res
+      ]
+  ,
+  runProcess = RunProcess
+]
+
+
 (* Load and check persistent configuration *)
 
 $applicationDataDirectory = FileNameJoin[{$UserBaseDirectory, "ApplicationData", "MaTeX"}]
@@ -143,9 +158,7 @@ checkConfig[] :=
     ];
 
     If[gsOK,
-      If[$OperatingSystem === "Windows", SetDirectory["\\"]]; (* workaround for Mathematica bug on Windows where RunProcess fails when run in directories with special chars in name *)
-      gsver = StringTrim@RunProcess[{gs, "--version"}, "StandardOutput"];
-      If[$OperatingSystem === "Windows", ResetDirectory[]]; (* workaround for Mathematica bug on Windows where RunProcess fails when run in directories with special chars in name *)
+      gsver = StringTrim@runProcess[{gs, "--version"}, "StandardOutput"];
       If[Not@OrderedQ[{{9,15}, FromDigits /@ StringSplit[gsver, "."]}],
         Print["Ghostscript version " <> gsver <> " found.  MaTeX requires Ghostscript 9.15 or later."];
         gsOK = False;
@@ -300,7 +313,7 @@ iMaTeX[tex_String, preamble_, display_, fontsize_] :=
       logfile = FileNameJoin[{dirpath, name <> ".log"}];
       auxfile = FileNameJoin[{dirpath, name <> ".aux"}];
 
-      return = RunProcess[{$config["pdfLaTeX"], "-halt-on-error", "-interaction=nonstopmode", texfile}, ProcessDirectory -> dirpath];
+      return = runProcess[{$config["pdfLaTeX"], "-halt-on-error", "-interaction=nonstopmode", texfile}, ProcessDirectory -> dirpath];
 
       If[return["ExitCode"] != 0 || texErrorQ[return["StandardOutput"]] (* workaround for Windows version *),
         Message[MaTeX::texerr, parseTeXError[return["StandardOutput"]]];
@@ -313,7 +326,7 @@ iMaTeX[tex_String, preamble_, display_, fontsize_] :=
       height += depth+2;
       {width, height, depth} *= 72/72.27; (* correct for PostScript point *)
 
-      return = RunProcess[{$config["Ghostscript"], "-o", pdfgsfile, "-dNoOutputFonts", "-sDEVICE=pdfwrite", pdffile}, ProcessDirectory -> dirpath];
+      return = runProcess[{$config["Ghostscript"], "-o", pdfgsfile, "-dNoOutputFonts", "-sDEVICE=pdfwrite", pdffile}, ProcessDirectory -> dirpath];
       If[return["ExitCode"] != 0,
         Message[MaTeX::gserr];
         cleanup[];
