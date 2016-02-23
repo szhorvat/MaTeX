@@ -226,15 +226,15 @@ dirpath = FileNameJoin[{$TemporaryDirectory, StringJoin["MaTeX_", ranid[]]}]
 debugPrint["Creating temporary directory: ", dirpath]
 CreateDirectory[dirpath]
 
-
+(* Thank you to David Carlisle and Tom Hejda for help with the LaTeX code. *)
 template = StringTemplate["\
 \\documentclass[12pt,border=1pt]{standalone}
 \\usepackage[utf8]{inputenc}
 `preamble`
 \\begin{document}
-\\fontsize{`fontsize`pt}{1.2em}\\selectfont
+\\fontsize{`fontsize`pt}{`skipsize`pt}\\selectfont
 \\newbox\\MaTeXbox
-\\setbox\\MaTeXbox\\hbox{\\strut$`display` `tex`$}%
+\\setbox\\MaTeXbox\\hbox{`strut`$`display` `tex`$}%
 \\typeout{MATEXDEPTH:\\the\\dp\\MaTeXbox}%
 \\typeout{MATEXHEIGHT:\\the\\ht\\MaTeXbox}%
 \\typeout{MATEXWIDTH:\\the\\wd\\MaTeXbox}%
@@ -277,6 +277,8 @@ ClearMaTeXCache[] := (cache = <||>;)
 Options[MaTeX] = {
   "Preamble" -> {"\\usepackage{lmodern,exscale}", "\\usepackage{amsmath,amssymb}"},
   "DisplayStyle" -> True,
+  ContentPadding -> True,
+  LineSpacing -> {1.2, 0},
   FontSize -> 12,
   Magnification -> 1
 };
@@ -287,13 +289,15 @@ MaTeX::texerr = "Error while running LaTeX:\n``"
 MaTeX::importerr = "Failed to import PDF.  This is unexpected.  Please go to https://github.com/szhorvat/MaTeX for instructions on how to report this problem."
 MaTeX::invopt = "Invalid option value: ``"
 
-iMaTeX[tex_String, preamble_, display_, fontsize_] :=
+$psfactor = 72/72.27; (* conversion factor from TeX points to PostScript points *)
+
+iMaTeX[tex_String, preamble_, display_, fontsize_, strut_, ls : {lsmult_, lsadd_}] :=
     Module[{key, cleanup, name, content,
             texfile, pdffile, pdfgsfile, logfile, auxfile,
             return, result,
             width, height, depth},
 
-      key = {tex, Sort[preamble], display, fontsize};
+      key = {tex, Sort[preamble], display, fontsize, strut, ls};
       If[KeyExistsQ[cache, key],
         Return[cache[key]]
       ];
@@ -301,11 +305,14 @@ iMaTeX[tex_String, preamble_, display_, fontsize_] :=
       cleanup[] := If[fileQ[#], DeleteFile[#]]& /@ {texfile, pdffile, pdfgsfile, logfile, auxfile};
       name = ranid[];
 
+      (* Note: StringTemplate automatically numericizes expressions like Sqrt[2]. *)
       content = <|
           "preamble" -> StringJoin@Riffle[preamble, "\n"],
           "tex" -> tex,
           "display" -> If[display, "\\displaystyle", ""],
-          "fontsize" -> fontsize
+          "strut" -> If[strut, "\\strut", ""],
+          "fontsize" -> fontsize,
+          "skipsize" -> lsmult fontsize + lsadd
           |>;
       texfile = Export[FileNameJoin[{dirpath, name <> ".tex"}], template[content], "Text", CharacterEncoding -> "UTF-8"];
       pdffile = FileNameJoin[{dirpath, name <> ".pdf"}];
@@ -322,9 +329,10 @@ iMaTeX[tex_String, preamble_, display_, fontsize_] :=
       ];
 
       {width, height, depth} = getDimensions[return["StandardOutput"]];
+      (* +2 is for the 1 pt border on each side *)
       width  += 2;
       height += depth+2;
-      {width, height, depth} *= 72/72.27; (* correct for PostScript point *)
+      {width, height, depth} *= $psfactor; (* correct for PostScript point *)
 
       return = runProcess[{$config["Ghostscript"], "-o", pdfgsfile, "-dNoOutputFonts", "-sDEVICE=pdfwrite", pdffile}, ProcessDirectory -> dirpath];
       If[return["ExitCode"] != 0,
@@ -341,7 +349,7 @@ iMaTeX[tex_String, preamble_, display_, fontsize_] :=
       ];
 
       result = First[result];
-      result = Show[result, ImageSize -> {width, height}, BaselinePosition -> Scaled[depth/height]];
+      result = Show[result, ImageSize -> {width, height}, BaselinePosition -> Scaled[(depth+$psfactor)/height]]; (* +$psfactor is for 1 pt border *)
 
       store[cache, key, result]
     ]
@@ -358,8 +366,16 @@ MaTeX[tex_String, opt:OptionsPattern[]] :=
         Message[MaTeX::invopt, "DisplayStyle" -> OptionValue["DisplayStyle"]];
         Return[$Failed]
       ];
-      If[Not[NumberQ@OptionValue[FontSize] && TrueQ@Positive@OptionValue[FontSize]],
+      If[Not@BooleanQ@OptionValue[ContentPadding],
+        Message[MaTeX::invopt, ContentPadding -> OptionValue[ContentPadding]];
+        Return[$Failed]
+      ];
+      If[Not[NumericQ@OptionValue[FontSize] && TrueQ@Positive@OptionValue[FontSize]],
         Message[MaTeX::invopt, FontSize -> OptionValue[FontSize]];
+        Return[$Failed]
+      ];
+      If[Not[MatchQ[OptionValue[LineSpacing], {mult_, add_} /; NumericQ[mult] && TrueQ@NonNegative[mult] && NumericQ[add]]],
+        Message[MaTeX::invopt, LineSpacing -> OptionValue[LineSpacing]];
         Return[$Failed]
       ];
       mag = OptionValue[Magnification];
@@ -367,9 +383,7 @@ MaTeX[tex_String, opt:OptionsPattern[]] :=
         Message[MaTeX::invopt, Magnification -> mag];
         Return[$Failed]
       ];
-      If[$OperatingSystem === "Windows", SetDirectory["\\"]]; (* workaround for Mathematica bug on Windows where RunProcess fails when run in directories with special chars in name *)
-      result = iMaTeX[tex, preamble, OptionValue["DisplayStyle"], OptionValue[FontSize]];
-      If[$OperatingSystem === "Windows", ResetDirectory[]]; (* workaround for Mathematica bug on Windows where RunProcess fails when run in directories with special chars in name *)
+      result = iMaTeX[tex, preamble, OptionValue["DisplayStyle"], OptionValue[FontSize], OptionValue[ContentPadding], OptionValue[LineSpacing]];
       If[result === $Failed || TrueQ[mag == 1], result, Show[result, ImageSize -> N[mag] extractOption[result, ImageSize]]]
     ]
 
