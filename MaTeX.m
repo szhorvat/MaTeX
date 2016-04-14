@@ -26,16 +26,16 @@ If[$OperatingSystem === "Windows" && $VersionNumber == 10.0 && $SystemWordLength
 BeginPackage["MaTeX`"]
 
 MaTeX::usage = "\
-MaTeX[\"texcode\"] will compile texcode using LaTeX and import the result into Mathematica as graphics.  texcode must be a string containing valid math-mode LaTeX code.
-MaTeX[expression] will convert expression to LaTeX using TeXForm, then compile it and import it back to Mathematica."
+MaTeX[\"texcode\"] compiles texcode using LaTeX and returns the result as Mathematica graphics.  texcode must be valid inline math-mode LaTeX code.
+MaTeX[expression] converts expression to LaTeX using TeXForm, then compiles it and returns the result.";
 
-BlackFrame::usage = "BlackFrame is a setting for FrameStyle or AxesStyle that produces the default look in black instead of gray."
+BlackFrame::usage = "BlackFrame is a setting for FrameStyle or AxesStyle that produces the default look in black instead of gray.";
 
 ConfigureMaTeX::usage = "\
-ConfigureMaTeX[\"key1\" \[Rule] \"value1\", \"key2\" \[Rule] \"value2\", \[Ellipsis]] will set configuration options for MaTeX and store them permanently.
-ConfigureMaTeX[] returns the current configuration."
+ConfigureMaTeX[\"key1\" \[Rule] \"value1\", \"key2\" \[Rule] \"value2\", \[Ellipsis]] sets configuration options for MaTeX and stores them permanently.
+ConfigureMaTeX[] returns the current configuration.";
 
-ClearMaTeXCache::usage = "ClearMaTeXCache[] will clear MaTeX's cache."
+ClearMaTeXCache::usage = "ClearMaTeXCache[] clears MaTeX's cache."
 
 `Developer`$Version = "1.2.0 (February 24, 2015)";
 
@@ -53,15 +53,15 @@ If[$OperatingSystem === "Windows",
       ]
   ,
   runProcess = RunProcess
-]
+];
 
 
 (* Load and check persistent configuration *)
 
-$applicationDataDirectory = FileNameJoin[{$UserBaseDirectory, "ApplicationData", "MaTeX"}]
+$applicationDataDirectory = FileNameJoin[{$UserBaseDirectory, "ApplicationData", "MaTeX"}];
 If[Not@DirectoryQ[$applicationDataDirectory], CreateDirectory[$applicationDataDirectory]]
 
-$configFile = FileNameJoin[{$applicationDataDirectory, "config.m"}]
+$configFile = FileNameJoin[{$applicationDataDirectory, "config.m"}];
 
 (* The following are best guess configurations for first-time setup *)
 
@@ -106,7 +106,7 @@ winFindPL[] := Quiet@Check[AbsoluteFileName@First@ReadList["!where pdflatex.exe"
 $defaultConfigWindows := <|
     "Ghostscript" -> winFindGS[],
     "pdfLaTeX" -> winFindPL[]
-|>;
+|>
 
 $defaultConfig :=
     Switch[$OperatingSystem,
@@ -119,14 +119,14 @@ $defaultConfig :=
 (* Load configuration, if it exists *)
 If[FileExistsQ[$configFile], $config = Import[$configFile, "Package"], $config = <||>];
 If[Not@AssociationQ[$config],
-  Print["The MaTeX configuration was corrupted so it has to be re-set. If you can reproduce this problem, please go to https://github.com/szhorvat/MaTeX and create a bug report."];
+  Print["The MaTeX configuration was corrupted so it had to be re-set. If you can reproduce this problem, please go to https://github.com/szhorvat/MaTeX and create a bug report."];
   $config = <||>
 ];
 
 If[Not@SubsetQ[Keys[$config], Keys[$defaultConfigBase]],
   $config = Join[$defaultConfig, $config]
 ];
-Export[$configFile, $config, "Package"]
+Export[$configFile, $config, "Package"];
 
 (* True if file exists and is not a directory *)
 fileQ[file_] := FileExistsQ[file] && Not@DirectoryQ[file]
@@ -234,13 +234,13 @@ template = StringTemplate["\
 \\begin{document}
 \\fontsize{`fontsize`pt}{`skipsize`pt}\\selectfont
 \\newbox\\MaTeXbox
-\\setbox\\MaTeXbox\\hbox{`strut`$`display` `tex`$}%
+\\setbox\\MaTeXbox\\hbox{`strut`\(`display` `tex`\)}%
 \\typeout{MATEXDEPTH:\\the\\dp\\MaTeXbox}%
 \\typeout{MATEXHEIGHT:\\the\\ht\\MaTeXbox}%
 \\typeout{MATEXWIDTH:\\the\\wd\\MaTeXbox}%
 \\unhbox\\MaTeXbox
 \\end{document}
-"]
+"];
 
 parseTeXError[err_String] :=
     StringJoin@Riffle[
@@ -284,10 +284,10 @@ Options[MaTeX] = {
 };
 SyntaxInformation[MaTeX] = {"ArgumentsPattern" -> {_, OptionsPattern[]}};
 
-MaTeX::gserr = "Error while running Ghostscript."
-MaTeX::texerr = "Error while running LaTeX:\n``"
-MaTeX::importerr = "Failed to import PDF.  This is unexpected.  Please go to https://github.com/szhorvat/MaTeX for instructions on how to report this problem."
-MaTeX::invopt = "Invalid option value: ``"
+MaTeX::gserr = "Error while running Ghostscript.";
+MaTeX::texerr = "Error while running LaTeX:\n``";
+MaTeX::importerr = "Failed to import PDF.  This is unexpected.  Please go to https://github.com/szhorvat/MaTeX and create a bug report.";
+MaTeX::invopt = "Invalid option value: ``.";
 
 $psfactor = 72/72.27; (* conversion factor from TeX points to PostScript points *)
 
