@@ -280,7 +280,9 @@ Options[MaTeX] = {
   ContentPadding -> True,
   LineSpacing -> {1.2, 0},
   FontSize -> 12,
-  Magnification -> 1
+  Magnification -> 1,
+  "LogFileFunction" -> None,
+  "TeXFileFunction" -> None
 };
 SyntaxInformation[MaTeX] = {"ArgumentsPattern" -> {_, OptionsPattern[]}};
 
@@ -291,7 +293,7 @@ MaTeX::invopt = "Invalid option value: ``.";
 
 $psfactor = 72/72.27; (* conversion factor from TeX points to PostScript points *)
 
-iMaTeX[tex_String, preamble_, display_, fontsize_, strut_, ls : {lsmult_, lsadd_}] :=
+iMaTeX[tex_String, preamble_, display_, fontsize_, strut_, ls : {lsmult_, lsadd_}, logFileFun_, texFileFun_] :=
     Module[{key, cleanup, name, content,
             texfile, pdffile, pdfgsfile, logfile, auxfile,
             return, result,
@@ -315,12 +317,15 @@ iMaTeX[tex_String, preamble_, display_, fontsize_, strut_, ls : {lsmult_, lsadd_
           "skipsize" -> lsmult fontsize + lsadd
           |>;
       texfile = Export[FileNameJoin[{dirpath, name <> ".tex"}], template[content], "Text", CharacterEncoding -> "UTF-8"];
+      If[texFileFun =!= None, With[{str = Import[texfile, "String"]}, texFileFun[str]]];
+
       pdffile = FileNameJoin[{dirpath, name <> ".pdf"}];
       pdfgsfile = FileNameJoin[{dirpath, name <> "-gs.pdf"}];
       logfile = FileNameJoin[{dirpath, name <> ".log"}];
       auxfile = FileNameJoin[{dirpath, name <> ".aux"}];
 
       return = runProcess[{$config["pdfLaTeX"], "-halt-on-error", "-interaction=nonstopmode", texfile}, ProcessDirectory -> dirpath];
+      If[logFileFun =!= None, With[{str = Import[logfile, "String"]}, logFileFun[str]]];
 
       If[return["ExitCode"] != 0 || texErrorQ[return["StandardOutput"]] (* workaround for Windows version *),
         Message[MaTeX::texerr, parseTeXError[return["StandardOutput"]]];
@@ -383,7 +388,11 @@ MaTeX[tex_String, opt:OptionsPattern[]] :=
         Message[MaTeX::invopt, Magnification -> mag];
         Return[$Failed]
       ];
-      result = iMaTeX[tex, preamble, OptionValue["DisplayStyle"], OptionValue[FontSize], OptionValue[ContentPadding], OptionValue[LineSpacing]];
+      result =
+          iMaTeX[tex, preamble,
+            OptionValue["DisplayStyle"], OptionValue[FontSize], OptionValue[ContentPadding], OptionValue[LineSpacing],
+            OptionValue["LogFileFunction"], OptionValue["TeXFileFunction"]
+          ];
       If[result === $Failed || TrueQ[mag == 1], result, Show[result, ImageSize -> N[mag] extractOption[result, ImageSize]]]
     ]
 
