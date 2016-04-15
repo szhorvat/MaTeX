@@ -4,11 +4,11 @@
 (* :Title: MaTeX *)
 (* :Author: Szabolcs Horvát <szhorvat@gmail.com> *)
 (* :Context: MaTeX` *)
-(* :Version: 1.2.0 *)
+(* :Version: 1.3.0 *)
 (* :Date: 2015-03-04 *)
 
 (* :Mathematica Version: 10 *)
-(* :Copyright: (c) 2015 Szabolcs Horvát *)
+(* :Copyright: (c) 2016 Szabolcs Horvát *)
 
 (* Abort for old, unsupported versions of Mathematica *)
 If[$VersionNumber < 10,
@@ -37,7 +37,7 @@ ConfigureMaTeX[] returns the current configuration.";
 
 ClearMaTeXCache::usage = "ClearMaTeXCache[] clears MaTeX's cache."
 
-`Developer`$Version = "1.2.0 (February 24, 2015)";
+`Developer`$Version = "1.3.0 (April 16, 2016)";
 
 Begin["`Private`"] (* Begin Private Context *)
 
