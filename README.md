@@ -6,20 +6,17 @@ See [the blog post](http://szhorvat.net/pelican/latex-typesetting-in-mathematica
 
 ## Installation
 
- - [Download the latest release](https://github.com/szhorvat/MaTeX/releases) and place `MaTeX.m` in the directory opened by `SystemOpen@FileNameJoin[{$UserBaseDirectory, "Applications"}]`.
+ - [Download the latest release](https://github.com/szhorvat/MaTeX/releases) and place the `MaTeX` directory inside the directory opened by `SystemOpen@FileNameJoin[{$UserBaseDirectory, "Applications"}]`.
 
  - Make sure that a TeX system and Ghostscript 9.15 or later are installed.  
 
      For Windows and Linux, the latest Ghostscript is available from [its official download page](http://ghostscript.com/download/gsdnld.html).  
 
-     On OS X, MacTeX 2015 and later already include a compatible version of Ghostscript. If you use an older TeX distribution that doesn't, get a recent Ghostscript from [Richard Koch's page](http://pages.uoregon.edu/koch/).
+     On OS X, MacTeX 2015 and later already include a compatible version of Ghostscript. If you use an older TeX distribution that doesn't, please obtain a recent Ghostscript from [Richard Koch's page](http://pages.uoregon.edu/koch/).
 
  - Evaluate ``Needs["MaTeX`"]``.  MaTeX will attempt to auto-configure itself when it is loaded for the first time.  If auto-configuration fails, it will display instructions on how to configure the path to the `pdflatex` and Ghostscript executables manually.  *Note:* On Windows systems use the command line Ghostscript executable, i.e. the one with the name ending in c: `gswin32c.exe` or `gswin64c.exe`.
 
  - Test MaTeX using `MaTeX["x^2"]`.
-
-**Update:** Nasser Abbasi has provided [detailed installation instructions for Windows systems](https://dl.dropboxusercontent.com/u/38623/using_matex_updated.pdf).  Thank you!
-
 
 ## Usage
 
