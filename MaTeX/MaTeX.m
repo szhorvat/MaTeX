@@ -198,11 +198,7 @@ fixSystemPath[] :=
 
 
 checkConfig[] (* check configuration and set $configOK *)
-debugPrint["System path: ", fixSystemPath[]]
-
-
-debugPrint["Configuration: ", $config]
-debugPrint["Confguration is valid: ", $configOK]
+fixSystemPath[] (* fix path for XeTeX *)
 
 
 ConfigureMaTeX::badkey = "Unknown configuration key: ``";
@@ -225,7 +221,6 @@ ranid[] := StringJoin@RandomChoice[CharacterRange["a", "z"], 16]
 
 (* Create temporary directory *)
 dirpath = FileNameJoin[{$TemporaryDirectory, StringJoin["MaTeX_", ranid[]]}]
-debugPrint["Creating temporary directory: ", dirpath]
 CreateDirectory[dirpath]
 
 (* Thank you to David Carlisle and Tom Hejda for help with the LaTeX code. *)
