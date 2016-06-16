@@ -277,7 +277,8 @@ ClearMaTeXCache[] := (cache = <||>;)
 
 
 Options[MaTeX] = {
-  "Preamble" -> {"\\usepackage{lmodern,exscale}", "\\usepackage{amsmath,amssymb}"},
+  "BasePreamble" -> {"\\usepackage{lmodern,exscale}", "\\usepackage{amsmath,amssymb}"},
+  "Preamble" -> {},
   "DisplayStyle" -> True,
   ContentPadding -> True,
   LineSpacing -> {1.2, 0},
@@ -301,7 +302,7 @@ iMaTeX[tex_String, preamble_, display_, fontsize_, strut_, ls : {lsmult_, lsadd_
             return, result,
             width, height, depth},
 
-      key = {tex, Sort[preamble], display, fontsize, strut, ls};
+      key = {tex, Union[preamble], display, fontsize, strut, ls};
       If[KeyExistsQ[cache, key],
         Return[cache[key]]
       ];
@@ -362,13 +363,21 @@ iMaTeX[tex_String, preamble_, display_, fontsize_, strut_, ls : {lsmult_, lsadd_
     ]
 
 MaTeX[tex_String, opt:OptionsPattern[]] :=
-    Module[{preamble, mag, result},
+    Module[{basepreamble, preamble, mag, result},
       If[! $configOK, checkConfig[]; Return[$Failed]];
       preamble = OptionValue["Preamble"];
+      If[preamble === None, preamble = {}];
       If[Not@VectorQ[preamble, StringQ],
         Message[MaTeX::invopt, "Preamble" -> preamble];
         Return[$Failed]
       ];
+      basepreamble = OptionValue["BasePreamble"];
+      If[basepreamble === None, basepreamble = {}];
+      If[Not@VectorQ[basepreamble, StringQ],
+        Message[MaTeX::invopt, "BasePreamble" -> basepreamble];
+        Return[$Failed]
+      ];
+      preamble = Join[basepreamble, preamble];
       If[Not@BooleanQ@OptionValue["DisplayStyle"],
         Message[MaTeX::invopt, "DisplayStyle" -> OptionValue["DisplayStyle"]];
         Return[$Failed]
