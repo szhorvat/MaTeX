@@ -229,20 +229,7 @@ debugPrint["Creating temporary directory: ", dirpath]
 CreateDirectory[dirpath]
 
 (* Thank you to David Carlisle and Tom Hejda for help with the LaTeX code. *)
-template = StringTemplate["\
-\\documentclass[12pt,border=1pt]{standalone}
-\\usepackage[utf8]{inputenc}
-`preamble`
-\\begin{document}
-\\fontsize{`fontsize`pt}{`skipsize`pt}\\selectfont
-\\newbox\\MaTeXbox
-\\setbox\\MaTeXbox\\hbox{`strut`\(`display` `tex`\)}%
-\\typeout{MATEXDEPTH:\\the\\dp\\MaTeXbox}%
-\\typeout{MATEXHEIGHT:\\the\\ht\\MaTeXbox}%
-\\typeout{MATEXWIDTH:\\the\\wd\\MaTeXbox}%
-\\unhbox\\MaTeXbox
-\\end{document}
-"];
+template = FileTemplate@FileNameJoin[{DirectoryName[$InputFileName], "template.tex"}];
 
 parseTeXError[err_String] :=
     StringJoin@Riffle[
