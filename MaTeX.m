@@ -25,6 +25,8 @@ If[$OperatingSystem === "Windows" && $VersionNumber == 10.0 && $SystemWordLength
 
 BeginPackage["MaTeX`"]
 
+Unprotect /@ Names["MaTeX`*"];
+
 MaTeX::usage = "\
 MaTeX[\"texcode\"] compiles texcode using LaTeX and returns the result as Mathematica graphics.  texcode must be valid inline math-mode LaTeX code.
 MaTeX[expression] converts expression to LaTeX using TeXForm, then compiles it and returns the result.";
@@ -402,6 +404,10 @@ MaTeX[tex_, opt:OptionsPattern[]] := MaTeX[ToString@TeXForm[tex], opt]
 
 
 BlackFrame = Directive[AbsoluteThickness[0.5], Black]
+
+
+(* Protect all package symbols *)
+With[{syms = Names["MaTeX`*"]}, SetAttributes[syms, {Protected, ReadProtected}] ];
 
 End[] (* End Private Context *)
 
