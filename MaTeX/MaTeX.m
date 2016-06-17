@@ -7,7 +7,7 @@
 (* :Version: 1.3.0 *)
 (* :Date: 2015-03-04 *)
 
-(* :Mathematica Version: 10 *)
+(* :Mathematica Version: 10.0 *)
 (* :Copyright: (c) 2016 Szabolcs Horvát *)
 
 (* Abort for old, unsupported versions of Mathematica *)
@@ -37,7 +37,7 @@ ConfigureMaTeX::usage = "\
 ConfigureMaTeX[\"key1\" \[Rule] \"value1\", \"key2\" \[Rule] \"value2\", \[Ellipsis]] sets configuration options for MaTeX and stores them permanently.
 ConfigureMaTeX[] returns the current configuration.";
 
-ClearMaTeXCache::usage = "ClearMaTeXCache[] clears MaTeX's cache."
+ClearMaTeXCache::usage = "ClearMaTeXCache[] clears MaTeX's cache.";
 
 `Developer`$Version = "1.3.0 (April 16, 2016)";
 
@@ -200,13 +200,12 @@ fixSystemPath[] :=
 checkConfig[] (* check configuration and set $configOK *)
 fixSystemPath[] (* fix path for XeTeX *)
 
-
-ConfigureMaTeX::badkey = "Unknown configuration key: ``";
-SyntaxInformation[ConfigureMaTeX] = {"ArgumentsPattern" -> {OptionsPattern[]}, "OptionNames" -> {"pdfLaTeX", "Ghostscript", "CacheSize"}};
+ConfigureMaTeX::badkey = "Unknown configuration key: ``. Valid keys are: " <> ToString[Keys[$defaultConfig], InputForm] <> ".";
+SyntaxInformation[ConfigureMaTeX] = {"ArgumentsPattern" -> {OptionsPattern[]}, "OptionNames" -> Keys[$defaultConfig]};
 
 ConfigureMaTeX[rules___Rule] :=
     (Scan[
-      If[KeyExistsQ[$config, First[#]], AppendTo[$config, #], Message[ConfigureMaTeX::badkey, First[#]]]&,
+      If[KeyExistsQ[$defaultConfig, First[#]], AppendTo[$config, #], Message[ConfigureMaTeX::badkey, First[#]]]&,
       {rules}
     ];
     checkConfig[];
