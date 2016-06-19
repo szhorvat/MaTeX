@@ -225,13 +225,47 @@ CreateDirectory[dirpath]
 (* Thank you to David Carlisle and Tom Hejda for help with the LaTeX code. *)
 template = FileTemplate@FileNameJoin[{DirectoryName[$InputFileName], "template.tex"}];
 
+
 parseTeXError[err_String] :=
-    StringJoin@Riffle[
-      StringDrop[#, 2] & /@ Select[
-        StringSplit[err, "\n"],
-        StringMatchQ[#, "! *"] &
-      ],
-      "\n"
+    Module[{lines, line, i=0, eof, errLinesLimit = 3, errLineCounter, result},
+      lines = StringSplit[err, "\n"];
+      eof = Length[lines];
+      line := lines[[i]];
+      result = First@Last@Reap@While[True,
+        If[i == eof, Break[]];
+        i += 1;
+        If[StringMatchQ[line, "! *"], Sow[line]];
+        If[StringMatchQ[line, "! Undefined control sequence." | ("! LaTeX Error:"~~___)],
+          While[True,
+            If[i == eof, Break[]];
+            i += 1;
+            errLineCounter = 0;
+            Which[
+              StringMatchQ[line, "! *"],
+              i -= 1; (* another error line found, handle it in the main loop *)
+              Break[]
+              ,
+              StringMatchQ[line, "l."~~(DigitCharacter..)~~___],
+              Sow@StringDelete[line, StartOfString~~"l."~~(DigitCharacter..)~~Whitespace];
+              Break[];
+              ,
+              StringMatchQ[line,
+                ("See the LaTeX manual or LaTeX Companion for explanation."~~___) |
+                ("Type  H <return>  for immediate help."~~___) |
+                (" ..."~~___) |
+                ("Enter file name: ") |
+                Whitespace | ""],
+              Null (* do nothing *)
+              ,
+              True,
+              Sow[line];
+              errLineCounter += 1;
+            ];
+            If[errLineCounter == errLinesLimit, Break[]]
+          ];
+        ];
+      ];
+      Style[StringJoin@Riffle[result, "\n"], "OutputForm"]
     ]
 
 (* This function is used to try to detect errors based on the log file.
@@ -271,7 +305,7 @@ Options[MaTeX] = {
 SyntaxInformation[MaTeX] = {"ArgumentsPattern" -> {_, OptionsPattern[]}};
 
 MaTeX::gserr = "Error while running Ghostscript.";
-MaTeX::texerr = "Error while running LaTeX:\n``";
+MaTeX::texerr = "Error while running LaTeX.\n``";
 MaTeX::importerr = "Failed to import PDF.  This is unexpected.  Please go to https://github.com/szhorvat/MaTeX and create a bug report.";
 MaTeX::invopt = "Invalid option value: ``.";
 
@@ -344,7 +378,7 @@ iMaTeX[tex_String, preamble_, display_, fontsize_, strut_, ls : {lsmult_, lsadd_
     ]
 
 MaTeX[tex_String, opt:OptionsPattern[]] :=
-    Module[{basepreamble, preamble, mag, result},
+    Module[{basepreamble, preamble, mag, result, trimmedTeX},
       If[! $configOK, checkConfig[]; Return[$Failed]];
       preamble = OptionValue["Preamble"];
       If[preamble === None, preamble = {}];
@@ -380,8 +414,9 @@ MaTeX[tex_String, opt:OptionsPattern[]] :=
         Message[MaTeX::invopt, Magnification -> mag];
         Return[$Failed]
       ];
+      trimmedTeX = StringTrim[tex, "\n"..];
       result =
-          iMaTeX[tex, preamble,
+          iMaTeX[trimmedTeX, preamble,
             OptionValue["DisplayStyle"], OptionValue[FontSize], OptionValue[ContentPadding], OptionValue[LineSpacing],
             OptionValue["LogFileFunction"], OptionValue["TeXFileFunction"]
           ];

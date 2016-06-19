@@ -4,7 +4,10 @@
 \begin{document}
 \fontsize{`fontsize`pt}{`skipsize`pt}\selectfont
 \newbox\MaTeXbox
-\setbox\MaTeXbox\hbox{`strut`\(`display` `tex`\)}%
+\setbox\MaTeXbox\hbox{`strut`\(%
+`display`%
+`tex` %
+\)}%
 \typeout{MATEXDEPTH:\the\dp\MaTeXbox}%
 \typeout{MATEXHEIGHT:\the\ht\MaTeXbox}%
 \typeout{MATEXWIDTH:\the\wd\MaTeXbox}%
