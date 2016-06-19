@@ -32,6 +32,11 @@ The limiting factor in the speed of `MaTeX` calls is running the `pdflatex` proc
 
 ## Revision history
 
+#### Version 1.5.0
+
+ - Much improved LaTeX error reporting. Please report any problems you notice with the new error reporting.
+ - MaTeX now checks for common user errors and issues warnings.  Turn them off using `Off[MaTeX::warn]`.
+ 
 #### Version 1.4.0
 
  - Separated `"Preamble"` and `"BasePreamble"` options.  The default preamble is now in `"BasePreamble"`.  The `"Preamble"` option can be set without needing to worry about the default.
