@@ -377,6 +377,30 @@ iMaTeX[tex_String, preamble_, display_, fontsize_, strut_, ls : {lsmult_, lsadd_
       store[cache, key, result]
     ]
 
+MaTeX::warn = "Warning: ``";
+
+checkForCommonErrors[str_String] :=
+    Which[
+      StringMatchQ[str, ("$$"~~___)|(___~~"$$")],
+      Message[MaTeX::warn, "$$ delimiter used. MaTeX expects math-mode input by default. Use the \"DisplayStyle\" option to choose inline or display styles."]
+      ,
+      StringMatchQ[str, "\\begin{equation}"~~___],
+      Message[MaTeX::warn, "\\begin{equation} used. MaTeX expects math-mode input by default. Use the \"DisplayStyle\" option to choose inline or display styles."]
+      ,
+      StringMatchQ[str, ("$"~~___)|(___~~"$")],
+      Message[MaTeX::warn, "$ delimiter used. MaTeX expects math-mode input by default."]
+      ,
+      StringMatchQ[str, ___~~"\\"] && Not@StringMatchQ[str, ___~~"\\\\"],
+      Message[MaTeX::warn, "Input ends in \\. \[VeryThinSpace]Did you forget to use \\\\ to denote a single backslash?"]
+      ,
+      StringMatchQ[str, "\\begin{eqnarray}"~~___],
+      Message[MaTeX::warn, "\\begin{eqnarray} cannot be used in math-mode. MaTeX expects math-mode input by default. Use \\begin{aligned} to typeset systems of equations."]
+      ,
+      StringMatchQ[str, "\\begin{eqnarray\\*}"~~___],
+      Message[MaTeX::warn, "\\begin{eqnarray* } cannot be used in math-mode. MaTeX expects math-mode input by default. Use \\begin{aligned} to typeset systems of equations."]
+    ]
+
+
 MaTeX[tex_String, opt:OptionsPattern[]] :=
     Module[{basepreamble, preamble, mag, result, trimmedTeX},
       If[! $configOK, checkConfig[]; Return[$Failed]];
@@ -415,6 +439,7 @@ MaTeX[tex_String, opt:OptionsPattern[]] :=
         Return[$Failed]
       ];
       trimmedTeX = StringTrim[tex, "\n"..];
+      checkForCommonErrors[trimmedTeX];
       result =
           iMaTeX[trimmedTeX, preamble,
             OptionValue["DisplayStyle"], OptionValue[FontSize], OptionValue[ContentPadding], OptionValue[LineSpacing],
