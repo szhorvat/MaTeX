@@ -1,15 +1,24 @@
-\documentclass[12pt,border=1pt]{standalone}
+\documentclass[12pt, border=1pt, multi]{standalone}
+\newenvironment{matex}{\ignorespaces}{\ignorespacesafterend}
+\standaloneenv{matex}
+\newbox\MaTeXbox
+\newcommand{\MaTeX}[1]{
+	\begin{matex}
+		\setbox\MaTeXbox\hbox{%
+			`strut`%
+			\(%
+				`display`%
+				#1%
+			\)}%
+		\typeout{MATEXDEPTH:\the\dp\MaTeXbox}%
+		\typeout{MATEXHEIGHT:\the\ht\MaTeXbox}%
+		\typeout{MATEXWIDTH:\the\wd\MaTeXbox}%
+		\unhbox\MaTeXbox%
+	\end{matex}
+}
 \usepackage[utf8]{inputenc}
 `preamble`
 \begin{document}
 \fontsize{`fontsize`pt}{`skipsize`pt}\selectfont
-\newbox\MaTeXbox
-\setbox\MaTeXbox\hbox{`strut`\(%
-`display`%
-`tex` %
-\)}%
-\typeout{MATEXDEPTH:\the\dp\MaTeXbox}%
-\typeout{MATEXHEIGHT:\the\ht\MaTeXbox}%
-\typeout{MATEXWIDTH:\the\wd\MaTeXbox}%
-\unhbox\MaTeXbox
+`tex`%
 \end{document}

@@ -29,7 +29,9 @@ Unprotect /@ Names["MaTeX`*"];
 
 MaTeX::usage = "\
 MaTeX[\"texcode\"] compiles texcode using LaTeX and returns the result as Mathematica graphics.  texcode must be valid inline math-mode LaTeX code.
-MaTeX[expression] converts expression to LaTeX using TeXForm, then compiles it and returns the result.";
+MaTeX[expression] converts expression to LaTeX using TeXForm, then compiles it and returns the result.
+MaTeX is automatically threaded over lists that appear as its argument, while running LaTeX only once.
+In this case all elements of the list must be either texcode or expressions.";
 
 BlackFrame::usage = "BlackFrame is a setting for FrameStyle or AxesStyle that produces the default look in black instead of gray.";
 
@@ -272,18 +274,18 @@ parseTeXError[err_String] :=
    It is necessary because on Windows RunProcess doesn't capture the correct exit code. *)
 texErrorQ[log_String] := Count[StringSplit[log, "\n"], line_ /; StringMatchQ[line, "! *"]] > 0
 
-getDimensions[log_String] := Interpreter["Number"]@First@StringCases[log, RegularExpression["MATEX"<>#<>":(.+?)pt"] -> "$1"]& /@ {"WIDTH", "HEIGHT", "DEPTH"}
+getDimensions[log_String] := Interpreter["Number"]@StringCases[log, RegularExpression["MATEX"<>#<>":(.+?)pt"] -> "$1"]& /@ {"WIDTH", "HEIGHT", "DEPTH"}
 
 extractOption[g_, opt_] := opt /. Options[g, opt]
 
 
-cache = <||>
+cache = <||>;
 
 SetAttributes[store, HoldFirst]
-store[memoStore_, key_, value_] :=
-    (AppendTo[memoStore, key -> value];
-    If[Length[memoStore] > $config["CacheSize"], memoStore = Rest[memoStore]];
-    value
+store[memoStore_, keys_, values_] :=
+    (AssociateTo[memoStore, AssociationThread[keys->values]];
+    If[Length[memoStore] > $config["CacheSize"], memoStore = Take[memoStore,{-$config["CacheSize"],-1}]];
+    values
     )
 
 
@@ -311,24 +313,24 @@ MaTeX::invopt = "Invalid option value: ``.";
 
 $psfactor = 72/72.27; (* conversion factor from TeX points to PostScript points *)
 
-iMaTeX[tex_String, preamble_, display_, fontsize_, strut_, ls : {lsmult_, lsadd_}, logFileFun_, texFileFun_] :=
-    Module[{key, cleanup, name, content,
+iMaTeX[tex:{__String}, preamble_, display_, fontsize_, strut_, ls : {lsmult_, lsadd_}, logFileFun_, texFileFun_] :=
+    Module[{keys, cleanup, name, content,
             texfile, pdffile, pdfgsfile, logfile, auxfile,
-            return, result,
+            return, results,
             width, height, depth},
 
-      key = {tex, Union[preamble], display, fontsize, strut, ls};
-      If[KeyExistsQ[cache, key],
-        Return[cache[key]]
+      keys = {#, Union[preamble], display, fontsize, strut, ls}&/@tex;
+      If[FreeQ[Lookup[cache,keys],Missing],
+        Return[Lookup[cache,keys]]
       ];
 
-      cleanup[] := If[fileQ[#], DeleteFile[#]]& /@ {texfile, pdffile, pdfgsfile, logfile, auxfile};
+      cleanup[] := If[fileQ[#], DeleteFile[#]]& /@ {texfile, pdffile, pdfgsfile, logfile, auxfile};   
       name = ranid[];
 
       (* Note: StringTemplate automatically numericizes expressions like Sqrt[2]. *)
       content = <|
           "preamble" -> StringJoin@Riffle[preamble, "\n"],
-          "tex" -> tex,
+          "tex" -> StringJoin[StringTemplate["\\MaTeX{``}\n"]/@tex],
           "display" -> If[display, "\\displaystyle", ""],
           "strut" -> If[strut, "\\strut", ""],
           "fontsize" -> fontsize,
@@ -345,7 +347,7 @@ iMaTeX[tex_String, preamble_, display_, fontsize_, strut_, ls : {lsmult_, lsadd_
       return = runProcess[{$config["pdfLaTeX"], "-halt-on-error", "-interaction=nonstopmode", texfile}, ProcessDirectory -> dirpath];
       If[logFileFun =!= None, With[{str = Import[logfile, "String"]}, logFileFun[str]]];
 
-      If[return["ExitCode"] != 0 || texErrorQ[return["StandardOutput"]] (* workaround for Windows version *),
+      If[return["ExitCode"] != 0 || texErrorQ[return["StandardOutput"]], (* workaround for Windows version *)
         Message[MaTeX::texerr, parseTeXError[return["StandardOutput"]]];
         cleanup[];
         Return[$Failed]
@@ -364,17 +366,16 @@ iMaTeX[tex_String, preamble_, display_, fontsize_, strut_, ls : {lsmult_, lsadd_
         Return[$Failed]
       ];
 
-      result = Import[pdfgsfile, "PDF"];
+      results = Import[pdfgsfile, "PDF"];
       cleanup[];
-      If[result === $Failed,
+      If[results === $Failed,
         Message[MaTeX::importerr];
         Return[$Failed]
       ];
-
-      result = First[result];
-      result = Show[result, ImageSize -> {width, height}, BaselinePosition -> Scaled[(depth+$psfactor)/height]]; (* +$psfactor is for 1 pt border *)
-
-      store[cache, key, result]
+      
+      results = MapThread[Show[#1, ImageSize -> {#2, #3}, BaselinePosition -> Scaled[(#4+$psfactor)/#3]]&,{results,width,height,depth}]; (* +$psfactor is for 1 pt border *)
+      
+      store[cache, keys, results]
     ]
 
 MaTeX::warn = "Warning: ``";
@@ -401,7 +402,7 @@ checkForCommonErrors[str_String] :=
     ]
 
 
-MaTeX[tex_String, opt:OptionsPattern[]] :=
+MaTeX[tex:{__String}, opt:OptionsPattern[]] :=
     Module[{basepreamble, preamble, mag, result, trimmedTeX},
       If[! $configOK, checkConfig[]; Return[$Failed]];
       preamble = OptionValue["Preamble"];
@@ -439,7 +440,7 @@ MaTeX[tex_String, opt:OptionsPattern[]] :=
         Return[$Failed]
       ];
       trimmedTeX = StringTrim[tex, "\n"..];
-      checkForCommonErrors[trimmedTeX];
+      checkForCommonErrors/@trimmedTeX;
       result =
           iMaTeX[trimmedTeX, preamble,
             OptionValue["DisplayStyle"], OptionValue[FontSize], OptionValue[ContentPadding], OptionValue[LineSpacing],
@@ -448,9 +449,11 @@ MaTeX[tex_String, opt:OptionsPattern[]] :=
       If[result === $Failed || TrueQ[mag == 1], result, Show[result, ImageSize -> N[mag] extractOption[result, ImageSize]]]
     ]
 
-MaTeX[tex_StringForm, opt:OptionsPattern[]] := MaTeX[ToString[tex], opt]
+MaTeX[tex:{__StringForm}, opt:OptionsPattern[]] := MaTeX[ToString/@tex, opt]
 
-MaTeX[tex_, opt:OptionsPattern[]] := MaTeX[ToString@TeXForm[tex], opt]
+MaTeX[tex_List, opt:OptionsPattern[]] := MaTeX[ToString[TeXForm[#]]&/@tex, opt]
+
+MaTeX[tex_, opt:OptionsPattern[]] := First@MaTeX[{tex}, opt]
 
 
 BlackFrame = Directive[AbsoluteThickness[0.5], Black]
