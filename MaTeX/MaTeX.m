@@ -30,8 +30,7 @@ Unprotect /@ Names["MaTeX`*"];
 MaTeX::usage = "\
 MaTeX[\"texcode\"] compiles texcode using LaTeX and returns the result as Mathematica graphics.  texcode must be valid inline math-mode LaTeX code.
 MaTeX[expression] converts expression to LaTeX using TeXForm, then compiles it and returns the result.
-MaTeX is automatically threaded over lists that appear as its argument, while running LaTeX only once.
-In this case all elements of the list must be either texcode or expressions.";
+MaTeX[{expr1, expr2, \[Ellipsis]}] processes all expressions while running LaTeX only once.  A list of results is returned.";
 
 BlackFrame::usage = "BlackFrame is a setting for FrameStyle or AxesStyle that produces the default look in black instead of gray.";
 
@@ -402,6 +401,12 @@ checkForCommonErrors[str_String] :=
     ]
 
 
+(* Convert supported expression types to a string contaninig TeX code *)
+texify[expr_String] := expr
+texify[expr_StringForm] := ToString[expr] (* per user request, StringForm is treated like the string it represents; may be removed in the future; use StringTemplate instead. *)
+texify[expr_] := ToString@TeXForm[expr]
+
+
 MaTeX[tex:{__String}, opt:OptionsPattern[]] :=
     Module[{basepreamble, preamble, mag, result, trimmedTeX},
       If[! $configOK, checkConfig[]; Return[$Failed]];
@@ -449,9 +454,9 @@ MaTeX[tex:{__String}, opt:OptionsPattern[]] :=
       If[result === $Failed || TrueQ[mag == 1], result, Show[result, ImageSize -> N[mag] extractOption[result, ImageSize]]]
     ]
 
-MaTeX[tex:{__StringForm}, opt:OptionsPattern[]] := MaTeX[ToString/@tex, opt]
+MaTeX[{}, opt:OptionsPattern[]] := {} (* prevent infinite recursion *)
 
-MaTeX[tex_List, opt:OptionsPattern[]] := MaTeX[ToString[TeXForm[#]]&/@tex, opt]
+MaTeX[tex_List, opt:OptionsPattern[]] := MaTeX[texify /@ tex, opt]
 
 MaTeX[tex_, opt:OptionsPattern[]] := First@MaTeX[{tex}, opt]
 
