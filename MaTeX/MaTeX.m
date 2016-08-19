@@ -23,7 +23,7 @@ If[$OperatingSystem === "Windows" && $VersionNumber == 10.0 && $SystemWordLength
   ]
 ]
 
-BeginPackage["MaTeX`"]
+BeginPackage["MaTeX`"];
 
 Unprotect /@ Names["MaTeX`*"];
 
@@ -42,7 +42,7 @@ ClearMaTeXCache::usage = "ClearMaTeXCache[] clears MaTeX's cache.";
 
 `Developer`$Version = "1.6.0 (July 20, 2016)";
 
-Begin["`Private`"] (* Begin Private Context *)
+Begin["`Private`"]; (* Begin Private Context *)
 
 
 (* workaround for Mathematica bug on Windows where RunProcess fails when run in directories with special chars in name *)
@@ -198,8 +198,8 @@ fixSystemPath[] :=
     ]
 
 
-checkConfig[] (* check configuration and set $configOK *)
-fixSystemPath[] (* fix path for XeTeX *)
+checkConfig[]; (* check configuration and set $configOK *)
+fixSystemPath[]; (* fix path for XeTeX *)
 
 ConfigureMaTeX::badkey = "Unknown configuration key: ``. Valid keys are: " <> ToString[Keys[$defaultConfig], InputForm] <> ".";
 SyntaxInformation[ConfigureMaTeX] = {"ArgumentsPattern" -> {OptionsPattern[]}, "OptionNames" -> Keys[$defaultConfig]};
@@ -220,8 +220,8 @@ ranid[] := StringJoin@RandomChoice[CharacterRange["a", "z"], 16]
 
 
 (* Create temporary directory *)
-dirpath = FileNameJoin[{$TemporaryDirectory, StringJoin["MaTeX_", ranid[]]}]
-CreateDirectory[dirpath]
+dirpath = FileNameJoin[{$TemporaryDirectory, StringJoin["MaTeX_", ranid[]]}];
+CreateDirectory[dirpath];
 
 (* Thank you to David Carlisle and Tom Hejda for help with the LaTeX code. *)
 template = StringTemplate@Import[FileNameJoin[{DirectoryName[$InputFileName], "template.tex"}], "Text", CharacterEncoding -> "UTF-8"];
@@ -483,12 +483,12 @@ MaTeX[tex_List, opt:OptionsPattern[]] := MaTeX[texify /@ tex, opt]
 MaTeX[tex_, opt:OptionsPattern[]] := With[{result = MaTeX[{tex}, opt]}, If[result === $Failed, $Failed, First[result]]]
 
 
-BlackFrame = Directive[AbsoluteThickness[0.5], Black]
+BlackFrame = Directive[AbsoluteThickness[0.5], Black];
 
 
 (* Protect all package symbols *)
 With[{syms = Names["MaTeX`*"]}, SetAttributes[syms, {Protected, ReadProtected}] ];
 
-End[] (* End Private Context *)
+End[]; (* End Private Context *)
 
-EndPackage[]
+EndPackage[];
