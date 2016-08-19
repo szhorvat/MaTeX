@@ -282,8 +282,10 @@ cache = <||>;
 
 SetAttributes[store, HoldFirst]
 store[memoStore_, keys_, values_] :=
-    (AssociateTo[memoStore, AssociationThread[keys->values]];
-    If[Length[memoStore] > $config["CacheSize"], memoStore = Take[memoStore,{-$config["CacheSize"],-1}]];
+    (AssociateTo[memoStore, Thread[keys -> values]]; (* do not use AssocationThread; associations are not supported as 2nd arg of AssociateTo in v10.0 *)
+    If[Length[memoStore] > $config["CacheSize"],
+      memoStore = Take[memoStore, -$config["CacheSize"]]
+    ];
     values
     )
 
