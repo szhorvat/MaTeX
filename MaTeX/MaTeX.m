@@ -416,7 +416,7 @@ texify[expr_] := ToString@TeXForm[expr]
 
 
 MaTeX[tex:{__String}, opt:OptionsPattern[]] :=
-    Module[{basepreamble, preamble, mag, result, trimmedTeX},
+    Module[{basepreamble, preamble, mag, results, trimmedTeX},
       (* check that MaTeX is configured *)
       If[! $configOK, checkConfig[]; Return[$Failed]];
 
@@ -461,14 +461,17 @@ MaTeX[tex:{__String}, opt:OptionsPattern[]] :=
       checkForCommonErrors /@ trimmedTeX;
 
       (* do the main work *)
-      result =
+      results =
           iMaTeX[trimmedTeX, preamble,
             OptionValue["DisplayStyle"], OptionValue[FontSize], OptionValue[ContentPadding], OptionValue[LineSpacing],
             OptionValue["LogFileFunction"], OptionValue["TeXFileFunction"]
           ];
 
       (* pass through $Failed; apply magnification *)
-      If[result === $Failed || TrueQ[mag == 1], result, Show[result, ImageSize -> N[mag] extractOption[result, ImageSize]]]
+      If[results === $Failed || TrueQ[mag == 1],
+        results,
+        Show[#, ImageSize -> N[mag] extractOption[#, ImageSize]]& /@ results
+      ]
     ]
 
 MaTeX[{}, opt:OptionsPattern[]] := {} (* prevent infinite recursion *)
