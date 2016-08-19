@@ -201,6 +201,7 @@ fixSystemPath[] :=
 checkConfig[]; (* check configuration and set $configOK *)
 fixSystemPath[]; (* fix path for XeTeX *)
 
+
 ConfigureMaTeX::badkey = "Unknown configuration key: ``. Valid keys are: " <> ToString[Keys[$defaultConfig], InputForm] <> ".";
 SyntaxInformation[ConfigureMaTeX] = {"ArgumentsPattern" -> {OptionsPattern[]}, "OptionNames" -> Keys[$defaultConfig]};
 
@@ -223,10 +224,13 @@ ranid[] := StringJoin@RandomChoice[CharacterRange["a", "z"], 16]
 dirpath = FileNameJoin[{$TemporaryDirectory, StringJoin["MaTeX_", ranid[]]}];
 CreateDirectory[dirpath];
 
-(* Thank you to David Carlisle and Tom Hejda for help with the LaTeX code. *)
+
+(* Thank you to David Carlisle and Tom Hejda for help with the LaTeX code in template.tex. *)
+(* Warning: Do not use FileTemplate because it mishandles CR/LF. *)
 template = StringTemplate@Import[FileNameJoin[{DirectoryName[$InputFileName], "template.tex"}], "Text", CharacterEncoding -> "UTF-8"];
 
 
+(* Interprets a UTF-8 encoded string stored as a byte sequence *)
 fromUTF8[s_String] := FromCharacterCode[ToCharacterCode[s], "UTF-8"]
 
 parseTeXError[err_String] :=
