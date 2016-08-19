@@ -224,8 +224,10 @@ dirpath = FileNameJoin[{$TemporaryDirectory, StringJoin["MaTeX_", ranid[]]}]
 CreateDirectory[dirpath]
 
 (* Thank you to David Carlisle and Tom Hejda for help with the LaTeX code. *)
-template = FileTemplate@FileNameJoin[{DirectoryName[$InputFileName], "template.tex"}];
+template = StringTemplate@Import[FileNameJoin[{DirectoryName[$InputFileName], "template.tex"}], "Text", CharacterEncoding -> "UTF-8"];
 
+
+fromUTF8[s_String] := FromCharacterCode[ToCharacterCode[s], "UTF-8"]
 
 parseTeXError[err_String] :=
     Module[{lines, line, i=0, eof, errLinesLimit = 3, errLineCounter, result},
@@ -339,7 +341,7 @@ iMaTeX[tex:{__String}, preamble_, display_, fontsize_, strut_, ls : {lsmult_, ls
           "skipsize" -> lsmult fontsize + lsadd
           |>;
       texfile = Export[FileNameJoin[{dirpath, name <> ".tex"}], template[content], "Text", CharacterEncoding -> "UTF-8"];
-      If[texFileFun =!= None, With[{str = Import[texfile, "String"]}, texFileFun[str]]];
+      If[texFileFun =!= None, With[{str = Import[texfile, "Text", CharacterEncoding -> "UTF-8"]}, texFileFun[str]]];
 
       pdffile = FileNameJoin[{dirpath, name <> ".pdf"}];
       pdfgsfile = FileNameJoin[{dirpath, name <> "-gs.pdf"}];
@@ -347,13 +349,13 @@ iMaTeX[tex:{__String}, preamble_, display_, fontsize_, strut_, ls : {lsmult_, ls
       auxfile = FileNameJoin[{dirpath, name <> ".aux"}];
 
       return = runProcess[{$config["pdfLaTeX"], "-halt-on-error", "-interaction=nonstopmode", texfile}, ProcessDirectory -> dirpath];
-      If[logFileFun =!= None, With[{str = Import[logfile, "String"]}, logFileFun[str]]];
+      If[logFileFun =!= None, With[{str = Import[logfile, "Text", CharacterEncoding -> "UTF-8"]}, logFileFun[str]]];
 
       If[
         return["ExitCode"] != 0 ||
         texErrorQ[return["StandardOutput"]] (* workaround for Windows, where the exit code may be misreported *)
         ,
-        Message[MaTeX::texerr, parseTeXError[return["StandardOutput"]]];
+        Message[MaTeX::texerr, parseTeXError[fromUTF8@return["StandardOutput"]]];
         cleanup[];
         Return[$Failed]
       ];
