@@ -50,6 +50,8 @@ The limiting factor in the speed of `MaTeX` calls is running the `pdflatex` proc
     Note that this changes behaviour slightly.  Previous versions of MaTeX compiled `MaTeX[{1, x^2, x/2}]` as a single expression.  Now each element of the list is converted to a separate result.  To restore the old behaviour, apply `TeXForm` explicitly: `MaTeX[TeXForm[{1, x^2, x/2}]`. 
     
  - Expressions with head `TeXForm` are now automatically handled.
+ 
+ - Bug fixes: Better handling of CR/LF line endings and character encodings.
 
 #### Version 1.5.0
 
