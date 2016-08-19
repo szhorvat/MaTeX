@@ -458,7 +458,7 @@ MaTeX[{}, opt:OptionsPattern[]] := {} (* prevent infinite recursion *)
 
 MaTeX[tex_List, opt:OptionsPattern[]] := MaTeX[texify /@ tex, opt]
 
-MaTeX[tex_, opt:OptionsPattern[]] := First@MaTeX[{tex}, opt]
+MaTeX[tex_, opt:OptionsPattern[]] := With[{result = MaTeX[{tex}, opt]}, If[result === $Failed, $Failed, First[result]]]
 
 
 BlackFrame = Directive[AbsoluteThickness[0.5], Black]
