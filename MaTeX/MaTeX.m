@@ -231,7 +231,7 @@ fromUTF8[s_String] := FromCharacterCode[ToCharacterCode[s], "UTF-8"]
 
 parseTeXError[err_String] :=
     Module[{lines, line, i=0, eof, errLinesLimit = 3, errLineCounter, result},
-      lines = StringSplit[err, "\n"];
+      lines = StringSplit[StringDelete[err, "\r"] (* fix for CR/LF on Windows *), "\n"];
       eof = Length[lines];
       line := lines[[i]];
       result = First@Last@Reap@While[True,
