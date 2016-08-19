@@ -320,9 +320,10 @@ iMaTeX[tex:{__String}, preamble_, display_, fontsize_, strut_, ls : {lsmult_, ls
             return, results,
             width, height, depth},
 
-      keys = {#, Union[preamble], display, fontsize, strut, ls}&/@tex;
-      If[FreeQ[Lookup[cache,keys],Missing],
-        Return[Lookup[cache,keys]]
+      (* If all entries are already cached, use cache; otherwise recompile using LaTeX *)
+      keys = {#, Union[preamble], display, fontsize, strut, ls}& /@ tex;
+      If[SubsetQ[Keys[cache], keys],
+        Return[Lookup[cache, keys]]
       ];
 
       cleanup[] := If[fileQ[#], DeleteFile[#]]& /@ {texfile, pdffile, pdfgsfile, logfile, auxfile};   
@@ -331,7 +332,7 @@ iMaTeX[tex:{__String}, preamble_, display_, fontsize_, strut_, ls : {lsmult_, ls
       (* Note: StringTemplate automatically numericizes expressions like Sqrt[2]. *)
       content = <|
           "preamble" -> StringJoin@Riffle[preamble, "\n"],
-          "tex" -> StringJoin[StringTemplate["\\MaTeX{``}\n"]/@tex],
+          "tex" -> StringJoin@Riffle[StringTemplate["\\MaTeX{``}"] /@ tex, "\n"],
           "display" -> If[display, "\\displaystyle", ""],
           "strut" -> If[strut, "\\strut", ""],
           "fontsize" -> fontsize,
@@ -348,7 +349,10 @@ iMaTeX[tex:{__String}, preamble_, display_, fontsize_, strut_, ls : {lsmult_, ls
       return = runProcess[{$config["pdfLaTeX"], "-halt-on-error", "-interaction=nonstopmode", texfile}, ProcessDirectory -> dirpath];
       If[logFileFun =!= None, With[{str = Import[logfile, "String"]}, logFileFun[str]]];
 
-      If[return["ExitCode"] != 0 || texErrorQ[return["StandardOutput"]], (* workaround for Windows version *)
+      If[
+        return["ExitCode"] != 0 ||
+        texErrorQ[return["StandardOutput"]] (* workaround for Windows, where the exit code may be misreported *)
+        ,
         Message[MaTeX::texerr, parseTeXError[return["StandardOutput"]]];
         cleanup[];
         Return[$Failed]
@@ -381,6 +385,7 @@ iMaTeX[tex:{__String}, preamble_, display_, fontsize_, strut_, ls : {lsmult_, ls
 
 MaTeX::warn = "Warning: ``";
 
+(* check for common errors and warn user without aborting *)
 checkForCommonErrors[str_String] :=
     Which[
       StringMatchQ[str, ("$$"~~___)|(___~~"$$")],
@@ -399,7 +404,7 @@ checkForCommonErrors[str_String] :=
       Message[MaTeX::warn, "\\begin{eqnarray} cannot be used in math-mode. MaTeX expects math-mode input by default. Use \\begin{aligned} to typeset systems of equations."]
       ,
       StringMatchQ[str, "\\begin{eqnarray\\*}"~~___],
-      Message[MaTeX::warn, "\\begin{eqnarray* } cannot be used in math-mode. MaTeX expects math-mode input by default. Use \\begin{aligned} to typeset systems of equations."]
+      Message[MaTeX::warn, "\\begin{eqnarray*} cannot be used in math-mode. MaTeX expects math-mode input by default. Use \\begin{aligned} to typeset systems of equations."]
     ]
 
 
@@ -412,7 +417,10 @@ texify[expr_] := ToString@TeXForm[expr]
 
 MaTeX[tex:{__String}, opt:OptionsPattern[]] :=
     Module[{basepreamble, preamble, mag, result, trimmedTeX},
+      (* check that MaTeX is configured *)
       If[! $configOK, checkConfig[]; Return[$Failed]];
+
+      (* verify option values for correctness *)
       preamble = OptionValue["Preamble"];
       If[preamble === None, preamble = {}];
       If[Not@VectorQ[preamble, StringQ],
@@ -447,13 +455,19 @@ MaTeX[tex:{__String}, opt:OptionsPattern[]] :=
         Message[MaTeX::invopt, Magnification -> mag];
         Return[$Failed]
       ];
+
+      (* trim extra newlines from input and check for common errors *)
       trimmedTeX = StringTrim[tex, "\n"..];
-      checkForCommonErrors/@trimmedTeX;
+      checkForCommonErrors /@ trimmedTeX;
+
+      (* do the main work *)
       result =
           iMaTeX[trimmedTeX, preamble,
             OptionValue["DisplayStyle"], OptionValue[FontSize], OptionValue[ContentPadding], OptionValue[LineSpacing],
             OptionValue["LogFileFunction"], OptionValue["TeXFileFunction"]
           ];
+
+      (* pass through $Failed; apply magnification *)
       If[result === $Failed || TrueQ[mag == 1], result, Show[result, ImageSize -> N[mag] extractOption[result, ImageSize]]]
     ]
 
