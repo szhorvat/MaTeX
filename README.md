@@ -25,10 +25,21 @@ Use `MaTeX[texcode]` or `MaTeX[expression]` to typeset using LaTeX.  The latter 
 The LaTeX code is interpreted in math mode.  Remember to escape backlashes (i.e. type *two* `\` characters when you mean one) when writing LaTeX code in Mathematica strings, e.g.
 
     MaTeX["\\sum_{k=1}^{\\infty} \\frac{1}{k}"]
+    
+Multiple expressions can also be processed in one go:
+
+    MaTeX[{
+      "\\frac{x^2}{\\sqrt{3}}",
+      HoldForm[Integrate[Sin[x], {x, 0, 2 Pi}]],
+      Expand[(1 + x)^5]
+    }]
+    
+Processing a list of expressions together involves a single run of LaTeX, thus is much faster than processing each separately.
+
 
 ## Notes on performance
 
-The limiting factor in the speed of `MaTeX` calls is running the `pdflatex` process, which might take as long as a second and cannot be sped up further.  However, MaTeX caches results, making subsequent calls with the same TeX code near-instantaneous.
+The limiting factor in the speed of `MaTeX` calls is running the `pdflatex` process, which might take as long as a second and cannot be sped up further.  However, MaTeX caches results, making subsequent calls with the same TeX code near-instantaneous.  MaTeX can also process a list of expressions using a single run of LaTeX, which is much faster than processing each separately.
 
 ## Revision history
 
