@@ -406,6 +406,7 @@ checkForCommonErrors[str_String] :=
 (* Convert supported expression types to a string contaninig TeX code *)
 texify[expr_String] := expr
 texify[expr_StringForm] := ToString[expr] (* per user request, StringForm is treated like the string it represents; may be removed in the future; use StringTemplate instead. *)
+texify[expr_TeXForm] := ToString[expr]
 texify[expr_] := ToString@TeXForm[expr]
 
 
