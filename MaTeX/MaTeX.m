@@ -147,7 +147,7 @@ checkConfig[] :=
       pdflatexOK = False
     ];
 
-    If[!pdflatexOK, Print["Please configure pdfLaTeX using ConfigureMaTeX[\"pdfLaTeX\" -> \"path to pdflatex executable...\"]"]];
+    If[!pdflatexOK, Print["Please configure pdfLaTeX using ConfigureMaTeX[\"pdfLaTeX\" -> \"path to pdflatex executable\[Ellipsis]\"]"]];
 
     gs = $config["Ghostscript"];
     If[StringQ[gs],
@@ -168,10 +168,10 @@ checkConfig[] :=
       ]
     ];
 
-    If[!gsOK, Print["Please configure Ghostscript using ConfigureMaTeX[\"Ghostscript\" -> \"path to gs executable...\"]"]];
+    If[!gsOK, Print["Please configure Ghostscript using ConfigureMaTeX[\"Ghostscript\" -> \"path to gs executable\[Ellipsis]\"]"]];
 
-    If[Not@TrueQ@NonNegative[$config["CacheSize"]],
-      Print["CacheSize must be a nonnegative number.  Please update the configuration using ConfigureMaTeX[\"CacheSize\" -> ...]."];
+    If[Not@TrueQ[$config["CacheSize"] === Infinity || (IntegerQ[$config["CacheSize"]] && NonNegative[$config["CacheSize"]])],
+      Print["CacheSize must be a nonnegative integer or \[Infinity].  Please update the configuration using ConfigureMaTeX[\"CacheSize\" -> \[Ellipsis]]."];
       cacheSizeOK = False,
       cacheSizeOK = True
     ];
