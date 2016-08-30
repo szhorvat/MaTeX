@@ -43,6 +43,10 @@ The limiting factor in the speed of `MaTeX` calls is running the `pdflatex` proc
 
 ## Revision history
 
+#### Version 1.6.1
+
+ - Bug fix: better error checking for the CacheSize option.
+
 #### Version 1.6.0
 
  - `MaTeX` now threads over lists. A list is batch-processed using a single run of LaTeX, which is much faster than element-wise processing. Implemented by [Andreas Ahlrichs](https://github.com/aquadr).
