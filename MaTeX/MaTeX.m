@@ -4,7 +4,7 @@
 (* :Title: MaTeX *)
 (* :Author: Szabolcs Horvát <szhorvat@gmail.com> *)
 (* :Context: MaTeX` *)
-(* :Version: 1.6.1 *)
+(* :Version: %%version%% *)
 (* :Date: 2015-03-04 *)
 
 (* :Mathematica Version: 10.0 *)
@@ -40,7 +40,7 @@ ConfigureMaTeX[] returns the current configuration.";
 
 ClearMaTeXCache::usage = "ClearMaTeXCache[] clears MaTeX's cache.";
 
-`Developer`$Version = "1.6.1 (August 30, 2016)";
+`Developer`$Version = "%%version%% (%%date%%)";
 
 Begin["`Private`"]; (* Begin Private Context *)
 
