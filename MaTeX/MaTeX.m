@@ -229,13 +229,18 @@ CreateDirectory[dirpath];
 (* Warning: Do not use FileTemplate because it mishandles CR/LF. *)
 template = StringTemplate@Import[FileNameJoin[{DirectoryName[$InputFileName], "template.tex"}], "Text", CharacterEncoding -> "UTF-8"];
 
+(* Fix for StringDelete not being available in M10.0 *)
+If[$VersionNumber >= 10.1,
+  stringDelete = StringDelete,
+  stringDelete[s_String, patt_] := StringReplace[s, patt -> ""]
+]
 
 (* Interprets a UTF-8 encoded string stored as a byte sequence *)
 fromUTF8[s_String] := FromCharacterCode[ToCharacterCode[s], "UTF-8"]
 
 parseTeXError[err_String] :=
     Module[{lines, line, i=0, eof, errLinesLimit = 3, errLineCounter, result},
-      lines = StringSplit[StringDelete[err, "\r"] (* fix for CR/LF on Windows *), "\n"];
+      lines = StringSplit[stringDelete[err, "\r"] (* fix for CR/LF on Windows *), "\n"];
       eof = Length[lines];
       line := lines[[i]];
       result = First@Last@Reap@While[True,
@@ -253,7 +258,7 @@ parseTeXError[err_String] :=
               Break[]
               ,
               StringMatchQ[line, "l."~~(DigitCharacter..)~~___],
-              Sow@StringDelete[line, StartOfString~~"l."~~(DigitCharacter..)~~Whitespace];
+              Sow@stringDelete[line, StartOfString~~"l."~~(DigitCharacter..)~~Whitespace];
               Break[];
               ,
               StringMatchQ[line,
