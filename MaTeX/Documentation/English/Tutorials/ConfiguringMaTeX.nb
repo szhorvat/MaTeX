@@ -1,0 +1,1255 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     38801,       1247]
+NotebookOptionsPosition[     31931,        990]
+NotebookOutlinePosition[     32362,       1007]
+CellTagsIndexPosition[     32319,       1004]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[{
+ "New in: ",
+ Cell["1.6", "HistoryData",
+  CellTags->"New"],
+ " | Modified in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Modified"],
+ " | Obsolete in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Obsolete"],
+ " | Excised in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Excised"]
+}], "History",
+ CellID->1247902091],
+
+Cell[CellGroupData[{
+
+Cell["Categorization", "CategorizationSection",
+ CellID->1122911449],
+
+Cell["Tutorial", "Categorization",
+ CellLabel->"Entity Type",
+ CellID->686433507],
+
+Cell["MaTeX", "Categorization",
+ CellLabel->"Paclet Name",
+ CellID->605800465],
+
+Cell["MaTeX`", "Categorization",
+ CellLabel->"Context",
+ CellID->468444828],
+
+Cell["MaTeX/tutorial/ConfiguringMaTeX", "Categorization",
+ CellChangeTimes->{3.688192161834012*^9},
+ CellLabel->"URI"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Keywords", "KeywordsSection",
+ CellID->1427428552],
+
+Cell["\<\
+matex, latex, configuration, configure, pdflatex, ghostscript\
+\>", "Keywords",
+ CellChangeTimes->{{3.688192243144868*^9, 3.688192257778432*^9}, {
+  3.688198806788258*^9, 3.688198808235944*^9}},
+ CellID->1251852827]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Details", "DetailsSection",
+ CellID->307771771],
+
+Cell["XXXX", "Details",
+ CellLabel->"Lead",
+ CellID->218895918],
+
+Cell["XXXX", "Details",
+ CellLabel->"Developers",
+ CellID->350963985],
+
+Cell["XXXX", "Details",
+ CellLabel->"Authors",
+ CellID->795871300],
+
+Cell["XXXX", "Details",
+ CellLabel->"Feature Name",
+ CellID->199739161],
+
+Cell["XXXX", "Details",
+ CellLabel->"QA",
+ CellID->40625308],
+
+Cell["XXXX", "Details",
+ CellLabel->"DA",
+ CellID->357121918],
+
+Cell["XXXX", "Details",
+ CellLabel->"Docs",
+ CellID->35949532],
+
+Cell["XXXX", "Details",
+ CellLabel->"Features Page Notes",
+ CellID->929432370],
+
+Cell["XXXX", "Details",
+ CellLabel->"Comments",
+ CellID->240026365]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Configuring MaTeX", "Title",
+ CellChangeTimes->{{3.688192278456999*^9, 3.688192278885817*^9}, {
+  3.688192424923602*^9, 3.688192425048636*^9}},
+ CellID->509267359],
+
+Cell["\<\
+After installation, MaTeX requires a few additional setup steps. These are \
+detailed in this tutorial.\
+\>", "Text",
+ CellChangeTimes->{{3.688106378173691*^9, 3.688106383276903*^9}, {
+  3.688107084113409*^9, 3.688107104197073*^9}},
+ CellID->100371240],
+
+Cell[CellGroupData[{
+
+Cell["Prerequisites", "Section",
+ CellChangeTimes->{{3.6880511083061447`*^9, 3.688051110335548*^9}},
+ CellID->707881275],
+
+Cell[TextData[{
+ "MaTeX requires ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " 10.0 or later and:"
+}], "Text",
+ CellChangeTimes->{{3.6880515846898813`*^9, 3.688051602713147*^9}, {
+   3.688051635607984*^9, 3.6880516462956247`*^9}, 3.6881929585174313`*^9, 
+   3.688193260017552*^9, {3.688199552626885*^9, 3.688199558369034*^9}},
+ CellID->1703085124],
+
+Cell[TextData[{
+ "A ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"T", 
+     AdjustmentBox["E",
+      BoxBaselineShift->0.5,
+      BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}],
+    SingleLetterItalics->False], TraditionalForm]]],
+ " system that includes ",
+ Cell[BoxData["pdflatex"], "InlineFormula",
+  FormatType->"StandardForm"],
+ " with the ",
+ Cell[BoxData["standalone"], "InlineFormula",
+  FormatType->"StandardForm"],
+ ", ",
+ Cell[BoxData["lmodern"], "InlineFormula",
+  FormatType->"StandardForm"],
+ " and ",
+ Cell[BoxData["exscale"], "InlineFormula",
+  FormatType->"StandardForm"],
+ " packages. Both ",
+ ButtonBox["TeX Live",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://www.tug.org/texlive/"], None},
+  ButtonNote->"https://www.tug.org/texlive/"],
+ " and ",
+ ButtonBox["MiKTeX",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://miktex.org/"], None},
+  ButtonNote->"https://miktex.org/"],
+ " should work. On OS X, use ",
+ ButtonBox["MacTeX",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://tug.org/mactex/"], None},
+  ButtonNote->"https://tug.org/mactex/"],
+ "."
+}], "BulletedText",
+ CellChangeTimes->{{3.688192977076707*^9, 3.688193110276116*^9}},
+ CellID->1088631257],
+
+Cell[TextData[{
+ ButtonBox["Ghostscript",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://ghostscript.com/"], None}],
+ " 9.15 or later. On OS X, On OS X, MacTeX 2015 includes a compatible version \
+of Ghostscript. If you use an older TeX distribution on OS X, get a recent \
+Ghostscript from ",
+ ButtonBox["Richard Koch's page",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://pages.uoregon.edu/koch/"], None}],
+ "."
+}], "BulletedText",
+ CellChangeTimes->{{3.6881931342637053`*^9, 3.688193224601275*^9}},
+ CellID->1251784128]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["First time setup", "Section",
+ CellChangeTimes->{{3.6880511186978197`*^9, 3.688051130510193*^9}},
+ CellID->389691836],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+After installing MaTeX, it is necessary to tell it the location of the \
+pdfLaTeX and Ghostscript executables. On some systems it is able to \
+automatically detect these. If it doesn't succeed, you will see the following \
+message after loading MaTeX:\
+\>", "Text",
+ CellChangeTimes->{{3.688050888602846*^9, 3.688050923895825*^9}, {
+  3.6880510591543283`*^9, 3.688051059994138*^9}, {3.688052295827531*^9, 
+  3.688052337882386*^9}},
+ CellID->1534169418],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"<<", "MaTeX`"}]], "Input",
+ CellChangeTimes->{{3.688050958191905*^9, 3.6880509623982058`*^9}, {
+  3.68805105139397*^9, 3.688051052657394*^9}},
+ CellLabel->"In[1]:=",
+ CellID->1640634666],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"The path to pdfLaTeX is not configured.\"\>"], "Print",
+ CellChangeTimes->{3.6881928988376703`*^9},
+ CellLabel->"During evaluation of In[1]:=",
+ CellID->782798985],
+
+Cell[BoxData["\<\"Please configure pdfLaTeX using ConfigureMaTeX[\\\"pdfLaTeX\
+\\\" -> \\\"path to pdflatex executable\[Ellipsis]\\\"]\"\>"], "Print",
+ CellChangeTimes->{3.6881928988458633`*^9},
+ CellLabel->"During evaluation of In[1]:=",
+ CellID->1017719373],
+
+Cell[BoxData["\<\"The path to Ghostscipt is not configured.\"\>"], "Print",
+ CellChangeTimes->{3.6881928988553333`*^9},
+ CellLabel->"During evaluation of In[1]:=",
+ CellID->102253656],
+
+Cell[BoxData["\<\"Please configure Ghostscript using \
+ConfigureMaTeX[\\\"Ghostscript\\\" -> \\\"path to gs \
+executable\[Ellipsis]\\\"]\"\>"], "Print",
+ CellChangeTimes->{3.6881928988653107`*^9},
+ CellLabel->"During evaluation of In[1]:=",
+ CellID->590278792],
+
+Cell[BoxData[
+ InterpretationBox["\<\"\\!\\(\\*TagBox[ButtonBox[PaneSelectorBox[{False -> \
+\\\"\\\\\\\"Click here\\\\\\\"\\\", Rule[True, StyleBox[\\\"\\\\\\\"Click \
+here\\\\\\\"\\\", List[\\\"HyperlinkActive\\\"]]]}, \
+Dynamic[CurrentValue[\\\"MouseOver\\\"]], Rule[BaseStyle, \
+List[\\\"Hyperlink\\\"]], Rule[FrameMargins, 0], Rule[ImageSize, Automatic]], \
+Rule[BaseStyle, \\\"Link\\\"], Rule[ButtonData, \
+\\\"paclet:MaTeX/tutorial/ConfiguringMaTeX\\\"], Rule[ButtonNote, \
+\\\"paclet:MaTeX/tutorial/ConfiguringMaTeX\\\"]], \
+Function[Annotation[Slot[1], \\\"paclet:MaTeX/tutorial/ConfiguringMaTeX\\\", \
+\\\"Hyperlink\\\"]]]\\) for documentation on configuring MaTeX.\"\>",
+  StringForm["`` for documentation on configuring MaTeX.", 
+   Hyperlink["Click here", "paclet:MaTeX/tutorial/ConfiguringMaTeX"]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.688192898875951*^9},
+ CellLabel->"During evaluation of In[1]:=",
+ CellID->1588691651]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "In this case, specify the path to these executables manually using ",
+ Cell[BoxData[
+  ButtonBox["ConfigureMaTeX",
+   BaseStyle->"Link",
+   ButtonData->"paclet:MaTeX/ref/ConfigureMaTeX"]], "InlineFormula"],
+ ". For example, on OS X with MacTeX the typical locations are the \
+following:"
+}], "Text",
+ CellChangeTimes->{{3.68805240057126*^9, 3.688052458311243*^9}, {
+  3.688106440465106*^9, 3.6881064686232557`*^9}, {3.688193281853887*^9, 
+  3.688193289784389*^9}},
+ CellID->1125038529],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ConfigureMaTeX", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+   "\"\<pdfLaTeX\>\"", "\[Rule]", "\"\</Library/TeX/texbin/pdflatex\>\""}], 
+   ",", 
+   RowBox[{"\"\<Ghostscript\>\"", "\[Rule]", "\"\</usr/local/bin/gs\>\""}]}], 
+  "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{{3.688051014610641*^9, 3.688051024643964*^9}, {
+  3.688052365697544*^9, 3.68805237140901*^9}, {3.688106514918579*^9, 
+  3.688106516972529*^9}},
+ CellLabel->"In[2]:=",
+ CellID->1768050685],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"\<\"CacheSize\"\>", "\[Rule]", "100"}], ",", 
+   RowBox[{"\<\"pdfLaTeX\"\>", 
+    "\[Rule]", "\<\"/Library/TeX/texbin/pdflatex\"\>"}], ",", 
+   RowBox[{"\<\"Ghostscript\"\>", "\[Rule]", "\<\"/usr/local/bin/gs\"\>"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{
+  3.688051030949843*^9, 3.688052372751333*^9, 3.6880524616745*^9, {
+   3.68810659407615*^9, 3.688106619540339*^9}, 3.6881928614996243`*^9, 
+   3.688192909017131*^9},
+ CellLabel->"Out[2]=",
+ CellID->492182815]
+}, Open  ]]
+}, Open  ]],
+
+Cell["\<\
+Note that the paths must point to the executables, not the to directory \
+containing them. Make sure to use correct capitalization.\
+\>", "Text",
+ CellChangeTimes->{{3.688052592162796*^9, 3.688052614930335*^9}, {
+  3.688198854406661*^9, 3.688198861795597*^9}},
+ CellID->1411884930],
+
+Cell[CellGroupData[{
+
+Cell["The existing configuration can always be queried using", "Text",
+ CellChangeTimes->{{3.6881933551703033`*^9, 3.68819336921373*^9}},
+ CellID->1877514704],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ConfigureMaTeX", "[", "]"}]], "Input",
+ CellChangeTimes->{{3.6881934016548758`*^9, 3.688193403494896*^9}},
+ CellLabel->"In[3]:=",
+ CellID->1947478611],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"\<\"CacheSize\"\>", "\[Rule]", "100"}], ",", 
+   RowBox[{"\<\"pdfLaTeX\"\>", 
+    "\[Rule]", "\<\"/Library/TeX/texbin/pdflatex\"\>"}], ",", 
+   RowBox[{"\<\"Ghostscript\"\>", "\[Rule]", "\<\"/usr/local/bin/gs\"\>"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.688193404332549*^9},
+ CellLabel->"Out[3]=",
+ CellID->1077518277]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Test MaTeX using a simple command:", "Text",
+ CellChangeTimes->{{3.688193707946086*^9, 3.688193716475854*^9}},
+ CellID->1468837617],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MaTeX", "[", "\"\<x^2\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.688193718989832*^9, 3.68819372164467*^9}},
+ CellLabel->"In[4]:=",
+ CellID->1320175261],
+
+Cell[BoxData[
+ GraphicsBox[
+  {Thickness[0.07473841554559042], 
+   FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {0,
+     1, 0}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+    3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 
+    3, 3}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {
+    1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}}}, CompressedData["
+1:eJxdlH9IU1EUx+dmmKjT+dzae05ybqL2g0wNzKId/5DQTCUFfxGWtJlIGBiY
+MSMlEzEKKsSJZf4gFVYqYaSUGNEvUAsNDYUU9I+WGhkp/l67976dkQcuj8+9
+7557zvece7X5xWeMMolE4uYYmY4hdYzB2oHKmFkBAsruXRl214CTMxbHlurj
+NTCTkBff0CNAZLTDSjQQ9kdvayh08cKtS7VRGzzy3v7HA8ZfPFQFe4QOxYj/
+f+IhhqyPBUI68VuhZv6b90BOaJZm5JUShohZlXDS+q5dUs8h0++CApmjcSrA
+PL06GT2vQn7qf0Be8F29Y90Zh4LF9Uxg/lcVcJPMfw2CNyTfVo7Nh4ewfHID
+4KLJYXU6sBBbU8La4vzg0VY9XCN+96uRy0ReFZn+b+FxvZ6yAMrbST/dM/RA
+ZIjmeJg73zwec0iPetD8GnXIv1u6gofDXVxA4wmBl+lxWfYCHl4XmxctxhCm
+KycgU10rAnewBqYigqx2mQ6Z+u9w8Y2NuMsjHXqmQ6wAD6qrcsY0oSKrkYOJ
+jilK5LtZtalu3Rxkeaqqo7vEeOM5pssxHat/hD9E7uvkvriHgne8PKm+UI77
+afzPvZEnfKZUxhUp8kyK7dxW04ah9O2LBMuWFtn3bNp0VKmLM8n5eVowEp1M
+m4bOFdvVIdCC+Uflel3fFnJs/sETu8CO/PDj/baiJ3YD7ZsLWmibbJ89LJMA
+Pa9cCxJiIGP11OnZ/Wj1xPqyfLyRabmz/ZBpvT74Qc3xxH5Tiw7ZTszXxXRf
+TQjr4+t+4Mx3eWCpt2Dcl9XrW7DYT96iroHs/Agv1j/JaqDpm3bjfWHxyJA1
+Paom6YwUOZfcP7MEuTepO7ZxbdNA+/yUCryIf5ubeF9VYCufLfpslcIdUnc/
+NTKte7OL/5K463iWp8GN5RkmiOdvG5zM4l5HHt14P/Eoe1lkHtn5XvzP4vuQ
+vG2gefYFYL2cnDaXOHpkzAM5lTDnBeFEvxoVnKbsI+qgFvWVox6svxW4n/Zr
+CYdMdUhTIzvfT/bOCLDzff0H/muFeg==
+    "]], 
+   FilledCurveBox[{{{0, 2, 0}, {1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {0, 1, 0}, {1,
+     3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+    3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}, {0, 
+    1, 0}}}, CompressedData["
+1:eJxTTMoPSmVmYGBgBGI9IGYC4jmLlHf+Oa7mcOqw09pMO3WHhJAg9QWeCP6L
+LO1v023VHDaoPmme91bNYUp7a9RlGTUHU5u9QdMU1RxeFW8V/f1a1SEj/0Pr
+ySuqDqI9Xq9YYPQWVYg581TgfLB5sQj+TBDoVITz1wrp8KWvU3Yw0FopfGGJ
+ugMDCHxQdjAD2fdQ3aHm04aA7FkqDmB3p2s4bNLLW8x4R8XhUYT49osLNBxS
+Yu+4Md9Qdaj9bVVwrkPTAea/ehA/QwvOB5tzSxvOl1n+wkNvv66DzLw4zdMG
+qhBzfug5iFROKjlrogznK197FMzgowjnV9//ccuYW8Ghhdd//ZRWXTh/A8hd
+MjpwPjh8QrQh/l2pANFvoe3QbeO5K+0Rgu++5uhyBgtFOD89DQi2KUL0lyD4
+TxIXXjPh14Hz/7x9fcDysY6D84RmobRXCnD+DJB9OxF8cHgaKDq8AMUbt57D
+ym8vK844KDn8+Vb6YE6hHsR+DmU4X2LqFc6MJhU4H+xPV1VoOOnC+bDwhPFN
+jEFAC5peVCDp4J8GJPxslBz+gswTVIfyFSDxx6AKDy9IOlKB89+A3HsawU8D
+AxWHgFvSNYlBanA+enoGAPMMPec=
+    "]]},
+  AspectRatio->Automatic,
+  BaselinePosition->Scaled[0.3237956353650342],
+  ImageSize->{13.376866749688668`, 16.368856787048568`},
+  PlotRange->{{0., 13.38}, {0., 16.37}}]], "Output",
+ CellChangeTimes->{3.688193722418611*^9},
+ CellLabel->"Out[4]=",
+ CellID->1051416698]
+}, Open  ]]
+}, Open  ]],
+
+Cell[TextData[{
+ "If everything works well, continue with the ",
+ ButtonBox["Basic Usage",
+  BaseStyle->"Link",
+  ButtonData->"paclet:MaTeX/tutorial/BasicUsage"],
+ " tutorial to learn how to use MaTeX effectively."
+}], "Text",
+ CellChangeTimes->{{3.688368159378274*^9, 3.688368178103404*^9}},
+ CellID->330769954],
+
+Cell[TextData[StyleBox["Notes:",
+ FontWeight->"Bold"]], "Text",
+ CellChangeTimes->{{3.688193440012474*^9, 3.688193440833027*^9}},
+ CellID->120086388],
+
+Cell[TextData[{
+ "Any flavour of ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"T", 
+     AdjustmentBox["E",
+      BoxBaselineShift->0.5,
+      BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}],
+    SingleLetterItalics->False], TraditionalForm]]],
+ " that produces PDF output can be used, including pdflatex, ",
+ ButtonBox["xelatex",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://tex.stackexchange.com/questions/3393/what-is-xetex-exactly-\
+and-why-should-i-use-it"], None}],
+ " and ",
+ ButtonBox["lualatex",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://www.luatex.org/"], None}],
+ ". Unlike pdfLaTeX, XeLaTeX can load any installed system font."
+}], "BulletedText",
+ CellChangeTimes->{{3.6881066420799417`*^9, 3.6881066690580397`*^9}, {
+  3.688193651570497*^9, 3.688193696298872*^9}},
+ CellID->874045736],
+
+Cell[TextData[{
+ "On Windows, use the Ghostscript executable which has a c suffix, i.e. ",
+ StyleBox["gswin64c.exe", "InlineCode"],
+ " instead of ",
+ StyleBox["gswin64.exe", "InlineCode"],
+ ". The typical Ghostscript installation location is ",
+ StyleBox["C:\\Program Files\\gs\\.", "InlineCode"]
+}], "BulletedText",
+ CellChangeTimes->{{3.6881066420799417`*^9, 3.6881066690580397`*^9}, {
+  3.688193459177033*^9, 3.688193596401609*^9}},
+ CellID->1638087321]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Uninstalling or upgrading MaTeX", "Section",
+ CellChangeTimes->{{3.688197691767721*^9, 3.6881977086333313`*^9}},
+ CellID->857614431],
+
+Cell[TextData[{
+ "It is safe to have multiple versions of MaTeX installed at the same time. \
+",
+ Cell[BoxData[
+  RowBox[{"Needs", "[", "\"\<MaTeX`\>\"", "]"}]], "InlineFormula",
+  FormatType->"StandardForm"],
+ " will always load the most recent compatible version."
+}], "Text",
+ CellChangeTimes->{{3.688197819154025*^9, 3.688197872582302*^9}, 
+   3.6881979527940407`*^9},
+ CellID->1896226899],
+
+Cell[CellGroupData[{
+
+Cell["All installed versions can be listed using", "Text",
+ CellChangeTimes->{{3.6881979559228287`*^9, 3.688197962137311*^9}},
+ CellID->1632656571],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"PacletFind", "[", "\"\<MaTeX\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.688197966235416*^9, 3.688197970922185*^9}},
+ CellLabel->"In[5]:=",
+ CellID->1702426077],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  InterpretationBox[
+   RowBox[{
+   "Paclet", "[", "\<\"MaTeX\"\>", ",", "\<\"1.6.2\"\>", ",", "<>", "]"}],
+   PacletManager`Paclet[
+   "Name" -> "MaTeX", "Version" -> "1.6.2", "MathematicaVersion" -> "10.0+", 
+    "Description" -> "Create LaTeX-typeset labels within Mathematica.", 
+    "Creator" -> "Szabolcs Horv\[AAcute]t", 
+    "Extensions" -> {{
+      "Documentation", "Language" -> "English", "MainPage" -> 
+       "Guides/MaTeX"}, {"Kernel", "Root" -> ".", "Context" -> "MaTeX`"}}, 
+    "Location" -> 
+    "/Users/szhorvat/Library/Mathematica/Paclets/Repository/MaTeX-1.6.2"]], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.688197971337862*^9, 3.688197996541058*^9}, 
+   3.68819817641138*^9, 3.688198730416047*^9},
+ CellLabel->"Out[5]=",
+ CellID->1110830294]
+}, Open  ]]
+}, Open  ]],
+
+Cell[TextData[{
+ "Any item in the list above can be uninstalled by applying ",
+ Cell[BoxData["PacletUninstall"], "InlineFormula",
+  FormatType->"StandardForm"],
+ " to it. To uninstall all versions at once, use ",
+ Cell[BoxData[
+  RowBox[{"PacletUninstall", "[", "\"\<MaTeX\>\"", "]"}]], "InlineFormula",
+  FormatType->"StandardForm"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.688198188971366*^9, 3.688198227026528*^9}},
+ CellID->978902278],
+
+Cell[CellGroupData[{
+
+Cell["Get more information on the active version:", "Text",
+ CellChangeTimes->{{3.688198246533307*^9, 3.688198285313715*^9}},
+ CellID->39858178],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"PacletInformation", "[", "\"\<MaTeX\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.688198249477521*^9, 3.6881982543408337`*^9}},
+ CellLabel->"In[6]:=",
+ CellID->818926783],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"\<\"Name\"\>", "\[Rule]", "\<\"MaTeX\"\>"}], ",", 
+   RowBox[{"\<\"Version\"\>", "\[Rule]", "\<\"1.6.2\"\>"}], ",", 
+   RowBox[{"\<\"BuildNumber\"\>", "\[Rule]", "\<\"\"\>"}], ",", 
+   RowBox[{"\<\"Qualifier\"\>", "\[Rule]", "\<\"\"\>"}], ",", 
+   RowBox[{"\<\"WolframVersion\"\>", "\[Rule]", "\<\"10.0+\"\>"}], ",", 
+   RowBox[{"\<\"SystemID\"\>", "\[Rule]", "All"}], ",", 
+   RowBox[{"\<\"Description\"\>", 
+    "\[Rule]", "\<\"Create LaTeX-typeset labels within Mathematica.\"\>"}], 
+   ",", 
+   RowBox[{"\<\"Category\"\>", "\[Rule]", "\<\"\"\>"}], ",", 
+   RowBox[{"\<\"Creator\"\>", "\[Rule]", "\<\"Szabolcs Horv\[AAcute]t\"\>"}], 
+   ",", 
+   RowBox[{"\<\"Publisher\"\>", "\[Rule]", "\<\"\"\>"}], ",", 
+   RowBox[{"\<\"Support\"\>", "\[Rule]", "\<\"\"\>"}], ",", 
+   RowBox[{"\<\"Internal\"\>", "\[Rule]", "False"}], ",", 
+   RowBox[{"\<\"Location\"\>", 
+    "\[Rule]", \
+"\<\"/Users/szhorvat/Library/Mathematica/Paclets/Repository/MaTeX-1.6.2\"\>"}]\
+, ",", 
+   RowBox[{"\<\"Context\"\>", "\[Rule]", 
+    RowBox[{"{", "\<\"MaTeX`\"\>", "}"}]}], ",", 
+   RowBox[{"\<\"Enabled\"\>", "\[Rule]", "True"}], ",", 
+   RowBox[{"\<\"Loading\"\>", "\[Rule]", "Manual"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.688198254597577*^9, 3.6881987333666573`*^9},
+ CellLabel->"Out[6]=",
+ CellID->628481183]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Troubleshooting", "Section",
+ CellChangeTimes->{{3.6880526318192472`*^9, 3.6880526338581533`*^9}},
+ CellID->1830783538],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "If having difficulties with MaTeX, make sure that you have the latest \
+version. The most recent version is always available at ",
+ ButtonBox["https://github.com/szhorvat/MaTeX/releases",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://github.com/szhorvat/MaTeX/releases"], None}]
+}], "Text",
+ CellChangeTimes->{{3.6880526439522133`*^9, 3.688052659488866*^9}, {
+   3.6881938431145144`*^9, 3.688193867479786*^9}, 3.688198972408457*^9},
+ CellID->338100563],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["MaTeX`Developer`$Version"], "Input",
+ CellChangeTimes->{{3.6881937597524843`*^9, 3.688193774561335*^9}},
+ CellLabel->"In[7]:=",
+ CellID->667848324],
+
+Cell[BoxData["\<\"1.6.2 (November 16, 2016)\"\>"], "Output",
+ CellChangeTimes->{
+  3.6881937706905823`*^9, 3.688193821492909*^9, {3.688198755550508*^9, 
+   3.688198760830853*^9}},
+ CellLabel->"Out[7]=",
+ CellID->760984774]
+}, Open  ]]
+}, Open  ]],
+
+Cell[TextData[{
+ "A link to continually updated troubleshooting information can be found at \
+GitHub: ",
+ ButtonBox["https://github.com/szhorvat/MaTeX",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://github.com/szhorvat/MaTeX"], None}]
+}], "Text",
+ CellChangeTimes->{{3.688198356474606*^9, 3.688198413493147*^9}},
+ CellID->1452302517],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "MaTeX doesn't work when configured to use ",
+ StyleBox["lualatex", "InlineCode",
+  FontWeight->"Bold"]
+}], "Subsection",
+ CellChangeTimes->{{3.688193897946418*^9, 3.688193909119709*^9}},
+ CellID->817653266],
+
+Cell[TextData[{
+ "When using LuaTeX 0.85 or later, it may be required to use ",
+ ButtonBox["the ",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://www.ctan.org/pkg/luatex85?lang=en"], None}],
+ StyleBox[ButtonBox["luatex85",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://www.ctan.org/pkg/luatex85?lang=en"], None}], "InlineCode"],
+ ButtonBox[" package",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://www.ctan.org/pkg/luatex85?lang=en"], None}],
+ ". The package documentation explains why this is needed."
+}], "Text",
+ CellChangeTimes->{{3.688193931713319*^9, 3.688193954782344*^9}},
+ CellID->380896318],
+
+Cell[TextData[{
+ "Add ",
+ Cell[BoxData["\"\<\\\\usepackage{luatex85}\>\""], "InlineFormula",
+  FormatType->"StandardForm"],
+ " to the ",
+ Cell[BoxData["\"\<BasePreamble\>\""], "InlineFormula",
+  FormatType->"StandardForm"],
+ " or ",
+ Cell[BoxData["\"\<Preamble\>\""], "InlineFormula",
+  FormatType->"StandardForm"],
+ " options."
+}], "Text",
+ CellChangeTimes->{{3.688193965783647*^9, 3.688193990928637*^9}},
+ CellID->1126609408]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["MaTeX no longer works on OS X 10.11 El Capitan", "Subsection",
+ CellChangeTimes->{3.688194020135438*^9},
+ CellID->495667237],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+If you use MacTeX on OS X El Capitan, the path to pdflatex or xelatex must be \
+set as\
+\>", "Text",
+ CellChangeTimes->{{3.688194034280346*^9, 3.688194034614674*^9}},
+ CellID->590185546],
+
+Cell[BoxData[
+ RowBox[{"ConfigureMaTeX", "[", 
+  RowBox[{
+  "\"\<pdfLaTeX\>\"", "\[Rule]", "\"\</Library/TeX/texbin/pdflatex\>\""}], 
+  "]"}]], "Input",
+ CellChangeTimes->{3.688194044254744*^9},
+ CellID->1374779525]
+}, Open  ]],
+
+Cell[TextData[{
+ "If you used the path ",
+ StyleBox["/usr/texbin/pdflatex", "InlineCode"],
+ " on OS X 10.10 or earlier, it will no longer work on 10.11. You must \
+reconfigure MaTeX with the new path. ",
+ ButtonBox["Please see the explanation here.",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://tug.org/mactex/UpdatingForElCapitan.pdf"], None}],
+ "\nThe path to Ghostscript is unchanged, ",
+ StyleBox["/usr/local/bin/gs", "InlineCode"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.688194052999703*^9, 3.688194081209948*^9}},
+ CellID->1939205046]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "\[OpenCurlyDoubleQuote]",
+ StyleBox["MaTeX::texerr: Error while running LaTeX", "InlineCode",
+  FontWeight->"Bold"],
+ "\[CloseCurlyDoubleQuote] message"
+}], "Subsection",
+ CellChangeTimes->{3.688194116489842*^9, 3.6881984467164927`*^9},
+ CellID->477558058],
+
+Cell["There may be several causes for this message.", "Text",
+ CellChangeTimes->{{3.68819415555678*^9, 3.688194158317573*^9}},
+ CellID->2071153153],
+
+Cell[TextData[{
+ "If it only happens with certain bits of TeX code, but not others, then it \
+indicates that there is an error in your LaTeX code. MaTeX attempts to \
+extract the relevant error message from LaTeX\[CloseCurlyQuote]s console \
+output and report it, but it does not always succeed in this. To make \
+debugging such situations easier, MaTeX offers the ",
+ Cell[BoxData["\"\<LogFileFunction\>\""], "InlineFormula",
+  FormatType->"StandardForm"],
+ " and ",
+ Cell[BoxData["\"\<TeXFileFunction\>\""], "InlineFormula",
+  FormatType->"StandardForm"],
+ " options (since version 1.3.0). These are applied to the contents of the \
+LaTeX log file and to the generated LaTeX code, respectively."
+}], "Text",
+ CellChangeTimes->{{3.68819415555678*^9, 3.688194191309622*^9}},
+ CellID->304381793],
+
+Cell[CellGroupData[{
+
+Cell["Use them like this:", "Text",
+ CellChangeTimes->{{3.68819415555678*^9, 3.688194168866045*^9}},
+ CellID->1225851384],
+
+Cell[BoxData[
+ RowBox[{"MaTeX", "[", 
+  RowBox[{"\"\<x^\>\"", ",", " ", 
+   RowBox[{"\"\<LogFileFunction\>\"", " ", "\[Rule]", " ", "Print"}], ",", 
+   " ", 
+   RowBox[{"\"\<TeXFileFunction\>\"", " ", "\[Rule]", " ", "Print"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.68819415555678*^9, 3.688194174916988*^9}, {
+  3.6881987702893963`*^9, 3.688198772623746*^9}},
+ CellID->2084234669]
+}, Open  ]],
+
+Cell[TextData[{
+ "The provided functions are called only if MaTeX is not using a previously \
+cached result. To force calling them, clear the cache using ",
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["ClearMaTeXCache",
+    BaseStyle->"Link",
+    ButtonData->"paclet:MaTeX/ref/ClearMaTeXCache"], "[", "]"}]], 
+  "InlineFormula",
+  FormatType->"StandardForm"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.68819415555678*^9, 3.688194172409782*^9}, {
+  3.688194210791478*^9, 3.688194231008171*^9}},
+ CellID->1288068061],
+
+Cell[TextData[{
+ StyleBox["If this error appears with any input to MaTeX,",
+  FontWeight->"Bold"],
+ " even with a simple example such as MaTeX[\"x^2\"], then there may be a \
+problem with your setup or MaTeX may be incompatible with your system. Check \
+for the following:"
+}], "Text",
+ CellChangeTimes->{{3.688199058897211*^9, 3.688199059391541*^9}},
+ CellID->2018525447],
+
+Cell["\<\
+Do you have all required LaTeX packages installed? MaTeX requires standalone, \
+lmodern, exscale, amsmath and amssymb. All these are part of most TeX \
+distributions, but may not get installed if choosing the smallest \
+installation option. The \"LogFileFunction\" option (described above) can \
+help in diagnosing missing packages.\
+\>", "BulletedText",
+ CellChangeTimes->{3.6881990852275553`*^9},
+ CellID->982827801],
+
+Cell[TextData[{
+ "If you use OS X or Windows (with certain TeX distributions only), make sure \
+that the name of the pdflatex (or xelatex) executable is spelt in the correct \
+case in ConfigureMaTeX. It must be lowercase.\n\nExamples for OS X:\n\n",
+ Cell[BoxData[
+  RowBox[{"ConfigureMaTeX", "[", 
+   RowBox[{
+   "\"\<pdfLaTeX\>\"", " ", "\[Rule]", " ", 
+    "\"\</Library/TeX/texbin/pdflatex\>\""}], "]"}]], "InlineFormula",
+  FormatType->"StandardForm"],
+ " is correct and will work provided that this is indeed the location of ",
+ StyleBox["pdflatex", "InlineCode"],
+ " on your system.\n\n",
+ Cell[BoxData[
+  RowBox[{"ConfigureMaTeX", "[", 
+   RowBox[{
+   "\"\<pdfLaTeX\>\"", " ", "\[Rule]", " ", 
+    "\"\</Library/TeX/texbin/pdfLaTeX\>\""}], "]"}]], "InlineFormula",
+  FormatType->"StandardForm"],
+ " is wrong and will trigger the error.\n\nOS X uses a case-preserving but \
+case-insensitive file system by default. However, some programs with a UNIX \
+heritage may not work correctly unless they are invoked with the case-correct \
+spelling. ",
+ StyleBox["pdflatex", "InlineCode"],
+ " is a notable example because ",
+ ButtonBox["it determines the format file to use based on the name it is \
+called with",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://tug.org/texinfohtml/web2c.html#Determining-the-memory-dump-to-\
+use"], None}],
+ ". The problem may also affect some TeX distributions on Windows, such as \
+TeX Live in Cygwin."
+}], "BulletedText",
+ CellChangeTimes->{{3.6881990852275553`*^9, 3.68819909462461*^9}, {
+  3.688199151359378*^9, 3.688199188794348*^9}, {3.6881992243532753`*^9, 
+  3.688199224416597*^9}},
+ CellID->2090122330],
+
+Cell[TextData[{
+ "If you use a 32-bit version of ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " 10.0 for Windows, MaTeX will not work. This is due to a bug in this \
+version of ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ ". As a workaround, use a 64-bit version of ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " or upgrade to a later 10.x version. Version 10.3.1 reportedly works \
+correctly. I have no information about 10.1 and 10.2."
+}], "BulletedText",
+ CellChangeTimes->{{3.6881990852275553`*^9, 3.6881991121680517`*^9}},
+ CellID->179301219]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Loading MaTeX or using the MaTeX function triggers a ",
+ Cell[BoxData[
+  RowBox[{"RunProcess", "::", "pnfd"}]], "InlineFormula",
+  FormatType->"StandardForm"],
+ " error on Windows"
+}], "Subsection",
+ CellChangeTimes->{{3.6881992889386473`*^9, 3.688199293489882*^9}},
+ CellID->1188374091],
+
+Cell["This may happen for two reasons:", "Text",
+ CellChangeTimes->{{3.68819931605287*^9, 3.688199317138721*^9}},
+ CellID->40252424],
+
+Cell[TextData[{
+ "If the current directory (",
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["Directory",
+    BaseStyle->"Link",
+    ButtonData->"paclet:ref/Directory"], "[", "]"}]], "InlineFormula",
+  FormatType->"StandardForm"],
+ ") contains non-ASCII characters in its name (such as \[EAcute], \
+\[ODoubleAcute], \[Alpha], \:4e2d, etc.), ",
+ ButtonBox["RunProcess",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/RunProcess"],
+ " will fail. This is a bug in ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ ". MaTeX 1.1.1 and later contain a workaround for the problem."
+}], "BulletedText",
+ CellChangeTimes->{{3.68819931605287*^9, 3.688199368733449*^9}},
+ CellID->1761711618],
+
+Cell[TextData[{
+ "The paths to pdflatex and Ghostscript use ",
+ StyleBox["/", "InlineCode"],
+ " as the path separator. Please use ",
+ Cell[BoxData[
+  ButtonBox["ConfigureMaTeX",
+   BaseStyle->"Link",
+   ButtonData->"paclet:MaTeX/ref/ConfigureMaTeX"]], "InlineFormula"],
+ " and change the paths to use backslashes (",
+ StyleBox["\\", "InlineCode"],
+ ") as the separator. Remember that in ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " strings backslashes must be doubled, so a path string will look something \
+like ",
+ StyleBox["\"C:\\\\texlive\\\\2014\\\\bin\\\\win64\\\\pdflatex.exe\"", 
+  "InlineCode"],
+ "."
+}], "BulletedText",
+ CellChangeTimes->{{3.68819931605287*^9, 3.688199337467422*^9}, {
+  3.68819938623003*^9, 3.688199386346016*^9}},
+ CellID->1575444036]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["MaTeX still doesn't work!", "Subsection",
+ CellChangeTimes->{{3.688199666496883*^9, 3.688199670497264*^9}},
+ CellID->1194226010],
+
+Cell[TextData[{
+ "MaTeX's GitHub page contains a link to continually updated troubleshooting \
+information. Please continue there. ",
+ ButtonBox["https://github.com/szhorvat/MaTeX",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://github.com/szhorvat/MaTeX"], None}]
+}], "Text",
+ CellChangeTimes->{{3.688199682388968*^9, 3.688199717837389*^9}},
+ CellID->128288467]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["More About", "TutorialMoreAboutSection",
+ CellID->23220180],
+
+Cell["XXXX", "TutorialMoreAbout",
+ CellID->1567025153]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Related Tutorials", "RelatedTutorialsSection",
+ CellID->415694126],
+
+Cell[TextData[ButtonBox["Basic Usage",
+ BaseStyle->"Link",
+ ButtonData->"paclet:MaTeX/tutorial/BasicUsage"]], "RelatedTutorials",
+ CellChangeTimes->{{3.6883681285471888`*^9, 3.688368134197332*^9}},
+ CellID->806871991]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Related Wolfram Education Group Courses", "TutorialRelatedLinksSection",
+ CellID->415694148],
+
+Cell["XXXX", "TutorialRelatedLinks",
+ CellID->415694149]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{720, 851},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
+2014)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "TutorialPageStyles.nb", 
+  CharacterEncoding -> "UTF-8"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 325, 14, 24, "History",
+ CellID->1247902091],
+Cell[CellGroupData[{
+Cell[908, 38, 68, 1, 29, "CategorizationSection",
+ CellID->1122911449],
+Cell[979, 41, 81, 2, 30, "Categorization",
+ CellID->686433507],
+Cell[1063, 45, 78, 2, 30, "Categorization",
+ CellID->605800465],
+Cell[1144, 49, 75, 2, 30, "Categorization",
+ CellID->468444828],
+Cell[1222, 53, 118, 2, 30, "Categorization"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1377, 60, 56, 1, 19, "KeywordsSection",
+ CellID->1427428552],
+Cell[1436, 63, 225, 5, 19, "Keywords",
+ CellID->1251852827]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1698, 73, 53, 1, 29, "DetailsSection",
+ CellID->307771771],
+Cell[1754, 76, 63, 2, 30, "Details",
+ CellID->218895918],
+Cell[1820, 80, 69, 2, 30, "Details",
+ CellID->350963985],
+Cell[1892, 84, 66, 2, 30, "Details",
+ CellID->795871300],
+Cell[1961, 88, 71, 2, 30, "Details",
+ CellID->199739161],
+Cell[2035, 92, 60, 2, 30, "Details",
+ CellID->40625308],
+Cell[2098, 96, 61, 2, 30, "Details",
+ CellID->357121918],
+Cell[2162, 100, 62, 2, 30, "Details",
+ CellID->35949532],
+Cell[2227, 104, 78, 2, 30, "Details",
+ CellID->929432370],
+Cell[2308, 108, 67, 2, 30, "Details",
+ CellID->240026365]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[2412, 115, 169, 3, 106, "Title",
+ CellID->509267359],
+Cell[2584, 120, 262, 6, 23, "Text",
+ CellID->100371240],
+Cell[CellGroupData[{
+Cell[2871, 130, 120, 2, 43, "Section",
+ CellID->707881275],
+Cell[2994, 134, 356, 9, 23, "Text",
+ CellID->1703085124],
+Cell[3353, 145, 1214, 43, 40, "BulletedText",
+ CellID->1088631257],
+Cell[4570, 190, 545, 15, 38, "BulletedText",
+ CellID->1251784128]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5152, 210, 123, 2, 43, "Section",
+ CellID->389691836],
+Cell[CellGroupData[{
+Cell[5300, 216, 462, 9, 57, "Text",
+ CellID->1534169418],
+Cell[CellGroupData[{
+Cell[5787, 229, 210, 5, 24, "Input",
+ CellID->1640634666],
+Cell[CellGroupData[{
+Cell[6022, 238, 181, 3, 20, "Print",
+ CellID->782798985],
+Cell[6206, 243, 259, 4, 36, "Print",
+ CellID->1017719373],
+Cell[6468, 249, 183, 3, 20, "Print",
+ CellID->102253656],
+Cell[6654, 254, 260, 5, 36, "Print",
+ CellID->590278792],
+Cell[6917, 261, 948, 16, 21, "Print",
+ CellID->1588691651]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7926, 284, 503, 12, 41, "Text",
+ CellID->1125038529],
+Cell[CellGroupData[{
+Cell[8454, 300, 506, 12, 73, "Input",
+ CellID->1768050685],
+Cell[8963, 314, 520, 13, 40, "Output",
+ CellID->492182815]
+}, Open  ]]
+}, Open  ]],
+Cell[9510, 331, 291, 6, 40, "Text",
+ CellID->1411884930],
+Cell[CellGroupData[{
+Cell[9826, 341, 158, 2, 23, "Text",
+ CellID->1877514704],
+Cell[CellGroupData[{
+Cell[10009, 347, 174, 4, 25, "Input",
+ CellID->1947478611],
+Cell[10186, 353, 377, 10, 40, "Output",
+ CellID->1077518277]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10612, 369, 137, 2, 23, "Text",
+ CellID->1468837617],
+Cell[CellGroupData[{
+Cell[10774, 375, 177, 4, 24, "Input",
+ CellID->1320175261],
+Cell[10954, 381, 2718, 49, 26, "Output",
+ CellID->1051416698]
+}, Open  ]]
+}, Open  ]],
+Cell[13699, 434, 312, 8, 23, "Text",
+ CellID->330769954],
+Cell[14014, 444, 149, 3, 23, "Text",
+ CellID->120086388],
+Cell[14166, 449, 828, 25, 40, "BulletedText",
+ CellID->874045736],
+Cell[14997, 476, 456, 10, 38, "BulletedText",
+ CellID->1638087321]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15490, 491, 138, 2, 43, "Section",
+ CellID->857614431],
+Cell[15631, 495, 393, 10, 41, "Text",
+ CellID->1896226899],
+Cell[CellGroupData[{
+Cell[16049, 509, 147, 2, 23, "Text",
+ CellID->1632656571],
+Cell[CellGroupData[{
+Cell[16221, 515, 185, 4, 24, "Input",
+ CellID->1702426077],
+Cell[16409, 521, 792, 18, 23, "Output",
+ CellID->1110830294]
+}, Open  ]]
+}, Open  ]],
+Cell[17228, 543, 437, 11, 42, "Text",
+ CellID->978902278],
+Cell[CellGroupData[{
+Cell[17690, 558, 144, 2, 23, "Text",
+ CellID->39858178],
+Cell[CellGroupData[{
+Cell[17859, 564, 193, 4, 24, "Input",
+ CellID->818926783],
+Cell[18055, 570, 1348, 28, 104, "Output",
+ CellID->628481183]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19464, 605, 125, 2, 43, "Section",
+ CellID->1830783538],
+Cell[CellGroupData[{
+Cell[19614, 611, 483, 10, 40, "Text",
+ CellID->338100563],
+Cell[CellGroupData[{
+Cell[20122, 625, 161, 3, 25, "Input",
+ CellID->667848324],
+Cell[20286, 630, 222, 5, 23, "Output",
+ CellID->760984774]
+}, Open  ]]
+}, Open  ]],
+Cell[20535, 639, 346, 9, 40, "Text",
+ CellID->1452302517],
+Cell[CellGroupData[{
+Cell[20906, 652, 224, 6, 40, "Subsection",
+ CellID->817653266],
+Cell[21133, 660, 638, 17, 40, "Text",
+ CellID->380896318],
+Cell[21774, 679, 427, 13, 25, "Text",
+ CellID->1126609408]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22238, 697, 130, 2, 39, "Subsection",
+ CellID->495667237],
+Cell[CellGroupData[{
+Cell[22393, 703, 196, 5, 23, "Text",
+ CellID->590185546],
+Cell[22592, 710, 215, 6, 25, "Input",
+ CellID->1374779525]
+}, Open  ]],
+Cell[22822, 719, 555, 14, 69, "Text",
+ CellID->1939205046]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[23414, 738, 274, 7, 40, "Subsection",
+ CellID->477558058],
+Cell[23691, 747, 147, 2, 23, "Text",
+ CellID->2071153153],
+Cell[23841, 751, 794, 15, 93, "Text",
+ CellID->304381793],
+Cell[CellGroupData[{
+Cell[24660, 770, 121, 2, 23, "Text",
+ CellID->1225851384],
+Cell[24784, 774, 386, 9, 25, "Input",
+ CellID->2084234669]
+}, Open  ]],
+Cell[25185, 786, 506, 14, 41, "Text",
+ CellID->1288068061],
+Cell[25694, 802, 372, 8, 57, "Text",
+ CellID->2018525447],
+Cell[26069, 812, 428, 8, 54, "BulletedText",
+ CellID->982827801],
+Cell[26500, 822, 1655, 37, 232, "BulletedText",
+ CellID->2090122330],
+Cell[28158, 861, 571, 15, 54, "BulletedText",
+ CellID->179301219]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28766, 881, 305, 8, 58, "Subsection",
+ CellID->1188374091],
+Cell[29074, 891, 132, 2, 23, "Text",
+ CellID->40252424],
+Cell[29209, 895, 676, 19, 39, "BulletedText",
+ CellID->1761711618],
+Cell[29888, 916, 773, 21, 55, "BulletedText",
+ CellID->1575444036]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[30698, 942, 134, 2, 39, "Subsection",
+ CellID->1194226010],
+Cell[30835, 946, 374, 9, 40, "Text",
+ CellID->128288467]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31258, 961, 65, 1, 72, "TutorialMoreAboutSection",
+ CellID->23220180],
+Cell[31326, 964, 54, 1, 22, "TutorialMoreAbout",
+ CellID->1567025153]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31417, 970, 72, 1, 72, "RelatedTutorialsSection",
+ CellID->415694126],
+Cell[31492, 973, 217, 4, 22, "RelatedTutorials",
+ CellID->806871991]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31746, 982, 98, 1, 72, "TutorialRelatedLinksSection",
+ CellID->415694148],
+Cell[31847, 985, 56, 1, 22, "TutorialRelatedLinks",
+ CellID->415694149]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

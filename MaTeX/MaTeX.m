@@ -177,6 +177,9 @@ checkConfig[] :=
     ];
 
     $configOK = pdflatexOK && gsOK && cacheSizeOK;
+    If[Not[$configOK] && $Notebooks, 
+      Print@StringForm["`` for documentation on configuring MaTeX.", Hyperlink["Click here", "paclet:MaTeX/tutorial/ConfiguringMaTeX"]]
+	];
   ]
 
 

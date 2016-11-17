@@ -1,0 +1,960 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     42103,        951]
+NotebookOptionsPosition[     37264,        779]
+NotebookOutlinePosition[     37895,        804]
+CellTagsIndexPosition[     37816,        799]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[{
+ "New in: ",
+ Cell["1.6", "HistoryData",
+  CellTags->"New"],
+ " | Modified in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Modified"],
+ " | Obsolete in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Obsolete"],
+ " | Excised in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Excised"]
+}], "History",
+ CellID->1247902091],
+
+Cell[CellGroupData[{
+
+Cell["Categorization", "CategorizationSection",
+ CellID->1122911449],
+
+Cell["Message", "Categorization",
+ CellChangeTimes->{{3.688227336977414*^9, 3.688227337791216*^9}},
+ CellLabel->"Entity Type",
+ CellID->686433507],
+
+Cell["MaTeX", "Categorization",
+ CellLabel->"Paclet Name",
+ CellID->605800465],
+
+Cell["MaTeX`", "Categorization",
+ CellLabel->"Context",
+ CellID->468444828],
+
+Cell["MaTeX/ref/message/MaTeX/texerr", "Categorization",
+ CellChangeTimes->{{3.688227317861203*^9, 3.688227347982616*^9}},
+ CellLabel->"URI"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Keywords", "KeywordsSection",
+ CellID->477174294],
+
+Cell["latex, error", "Keywords",
+ CellChangeTimes->{{3.6882273572112217`*^9, 3.68822735877101*^9}},
+ CellID->1164421360]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Syntax Templates", "TemplatesSection",
+ CellID->1872225408],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Additional Function Template",
+ CellID->1562036412],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Arguments Pattern",
+ CellID->158391909],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Local Variables",
+ CellID->1360575930],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Color Equal Signs",
+ CellID->793782254]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Details", "DetailsSection",
+ CellID->307771771],
+
+Cell["XXXX", "Details",
+ CellLabel->"Lead",
+ CellID->670882175],
+
+Cell["XXXX", "Details",
+ CellLabel->"Developers",
+ CellID->350963985],
+
+Cell["XXXX", "Details",
+ CellLabel->"Authors",
+ CellID->8391405],
+
+Cell["XXXX", "Details",
+ CellLabel->"Feature Name",
+ CellID->3610269],
+
+Cell["XXXX", "Details",
+ CellLabel->"QA",
+ CellID->401364205],
+
+Cell["XXXX", "Details",
+ CellLabel->"DA",
+ CellID->350204745],
+
+Cell["XXXX", "Details",
+ CellLabel->"Docs",
+ CellID->732958810],
+
+Cell["XXXX", "Details",
+ CellLabel->"Features Page Notes",
+ CellID->222905350],
+
+Cell["XXXX", "Details",
+ CellLabel->"Comments",
+ CellID->240026365]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["MaTeX::texerr", "ObjectName",
+ CellChangeTimes->{{3.68822736585651*^9, 3.688227366904566*^9}},
+ CellID->1224892054],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"MaTeX", "::", "texerr"}], "MessageName"], ":", 
+  " ", "\<\"Error while running LaTeX.\[NoBreak]\\!\\(\\\"\\\"\\)\[NoBreak] \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:MaTeX/ref/MaTeX\\\", ButtonNote -> \
+\\\"MaTeX`MaTeX::texerr\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellID->152366399],
+
+Cell[TextData[{
+ "This message is generated when there was an error while running ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"L", 
+     StyleBox[
+      AdjustmentBox["A",
+       BoxBaselineShift->-0.4,
+       BoxMargins->{{-0.5, -0.3}, {0, 0}}],
+      FontSize->Smaller], "T", 
+     AdjustmentBox["E",
+      BoxBaselineShift->0.5,
+      BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}],
+    SingleLetterItalics->False], TraditionalForm]]],
+ ". This typically indicates that there is an error in the ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"T", 
+     AdjustmentBox["E",
+      BoxBaselineShift->0.5,
+      BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}],
+    SingleLetterItalics->False], TraditionalForm]]],
+ " code passed to ",
+ Cell[BoxData[
+  ButtonBox["MaTeX",
+   BaseStyle->"Link",
+   ButtonData->"paclet:MaTeX/ref/MaTeX"]], "InlineFormula"],
+ "."
+}], "Notes",
+ CellChangeTimes->{{3.6882274480812263`*^9, 3.688227453621908*^9}, {
+  3.6882275157419558`*^9, 3.688227556994628*^9}},
+ CellID->1067943069],
+
+Cell[TextData[{
+ "MaTeX is not always able to extract the full error message from the ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"T", 
+     AdjustmentBox["E",
+      BoxBaselineShift->0.5,
+      BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}],
+    SingleLetterItalics->False], TraditionalForm]]],
+ " log file. To see the full log file, set the ",
+ Cell[BoxData[
+  RowBox[{"\"\<LogFileFunction\>\"", "\[Rule]", "Print"}]], "InlineFormula",
+  FormatType->"StandardForm"],
+ " option within ",
+ Cell[BoxData[
+  ButtonBox["MaTeX",
+   BaseStyle->"Link",
+   ButtonData->"paclet:MaTeX/ref/MaTeX"]], "InlineFormula"],
+ "."
+}], "Notes",
+ CellChangeTimes->{{3.6882275798174143`*^9, 3.688227651710823*^9}},
+ CellID->980309984]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Tutorials", "TutorialsSection",
+ CellID->250839057],
+
+Cell[TextData[ButtonBox["Configuring MaTeX",
+ BaseStyle->"Link",
+ ButtonData->"paclet:MaTeX/tutorial/ConfiguringMaTeX"]], "Tutorials",
+ CellChangeTimes->{{3.6882276650051737`*^9, 3.688227679427339*^9}},
+ CellID->341631938]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Related Demonstrations", "RelatedDemonstrationsSection",
+ CellID->1268215905],
+
+Cell["XXXX", "RelatedDemonstrations",
+ CellID->1129518860]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Related Links", "RelatedLinksSection",
+ CellID->1584193535],
+
+Cell["XXXX", "RelatedLinks",
+ CellID->1038487239]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["See Also", "SeeAlsoSection",
+ CellID->1255426704],
+
+Cell["XXXX", "SeeAlso",
+ CellID->929782353]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["More About", "MoreAboutSection",
+ CellID->38303248],
+
+Cell["XXXX", "MoreAbout",
+ CellID->1665078683]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {
+     StyleBox["Examples", "PrimaryExamplesSection"], 
+     ButtonBox[
+      RowBox[{
+       RowBox[{"More", " ", "Examples"}], " ", "\[RightTriangle]"}],
+      BaseStyle->"ExtendedExamplesLink",
+      ButtonData:>"ExtendedExamples"]}
+   }],
+  $Line = 0; Null]], "PrimaryExamplesSection",
+ CellID->880084151],
+
+Cell[TextData[{
+ "There is a syntax error in the following ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"L", 
+     StyleBox[
+      AdjustmentBox["A",
+       BoxBaselineShift->-0.4,
+       BoxMargins->{{-0.5, -0.3}, {0, 0}}],
+      FontSize->Smaller], "T", 
+     AdjustmentBox["E",
+      BoxBaselineShift->0.5,
+      BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}],
+    SingleLetterItalics->False], TraditionalForm]]],
+ " code. The superscript is missing."
+}], "ExampleText",
+ CellChangeTimes->{{3.6882277395038853`*^9, 3.6882277742645893`*^9}},
+ CellID->1563779258],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MaTeX", "[", "\"\<x^\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.688227503982098*^9, 3.688227507531983*^9}},
+ CellLabel->"In[10]:=",
+ CellID->420232364],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"MaTeX", "::", "texerr"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Error while running \
+LaTeX.\\n\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\"! Missing { \
+inserted.\\\\\\\\n!  ==> Fatal error occurred, no output PDF file produced!\\\
+\\\\\"\\\", \\\"OutputForm\\\", Rule[StripOnInput, False]]\\)\[NoBreak] \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:MaTeX/ref/MaTeX\\\", ButtonNote -> \
+\\\"MaTeX`MaTeX::texerr\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.688227508440271*^9},
+ CellLabel->"During evaluation of In[10]:=",
+ CellID->612647526],
+
+Cell[BoxData["$Failed"], "Output",
+ CellChangeTimes->{3.688227508449038*^9},
+ CellLabel->"Out[10]=",
+ CellID->1730365764]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->125493087],
+
+Cell["See the full log file:", "ExampleText",
+ CellChangeTimes->{{3.688227779138632*^9, 3.688227784848049*^9}},
+ CellID->2107528481],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MaTeX", "[", 
+  RowBox[{"\"\<x^\>\"", ",", 
+   RowBox[{"\"\<LogFileFunction\>\"", "\[Rule]", "Print"}]}], "]"}]], "Input",\
+
+ CellChangeTimes->{{3.688227702530321*^9, 3.688227706212517*^9}},
+ CellLabel->"In[11]:=",
+ CellID->2053942007],
+
+Cell[BoxData["\<\"This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live \
+2016) (preloaded format=pdflatex 2016.6.12)  15 NOV 2016 20:41\\nentering \
+extended mode\\n restricted \\\\write18 enabled.\\n %&-line parsing \
+enabled.\\n**/var/folders/31/l_62jfs110lf0dh7k5n_y2th0000gn/T/MaTeX_\
+pwugbgcnfrbvwdro/slrau\\nrtxbmoggdyk.tex\\n\\n(/var/folders/31/l_\
+62jfs110lf0dh7k5n_y2th0000gn/T/MaTeX_pwugbgcnfrbvwdro/slraur\\ntxbmoggdyk.tex\
+\\nLaTeX2e <2016/03/31>\\nBabel <3.9r> and hyphenation patterns for 83 \
+language(s) \
+loaded.\\n(/usr/local/texlive/2016/texmf-dist/tex/latex/standalone/standalone.\
+cls\\nDocument Class: standalone 2015/07/15 v1.2 Class to compile TeX \
+sub-files \
+stand\\nalone\\n(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/\
+ifluatex.sty\\nPackage: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch \
+(HO)\\nPackage ifluatex Info: LuaTeX not \
+detected.\\n)\\n(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/\
+ifpdf.sty\\nPackage: ifpdf 2016/05/14 v3.1 Provides the ifpdf \
+switch\\n)\\n(/usr/local/texlive/2016/texmf-dist/tex/generic/ifxetex/ifxetex.\
+sty\\nPackage: ifxetex 2010/09/12 v0.6 Provides ifxetex \
+conditional\\n)\\n(/usr/local/texlive/2016/texmf-dist/tex/latex/xkeyval/\
+xkeyval.sty\\nPackage: xkeyval 2014/12/03 v2.7a package option processing \
+(HA)\\n\\n(/usr/local/texlive/2016/texmf-dist/tex/generic/xkeyval/xkeyval.tex\
+\\n(/usr/local/texlive/2016/texmf-dist/tex/generic/xkeyval/xkvutils.tex\\n\\\\\
+XKV@toks=\\\\toks14\\n\\\\XKV@tempa@toks=\\\\toks15\\n\\n(/usr/local/texlive/\
+2016/texmf-dist/tex/generic/xkeyval/keyval.tex))\\n\\\\XKV@depth=\\\\count79\\\
+nFile: xkeyval.tex 2014/12/03 v2.7a key=value parser \
+(HA)\\n))\\n\\\\sa@internal=\\\\count80\\n\\\\c@sapage=\\\\count81\\n\\n(/usr/\
+local/texlive/2016/texmf-dist/tex/latex/standalone/standalone.cfg\\nFile: \
+standalone.cfg 2015/07/15 v1.2 Default configuration file for 'standalone\\n' \
+class\\n)\\n(/usr/local/texlive/2016/texmf-dist/tex/latex/base/article.cls\\\
+nDocument Class: article 2014/09/29 v1.4h Standard LaTeX document \
+class\\n(/usr/local/texlive/2016/texmf-dist/tex/latex/base/size12.clo\\nFile: \
+size12.clo 2014/09/29 v1.4h Standard LaTeX file (size \
+option)\\n)\\n\\\\c@part=\\\\count82\\n\\\\c@section=\\\\count83\\n\\\\c@\
+subsection=\\\\count84\\n\\\\c@subsubsection=\\\\count85\\n\\\\c@paragraph=\\\
+\\count86\\n\\\\c@subparagraph=\\\\count87\\n\\\\c@figure=\\\\count88\\n\\\\c@\
+table=\\\\count89\\n\\\\abovecaptionskip=\\\\skip41\\n\\\\belowcaptionskip=\\\
+\\skip42\\n\\\\bibindent=\\\\dimen102\\n)\\n\\\\sa@box=\\\\box26\\n)\\n\\\\\
+MaTeXbox=\\\\box27\\n\\n(/usr/local/texlive/2016/texmf-dist/tex/latex/base/\
+inputenc.sty\\nPackage: inputenc 2015/03/17 v1.2c Input encoding \
+file\\n\\\\inpenc@prehook=\\\\toks16\\n\\\\inpenc@posthook=\\\\toks17\\n\\n(/\
+usr/local/texlive/2016/texmf-dist/tex/latex/base/utf8.def\\nFile: utf8.def \
+2016/02/28 v1.1s UTF-8 support for inputenc\\nNow handling font encoding OML \
+...\\n... no UTF-8 mapping file for font encoding OML\\nNow handling font \
+encoding T1 ...\\n... processing UTF-8 mapping file for font encoding \
+T1\\n\\n(/usr/local/texlive/2016/texmf-dist/tex/latex/base/t1enc.dfu\\nFile: \
+t1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc\\n   defining Unicode \
+char U+00A0 (decimal 160)\\n   defining Unicode char U+00A1 (decimal 161)\\n  \
+ defining Unicode char U+00A3 (decimal 163)\\n   defining Unicode char U+00AB \
+(decimal 171)\\n   defining Unicode char U+00AD (decimal 173)\\n   defining \
+Unicode char U+00BB (decimal 187)\\n   defining Unicode char U+00BF (decimal \
+191)\\n   defining Unicode char U+00C0 (decimal 192)\\n   defining Unicode \
+char U+00C1 (decimal 193)\\n   defining Unicode char U+00C2 (decimal 194)\\n  \
+ defining Unicode char U+00C3 (decimal 195)\\n   defining Unicode char U+00C4 \
+(decimal 196)\\n   defining Unicode char U+00C5 (decimal 197)\\n   defining \
+Unicode char U+00C6 (decimal 198)\\n   defining Unicode char U+00C7 (decimal \
+199)\\n   defining Unicode char U+00C8 (decimal 200)\\n   defining Unicode \
+char U+00C9 (decimal 201)\\n   defining Unicode char U+00CA (decimal 202)\\n  \
+ defining Unicode char U+00CB (decimal 203)\\n   defining Unicode char U+00CC \
+(decimal 204)\\n   defining Unicode char U+00CD (decimal 205)\\n   defining \
+Unicode char U+00CE (decimal 206)\\n   defining Unicode char U+00CF (decimal \
+207)\\n   defining Unicode char U+00D0 (decimal 208)\\n   defining Unicode \
+char U+00D1 (decimal 209)\\n   defining Unicode char U+00D2 (decimal 210)\\n  \
+ defining Unicode char U+00D3 (decimal 211)\\n   defining Unicode char U+00D4 \
+(decimal 212)\\n   defining Unicode char U+00D5 (decimal 213)\\n   defining \
+Unicode char U+00D6 (decimal 214)\\n   defining Unicode char U+00D8 (decimal \
+216)\\n   defining Unicode char U+00D9 (decimal 217)\\n   defining Unicode \
+char U+00DA (decimal 218)\\n   defining Unicode char U+00DB (decimal 219)\\n  \
+ defining Unicode char U+00DC (decimal 220)\\n   defining Unicode char U+00DD \
+(decimal 221)\\n   defining Unicode char U+00DE (decimal 222)\\n   defining \
+Unicode char U+00DF (decimal 223)\\n   defining Unicode char U+00E0 (decimal \
+224)\\n   defining Unicode char U+00E1 (decimal 225)\\n   defining Unicode \
+char U+00E2 (decimal 226)\\n   defining Unicode char U+00E3 (decimal 227)\\n  \
+ defining Unicode char U+00E4 (decimal 228)\\n   defining Unicode char U+00E5 \
+(decimal 229)\\n   defining Unicode char U+00E6 (decimal 230)\\n   defining \
+Unicode char U+00E7 (decimal 231)\\n   defining Unicode char U+00E8 (decimal \
+232)\\n   defining Unicode char U+00E9 (decimal 233)\\n   defining Unicode \
+char U+00EA (decimal 234)\\n   defining Unicode char U+00EB (decimal 235)\\n  \
+ defining Unicode char U+00EC (decimal 236)\\n   defining Unicode char U+00ED \
+(decimal 237)\\n   defining Unicode char U+00EE (decimal 238)\\n   defining \
+Unicode char U+00EF (decimal 239)\\n   defining Unicode char U+00F0 (decimal \
+240)\\n   defining Unicode char U+00F1 (decimal 241)\\n   defining Unicode \
+char U+00F2 (decimal 242)\\n   defining Unicode char U+00F3 (decimal 243)\\n  \
+ defining Unicode char U+00F4 (decimal 244)\\n   defining Unicode char U+00F5 \
+(decimal 245)\\n   defining Unicode char U+00F6 (decimal 246)\\n   defining \
+Unicode char U+00F8 (decimal 248)\\n   defining Unicode char U+00F9 (decimal \
+249)\\n   defining Unicode char U+00FA (decimal 250)\\n   defining Unicode \
+char U+00FB (decimal 251)\\n   defining Unicode char U+00FC (decimal 252)\\n  \
+ defining Unicode char U+00FD (decimal 253)\\n   defining Unicode char U+00FE \
+(decimal 254)\\n   defining Unicode char U+00FF (decimal 255)\\n   defining \
+Unicode char U+0100 (decimal 256)\\n   defining Unicode char U+0101 (decimal \
+257)\\n   defining Unicode char U+0102 (decimal 258)\\n   defining Unicode \
+char U+0103 (decimal 259)\\n   defining Unicode char U+0104 (decimal 260)\\n  \
+ defining Unicode char U+0105 (decimal 261)\\n   defining Unicode char U+0106 \
+(decimal 262)\\n   defining Unicode char U+0107 (decimal 263)\\n   defining \
+Unicode char U+0108 (decimal 264)\\n   defining Unicode char U+0109 (decimal \
+265)\\n   defining Unicode char U+010A (decimal 266)\\n   defining Unicode \
+char U+010B (decimal 267)\\n   defining Unicode char U+010C (decimal 268)\\n  \
+ defining Unicode char U+010D (decimal 269)\\n   defining Unicode char U+010E \
+(decimal 270)\\n   defining Unicode char U+010F (decimal 271)\\n   defining \
+Unicode char U+0110 (decimal 272)\\n   defining Unicode char U+0111 (decimal \
+273)\\n   defining Unicode char U+0112 (decimal 274)\\n   defining Unicode \
+char U+0113 (decimal 275)\\n   defining Unicode char U+0114 (decimal 276)\\n  \
+ defining Unicode char U+0115 (decimal 277)\\n   defining Unicode char U+0116 \
+(decimal 278)\\n   defining Unicode char U+0117 (decimal 279)\\n   defining \
+Unicode char U+0118 (decimal 280)\\n   defining Unicode char U+0119 (decimal \
+281)\\n   defining Unicode char U+011A (decimal 282)\\n   defining Unicode \
+char U+011B (decimal 283)\\n   defining Unicode char U+011C (decimal 284)\\n  \
+ defining Unicode char U+011D (decimal 285)\\n   defining Unicode char U+011E \
+(decimal 286)\\n   defining Unicode char U+011F (decimal 287)\\n   defining \
+Unicode char U+0120 (decimal 288)\\n   defining Unicode char U+0121 (decimal \
+289)\\n   defining Unicode char U+0122 (decimal 290)\\n   defining Unicode \
+char U+0123 (decimal 291)\\n   defining Unicode char U+0124 (decimal 292)\\n  \
+ defining Unicode char U+0125 (decimal 293)\\n   defining Unicode char U+0128 \
+(decimal 296)\\n   defining Unicode char U+0129 (decimal 297)\\n   defining \
+Unicode char U+012A (decimal 298)\\n   defining Unicode char U+012B (decimal \
+299)\\n   defining Unicode char U+012C (decimal 300)\\n   defining Unicode \
+char U+012D (decimal 301)\\n   defining Unicode char U+012E (decimal 302)\\n  \
+ defining Unicode char U+012F (decimal 303)\\n   defining Unicode char U+0130 \
+(decimal 304)\\n   defining Unicode char U+0131 (decimal 305)\\n   defining \
+Unicode char U+0132 (decimal 306)\\n   defining Unicode char U+0133 (decimal \
+307)\\n   defining Unicode char U+0134 (decimal 308)\\n   defining Unicode \
+char U+0135 (decimal 309)\\n   defining Unicode char U+0136 (decimal 310)\\n  \
+ defining Unicode char U+0137 (decimal 311)\\n   defining Unicode char U+0139 \
+(decimal 313)\\n   defining Unicode char U+013A (decimal 314)\\n   defining \
+Unicode char U+013B (decimal 315)\\n   defining Unicode char U+013C (decimal \
+316)\\n   defining Unicode char U+013D (decimal 317)\\n   defining Unicode \
+char U+013E (decimal 318)\\n   defining Unicode char U+0141 (decimal 321)\\n  \
+ defining Unicode char U+0142 (decimal 322)\\n   defining Unicode char U+0143 \
+(decimal 323)\\n   defining Unicode char U+0144 (decimal 324)\\n   defining \
+Unicode char U+0145 (decimal 325)\\n   defining Unicode char U+0146 (decimal \
+326)\\n   defining Unicode char U+0147 (decimal 327)\\n   defining Unicode \
+char U+0148 (decimal 328)\\n   defining Unicode char U+014A (decimal 330)\\n  \
+ defining Unicode char U+014B (decimal 331)\\n   defining Unicode char U+014C \
+(decimal 332)\\n   defining Unicode char U+014D (decimal 333)\\n   defining \
+Unicode char U+014E (decimal 334)\\n   defining Unicode char U+014F (decimal \
+335)\\n   defining Unicode char U+0150 (decimal 336)\\n   defining Unicode \
+char U+0151 (decimal 337)\\n   defining Unicode char U+0152 (decimal 338)\\n  \
+ defining Unicode char U+0153 (decimal 339)\\n   defining Unicode char U+0154 \
+(decimal 340)\\n   defining Unicode char U+0155 (decimal 341)\\n   defining \
+Unicode char U+0156 (decimal 342)\\n   defining Unicode char U+0157 (decimal \
+343)\\n   defining Unicode char U+0158 (decimal 344)\\n   defining Unicode \
+char U+0159 (decimal 345)\\n   defining Unicode char U+015A (decimal 346)\\n  \
+ defining Unicode char U+015B (decimal 347)\\n   defining Unicode char U+015C \
+(decimal 348)\\n   defining Unicode char U+015D (decimal 349)\\n   defining \
+Unicode char U+015E (decimal 350)\\n   defining Unicode char U+015F (decimal \
+351)\\n   defining Unicode char U+0160 (decimal 352)\\n   defining Unicode \
+char U+0161 (decimal 353)\\n   defining Unicode char U+0162 (decimal 354)\\n  \
+ defining Unicode char U+0163 (decimal 355)\\n   defining Unicode char U+0164 \
+(decimal 356)\\n   defining Unicode char U+0165 (decimal 357)\\n   defining \
+Unicode char U+0168 (decimal 360)\\n   defining Unicode char U+0169 (decimal \
+361)\\n   defining Unicode char U+016A (decimal 362)\\n   defining Unicode \
+char U+016B (decimal 363)\\n   defining Unicode char U+016C (decimal 364)\\n  \
+ defining Unicode char U+016D (decimal 365)\\n   defining Unicode char U+016E \
+(decimal 366)\\n   defining Unicode char U+016F (decimal 367)\\n   defining \
+Unicode char U+0170 (decimal 368)\\n   defining Unicode char U+0171 (decimal \
+369)\\n   defining Unicode char U+0172 (decimal 370)\\n   defining Unicode \
+char U+0173 (decimal 371)\\n   defining Unicode char U+0174 (decimal 372)\\n  \
+ defining Unicode char U+0175 (decimal 373)\\n   defining Unicode char U+0176 \
+(decimal 374)\\n   defining Unicode char U+0177 (decimal 375)\\n   defining \
+Unicode char U+0178 (decimal 376)\\n   defining Unicode char U+0179 (decimal \
+377)\\n   defining Unicode char U+017A (decimal 378)\\n   defining Unicode \
+char U+017B (decimal 379)\\n   defining Unicode char U+017C (decimal 380)\\n  \
+ defining Unicode char U+017D (decimal 381)\\n   defining Unicode char U+017E \
+(decimal 382)\\n   defining Unicode char U+01CD (decimal 461)\\n   defining \
+Unicode char U+01CE (decimal 462)\\n   defining Unicode char U+01CF (decimal \
+463)\\n   defining Unicode char U+01D0 (decimal 464)\\n   defining Unicode \
+char U+01D1 (decimal 465)\\n   defining Unicode char U+01D2 (decimal 466)\\n  \
+ defining Unicode char U+01D3 (decimal 467)\\n   defining Unicode char U+01D4 \
+(decimal 468)\\n   defining Unicode char U+01E2 (decimal 482)\\n   defining \
+Unicode char U+01E3 (decimal 483)\\n   defining Unicode char U+01E6 (decimal \
+486)\\n   defining Unicode char U+01E7 (decimal 487)\\n   defining Unicode \
+char U+01E8 (decimal 488)\\n   defining Unicode char U+01E9 (decimal 489)\\n  \
+ defining Unicode char U+01EA (decimal 490)\\n   defining Unicode char U+01EB \
+(decimal 491)\\n   defining Unicode char U+01F0 (decimal 496)\\n   defining \
+Unicode char U+01F4 (decimal 500)\\n   defining Unicode char U+01F5 (decimal \
+501)\\n   defining Unicode char U+0218 (decimal 536)\\n   defining Unicode \
+char U+0219 (decimal 537)\\n   defining Unicode char U+021A (decimal 538)\\n  \
+ defining Unicode char U+021B (decimal 539)\\n   defining Unicode char U+1E02 \
+(decimal 7682)\\n   defining Unicode char U+1E03 (decimal 7683)\\n   defining \
+Unicode char U+200C (decimal 8204)\\n   defining Unicode char U+2010 (decimal \
+8208)\\n   defining Unicode char U+2011 (decimal 8209)\\n   defining Unicode \
+char U+2012 (decimal 8210)\\n   defining Unicode char U+2013 (decimal \
+8211)\\n   defining Unicode char U+2014 (decimal 8212)\\n   defining Unicode \
+char U+2015 (decimal 8213)\\n   defining Unicode char U+2018 (decimal \
+8216)\\n   defining Unicode char U+2019 (decimal 8217)\\n   defining Unicode \
+char U+201A (decimal 8218)\\n   defining Unicode char U+201C (decimal \
+8220)\\n   defining Unicode char U+201D (decimal 8221)\\n   defining Unicode \
+char U+201E (decimal 8222)\\n   defining Unicode char U+2030 (decimal \
+8240)\\n   defining Unicode char U+2031 (decimal 8241)\\n   defining Unicode \
+char U+2039 (decimal 8249)\\n   defining Unicode char U+203A (decimal \
+8250)\\n   defining Unicode char U+2423 (decimal 9251)\\n)\\nNow handling \
+font encoding OT1 ...\\n... processing UTF-8 mapping file for font encoding \
+OT1\\n\\n(/usr/local/texlive/2016/texmf-dist/tex/latex/base/ot1enc.dfu\\nFile:\
+ ot1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc\\n   defining Unicode \
+char U+00A0 (decimal 160)\\n   defining Unicode char U+00A1 (decimal 161)\\n  \
+ defining Unicode char U+00A3 (decimal 163)\\n   defining Unicode char U+00AD \
+(decimal 173)\\n   defining Unicode char U+00B8 (decimal 184)\\n   defining \
+Unicode char U+00BF (decimal 191)\\n   defining Unicode char U+00C5 (decimal \
+197)\\n   defining Unicode char U+00C6 (decimal 198)\\n   defining Unicode \
+char U+00D8 (decimal 216)\\n   defining Unicode char U+00DF (decimal 223)\\n  \
+ defining Unicode char U+00E6 (decimal 230)\\n   defining Unicode char U+00EC \
+(decimal 236)\\n   defining Unicode char U+00ED (decimal 237)\\n   defining \
+Unicode char U+00EE (decimal 238)\\n   defining Unicode char U+00EF (decimal \
+239)\\n   defining Unicode char U+00F8 (decimal 248)\\n   defining Unicode \
+char U+0131 (decimal 305)\\n   defining Unicode char U+0141 (decimal 321)\\n  \
+ defining Unicode char U+0142 (decimal 322)\\n   defining Unicode char U+0152 \
+(decimal 338)\\n   defining Unicode char U+0153 (decimal 339)\\n   defining \
+Unicode char U+0174 (decimal 372)\\n   defining Unicode char U+0175 (decimal \
+373)\\n   defining Unicode char U+0176 (decimal 374)\\n   defining Unicode \
+char U+0177 (decimal 375)\\n   defining Unicode char U+0218 (decimal 536)\\n  \
+ defining Unicode char U+0219 (decimal 537)\\n   defining Unicode char U+021A \
+(decimal 538)\\n   defining Unicode char U+021B (decimal 539)\\n   defining \
+Unicode char U+2013 (decimal 8211)\\n   defining Unicode char U+2014 (decimal \
+8212)\\n   defining Unicode char U+2018 (decimal 8216)\\n   defining Unicode \
+char U+2019 (decimal 8217)\\n   defining Unicode char U+201C (decimal \
+8220)\\n   defining Unicode char U+201D (decimal 8221)\\n)\\nNow handling \
+font encoding OMS ...\\n... processing UTF-8 mapping file for font encoding \
+OMS\\n\\n(/usr/local/texlive/2016/texmf-dist/tex/latex/base/omsenc.dfu\\nFile:\
+ omsenc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc\\n   defining Unicode \
+char U+00A7 (decimal 167)\\n   defining Unicode char U+00B6 (decimal 182)\\n  \
+ defining Unicode char U+00B7 (decimal 183)\\n   defining Unicode char U+2020 \
+(decimal 8224)\\n   defining Unicode char U+2021 (decimal 8225)\\n   defining \
+Unicode char U+2022 (decimal 8226)\\n)\\nNow handling font encoding OMX \
+...\\n... no UTF-8 mapping file for font encoding OMX\\nNow handling font \
+encoding U ...\\n... no UTF-8 mapping file for font encoding U\\n   defining \
+Unicode char U+00A9 (decimal 169)\\n   defining Unicode char U+00AA (decimal \
+170)\\n   defining Unicode char U+00AE (decimal 174)\\n   defining Unicode \
+char U+00BA (decimal 186)\\n   defining Unicode char U+02C6 (decimal 710)\\n  \
+ defining Unicode char U+02DC (decimal 732)\\n   defining Unicode char U+200C \
+(decimal 8204)\\n   defining Unicode char U+2026 (decimal 8230)\\n   defining \
+Unicode char U+2122 (decimal 8482)\\n   defining Unicode char U+2423 (decimal \
+9251)\\n))\\n(/usr/local/texlive/2016/texmf-dist/tex/latex/lm/lmodern.sty\\\
+nPackage: lmodern 2009/10/30 v1.6 Latin Modern Fonts\\nLaTeX Font Info:    \
+Overwriting symbol font `operators' in version `normal'\\n(Font)              \
+    OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.\\nLaTeX Font Info:    \
+Overwriting symbol font `letters' in version `normal'\\n(Font)                \
+  OML/cmm/m/it --> OML/lmm/m/it on input line 23.\\nLaTeX Font Info:    \
+Overwriting symbol font `symbols' in version `normal'\\n(Font)                \
+  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.\\nLaTeX Font Info:    \
+Overwriting symbol font `largesymbols' in version `normal'\\n(Font)           \
+       OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.\\nLaTeX Font Info:    \
+Overwriting symbol font `operators' in version `bold'\\n(Font)                \
+  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.\\nLaTeX Font Info:    \
+Overwriting symbol font `letters' in version `bold'\\n(Font)                  \
+OML/cmm/b/it --> OML/lmm/b/it on input line 27.\\nLaTeX Font Info:    \
+Overwriting symbol font `symbols' in version `bold'\\n(Font)                  \
+OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.\\nLaTeX Font Info:    \
+Overwriting symbol font `largesymbols' in version `bold'\\n(Font)             \
+     OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.\\nLaTeX Font Info:    \
+Overwriting math alphabet `\\\\mathbf' in version `normal'\\n(Font)           \
+       OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.\\nLaTeX Font Info:    \
+Overwriting math alphabet `\\\\mathsf' in version `normal'\\n(Font)           \
+       OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.\\nLaTeX Font Info:    \
+Overwriting math alphabet `\\\\mathit' in version `normal'\\n(Font)           \
+       OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.\\nLaTeX Font Info:    \
+Overwriting math alphabet `\\\\mathtt' in version `normal'\\n(Font)           \
+       OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.\\nLaTeX Font Info:    \
+Overwriting math alphabet `\\\\mathbf' in version `bold'\\n(Font)             \
+     OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.\\nLaTeX Font Info:    \
+Overwriting math alphabet `\\\\mathsf' in version `bold'\\n(Font)             \
+     OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.\\nLaTeX Font Info:    \
+Overwriting math alphabet `\\\\mathit' in version `bold'\\n(Font)             \
+     OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.\\nLaTeX Font Info:    \
+Overwriting math alphabet `\\\\mathtt' in version `bold'\\n(Font)             \
+     OT1/cmtt/m/n --> OT1/lmtt/m/n on input line \
+38.\\n)\\n(/usr/local/texlive/2016/texmf-dist/tex/latex/base/exscale.sty\\\
+nPackage: exscale 2014/09/29 v2.1h Standard LaTeX package exscale\\nLaTeX \
+Font Info:    Redeclaring symbol font `largesymbols' on input line \
+57.\\nLaTeX Font Info:    Overwriting symbol font `largesymbols' in version \
+`normal'\\n(Font)                  OMX/lmex/m/n --> OMX/cmex/m/n on input \
+line 57.\\nLaTeX Font Info:    Overwriting symbol font `largesymbols' in \
+version `bold'\\n(Font)                  OMX/lmex/m/n --> OMX/cmex/m/n on \
+input line \
+57.\\n\\\\big@size=\\\\dimen103\\n)\\n(/usr/local/texlive/2016/texmf-dist/tex/\
+latex/amsmath/amsmath.sty\\nPackage: amsmath 2016/06/28 v2.15d AMS math \
+features\\n\\\\@mathmargin=\\\\skip43\\n\\nFor additional information on \
+amsmath, use the `?' \
+option.\\n(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amstext.sty\\\
+nPackage: amstext 2000/06/29 v2.01 AMS \
+text\\n\\n(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsgen.sty\\\
+nFile: amsgen.sty 1999/11/30 v2.0 generic \
+functions\\n\\\\@emptytoks=\\\\toks18\\n\\\\ex@=\\\\dimen104\\n))\\n(/usr/\
+local/texlive/2016/texmf-dist/tex/latex/amsmath/amsbsy.sty\\nPackage: amsbsy \
+1999/11/29 v1.2d Bold \
+Symbols\\n\\\\pmbraise@=\\\\dimen105\\n)\\n(/usr/local/texlive/2016/texmf-\
+dist/tex/latex/amsmath/amsopn.sty\\nPackage: amsopn 2016/03/08 v2.02 operator \
+names\\n)\\n\\\\inf@bad=\\\\count90\\nLaTeX Info: Redefining \\\\frac on \
+input line 199.\\n\\\\uproot@=\\\\count91\\n\\\\leftroot@=\\\\count92\\nLaTeX \
+Info: Redefining \\\\overline on input line \
+297.\\n\\\\classnum@=\\\\count93\\n\\\\DOTSCASE@=\\\\count94\\nLaTeX Info: \
+Redefining \\\\ldots on input line 394.\\nLaTeX Info: Redefining \\\\dots on \
+input line 397.\\nLaTeX Info: Redefining \\\\cdots on input line \
+518.\\n\\\\Mathstrutbox@=\\\\box28\\n\\\\strutbox@=\\\\box29\\n\\\\big@size=\\\
+\\dimen106\\nLaTeX Font Info:    Redeclaring font encoding OML on input line \
+634.\\nLaTeX Font Info:    Redeclaring font encoding OMS on input line \
+635.\\n\\\\macc@depth=\\\\count95\\n\\\\c@MaxMatrixCols=\\\\count96\\n\\\\\
+dotsspace@=\\\\muskip10\\n\\\\c@parentequation=\\\\count97\\n\\\\dspbrk@lvl=\\\
+\\count98\\n\\\\tag@help=\\\\toks19\\n\\\\row@=\\\\count99\\n\\\\column@=\\\\\
+count100\\n\\\\maxfields@=\\\\count101\\n\\\\andhelp@=\\\\toks20\\n\\\\\
+eqnshift@=\\\\dimen107\\n\\\\alignsep@=\\\\dimen108\\n\\\\tagshift@=\\\\\
+dimen109\\n\\\\tagwidth@=\\\\dimen110\\n\\\\totwidth@=\\\\dimen111\\n\\\\\
+lineht@=\\\\dimen112\\n\\\\@envbody=\\\\toks21\\n\\\\multlinegap=\\\\skip44\\\
+n\\\\multlinetaggap=\\\\skip45\\n\\\\mathdisplay@stack=\\\\toks22\\nLaTeX \
+Info: Redefining \\\\[ on input line 2739.\\nLaTeX Info: Redefining \\\\] on \
+input line \
+2740.\\n)\\n(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/amssymb.\
+sty\\nPackage: amssymb 2013/01/14 v3.01 AMS font \
+symbols\\n\\n(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/amsfonts.\
+sty\\nPackage: amsfonts 2013/01/14 v3.01 Basic AMSFonts \
+support\\n\\\\symAMSa=\\\\mathgroup4\\n\\\\symAMSb=\\\\mathgroup5\\nLaTeX \
+Font Info:    Overwriting math alphabet `\\\\mathfrak' in version \
+`bold'\\n(Font)                  U/euf/m/n --> U/euf/b/n on input line \
+106.\\n))\\nNo file slraurtxbmoggdyk.aux.\\n\\\\openout1 = \
+`slraurtxbmoggdyk.aux'.\\n\\nLaTeX Font Info:    Checking defaults for \
+OML/cmm/m/it on input line 22.\\nLaTeX Font Info:    ... okay on input line \
+22.\\nLaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line \
+22.\\nLaTeX Font Info:    ... okay on input line 22.\\nLaTeX Font Info:    \
+Checking defaults for OT1/cmr/m/n on input line 22.\\nLaTeX Font Info:    ... \
+okay on input line 22.\\nLaTeX Font Info:    Checking defaults for \
+OMS/cmsy/m/n on input line 22.\\nLaTeX Font Info:    ... okay on input line \
+22.\\nLaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line \
+22.\\nLaTeX Font Info:    ... okay on input line 22.\\nLaTeX Font Info:    \
+Checking defaults for U/cmr/m/n on input line 22.\\nLaTeX Font Info:    ... \
+okay on input line 22.\\nLaTeX Font Info:    Try loading font information for \
+OT1+lmr on input line \
+22.\\n(/usr/local/texlive/2016/texmf-dist/tex/latex/lm/ot1lmr.fd\\nFile: \
+ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern\\n)\\nLaTeX Font Info:   \
+ Try loading font information for OML+lmm on input line \
+24.\\n\\n(/usr/local/texlive/2016/texmf-dist/tex/latex/lm/omllmm.fd\\nFile: \
+omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern\\n)\\nLaTeX Font Info:   \
+ Try loading font information for OMS+lmsy on input line \
+24.\\n\\n\\n(/usr/local/texlive/2016/texmf-dist/tex/latex/lm/omslmsy.fd\\\
+nFile: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern\\n)\\nLaTeX Font \
+Info:    Try loading font information for U+msa on input line \
+24.\\n\\n(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd\\\
+nFile: umsa.fd 2013/01/14 v3.01 AMS symbols A\\n)\\nLaTeX Font Info:    Try \
+loading font information for U+msb on input line \
+24.\\n\\n(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd\\\
+nFile: umsb.fd 2013/01/14 v3.01 AMS symbols B\\n)\\n! Missing { \
+inserted.\\n<to be read again> \\n                   $\\nl.24 \
+\\\\MaTeX{x^}\\n                \\nHere is how much of TeX's memory you used:\
+\\n 1972 strings out of 493014\\n 25863 string characters out of 6133351\\n \
+77246 words of memory out of 5000000\\n 5501 multiletter control sequences \
+out of 15000+600000\\n 16648 words of font info for 33 fonts, out of 8000000 \
+for 9000\\n 1141 hyphenation exceptions out of 8191\\n 34i,5n,56p,320b,97s \
+stack positions out of 5000i,500n,10000p,200000b,80000s\\n\\n!  ==> Fatal \
+error occurred, no output PDF file produced!\"\>"], "Print",
+ CellChangeTimes->{3.6882277100884438`*^9},
+ CellLabel->"During evaluation of In[11]:=",
+ CellID->98788073],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"MaTeX", "::", "texerr"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Error while running \
+LaTeX.\\n\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\"! Missing { \
+inserted.\\\\\\\\n!  ==> Fatal error occurred, no output PDF file produced!\\\
+\\\\\"\\\", \\\"OutputForm\\\", Rule[StripOnInput, False]]\\)\[NoBreak] \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:MaTeX/ref/MaTeX\\\", ButtonNote -> \
+\\\"MaTeX`MaTeX::texerr\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6882277103204803`*^9},
+ CellLabel->"During evaluation of In[11]:=",
+ CellID->326283780],
+
+Cell[BoxData["$Failed"], "Output",
+ CellChangeTimes->{3.688227710327004*^9},
+ CellLabel->"Out[11]=",
+ CellID->1325739669]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["More Examples", "ExtendedExamplesSection",
+ CellTags->"ExtendedExamples",
+ CellID->1854448968],
+
+Cell[BoxData[
+ InterpretationBox[Cell["Scope", "ExampleSection"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->1293636265],
+
+Cell[BoxData[
+ InterpretationBox[Cell["Generalizations & Extensions", "ExampleSection"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->1020263627],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["Options", "ExampleSection"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->2061341341],
+
+Cell[BoxData[
+ InterpretationBox[Cell["XXXX", "ExampleSubsection"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellID->1757724783],
+
+Cell[BoxData[
+ InterpretationBox[Cell["XXXX", "ExampleSubsection"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellID->1295379749]
+}, Closed]],
+
+Cell[BoxData[
+ InterpretationBox[Cell["Applications", "ExampleSection"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->258228157],
+
+Cell[BoxData[
+ InterpretationBox[Cell["Properties & Relations", "ExampleSection"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->2123667759],
+
+Cell[BoxData[
+ InterpretationBox[Cell["Possible Issues", "ExampleSection"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->1305812373],
+
+Cell[BoxData[
+ InterpretationBox[Cell["Interactive Examples", "ExampleSection"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->1653164318],
+
+Cell[BoxData[
+ InterpretationBox[Cell["Neat Examples", "ExampleSection"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->589267740]
+}, Open  ]]
+},
+WindowSize->{700, 770},
+WindowMargins->{{4, Automatic}, {Automatic, 0}},
+CellContext->"Global`",
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
+2014)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "FunctionPageStyles.nb", 
+  CharacterEncoding -> "UTF-8"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "ExtendedExamples"->{
+  Cell[35744, 721, 100, 2, 55, "ExtendedExamplesSection",
+   CellTags->"ExtendedExamples",
+   CellID->1854448968]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"ExtendedExamples", 37677, 792}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 325, 14, 24, "History",
+ CellID->1247902091],
+Cell[CellGroupData[{
+Cell[908, 38, 68, 1, 29, "CategorizationSection",
+ CellID->1122911449],
+Cell[979, 41, 146, 3, 30, "Categorization",
+ CellID->686433507],
+Cell[1128, 46, 78, 2, 30, "Categorization",
+ CellID->605800465],
+Cell[1209, 50, 75, 2, 30, "Categorization",
+ CellID->468444828],
+Cell[1287, 54, 141, 2, 30, "Categorization"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1465, 61, 55, 1, 29, "KeywordsSection",
+ CellID->477174294],
+Cell[1523, 64, 120, 2, 19, "Keywords",
+ CellID->1164421360]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1680, 71, 65, 1, 29, "TemplatesSection",
+ CellID->1872225408],
+Cell[1748, 74, 94, 2, 70, "Template",
+ CellID->1562036412],
+Cell[1845, 78, 82, 2, 70, "Template",
+ CellID->158391909],
+Cell[1930, 82, 81, 2, 70, "Template",
+ CellID->1360575930],
+Cell[2014, 86, 82, 2, 70, "Template",
+ CellID->793782254]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[2133, 93, 53, 1, 19, "DetailsSection",
+ CellID->307771771],
+Cell[2189, 96, 63, 2, 70, "Details",
+ CellID->670882175],
+Cell[2255, 100, 69, 2, 70, "Details",
+ CellID->350963985],
+Cell[2327, 104, 64, 2, 70, "Details",
+ CellID->8391405],
+Cell[2394, 108, 69, 2, 70, "Details",
+ CellID->3610269],
+Cell[2466, 112, 61, 2, 70, "Details",
+ CellID->401364205],
+Cell[2530, 116, 61, 2, 70, "Details",
+ CellID->350204745],
+Cell[2594, 120, 63, 2, 70, "Details",
+ CellID->732958810],
+Cell[2660, 124, 78, 2, 70, "Details",
+ CellID->222905350],
+Cell[2741, 128, 67, 2, 70, "Details",
+ CellID->240026365]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[2845, 135, 121, 2, 63, "ObjectName",
+ CellID->1224892054],
+Cell[2969, 139, 405, 8, 22, "Message",
+ CellID->152366399],
+Cell[3377, 149, 1011, 33, 45, "Notes",
+ CellID->1067943069],
+Cell[4391, 184, 716, 22, 45, "Notes",
+ CellID->980309984]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5144, 211, 57, 1, 43, "TutorialsSection",
+ CellID->250839057],
+Cell[5204, 214, 222, 4, 16, "Tutorials",
+ CellID->341631938]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5463, 223, 83, 1, 30, "RelatedDemonstrationsSection",
+ CellID->1268215905],
+Cell[5549, 226, 58, 1, 16, "RelatedDemonstrations",
+ CellID->1129518860]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5644, 232, 65, 1, 30, "RelatedLinksSection",
+ CellID->1584193535],
+Cell[5712, 235, 49, 1, 16, "RelatedLinks",
+ CellID->1038487239]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5798, 241, 55, 1, 30, "SeeAlsoSection",
+ CellID->1255426704],
+Cell[5856, 244, 43, 1, 16, "SeeAlso",
+ CellID->929782353]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5936, 250, 57, 1, 30, "MoreAboutSection",
+ CellID->38303248],
+Cell[5996, 253, 46, 1, 16, "MoreAbout",
+ CellID->1665078683]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6079, 259, 356, 11, 69, "PrimaryExamplesSection",
+ CellID->880084151],
+Cell[6438, 272, 566, 18, 24, "ExampleText",
+ CellID->1563779258],
+Cell[CellGroupData[{
+Cell[7029, 294, 177, 4, 24, "Input",
+ CellID->420232364],
+Cell[7209, 300, 677, 14, 56, "Message",
+ CellID->612647526],
+Cell[7889, 316, 121, 3, 23, "Output",
+ CellID->1730365764]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8047, 324, 125, 3, 17, "ExampleDelimiter",
+ CellID->125493087],
+Cell[8175, 329, 132, 2, 22, "ExampleText",
+ CellID->2107528481],
+Cell[CellGroupData[{
+Cell[8332, 335, 259, 7, 25, "Input",
+ CellID->2053942007],
+Cell[8594, 344, 26283, 349, 9579, "Print",
+ CellID->98788073],
+Cell[34880, 695, 679, 14, 56, "Message",
+ CellID->326283780],
+Cell[35562, 711, 121, 3, 23, "Output",
+ CellID->1325739669]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[35744, 721, 100, 2, 55, "ExtendedExamplesSection",
+ CellTags->"ExtendedExamples",
+ CellID->1854448968],
+Cell[35847, 725, 125, 3, 33, "ExampleSection",
+ CellID->1293636265],
+Cell[35975, 730, 148, 3, 21, "ExampleSection",
+ CellID->1020263627],
+Cell[CellGroupData[{
+Cell[36148, 737, 127, 3, 21, "ExampleSection",
+ CellID->2061341341],
+Cell[36278, 742, 130, 3, 70, "ExampleSubsection",
+ CellID->1757724783],
+Cell[36411, 747, 130, 3, 70, "ExampleSubsection",
+ CellID->1295379749]
+}, Closed]],
+Cell[36556, 753, 131, 3, 21, "ExampleSection",
+ CellID->258228157],
+Cell[36690, 758, 142, 3, 21, "ExampleSection",
+ CellID->2123667759],
+Cell[36835, 763, 135, 3, 21, "ExampleSection",
+ CellID->1305812373],
+Cell[36973, 768, 140, 3, 21, "ExampleSection",
+ CellID->1653164318],
+Cell[37116, 773, 132, 3, 21, "ExampleSection",
+ CellID->589267740]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

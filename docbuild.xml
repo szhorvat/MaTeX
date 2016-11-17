@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<project name="BuildDocumentation" default="main" basedir=".">
+
+<!--
+ This build file has been created by the Wolfram Workbench.
+ If you run it inside the Workbench it should not need any 
+ modifications to create documentation.
+
+
+ If you run the build outside of the Workbench you may need to 
+ modify appPath, mathematicaInstallDir and mathExe.
+ 
+ If you move the buildfile inside the project, you will 
+ need to make appropriate changes to inputDir, outputDirNB,
+ outputDirWeb, and logDir.
+ 
+ Properties:
+   appPath    the path that contains the location of the DocumentationBuild app
+   mathematicaInstallDir   
+              the installation directory of Mathematica
+   mathExe    the command to use for invoking the Mathematica Kernel
+   inputDir   the directory in which to search for notebooks to convert
+   outputDirNB  the directory into which notebook output will be written
+   outputDirWeb  the directory into which web output will be written
+   logDir     the directory into which log information will be written
+   buildNBDocs set this if you want to build NB documentation
+   buildWebDocs set this if you want to build Web documentation
+-->
+	
+<!--
+	app.name is the name of the application.
+-->
+	<property name="pacletName" value="MaTeX"/>
+	<property name="app.name" value="MaTeX"/>
+	<property name="pacletContainer" value="MaTeX"/>
+	<property name="docInputDir" value="MaTeX/Documentation"/>
+	<property name="docOutputDir" value="Documentation"/>
+	<property name="dist" value="${basedir}/build" />
+	
+	<target name="clean">
+		<delete  dir="${dist}" />
+	</target>
+	
+	<target name="docbuild">
+
+<!--
+If you want to create HTML you should always set Mathematica.DocumentationBuild.createHTML
+or set Mathematica.DocumentationBuild.createHTML.setting to Mathematica.DocumentationBuild.createHTML.
+-->
+		<property name="${Mathematica.DocumentationBuild.createHTML.setting}" value="true" />	
+
+<!--
+ appPath, mathematicaInstallDir and mathExe. 
+ These need to be set appropriately for your build.
+-->		
+		<property name="appPath" value="${appPath.default}"/>
+		<property name="mathematicaInstallDir" value="/Applications/Mathematica 11.app/Contents"/>
+		<property name="mathExe" value="/Applications/Mathematica 11.app/Contents/MacOS/MathKernel"/>
+
+<!--
+ If you move the build file, you need to change inputDir, outputDir, and logDir.
+-->
+
+		<property name="inputDir" value="${basedir}/${docInputDir}" />
+		<property name="outputDirNB" value="${dist}/${pacletContainer}/${docOutputDir}" />
+		<property name="outputDirWeb" value="${dist}/${pacletContainer}-HTML" />
+		<property name="logDir" value="${dist}/log" />
+		<property name="jlinkpath" value="${mathematicaInstallDir}/SystemFiles/Links/JLink"/>
+
+		<echo message="DocumentationBuild: ${appPath}"/>
+		<echo message="Mathematica Install Dir: ${mathematicaInstallDir}"/>
+		<echo message="MathKernel: ${mathExe}"/>
+		<echo message="Input: ${inputDir}"/>
+		<echo message="Output NB: ${outputDirNB}"/>
+		<echo message="Output Web: ${outputDirWeb}"/>
+			
+		<property name="buildNBDocs" value="true" />
+		<property name="buildWebDocs" value="true" />
+		<property name="includeLinkTrails" value="false"/> 
+
+	  	<path id="jlink.lib">
+	    	<fileset dir="${jlinkpath}">
+	      		<include name="**/JLink.jar"/>
+	      		<include name="**/SystemFiles/*"/>
+	    		</fileset>
+	  	</path>
+
+	  	<!-- Load JLink -->
+	  	<taskdef name="mathematica"
+	      	classname="com.wolfram.jlink.util.MathematicaTask" >
+	    	<classpath refid="jlink.lib" />
+	  	</taskdef>
+
+		<property name="JLinkLoaded" value="true"/>
+		
+		<ant antfile="${appPath}/DocumentationBuild/SystemFiles/ant/Build/notebook.xml"
+	           target="main">
+	    	<property name="outputDir" value="${outputDirNB}" />
+	        <property name="language" value="English" />
+	    </ant>
+
+		<antcall target="createHTML" />
+		
+		<antcall target="setupPaclet" />
+		
+
+	</target>
+
+	<target name="createHTML" if="Mathematica.DocumentationBuild.createHTML">
+	    <ant antfile="${appPath}/DocumentationBuild/SystemFiles/ant/Build/html.xml"
+	           target="main">
+				<property name="local" value="True"/>
+				<property name="completeHTMLQ" value="True"/>
+				<property name="includeLinkTrails" value="False"/>	
+	           	<property name="outputDir" value="${outputDirWeb}" />
+	        <property name="language" value="English" />
+	    </ant>	
+	</target>
+	
+	<target name="setupPaclet" if="buildNBDocs">	
+		<copy file="${basedir}/MaTeX/PacletInfo.m" todir="${dist}/${pacletContainer}" overwrite="true" />
+		<copy todir="${dist}/${pacletContainer}/${docOutputDir}" overwrite="true" >
+		<fileset dir="${basedir}/${docInputDir}">
+		    <exclude name="*/Guides/**"/>
+		    <exclude name="*/ReferencePages/**"/>
+	    	<exclude name="*/Tutorials/**"/>
+		</fileset>
+		</copy>
+	</target>
+	
+	<target name="main" depends="clean">
+		<antcall target="docbuild" />
+	</target>
+
+	
+</project>
+

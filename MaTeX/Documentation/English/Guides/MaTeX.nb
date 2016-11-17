@@ -1,0 +1,383 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      9642,        375]
+NotebookOptionsPosition[      6785,        274]
+NotebookOutlinePosition[      7216,        291]
+CellTagsIndexPosition[      7173,        288]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[{
+ "New in: ",
+ Cell["1.6", "HistoryData",
+  CellTags->"New"],
+ " | Modified in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Modified"],
+ " | Obsolete in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Obsolete"],
+ " | Excised in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Excised"]
+}], "History",
+ CellID->1247902091],
+
+Cell[CellGroupData[{
+
+Cell["Categorization", "CategorizationSection",
+ CellID->1122911449],
+
+Cell["Guide", "Categorization",
+ CellLabel->"Entity Type",
+ CellID->686433507],
+
+Cell["MaTeX", "Categorization",
+ CellLabel->"Paclet Name",
+ CellID->605800465],
+
+Cell["MaTeX`", "Categorization",
+ CellLabel->"Context",
+ CellID->468444828],
+
+Cell["MaTeX/guide/MaTeX", "Categorization",
+ CellLabel->"URI"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Keywords", "KeywordsSection",
+ CellID->1427428552],
+
+Cell["XXXX", "Keywords",
+ CellID->1251852827]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Details", "DetailsSection",
+ CellID->307771771],
+
+Cell["XXXX", "Details",
+ CellLabel->"Lead",
+ CellID->795394057],
+
+Cell["XXXX", "Details",
+ CellLabel->"Developers",
+ CellID->350963985],
+
+Cell["XXXX", "Details",
+ CellLabel->"Authors",
+ CellID->802101],
+
+Cell["XXXX", "Details",
+ CellLabel->"Feature Name",
+ CellID->509823116],
+
+Cell["XXXX", "Details",
+ CellLabel->"QA",
+ CellID->199884516],
+
+Cell["XXXX", "Details",
+ CellLabel->"DA",
+ CellID->463951815],
+
+Cell["XXXX", "Details",
+ CellLabel->"Docs",
+ CellID->8237523],
+
+Cell["XXXX", "Details",
+ CellLabel->"Features Page Notes",
+ CellID->813936640],
+
+Cell["XXXX", "Details",
+ CellLabel->"Comments",
+ CellID->240026365]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["MaTeX", "GuideTitle",
+ CellID->942062912],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"L", 
+     StyleBox[
+      AdjustmentBox["A",
+       BoxBaselineShift->-0.4,
+       BoxMargins->{{-0.5, -0.3}, {0, 0}}],
+      FontSize->Smaller], "T", 
+     AdjustmentBox["E",
+      BoxBaselineShift->0.5,
+      BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}],
+    SingleLetterItalics->False], TraditionalForm]]],
+ " integration for Mathematica."
+}], "GuideAbstract",
+ CellChangeTimes->{{3.688107051475974*^9, 3.6881070562714777`*^9}},
+ CellID->2001916300],
+
+Cell[TextData[ButtonBox["https://github.com/szhorvat/MaTeX",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://github.com/szhorvat/MaTeX"], None}]], "GuideAbstract",
+ CellChangeTimes->{{3.6881916875921383`*^9, 3.6881916876524267`*^9}},
+ CellID->1546482418]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "GuideFunctionsSection",
+ CellID->1866139230],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["MaTeX",
+   BaseStyle->"Link",
+   ButtonData->"paclet:MaTeX/ref/MaTeX"]], "InlineGuideFunction"],
+ " \[LongDash] convert ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"L", 
+     StyleBox[
+      AdjustmentBox["A",
+       BoxBaselineShift->-0.4,
+       BoxMargins->{{-0.5, -0.3}, {0, 0}}],
+      FontSize->Smaller], "T", 
+     AdjustmentBox["E",
+      BoxBaselineShift->0.5,
+      BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}],
+    SingleLetterItalics->False], TraditionalForm]]],
+ " code into Mathematica graphics"
+}], "GuideText",
+ CellChangeTimes->{{3.6880449398889*^9, 3.6880449412550592`*^9}, {
+  3.688044983846015*^9, 3.6880449843228903`*^9}, {3.688048112120625*^9, 
+  3.6880481357487583`*^9}, {3.688049023163824*^9, 3.688049023506515*^9}},
+ CellID->203374175],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["ConfigureMaTeX",
+   BaseStyle->"Link",
+   ButtonData->"paclet:MaTeX/ref/ConfigureMaTeX"]], "InlineGuideFunction"],
+ " \[LongDash] set the location of ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"L", 
+     StyleBox[
+      AdjustmentBox["A",
+       BoxBaselineShift->-0.4,
+       BoxMargins->{{-0.5, -0.3}, {0, 0}}],
+      FontSize->Smaller], "T", 
+     AdjustmentBox["E",
+      BoxBaselineShift->0.5,
+      BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}],
+    SingleLetterItalics->False], TraditionalForm]]],
+ ", Ghostscript, and other MaTeX settings"
+}], "GuideText",
+ CellChangeTimes->{{3.6880449482546263`*^9, 3.688044950150691*^9}, {
+  3.688044989078364*^9, 3.68804498913696*^9}, {3.6880481250932283`*^9, 
+  3.6880481456362762`*^9}, {3.688049027970026*^9, 3.688049038897674*^9}},
+ CellID->1463276848],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["ClearMaTeXCache",
+   BaseStyle->"Link",
+   ButtonData->"paclet:MaTeX/ref/ClearMaTeXCache"]], "InlineGuideFunction"],
+ " \[LongDash] clear any cached results"
+}], "GuideText",
+ CellChangeTimes->{{3.6880449600801783`*^9, 3.688044992687244*^9}, {
+  3.688048148260315*^9, 3.6880481530280247`*^9}, {3.688049045329348*^9, 
+  3.688049045561467*^9}},
+ CellID->1690080009],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["BlackFrame",
+   BaseStyle->"Link",
+   ButtonData->"paclet:MaTeX/ref/BlackFrame"]], "InlineGuideFunction"],
+ " \[LongDash] can be used as ",
+ ButtonBox["FrameStyle",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/FrameStyle"],
+ " or ",
+ ButtonBox["AxesStyle",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/AxesStyle"]
+}], "GuideText",
+ CellChangeTimes->{{3.688044970926957*^9, 3.688044996154689*^9}, {
+  3.688048157427815*^9, 3.688048173155199*^9}, {3.688049061800762*^9, 
+  3.688049091753195*^9}},
+ CellID->1580182154],
+
+Cell[CellGroupData[{
+
+Cell["\t", "GuideDelimiter",
+ CellID->311258892],
+
+Cell["XXXX . XXXX . ", "InlineGuideFunctionListing",
+ CellID->58033752]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Tutorials", "GuideTutorialsSection",
+ CellID->415694126],
+
+Cell[TextData[ButtonBox["Configuring MaTeX",
+ BaseStyle->"Link",
+ ButtonData->"paclet:MaTeX/tutorial/ConfiguringMaTeX"]], "GuideTutorial",
+ CellChangeTimes->{{3.6880450548140697`*^9, 3.6880450603991537`*^9}},
+ CellID->1481783382],
+
+Cell[TextData[ButtonBox["Basic Usage",
+ BaseStyle->"Link",
+ ButtonData->"paclet:MaTeX/tutorial/BasicUsage"]], "GuideTutorial",
+ CellChangeTimes->{{3.688045025042121*^9, 3.6880450370466757`*^9}},
+ CellID->806871991],
+
+Cell["XXXX", "GuideTutorial",
+ CellID->1885805579]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["More About", "GuideMoreAboutSection",
+ CellID->23220180],
+
+Cell["XXXX", "GuideMoreAbout",
+ CellID->1567025153],
+
+Cell["XXXX", "GuideMoreAbout",
+ CellID->252299663]
+}, Open  ]],
+
+Cell["Related Links", "GuideRelatedLinksSection",
+ CellID->415694148]
+},
+WindowSize->{700, 770},
+WindowMargins->{{340, Automatic}, {18, Automatic}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
+2014)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "GuidePageStyles.nb", 
+  CharacterEncoding -> "UTF-8"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 325, 14, 24, "History",
+ CellID->1247902091],
+Cell[CellGroupData[{
+Cell[908, 38, 68, 1, 29, "CategorizationSection",
+ CellID->1122911449],
+Cell[979, 41, 78, 2, 70, "Categorization",
+ CellID->686433507],
+Cell[1060, 45, 78, 2, 70, "Categorization",
+ CellID->605800465],
+Cell[1141, 49, 75, 2, 70, "Categorization",
+ CellID->468444828],
+Cell[1219, 53, 62, 1, 70, "Categorization"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1318, 59, 56, 1, 19, "KeywordsSection",
+ CellID->1427428552],
+Cell[1377, 62, 45, 1, 70, "Keywords",
+ CellID->1251852827]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1459, 68, 53, 1, 19, "DetailsSection",
+ CellID->307771771],
+Cell[1515, 71, 63, 2, 70, "Details",
+ CellID->795394057],
+Cell[1581, 75, 69, 2, 70, "Details",
+ CellID->350963985],
+Cell[1653, 79, 63, 2, 70, "Details",
+ CellID->802101],
+Cell[1719, 83, 71, 2, 70, "Details",
+ CellID->509823116],
+Cell[1793, 87, 61, 2, 70, "Details",
+ CellID->199884516],
+Cell[1857, 91, 61, 2, 70, "Details",
+ CellID->463951815],
+Cell[1921, 95, 61, 2, 70, "Details",
+ CellID->8237523],
+Cell[1985, 99, 78, 2, 70, "Details",
+ CellID->813936640],
+Cell[2066, 103, 67, 2, 70, "Details",
+ CellID->240026365]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[2170, 110, 47, 1, 77, "GuideTitle",
+ CellID->942062912],
+Cell[2220, 113, 515, 17, 29, "GuideAbstract",
+ CellID->2001916300],
+Cell[2738, 132, 262, 5, 27, "GuideAbstract",
+ CellID->1546482418]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3037, 142, 54, 1, 70, "GuideFunctionsSection",
+ CellID->1866139230],
+Cell[3094, 145, 809, 24, 24, "GuideText",
+ CellID->203374175],
+Cell[3906, 171, 849, 24, 24, "GuideText",
+ CellID->1463276848],
+Cell[4758, 197, 407, 10, 23, "GuideText",
+ CellID->1690080009],
+Cell[5168, 209, 563, 17, 23, "GuideText",
+ CellID->1580182154],
+Cell[CellGroupData[{
+Cell[5756, 230, 48, 1, 26, "GuideDelimiter",
+ CellID->311258892],
+Cell[5807, 233, 71, 1, 20, "InlineGuideFunctionListing",
+ CellID->58033752]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5927, 240, 62, 1, 72, "GuideTutorialsSection",
+ CellID->415694126],
+Cell[5992, 243, 229, 4, 22, "GuideTutorial",
+ CellID->1481783382],
+Cell[6224, 249, 214, 4, 22, "GuideTutorial",
+ CellID->806871991],
+Cell[6441, 255, 50, 1, 22, "GuideTutorial",
+ CellID->1885805579]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6528, 261, 62, 1, 72, "GuideMoreAboutSection",
+ CellID->23220180],
+Cell[6593, 264, 51, 1, 22, "GuideMoreAbout",
+ CellID->1567025153],
+Cell[6647, 267, 50, 1, 22, "GuideMoreAbout",
+ CellID->252299663]
+}, Open  ]],
+Cell[6712, 271, 69, 1, 72, "GuideRelatedLinksSection",
+ CellID->415694148]
+}
+]
+*)
+
