@@ -2,11 +2,13 @@
 
 Create LaTeX labels in *Mathematica*.
 
-See [the blog post](http://szhorvat.net/pelican/latex-typesetting-in-mathematica.html) for a detailed introduction to MaTeX.
+See [the blog post](http://szhorvat.net/pelican/latex-typesetting-in-mathematica.html) for a detailed introduction to MaTeX and up to date troubleshooting information.
 
 ## Installation
 
- - [Download the latest release](https://github.com/szhorvat/MaTeX/releases) and place the `MaTeX` directory inside the directory opened by `SystemOpen@FileNameJoin[{$UserBaseDirectory, "Applications"}]`.
+ - [Download the latest release](https://github.com/szhorvat/MaTeX/releases), distributed as a `.paclet` file, and install it using the `PacletInstall` function in Mathematica.  For example, assuming that the file `MaTeX-1.6.2.paclet` was downloaded into the directory `~/Downloads`, evaluate
+
+        PacletInstall["~/Downloads/MaTeX-1.6.2.paclet"]
 
  - Make sure that a TeX system and Ghostscript 9.15 or later are installed.  
 
@@ -18,6 +20,28 @@ See [the blog post](http://szhorvat.net/pelican/latex-typesetting-in-mathematica
 
  - Test MaTeX using `MaTeX["x^2"]`.
 
+    Open the documentation center and search for "matex" to get started.
+
+## Upgrading or uninstalling
+
+A newer version can be safely installed when an older version is already present.  ``Needs["MaTeX`"]`` will always load the latest installed MaTeX that is compatible with your version of Mathematica.
+
+A list of all installed versions can be retrieved using
+
+    PacletFind["MaTeX"]
+
+Any of the items in the list can be uninstalled by applying `PacletUninstall` to it.  To uninstall all versions at once, use
+
+    PacletUninstall["MaTeX"]
+
+To see more information about the version that gets loaded by `Needs`, use
+
+    PacletInformaton["MaTeX"]
+
+**Note:** If you installed MaTeX before it started using the paclet distribution format (i.e. version 1.6.2), uninstall it by removing the `MaTeX` directory from the following location:
+
+    SystemOpen@FileNameJoin[{$UserBaseDirectory, "Applications"}]
+
 ## Usage
 
 Use `MaTeX[texcode]` or `MaTeX[expression]` to typeset using LaTeX.  The latter will automatically apply `TeXForm` to `expression`.
@@ -25,7 +49,7 @@ Use `MaTeX[texcode]` or `MaTeX[expression]` to typeset using LaTeX.  The latter 
 The LaTeX code is interpreted in math mode.  Remember to escape backlashes (i.e. type *two* `\` characters when you mean one) when writing LaTeX code in Mathematica strings, e.g.
 
     MaTeX["\\sum_{k=1}^{\\infty} \\frac{1}{k}"]
-    
+
 Multiple expressions can also be processed in one go:
 
     MaTeX[{
@@ -33,9 +57,10 @@ Multiple expressions can also be processed in one go:
       HoldForm[Integrate[Sin[x], {x, 0, 2 Pi}]],
       Expand[(1 + x)^5]
     }]
-    
+
 Processing a list of expressions together involves a single run of LaTeX, thus is much faster than processing each separately.
 
+For many usage instructions, search for "MaTeX" in the documentation center.
 
 ## Notes on performance
 
@@ -43,25 +68,30 @@ The limiting factor in the speed of `MaTeX` calls is running the `pdflatex` proc
 
 ## Revision history
 
+#### Version 1.6.2
+
+ - The documentation is now integrated into the Documentation Center.
+ - Bug fix: full compatibility with Mathematica 10.0 restored.
+
 #### Version 1.6.1
 
- - Bug fix: better error checking for the CacheSize option.
+ - Bug fix: better error checking for the CacheSize configuration option.
 
 #### Version 1.6.0
 
  - `MaTeX` now threads over lists. A list is batch-processed using a single run of LaTeX, which is much faster than element-wise processing. Implemented by [Andreas Ahlrichs](https://github.com/aquadr).
- 
-    Note that this changes behaviour slightly.  Previous versions of MaTeX compiled `MaTeX[{1, x^2, x/2}]` as a single expression.  Now each element of the list is converted to a separate result.  To restore the old behaviour, apply `TeXForm` explicitly: `MaTeX[TeXForm[{1, x^2, x/2}]`. 
-    
+
+    Note that this changes behaviour slightly.  Previous versions of MaTeX compiled `MaTeX[{1, x^2, x/2}]` as a single expression.  Now each element of the list is converted to a separate result.  To restore the old behaviour, apply `TeXForm` explicitly: `MaTeX[TeXForm[{1, x^2, x/2}]`.
+
  - Expressions with head `TeXForm` are now automatically handled.
- 
+
  - Bug fixes: Better handling of CR/LF line endings and character encodings.
 
 #### Version 1.5.0
 
  - Much improved LaTeX error reporting. Please report any problems you notice with the new error reporting.
  - MaTeX now checks for common user errors and issues warnings.  Turn them off using `Off[MaTeX::warn]`.
- 
+
 #### Version 1.4.0
 
  - Separated `"Preamble"` and `"BasePreamble"` options.  The default preamble is now in `"BasePreamble"`.  The `"Preamble"` option can be set without needing to worry about the default.
