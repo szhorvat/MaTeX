@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      9642,        375]
-NotebookOptionsPosition[      6785,        274]
-NotebookOutlinePosition[      7216,        291]
-CellTagsIndexPosition[      7173,        288]
+NotebookDataLength[     10063,        383]
+NotebookOptionsPosition[      7272,        284]
+NotebookOutlinePosition[      7703,        301]
+CellTagsIndexPosition[      7660,        298]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -112,6 +112,7 @@ Cell["MaTeX", "GuideTitle",
  CellID->942062912],
 
 Cell[TextData[{
+ "MaTeX makes it easy to typeset expressions using ",
  Cell[BoxData[
   FormBox[
    StyleBox[
@@ -125,17 +126,23 @@ Cell[TextData[{
       BoxBaselineShift->0.5,
       BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}],
     SingleLetterItalics->False], TraditionalForm]]],
- " integration for Mathematica."
+ " without leaving Mathematica. It is primarily intended for creating \
+beautifully typeset figure labels. The latest version is always available on \
+GitHub at ",
+ ButtonBox["https://github.com/szhorvat/MaTeX",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://github.com/szhorvat/MaTeX"], None}],
+ ". MaTeX is licensed under the ",
+ ButtonBox["MIT license",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://opensource.org/licenses/MIT"], None}],
+ "."
 }], "GuideAbstract",
- CellChangeTimes->{{3.688107051475974*^9, 3.6881070562714777`*^9}},
- CellID->2001916300],
-
-Cell[TextData[ButtonBox["https://github.com/szhorvat/MaTeX",
- BaseStyle->"Hyperlink",
- ButtonData->{
-   URL["https://github.com/szhorvat/MaTeX"], None}]], "GuideAbstract",
- CellChangeTimes->{{3.6881916875921383`*^9, 3.6881916876524267`*^9}},
- CellID->1546482418]
+ CellChangeTimes->{{3.688409356005567*^9, 3.688409421280478*^9}, {
+   3.688578472064713*^9, 3.6885784831768436`*^9}, 3.688580928967751*^9},
+ CellID->396060580]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -262,7 +269,10 @@ Cell[CellGroupData[{
 Cell["More About", "GuideMoreAboutSection",
  CellID->23220180],
 
-Cell["XXXX", "GuideMoreAbout",
+Cell[TextData[ButtonBox["Generating and Importing TeX",
+ BaseStyle->"Link",
+ ButtonData->"paclet:tutorial/GeneratingAndImportingTeX"]], "GuideMoreAbout",
+ CellChangeTimes->{{3.68840927926329*^9, 3.688409313433278*^9}},
  CellID->1567025153],
 
 Cell["XXXX", "GuideMoreAbout",
@@ -334,48 +344,46 @@ Cell[2066, 103, 67, 2, 70, "Details",
 Cell[CellGroupData[{
 Cell[2170, 110, 47, 1, 77, "GuideTitle",
  CellID->942062912],
-Cell[2220, 113, 515, 17, 29, "GuideAbstract",
- CellID->2001916300],
-Cell[2738, 132, 262, 5, 27, "GuideAbstract",
- CellID->1546482418]
+Cell[2220, 113, 1079, 31, 77, "GuideAbstract",
+ CellID->396060580]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[3037, 142, 54, 1, 70, "GuideFunctionsSection",
+Cell[3336, 149, 54, 1, 70, "GuideFunctionsSection",
  CellID->1866139230],
-Cell[3094, 145, 809, 24, 24, "GuideText",
+Cell[3393, 152, 809, 24, 24, "GuideText",
  CellID->203374175],
-Cell[3906, 171, 849, 24, 24, "GuideText",
+Cell[4205, 178, 849, 24, 24, "GuideText",
  CellID->1463276848],
-Cell[4758, 197, 407, 10, 23, "GuideText",
+Cell[5057, 204, 407, 10, 23, "GuideText",
  CellID->1690080009],
-Cell[5168, 209, 563, 17, 23, "GuideText",
+Cell[5467, 216, 563, 17, 23, "GuideText",
  CellID->1580182154],
 Cell[CellGroupData[{
-Cell[5756, 230, 48, 1, 26, "GuideDelimiter",
+Cell[6055, 237, 48, 1, 26, "GuideDelimiter",
  CellID->311258892],
-Cell[5807, 233, 71, 1, 20, "InlineGuideFunctionListing",
+Cell[6106, 240, 71, 1, 20, "InlineGuideFunctionListing",
  CellID->58033752]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5927, 240, 62, 1, 72, "GuideTutorialsSection",
+Cell[6226, 247, 62, 1, 72, "GuideTutorialsSection",
  CellID->415694126],
-Cell[5992, 243, 229, 4, 22, "GuideTutorial",
+Cell[6291, 250, 229, 4, 22, "GuideTutorial",
  CellID->1481783382],
-Cell[6224, 249, 214, 4, 22, "GuideTutorial",
+Cell[6523, 256, 214, 4, 22, "GuideTutorial",
  CellID->806871991],
-Cell[6441, 255, 50, 1, 22, "GuideTutorial",
+Cell[6740, 262, 50, 1, 22, "GuideTutorial",
  CellID->1885805579]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[6528, 261, 62, 1, 72, "GuideMoreAboutSection",
+Cell[6827, 268, 62, 1, 72, "GuideMoreAboutSection",
  CellID->23220180],
-Cell[6593, 264, 51, 1, 22, "GuideMoreAbout",
+Cell[6892, 271, 239, 4, 22, "GuideMoreAbout",
  CellID->1567025153],
-Cell[6647, 267, 50, 1, 22, "GuideMoreAbout",
+Cell[7134, 277, 50, 1, 22, "GuideMoreAbout",
  CellID->252299663]
 }, Open  ]],
-Cell[6712, 271, 69, 1, 72, "GuideRelatedLinksSection",
+Cell[7199, 281, 69, 1, 72, "GuideRelatedLinksSection",
  CellID->415694148]
 }
 ]
