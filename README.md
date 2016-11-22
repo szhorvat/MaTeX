@@ -42,6 +42,31 @@ To see more information about the version that gets loaded by `Needs`, use
 
     SystemOpen@FileNameJoin[{$UserBaseDirectory, "Applications"}]
 
+----
+
+The following function will automatically download the latest release of MaTeX and install it:
+
+    updateMaTeX[] :=
+      Module[{json, download, target, progress = 0.},
+        Check[
+          json = Import["https://api.github.com/repos/szhorvat/MaTeX/releases/latest", "JSON"];
+          download = Lookup[First@Lookup[json, "assets"], "browser_download_url"];
+          target = FileNameJoin[{CreateDirectory[], "MaTeX.paclet"}];
+          PrintTemporary@ProgressIndicator[Dynamic[progress]];
+          WaitAsynchronousTask@URLSaveAsynchronous[
+            download, target,
+            If[#2 === "progress", progress = Quiet[#3[[1]]/#3[[2]]] ] &,
+            "Progress" -> True
+          ]
+          ,
+          Return[$Failed]
+        ];
+        If[FileExistsQ[target], PacletInstall[target], $Failed]
+      ]
+
+Just run `updateMaTeX[]`.
+
+
 ## Usage
 
 Use `MaTeX[texcode]` or `MaTeX[expression]` to typeset using LaTeX.  The latter will automatically apply `TeXForm` to `expression`.
