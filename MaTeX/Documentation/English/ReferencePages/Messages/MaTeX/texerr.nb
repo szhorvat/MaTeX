@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     42465,        962]
-NotebookOptionsPosition[     37624,        790]
-NotebookOutlinePosition[     38255,        815]
-CellTagsIndexPosition[     38176,        810]
+NotebookDataLength[     42618,        968]
+NotebookOptionsPosition[     37719,        794]
+NotebookOutlinePosition[     38350,        819]
+CellTagsIndexPosition[     38271,        814]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -280,6 +280,10 @@ Cell[BoxData[
    }],
   $Line = 0; Null]], "PrimaryExamplesSection",
  CellID->880084151],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<MaTeX`\>\"", "]"}]], "Input",
+ CellID->1836554594],
 
 Cell[TextData[{
  "There is a syntax error in the following ",
@@ -802,14 +806,14 @@ StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "FunctionPageStyles.nb",
 (*CellTagsOutline
 CellTagsIndex->{
  "ExtendedExamples"->{
-  Cell[36104, 732, 100, 2, 55, "ExtendedExamplesSection",
+  Cell[36199, 736, 100, 2, 55, "ExtendedExamplesSection",
    CellTags->"ExtendedExamples",
    CellID->1854448968]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"ExtendedExamples", 38037, 803}
+ {"ExtendedExamples", 38132, 807}
  }
 *)
 (*NotebookFileOutline
@@ -910,58 +914,60 @@ Cell[6356, 264, 46, 1, 16, "MoreAbout",
 Cell[CellGroupData[{
 Cell[6439, 270, 356, 11, 69, "PrimaryExamplesSection",
  CellID->880084151],
-Cell[6798, 283, 566, 18, 24, "ExampleText",
+Cell[6798, 283, 92, 2, 24, "Input",
+ CellID->1836554594],
+Cell[6893, 287, 566, 18, 24, "ExampleText",
  CellID->1563779258],
 Cell[CellGroupData[{
-Cell[7389, 305, 177, 4, 24, "Input",
+Cell[7484, 309, 177, 4, 24, "Input",
  CellID->420232364],
-Cell[7569, 311, 677, 14, 56, "Message",
+Cell[7664, 315, 677, 14, 56, "Message",
  CellID->612647526],
-Cell[8249, 327, 121, 3, 23, "Output",
+Cell[8344, 331, 121, 3, 23, "Output",
  CellID->1730365764]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[8407, 335, 125, 3, 17, "ExampleDelimiter",
+Cell[8502, 339, 125, 3, 17, "ExampleDelimiter",
  CellID->125493087],
-Cell[8535, 340, 132, 2, 22, "ExampleText",
+Cell[8630, 344, 132, 2, 22, "ExampleText",
  CellID->2107528481],
 Cell[CellGroupData[{
-Cell[8692, 346, 259, 7, 25, "Input",
+Cell[8787, 350, 259, 7, 25, "Input",
  CellID->2053942007],
-Cell[8954, 355, 26283, 349, 9579, "Print",
+Cell[9049, 359, 26283, 349, 9579, "Print",
  CellID->98788073],
-Cell[35240, 706, 679, 14, 56, "Message",
+Cell[35335, 710, 679, 14, 56, "Message",
  CellID->326283780],
-Cell[35922, 722, 121, 3, 23, "Output",
+Cell[36017, 726, 121, 3, 23, "Output",
  CellID->1325739669]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[36104, 732, 100, 2, 55, "ExtendedExamplesSection",
+Cell[36199, 736, 100, 2, 55, "ExtendedExamplesSection",
  CellTags->"ExtendedExamples",
  CellID->1854448968],
-Cell[36207, 736, 125, 3, 33, "ExampleSection",
+Cell[36302, 740, 125, 3, 33, "ExampleSection",
  CellID->1293636265],
-Cell[36335, 741, 148, 3, 21, "ExampleSection",
+Cell[36430, 745, 148, 3, 21, "ExampleSection",
  CellID->1020263627],
 Cell[CellGroupData[{
-Cell[36508, 748, 127, 3, 21, "ExampleSection",
+Cell[36603, 752, 127, 3, 21, "ExampleSection",
  CellID->2061341341],
-Cell[36638, 753, 130, 3, 70, "ExampleSubsection",
+Cell[36733, 757, 130, 3, 70, "ExampleSubsection",
  CellID->1757724783],
-Cell[36771, 758, 130, 3, 70, "ExampleSubsection",
+Cell[36866, 762, 130, 3, 70, "ExampleSubsection",
  CellID->1295379749]
 }, Closed]],
-Cell[36916, 764, 131, 3, 21, "ExampleSection",
+Cell[37011, 768, 131, 3, 21, "ExampleSection",
  CellID->258228157],
-Cell[37050, 769, 142, 3, 21, "ExampleSection",
+Cell[37145, 773, 142, 3, 21, "ExampleSection",
  CellID->2123667759],
-Cell[37195, 774, 135, 3, 21, "ExampleSection",
+Cell[37290, 778, 135, 3, 21, "ExampleSection",
  CellID->1305812373],
-Cell[37333, 779, 140, 3, 21, "ExampleSection",
+Cell[37428, 783, 140, 3, 21, "ExampleSection",
  CellID->1653164318],
-Cell[37476, 784, 132, 3, 21, "ExampleSection",
+Cell[37571, 788, 132, 3, 21, "ExampleSection",
  CellID->589267740]
 }, Open  ]]
 }

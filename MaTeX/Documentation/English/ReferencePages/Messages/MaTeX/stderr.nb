@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     12016,        470]
-NotebookOptionsPosition[      7982,        328]
-NotebookOutlinePosition[      8611,        353]
-CellTagsIndexPosition[      8533,        348]
+NotebookDataLength[     12434,        475]
+NotebookOptionsPosition[      8361,        331]
+NotebookOutlinePosition[      8990,        356]
+CellTagsIndexPosition[      8912,        351]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -40,7 +40,7 @@ Cell["Categorization", "CategorizationSection",
  CellID->1122911449],
 
 Cell["Message", "Categorization",
- CellChangeTimes->{{3.6882327978500957`*^9, 3.688232798750824*^9}},
+ CellChangeTimes->{{3.688227336977414*^9, 3.688227337791216*^9}},
  CellLabel->"Entity Type",
  CellID->686433507],
 
@@ -52,8 +52,9 @@ Cell["MaTeX`", "Categorization",
  CellLabel->"Context",
  CellID->468444828],
 
-Cell["MaTeX/ref/message/MaTeX/gserr", "Categorization",
- CellChangeTimes->{{3.688232800982827*^9, 3.688232820031794*^9}},
+Cell["MaTeX/ref/message/MaTeX/stderr", "Categorization",
+ CellChangeTimes->{{3.688227317861203*^9, 3.688227347982616*^9}, {
+  3.689432511323558*^9, 3.6894325120514383`*^9}},
  CellLabel->"URI"]
 }, Open  ]],
 
@@ -62,8 +63,8 @@ Cell[CellGroupData[{
 Cell["Keywords", "KeywordsSection",
  CellID->477174294],
 
-Cell["error, ghostscript", "Keywords",
- CellChangeTimes->{{3.688232745627749*^9, 3.688232747762245*^9}},
+Cell["latex, error", "Keywords",
+ CellChangeTimes->{{3.6882273572112217`*^9, 3.68822735877101*^9}},
  CellID->1164421360]
 }, Open  ]],
 
@@ -133,78 +134,80 @@ Cell["XXXX", "Details",
 
 Cell[CellGroupData[{
 
-Cell["MaTeX::gserr", "ObjectName",
- CellChangeTimes->{{3.688232491659637*^9, 3.688232492867407*^9}},
+Cell["MaTeX::stderr", "ObjectName",
+ CellChangeTimes->{{3.68822736585651*^9, 3.688227366904566*^9}, {
+  3.689432585939097*^9, 3.6894325866091347`*^9}},
  CellID->1224892054],
 
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"MaTeX", "::", "gserr"}], "MessageName"], ":", 
-  " ", "\<\"Error while running Ghostscript. \\!\\(\\*ButtonBox[\\\"\
-\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:MaTeX/ref/MaTeX\\\", ButtonNote -> \
-\\\"MaTeX`MaTeX::gserr\\\"]\\)\"\>"}]], "Message", "MSG",
- CellID->508735689],
+   RowBox[{"MaTeX", "::", "stderr"}], "MessageName"], ":", 
+  " ", "\<\"Additional error information received:\[NoBreak]\\!\\(\\\"\\\"\\)\
+\[NoBreak] \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:MaTeX/ref/message/MaTeX/stderr\\\", ButtonNote -> \
+\\\"MaTeX`MaTeX::stderr\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{{3.689432532615193*^9, 3.689432552063304*^9}},
+ CellLabel->"During evaluation of In[12]:=",
+ CellID->1526652157],
 
-Cell["This messages is issued when running Ghostscript fails.", "Notes",
- CellChangeTimes->{{3.6882325037649717`*^9, 3.688232541469187*^9}, 
-   3.688232676521599*^9},
+Cell[TextData[{
+ "This message is generated when the ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"L", 
+     StyleBox[
+      AdjustmentBox["A",
+       BoxBaselineShift->-0.4,
+       BoxMargins->{{-0.5, -0.3}, {0, 0}}],
+      FontSize->Smaller], "T", 
+     AdjustmentBox["E",
+      BoxBaselineShift->0.5,
+      BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}],
+    SingleLetterItalics->False], TraditionalForm]]],
+ " process output some additional error text to ",
+ StyleBox["sdterr", "InlineCode"],
+ ". This is typically done by MiKTeX when there was a serious failure."
+}], "Notes",
+ CellChangeTimes->{{3.6882274480812263`*^9, 3.688227453621908*^9}, {
+  3.6882275157419558`*^9, 3.688227556994628*^9}, {3.6894326332169943`*^9, 
+  3.68943270510133*^9}, {3.689432750059223*^9, 3.689432753675036*^9}, {
+  3.689432918047168*^9, 3.6894329332277822`*^9}, {3.689434052868123*^9, 
+  3.68943405317705*^9}},
  CellID->1067943069],
 
 Cell[TextData[{
- "One possible cause is that ",
+ "This message often indicates that there is a problem with the ",
  Cell[BoxData[
   FormBox[
    StyleBox[
-    RowBox[{"L", 
-     StyleBox[
-      AdjustmentBox["A",
-       BoxBaselineShift->-0.4,
-       BoxMargins->{{-0.5, -0.3}, {0, 0}}],
-      FontSize->Smaller], "T", 
+    RowBox[{"T", 
      AdjustmentBox["E",
       BoxBaselineShift->0.5,
       BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}],
     SingleLetterItalics->False], TraditionalForm]]],
- " produced an invalid PDF file, possibly due to broken fonts. Check the ",
- Cell[BoxData[
-  FormBox[
-   StyleBox[
-    RowBox[{"L", 
-     StyleBox[
-      AdjustmentBox["A",
-       BoxBaselineShift->-0.4,
-       BoxMargins->{{-0.5, -0.3}, {0, 0}}],
-      FontSize->Smaller], "T", 
-     AdjustmentBox["E",
-      BoxBaselineShift->0.5,
-      BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}],
-    SingleLetterItalics->False], TraditionalForm]]],
- " log file by setting the ",
- Cell[BoxData[
-  RowBox[{"\"\<LogFileFunction\>\"", "\[Rule]", "Print"}]], "InlineFormula"],
- " option within ",
- Cell[BoxData[
-  ButtonBox["MaTeX",
-   BaseStyle->"Link",
-   ButtonData->"paclet:MaTeX/ref/MaTeX"]], "InlineFormula"],
- "."
+ " installation."
 }], "Notes",
- CellChangeTimes->{{3.688232543918766*^9, 3.688232604711664*^9}, {
-  3.688232688068215*^9, 3.68823268887578*^9}, {3.689433930623719*^9, 
-  3.68943400169125*^9}},
- CellID->329808222],
-
-Cell["\<\
-Make sure that MaTeX is configured to use Ghostscript version 9.15 or later.\
-\>", "Notes",
- CellChangeTimes->{{3.688232625582076*^9, 3.6882326473295317`*^9}},
- CellID->666228394]
+ CellChangeTimes->{{3.6882274480812263`*^9, 3.688227453621908*^9}, {
+  3.6882275157419558`*^9, 3.688227556994628*^9}, {3.6894326332169943`*^9, 
+  3.68943270510133*^9}, {3.689432750059223*^9, 3.689432753675036*^9}, {
+  3.689432918047168*^9, 3.6894329332277822`*^9}},
+ CellID->350257649]
 }, Open  ]],
+
+Cell[CellGroupData[{
 
 Cell["Tutorials", "TutorialsSection",
  CellID->250839057],
+
+Cell[TextData[ButtonBox["Configuring MaTeX",
+ BaseStyle->"Link",
+ ButtonData->"paclet:MaTeX/tutorial/ConfiguringMaTeX"]], "Tutorials",
+ CellChangeTimes->{{3.6882276650051737`*^9, 3.688227679427339*^9}},
+ CellID->341631938]
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -240,7 +243,7 @@ Cell[TextData[{
    BaseStyle->"Link",
    ButtonData->"paclet:MaTeX/ref/ConfigureMaTeX"]], "InlineFormula"]
 }], "SeeAlso",
- CellChangeTimes->{{3.68857550210433*^9, 3.6885755060289097`*^9}},
+ CellChangeTimes->{{3.688575585341312*^9, 3.6885755902171164`*^9}},
  CellID->929782353]
 }, Open  ]],
 
@@ -340,14 +343,14 @@ StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "FunctionPageStyles.nb",
 (*CellTagsOutline
 CellTagsIndex->{
  "ExtendedExamples"->{
-  Cell[6462, 270, 100, 2, 55, "ExtendedExamplesSection",
+  Cell[6841, 273, 100, 2, 55, "ExtendedExamplesSection",
    CellTags->"ExtendedExamples",
    CellID->1854448968]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"ExtendedExamples", 8395, 341}
+ {"ExtendedExamples", 8774, 344}
  }
 *)
 (*NotebookFileOutline
@@ -357,119 +360,121 @@ Cell[558, 20, 325, 14, 24, "History",
 Cell[CellGroupData[{
 Cell[908, 38, 68, 1, 29, "CategorizationSection",
  CellID->1122911449],
-Cell[979, 41, 148, 3, 30, "Categorization",
+Cell[979, 41, 146, 3, 30, "Categorization",
  CellID->686433507],
-Cell[1130, 46, 78, 2, 30, "Categorization",
+Cell[1128, 46, 78, 2, 30, "Categorization",
  CellID->605800465],
-Cell[1211, 50, 75, 2, 30, "Categorization",
+Cell[1209, 50, 75, 2, 30, "Categorization",
  CellID->468444828],
-Cell[1289, 54, 140, 2, 30, "Categorization"]
+Cell[1287, 54, 192, 3, 30, "Categorization"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1466, 61, 55, 1, 29, "KeywordsSection",
+Cell[1516, 62, 55, 1, 29, "KeywordsSection",
  CellID->477174294],
-Cell[1524, 64, 125, 2, 19, "Keywords",
+Cell[1574, 65, 120, 2, 19, "Keywords",
  CellID->1164421360]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1686, 71, 65, 1, 29, "TemplatesSection",
+Cell[1731, 72, 65, 1, 29, "TemplatesSection",
  CellID->1872225408],
-Cell[1754, 74, 94, 2, 70, "Template",
+Cell[1799, 75, 94, 2, 70, "Template",
  CellID->1562036412],
-Cell[1851, 78, 82, 2, 70, "Template",
+Cell[1896, 79, 82, 2, 70, "Template",
  CellID->158391909],
-Cell[1936, 82, 81, 2, 70, "Template",
+Cell[1981, 83, 81, 2, 70, "Template",
  CellID->1360575930],
-Cell[2020, 86, 82, 2, 70, "Template",
+Cell[2065, 87, 82, 2, 70, "Template",
  CellID->793782254]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[2139, 93, 53, 1, 19, "DetailsSection",
+Cell[2184, 94, 53, 1, 19, "DetailsSection",
  CellID->307771771],
-Cell[2195, 96, 63, 2, 70, "Details",
+Cell[2240, 97, 63, 2, 70, "Details",
  CellID->670882175],
-Cell[2261, 100, 69, 2, 70, "Details",
+Cell[2306, 101, 69, 2, 70, "Details",
  CellID->350963985],
-Cell[2333, 104, 64, 2, 70, "Details",
+Cell[2378, 105, 64, 2, 70, "Details",
  CellID->8391405],
-Cell[2400, 108, 69, 2, 70, "Details",
+Cell[2445, 109, 69, 2, 70, "Details",
  CellID->3610269],
-Cell[2472, 112, 61, 2, 70, "Details",
+Cell[2517, 113, 61, 2, 70, "Details",
  CellID->401364205],
-Cell[2536, 116, 61, 2, 70, "Details",
+Cell[2581, 117, 61, 2, 70, "Details",
  CellID->350204745],
-Cell[2600, 120, 63, 2, 70, "Details",
+Cell[2645, 121, 63, 2, 70, "Details",
  CellID->732958810],
-Cell[2666, 124, 78, 2, 70, "Details",
+Cell[2711, 125, 78, 2, 70, "Details",
  CellID->222905350],
-Cell[2747, 128, 67, 2, 70, "Details",
+Cell[2792, 129, 67, 2, 70, "Details",
  CellID->240026365]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[2851, 135, 121, 2, 63, "ObjectName",
+Cell[2896, 136, 172, 3, 63, "ObjectName",
  CellID->1224892054],
-Cell[2975, 139, 372, 8, 22, "Message",
- CellID->508735689],
-Cell[3350, 149, 187, 3, 25, "Notes",
+Cell[3071, 141, 546, 11, 22, "Message",
+ CellID->1526652157],
+Cell[3620, 154, 918, 24, 43, "Notes",
  CellID->1067943069],
-Cell[3540, 154, 1299, 42, 45, "Notes",
- CellID->329808222],
-Cell[4842, 198, 189, 4, 25, "Notes",
- CellID->666228394]
+Cell[4541, 180, 609, 16, 27, "Notes",
+ CellID->350257649]
 }, Open  ]],
-Cell[5046, 205, 57, 1, 43, "TutorialsSection",
- CellID->250839057],
 Cell[CellGroupData[{
-Cell[5128, 210, 83, 1, 22, "RelatedDemonstrationsSection",
+Cell[5187, 201, 57, 1, 43, "TutorialsSection",
+ CellID->250839057],
+Cell[5247, 204, 222, 4, 16, "Tutorials",
+ CellID->341631938]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5506, 213, 83, 1, 30, "RelatedDemonstrationsSection",
  CellID->1268215905],
-Cell[5214, 213, 58, 1, 16, "RelatedDemonstrations",
+Cell[5592, 216, 58, 1, 16, "RelatedDemonstrations",
  CellID->1129518860]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5309, 219, 65, 1, 30, "RelatedLinksSection",
+Cell[5687, 222, 65, 1, 30, "RelatedLinksSection",
  CellID->1584193535],
-Cell[5377, 222, 49, 1, 16, "RelatedLinks",
+Cell[5755, 225, 49, 1, 16, "RelatedLinks",
  CellID->1038487239]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5463, 228, 55, 1, 30, "SeeAlsoSection",
+Cell[5841, 231, 55, 1, 30, "SeeAlsoSection",
  CellID->1255426704],
-Cell[5521, 231, 402, 12, 19, "SeeAlso",
+Cell[5899, 234, 403, 12, 19, "SeeAlso",
  CellID->929782353]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5960, 248, 57, 1, 30, "MoreAboutSection",
+Cell[6339, 251, 57, 1, 30, "MoreAboutSection",
  CellID->38303248],
-Cell[6020, 251, 46, 1, 16, "MoreAbout",
+Cell[6399, 254, 46, 1, 16, "MoreAbout",
  CellID->1665078683]
 }, Open  ]],
-Cell[6081, 255, 356, 11, 69, "PrimaryExamplesSection",
+Cell[6460, 258, 356, 11, 69, "PrimaryExamplesSection",
  CellID->880084151],
 Cell[CellGroupData[{
-Cell[6462, 270, 100, 2, 55, "ExtendedExamplesSection",
+Cell[6841, 273, 100, 2, 55, "ExtendedExamplesSection",
  CellTags->"ExtendedExamples",
  CellID->1854448968],
-Cell[6565, 274, 125, 3, 33, "ExampleSection",
+Cell[6944, 277, 125, 3, 33, "ExampleSection",
  CellID->1293636265],
-Cell[6693, 279, 148, 3, 21, "ExampleSection",
+Cell[7072, 282, 148, 3, 21, "ExampleSection",
  CellID->1020263627],
 Cell[CellGroupData[{
-Cell[6866, 286, 127, 3, 21, "ExampleSection",
+Cell[7245, 289, 127, 3, 21, "ExampleSection",
  CellID->2061341341],
-Cell[6996, 291, 130, 3, 70, "ExampleSubsection",
+Cell[7375, 294, 130, 3, 24, "ExampleSubsection",
  CellID->1757724783],
-Cell[7129, 296, 130, 3, 70, "ExampleSubsection",
+Cell[7508, 299, 130, 3, 20, "ExampleSubsection",
  CellID->1295379749]
 }, Closed]],
-Cell[7274, 302, 131, 3, 21, "ExampleSection",
+Cell[7653, 305, 131, 3, 21, "ExampleSection",
  CellID->258228157],
-Cell[7408, 307, 142, 3, 21, "ExampleSection",
+Cell[7787, 310, 142, 3, 21, "ExampleSection",
  CellID->2123667759],
-Cell[7553, 312, 135, 3, 21, "ExampleSection",
+Cell[7932, 315, 135, 3, 21, "ExampleSection",
  CellID->1305812373],
-Cell[7691, 317, 140, 3, 21, "ExampleSection",
+Cell[8070, 320, 140, 3, 21, "ExampleSection",
  CellID->1653164318],
-Cell[7834, 322, 132, 3, 21, "ExampleSection",
+Cell[8213, 325, 132, 3, 21, "ExampleSection",
  CellID->589267740]
 }, Open  ]]
 }

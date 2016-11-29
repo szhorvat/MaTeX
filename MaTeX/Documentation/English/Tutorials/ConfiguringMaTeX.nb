@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     43549,       1385]
-NotebookOptionsPosition[     36050,       1104]
-NotebookOutlinePosition[     36481,       1121]
-CellTagsIndexPosition[     36438,       1118]
+NotebookDataLength[     43570,       1386]
+NotebookOptionsPosition[     36071,       1105]
+NotebookOutlinePosition[     36502,       1122]
+CellTagsIndexPosition[     36459,       1119]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1085,11 +1085,12 @@ Cell[CellGroupData[{
 Cell["Related Tutorials", "RelatedTutorialsSection",
  CellID->415694126],
 
-Cell[TextData[ButtonBox["Basic Usage",
+Cell[TextData[ButtonBox["Typesetting with MaTeX",
  BaseStyle->"Link",
- ButtonData->"paclet:MaTeX/tutorial/BasicUsage"]], "RelatedTutorials",
- CellChangeTimes->{{3.6883681285471888`*^9, 3.688368134197332*^9}},
- CellID->806871991]
+ ButtonData->
+  "paclet:MaTeX/tutorial/TypesettingWithMaTeX"]], "RelatedTutorials",
+ CellChangeTimes->{{3.689433871628737*^9, 3.68943387172574*^9}},
+ CellID->250940407]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1377,13 +1378,13 @@ Cell[35445, 1078, 54, 1, 22, "TutorialMoreAbout",
 Cell[CellGroupData[{
 Cell[35536, 1084, 72, 1, 72, "RelatedTutorialsSection",
  CellID->415694126],
-Cell[35611, 1087, 217, 4, 22, "RelatedTutorials",
- CellID->806871991]
+Cell[35611, 1087, 238, 5, 22, "RelatedTutorials",
+ CellID->250940407]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[35865, 1096, 98, 1, 72, "TutorialRelatedLinksSection",
+Cell[35886, 1097, 98, 1, 72, "TutorialRelatedLinksSection",
  CellID->415694148],
-Cell[35966, 1099, 56, 1, 22, "TutorialRelatedLinks",
+Cell[35987, 1100, 56, 1, 22, "TutorialRelatedLinks",
  CellID->415694149]
 }, Open  ]]
 }, Open  ]]

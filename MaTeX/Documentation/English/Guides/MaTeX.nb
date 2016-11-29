@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     10063,        383]
-NotebookOptionsPosition[      7272,        284]
-NotebookOutlinePosition[      7703,        301]
-CellTagsIndexPosition[      7660,        298]
+NotebookDataLength[     10084,        383]
+NotebookOptionsPosition[      7292,        284]
+NotebookOutlinePosition[      7723,        301]
+CellTagsIndexPosition[      7680,        298]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -254,11 +254,11 @@ Cell[TextData[ButtonBox["Configuring MaTeX",
  CellChangeTimes->{{3.6880450548140697`*^9, 3.6880450603991537`*^9}},
  CellID->1481783382],
 
-Cell[TextData[ButtonBox["Basic Usage",
+Cell[TextData[ButtonBox["Typesetting with MaTeX",
  BaseStyle->"Link",
- ButtonData->"paclet:MaTeX/tutorial/BasicUsage"]], "GuideTutorial",
- CellChangeTimes->{{3.688045025042121*^9, 3.6880450370466757`*^9}},
- CellID->806871991],
+ ButtonData->"paclet:MaTeX/tutorial/TypesettingWithMaTeX"]], "GuideTutorial",
+ CellChangeTimes->{{3.689433747207262*^9, 3.689433768280323*^9}},
+ CellID->1049061760],
 
 Cell["XXXX", "GuideTutorial",
  CellID->1885805579]
@@ -370,20 +370,20 @@ Cell[6226, 247, 62, 1, 72, "GuideTutorialsSection",
  CellID->415694126],
 Cell[6291, 250, 229, 4, 22, "GuideTutorial",
  CellID->1481783382],
-Cell[6523, 256, 214, 4, 22, "GuideTutorial",
- CellID->806871991],
-Cell[6740, 262, 50, 1, 22, "GuideTutorial",
+Cell[6523, 256, 234, 4, 22, "GuideTutorial",
+ CellID->1049061760],
+Cell[6760, 262, 50, 1, 22, "GuideTutorial",
  CellID->1885805579]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[6827, 268, 62, 1, 72, "GuideMoreAboutSection",
+Cell[6847, 268, 62, 1, 72, "GuideMoreAboutSection",
  CellID->23220180],
-Cell[6892, 271, 239, 4, 22, "GuideMoreAbout",
+Cell[6912, 271, 239, 4, 22, "GuideMoreAbout",
  CellID->1567025153],
-Cell[7134, 277, 50, 1, 22, "GuideMoreAbout",
+Cell[7154, 277, 50, 1, 22, "GuideMoreAbout",
  CellID->252299663]
 }, Open  ]],
-Cell[7199, 281, 69, 1, 72, "GuideRelatedLinksSection",
+Cell[7219, 281, 69, 1, 72, "GuideRelatedLinksSection",
  CellID->415694148]
 }
 ]

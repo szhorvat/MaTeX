@@ -1,0 +1,626 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     17067,        617]
+NotebookOptionsPosition[     12140,        441]
+NotebookOutlinePosition[     12771,        466]
+CellTagsIndexPosition[     12692,        461]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[{
+ "New in: ",
+ Cell["1.6", "HistoryData",
+  CellTags->"New"],
+ " | Modified in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Modified"],
+ " | Obsolete in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Obsolete"],
+ " | Excised in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Excised"]
+}], "History",
+ CellID->1247902091],
+
+Cell[CellGroupData[{
+
+Cell["Categorization", "CategorizationSection",
+ CellID->1122911449],
+
+Cell["Message", "Categorization",
+ CellChangeTimes->{{3.688227336977414*^9, 3.688227337791216*^9}},
+ CellLabel->"Entity Type",
+ CellID->686433507],
+
+Cell["MaTeX", "Categorization",
+ CellLabel->"Paclet Name",
+ CellID->605800465],
+
+Cell["MaTeX`", "Categorization",
+ CellLabel->"Context",
+ CellID->468444828],
+
+Cell["MaTeX/ref/message/MaTeX/invopt", "Categorization",
+ CellChangeTimes->{{3.688227317861203*^9, 3.688227347982616*^9}, {
+  3.6894332411392*^9, 3.6894332415759897`*^9}},
+ CellLabel->"URI"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Keywords", "KeywordsSection",
+ CellID->477174294],
+
+Cell["latex, error", "Keywords",
+ CellChangeTimes->{{3.6882273572112217`*^9, 3.68822735877101*^9}},
+ CellID->1164421360]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Syntax Templates", "TemplatesSection",
+ CellID->1872225408],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Additional Function Template",
+ CellID->1562036412],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Arguments Pattern",
+ CellID->158391909],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Local Variables",
+ CellID->1360575930],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Color Equal Signs",
+ CellID->793782254]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Details", "DetailsSection",
+ CellID->307771771],
+
+Cell["XXXX", "Details",
+ CellLabel->"Lead",
+ CellID->670882175],
+
+Cell["XXXX", "Details",
+ CellLabel->"Developers",
+ CellID->350963985],
+
+Cell["XXXX", "Details",
+ CellLabel->"Authors",
+ CellID->8391405],
+
+Cell["XXXX", "Details",
+ CellLabel->"Feature Name",
+ CellID->3610269],
+
+Cell["XXXX", "Details",
+ CellLabel->"QA",
+ CellID->401364205],
+
+Cell["XXXX", "Details",
+ CellLabel->"DA",
+ CellID->350204745],
+
+Cell["XXXX", "Details",
+ CellLabel->"Docs",
+ CellID->732958810],
+
+Cell["XXXX", "Details",
+ CellLabel->"Features Page Notes",
+ CellID->222905350],
+
+Cell["XXXX", "Details",
+ CellLabel->"Comments",
+ CellID->240026365]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["MaTeX::invopt", "ObjectName",
+ CellChangeTimes->{{3.68822736585651*^9, 3.688227366904566*^9}, {
+  3.689433243503908*^9, 3.6894332439919367`*^9}},
+ CellID->1224892054],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"MaTeX", "::", "invopt"}], "MessageName"], ":", 
+  " ", "\<\"Invalid option value: \[NoBreak]``\[NoBreak]. \\!\\(\\*ButtonBox[\
+\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:MaTeX/ref/message/MaTeX/invopt\\\", ButtonNote -> \
+\\\"MaTeX`MaTeX::invopt\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.688227508440271*^9, 3.689433263015781*^9},
+ CellLabel->"During evaluation of In[16]:=",
+ CellID->927481333],
+
+Cell[TextData[{
+ "This message is generated when an option passed to ",
+ Cell[BoxData[
+  ButtonBox["MaTeX",
+   BaseStyle->"Link",
+   ButtonData->"paclet:MaTeX/ref/MaTeX"]], "InlineFormula"],
+ " has an invalid value."
+}], "Notes",
+ CellChangeTimes->{{3.6882274480812263`*^9, 3.688227453621908*^9}, {
+  3.6882275157419558`*^9, 3.688227556994628*^9}, {3.689433524373671*^9, 
+  3.689433530645234*^9}},
+ CellID->1067943069]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Tutorials", "TutorialsSection",
+ CellID->250839057],
+
+Cell[TextData[ButtonBox["Typesetting with MaTeX",
+ BaseStyle->"Link",
+ ButtonData->"paclet:MaTeX/tutorial/TypesettingWithMaTeX"]], "Tutorials",
+ CellChangeTimes->{{3.6894340797600527`*^9, 3.68943408603799*^9}},
+ CellID->617827638]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Related Demonstrations", "RelatedDemonstrationsSection",
+ CellID->1268215905],
+
+Cell["XXXX", "RelatedDemonstrations",
+ CellID->1129518860]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Related Links", "RelatedLinksSection",
+ CellID->1584193535],
+
+Cell["XXXX", "RelatedLinks",
+ CellID->1038487239]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["See Also", "SeeAlsoSection",
+ CellID->1255426704],
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox["MaTeX",
+  BaseStyle->"Link",
+  ButtonData->"paclet:MaTeX/ref/MaTeX"]], "InlineFormula"]], "SeeAlso",
+ CellChangeTimes->{{3.688575585341312*^9, 3.6885755902171164`*^9}, {
+  3.6894335384766407`*^9, 3.689433540012658*^9}},
+ CellID->929782353]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["More About", "MoreAboutSection",
+ CellID->38303248],
+
+Cell["XXXX", "MoreAbout",
+ CellID->1665078683]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {
+     StyleBox["Examples", "PrimaryExamplesSection"], 
+     ButtonBox[
+      RowBox[{
+       RowBox[{"More", " ", "Examples"}], " ", "\[RightTriangle]"}],
+      BaseStyle->"ExtendedExamplesLink",
+      ButtonData:>"ExtendedExamples"]}
+   }],
+  $Line = 0; Null]], "PrimaryExamplesSection",
+ CellID->880084151],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<MaTeX`\>\"", "]"}]], "Input",
+ CellID->1926599868],
+
+Cell[TextData[{
+ "The ",
+ ButtonBox["ContentPadding",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/ContentPadding"],
+ " option should be ",
+ ButtonBox["True",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/True"],
+ " or ",
+ ButtonBox["False",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/False"],
+ ":"
+}], "ExampleText",
+ CellChangeTimes->{{3.6882277395038853`*^9, 3.6882277742645893`*^9}, {
+  3.689433268166617*^9, 3.689433294301621*^9}},
+ CellID->1563779258],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MaTeX", "[", 
+  RowBox[{"\"\<x\>\"", ",", 
+   RowBox[{"ContentPadding", "\[Rule]", "123"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.688227503982098*^9, 3.688227507531983*^9}, {
+  3.689433253164013*^9, 3.689433259808515*^9}},
+ CellLabel->"In[16]:=",
+ CellID->420232364],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"MaTeX", "::", "invopt"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Invalid option value: \[NoBreak]\\!\\(ContentPadding \
+\[Rule] 123\\)\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:MaTeX/ref/message/MaTeX/invopt\\\", ButtonNote -> \
+\\\"MaTeX`MaTeX::invopt\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.688227508440271*^9, 3.689433263015781*^9},
+ CellLabel->"During evaluation of In[16]:=",
+ CellID->972038703],
+
+Cell[BoxData["$Failed"], "Output",
+ CellChangeTimes->{3.688227508449038*^9, 3.689433263029892*^9},
+ CellLabel->"Out[16]=",
+ CellID->1146378592]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->125493087],
+
+Cell["The \"Preamble\" option should always be a list of lines:", \
+"ExampleText",
+ CellChangeTimes->{{3.688227779138632*^9, 3.688227784848049*^9}, {
+   3.689433354971903*^9, 3.689433364243435*^9}, 3.689433443872477*^9},
+ CellID->2107528481],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MaTeX", "[", 
+  RowBox[{"\"\<x\>\"", ",", 
+   RowBox[{"\"\<Preamble\>\"", "\[Rule]", "\"\<\\\\usepackage{color}\>\""}]}],
+   "]"}]], "Input",
+ CellChangeTimes->{{3.688227702530321*^9, 3.688227706212517*^9}, {
+  3.689433333138405*^9, 3.689433347989169*^9}},
+ CellLabel->"In[18]:=",
+ CellID->2053942007],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"MaTeX", "::", "invopt"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Invalid option value: \[NoBreak]\\!\\(\\\"Preamble\\\" \
+\[Rule] \\\"\\\\\\\\usepackage{color}\\\"\\)\[NoBreak]. \\!\\(\\*ButtonBox[\\\
+\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:MaTeX/ref/message/MaTeX/invopt\\\", ButtonNote -> \
+\\\"MaTeX`MaTeX::invopt\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6882277103204803`*^9, 3.689433348989946*^9},
+ CellLabel->"During evaluation of In[18]:=",
+ CellID->961364962],
+
+Cell[BoxData["$Failed"], "Output",
+ CellChangeTimes->{3.688227710327004*^9, 3.6894333490012608`*^9},
+ CellLabel->"Out[18]=",
+ CellID->2141439953]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MaTeX", "[", 
+  RowBox[{"\"\<x\>\"", ",", 
+   RowBox[{"\"\<Preamble\>\"", "\[Rule]", 
+    RowBox[{"{", "\"\<\\\\usepackage{color}\>\"", "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.689433370563107*^9, 3.689433371388309*^9}},
+ CellLabel->"In[22]:=",
+ CellID->853465919],
+
+Cell[BoxData[
+ GraphicsBox[
+  {Thickness[0.11560693641618497`], FilledCurveBox[CompressedData["
+1:eJxTTMoPymNmYGBgBGI5IIaxWZDYzCSwGaB8BjL0DhR7oNwMAEUOAp8=
+    
+    "], CompressedData["
+1:eJxdlH9IU1EUx+dmmKjT+dzae05ybqL2g0wNzKId/5DQTCUFfxGWtJlIGBiY
+MSMlEzEKKsSJZf4gFVYqYaSUGNEvUAsNDYUU9I+WGhkp/l67976dkQcuj8+9
+7557zvece7X5xWeMMolE4uYYmY4hdYzB2oHKmFkBAsruXRl214CTMxbHlurj
+NTCTkBff0CNAZLTDSjQQ9kdvayh08cKtS7VRGzzy3v7HA8ZfPFQFe4QOxYj/
+f+IhhqyPBUI68VuhZv6b90BOaJZm5JUShohZlXDS+q5dUs8h0++CApmjcSrA
+PL06GT2vQn7qf0Be8F29Y90Zh4LF9Uxg/lcVcJPMfw2CNyTfVo7Nh4ewfHID
+4KLJYXU6sBBbU8La4vzg0VY9XCN+96uRy0ReFZn+b+FxvZ6yAMrbST/dM/RA
+ZIjmeJg73zwec0iPetD8GnXIv1u6gofDXVxA4wmBl+lxWfYCHl4XmxctxhCm
+KycgU10rAnewBqYigqx2mQ6Z+u9w8Y2NuMsjHXqmQ6wAD6qrcsY0oSKrkYOJ
+jilK5LtZtalu3Rxkeaqqo7vEeOM5pssxHat/hD9E7uvkvriHgne8PKm+UI77
+afzPvZEnfKZUxhUp8kyK7dxW04ah9O2LBMuWFtn3bNp0VKmLM8n5eVowEp1M
+m4bOFdvVIdCC+Uflel3fFnJs/sETu8CO/PDj/baiJ3YD7ZsLWmibbJ89LJMA
+Pa9cCxJiIGP11OnZ/Wj1xPqyfLyRabmz/ZBpvT74Qc3xxH5Tiw7ZTszXxXRf
+TQjr4+t+4Mx3eWCpt2Dcl9XrW7DYT96iroHs/Agv1j/JaqDpm3bjfWHxyJA1
+Paom6YwUOZfcP7MEuTepO7ZxbdNA+/yUCryIf5ubeF9VYCufLfpslcIdUnc/
+NTKte7OL/5K463iWp8GN5RkmiOdvG5zM4l5HHt14P/Eoe1lkHtn5XvzP4vuQ
+vG2gefYFYL2cnDaXOHpkzAM5lTDnBeFEvxoVnKbsI+qgFvWVox6svxW4n/Zr
+CYdMdUhTIzvfT/bOCLDzff0H/muFeg==
+    "]]},
+  AspectRatio->Automatic,
+  BaselinePosition->Scaled[0.32439307852814453`],
+  ImageSize->{8.644612702366127, 16.338709838107096`},
+  PlotRange->{{0., 8.65}, {0., 16.34}}]], "Output",
+ CellChangeTimes->{{3.6894333720868683`*^9, 3.68943338983534*^9}},
+ CellLabel->"Out[22]=",
+ CellID->1847357107]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["More Examples", "ExtendedExamplesSection",
+ CellTags->"ExtendedExamples",
+ CellID->1854448968],
+
+Cell[BoxData[
+ InterpretationBox[Cell["Scope", "ExampleSection"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->1293636265],
+
+Cell[BoxData[
+ InterpretationBox[Cell["Generalizations & Extensions", "ExampleSection"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->1020263627],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["Options", "ExampleSection"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->2061341341],
+
+Cell[BoxData[
+ InterpretationBox[Cell["XXXX", "ExampleSubsection"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellID->1757724783],
+
+Cell[BoxData[
+ InterpretationBox[Cell["XXXX", "ExampleSubsection"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellID->1295379749]
+}, Closed]],
+
+Cell[BoxData[
+ InterpretationBox[Cell["Applications", "ExampleSection"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->258228157],
+
+Cell[BoxData[
+ InterpretationBox[Cell["Properties & Relations", "ExampleSection"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->2123667759],
+
+Cell[BoxData[
+ InterpretationBox[Cell["Possible Issues", "ExampleSection"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->1305812373],
+
+Cell[BoxData[
+ InterpretationBox[Cell["Interactive Examples", "ExampleSection"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->1653164318],
+
+Cell[BoxData[
+ InterpretationBox[Cell["Neat Examples", "ExampleSection"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->589267740]
+}, Open  ]]
+},
+WindowSize->{700, 770},
+WindowMargins->{{4, Automatic}, {Automatic, 0}},
+CellContext->"Global`",
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
+2014)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "FunctionPageStyles.nb", 
+  CharacterEncoding -> "UTF-8"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "ExtendedExamples"->{
+  Cell[10620, 383, 100, 2, 55, "ExtendedExamplesSection",
+   CellTags->"ExtendedExamples",
+   CellID->1854448968]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"ExtendedExamples", 12553, 454}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 325, 14, 24, "History",
+ CellID->1247902091],
+Cell[CellGroupData[{
+Cell[908, 38, 68, 1, 29, "CategorizationSection",
+ CellID->1122911449],
+Cell[979, 41, 146, 3, 30, "Categorization",
+ CellID->686433507],
+Cell[1128, 46, 78, 2, 30, "Categorization",
+ CellID->605800465],
+Cell[1209, 50, 75, 2, 30, "Categorization",
+ CellID->468444828],
+Cell[1287, 54, 190, 3, 30, "Categorization"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1514, 62, 55, 1, 29, "KeywordsSection",
+ CellID->477174294],
+Cell[1572, 65, 120, 2, 19, "Keywords",
+ CellID->1164421360]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1729, 72, 65, 1, 29, "TemplatesSection",
+ CellID->1872225408],
+Cell[1797, 75, 94, 2, 70, "Template",
+ CellID->1562036412],
+Cell[1894, 79, 82, 2, 70, "Template",
+ CellID->158391909],
+Cell[1979, 83, 81, 2, 70, "Template",
+ CellID->1360575930],
+Cell[2063, 87, 82, 2, 70, "Template",
+ CellID->793782254]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[2182, 94, 53, 1, 19, "DetailsSection",
+ CellID->307771771],
+Cell[2238, 97, 63, 2, 70, "Details",
+ CellID->670882175],
+Cell[2304, 101, 69, 2, 70, "Details",
+ CellID->350963985],
+Cell[2376, 105, 64, 2, 70, "Details",
+ CellID->8391405],
+Cell[2443, 109, 69, 2, 70, "Details",
+ CellID->3610269],
+Cell[2515, 113, 61, 2, 70, "Details",
+ CellID->401364205],
+Cell[2579, 117, 61, 2, 70, "Details",
+ CellID->350204745],
+Cell[2643, 121, 63, 2, 70, "Details",
+ CellID->732958810],
+Cell[2709, 125, 78, 2, 70, "Details",
+ CellID->222905350],
+Cell[2790, 129, 67, 2, 70, "Details",
+ CellID->240026365]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[2894, 136, 172, 3, 63, "ObjectName",
+ CellID->1224892054],
+Cell[3069, 141, 511, 10, 22, "Message",
+ CellID->927481333],
+Cell[3583, 153, 418, 11, 26, "Notes",
+ CellID->1067943069]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4038, 169, 57, 1, 43, "TutorialsSection",
+ CellID->250839057],
+Cell[4098, 172, 230, 4, 16, "Tutorials",
+ CellID->617827638]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4365, 181, 83, 1, 30, "RelatedDemonstrationsSection",
+ CellID->1268215905],
+Cell[4451, 184, 58, 1, 16, "RelatedDemonstrations",
+ CellID->1129518860]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4546, 190, 65, 1, 30, "RelatedLinksSection",
+ CellID->1584193535],
+Cell[4614, 193, 49, 1, 16, "RelatedLinks",
+ CellID->1038487239]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4700, 199, 55, 1, 30, "SeeAlsoSection",
+ CellID->1255426704],
+Cell[4758, 202, 279, 6, 19, "SeeAlso",
+ CellID->929782353]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5074, 213, 57, 1, 30, "MoreAboutSection",
+ CellID->38303248],
+Cell[5134, 216, 46, 1, 16, "MoreAbout",
+ CellID->1665078683]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5217, 222, 356, 11, 69, "PrimaryExamplesSection",
+ CellID->880084151],
+Cell[5576, 235, 92, 2, 24, "Input",
+ CellID->1926599868],
+Cell[5671, 239, 464, 17, 22, "ExampleText",
+ CellID->1563779258],
+Cell[CellGroupData[{
+Cell[6160, 260, 293, 7, 25, "Input",
+ CellID->420232364],
+Cell[6456, 269, 559, 12, 22, "Message",
+ CellID->972038703],
+Cell[7018, 283, 143, 3, 23, "Output",
+ CellID->1146378592]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7198, 291, 125, 3, 17, "ExampleDelimiter",
+ CellID->125493087],
+Cell[7326, 296, 241, 4, 22, "ExampleText",
+ CellID->2107528481],
+Cell[CellGroupData[{
+Cell[7592, 304, 325, 8, 25, "Input",
+ CellID->2053942007],
+Cell[7920, 314, 593, 12, 22, "Message",
+ CellID->961364962],
+Cell[8516, 328, 145, 3, 23, "Output",
+ CellID->2141439953]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8698, 336, 297, 7, 25, "Input",
+ CellID->853465919],
+Cell[8998, 345, 1561, 31, 26, "Output",
+ CellID->1847357107]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10620, 383, 100, 2, 55, "ExtendedExamplesSection",
+ CellTags->"ExtendedExamples",
+ CellID->1854448968],
+Cell[10723, 387, 125, 3, 33, "ExampleSection",
+ CellID->1293636265],
+Cell[10851, 392, 148, 3, 21, "ExampleSection",
+ CellID->1020263627],
+Cell[CellGroupData[{
+Cell[11024, 399, 127, 3, 21, "ExampleSection",
+ CellID->2061341341],
+Cell[11154, 404, 130, 3, 70, "ExampleSubsection",
+ CellID->1757724783],
+Cell[11287, 409, 130, 3, 70, "ExampleSubsection",
+ CellID->1295379749]
+}, Closed]],
+Cell[11432, 415, 131, 3, 21, "ExampleSection",
+ CellID->258228157],
+Cell[11566, 420, 142, 3, 21, "ExampleSection",
+ CellID->2123667759],
+Cell[11711, 425, 135, 3, 21, "ExampleSection",
+ CellID->1305812373],
+Cell[11849, 430, 140, 3, 21, "ExampleSection",
+ CellID->1653164318],
+Cell[11992, 435, 132, 3, 21, "ExampleSection",
+ CellID->589267740]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
