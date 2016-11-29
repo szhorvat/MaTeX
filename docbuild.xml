@@ -93,6 +93,14 @@ or set Mathematica.DocumentationBuild.createHTML.setting to Mathematica.Document
 
 		<property name="JLinkLoaded" value="true"/>
 		
+		<mathematica exe="${mathExe}">
+		    <![CDATA[
+		        If[Not@MemberQ[$Path, #], PrependTo[$Path, #]]&@AntProperty["appPath"]
+		        Needs["DocumentationBuild`"]
+		        ConvertGraphicsToBitmaps = Null&
+				DownValues[AddSpaceToCamelCase] = DownValues[AddSpaceToCamelCase] /. HoldPattern[Alternatives][s__String] :> Alternatives[s, "MaTeX"]
+		    ]]> 
+		</mathematica>
 		<ant antfile="${appPath}/DocumentationBuild/SystemFiles/ant/Build/notebook.xml"
 	           target="main">
 	    	<property name="outputDir" value="${outputDirNB}" />
