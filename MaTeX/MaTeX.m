@@ -241,15 +241,19 @@ If[$VersionNumber >= 10.1,
 (* Interprets a UTF-8 encoded string stored as a byte sequence *)
 fromUTF8[s_String] := FromCharacterCode[ToCharacterCode[s], "UTF-8"]
 
+errorLinePattern = ("! "~~___) | ("!"~~___~~"error"~~___) | (___~~"Fatal error occurred"~~___);
+
 parseTeXError[err_String] :=
     Module[{lines, line, i=0, eof, errLinesLimit = 3, errLineCounter, result},
       lines = StringSplit[stringDelete[err, "\r"] (* fix for CR/LF on Windows *), "\n"];
       eof = Length[lines];
       line := lines[[i]];
-      result = First@Last@Reap@While[True,
+      result = Last@Reap@While[True,
         If[i == eof, Break[]];
         i += 1;
-        If[StringMatchQ[line, "! *"], Sow[line]];
+        If[StringMatchQ[line, errorLinePattern],
+          Sow[line]
+        ];
         If[StringMatchQ[line, "! Undefined control sequence." | ("! LaTeX Error:"~~___)],
           While[True,
             If[i == eof, Break[]];
@@ -280,12 +284,16 @@ parseTeXError[err_String] :=
           ];
         ];
       ];
+      (* this conditional is necessary in case no error line was Sown and result === {} *)
+      If[result =!= {},
+        result = First[result];
+      ];
       Style[StringJoin@Riffle[result, "\n"], "OutputForm"]
     ]
 
 (* This function is used to try to detect errors based on the log file.
    It is necessary because on Windows RunProcess doesn't capture the correct exit code. *)
-texErrorQ[log_String] := Count[StringSplit[log, "\n"], line_ /; StringMatchQ[line, "! *"]] > 0
+texErrorQ[log_String] := Count[StringSplit[stringDelete[log, "\r"], "\n"], line_ /; StringMatchQ[line, errorLinePattern]] > 0
 
 getDimensions[log_String] := Interpreter["Number"]@StringCases[log, RegularExpression["MATEX"<>#<>":(.+?)pt"] -> "$1"]& /@ {"WIDTH", "HEIGHT", "DEPTH"}
 
@@ -321,17 +329,19 @@ Options[MaTeX] = {
 };
 SyntaxInformation[MaTeX] = {"ArgumentsPattern" -> {_, OptionsPattern[]}};
 
-MaTeX::gserr = "Error while running Ghostscript.";
-MaTeX::texerr = "Error while running LaTeX.\n``";
-MaTeX::importerr = "Failed to import PDF.  This is unexpected.  Please go to https://github.com/szhorvat/MaTeX and create a bug report.";
-MaTeX::invopt = "Invalid option value: ``.";
+MaTeX::gserr     = "Error while running Ghostscript.";
+MaTeX::texerr    = "Error while running LaTeX.\n``";
+MaTeX::stderr    = "Additional error information received:\n``";
+MaTeX::nopdf     = "LaTeX failed to produce a PDF file.";
+MaTeX::importerr = "Failed to import PDF. This is unexpected. Please go to https://github.com/szhorvat/MaTeX and create a bug report.";
+MaTeX::invopt    = "Invalid option value: ``.";
 
 $psfactor = 72/72.27; (* conversion factor from TeX points to PostScript points *)
 
 iMaTeX[tex:{__String}, preamble_, display_, fontsize_, strut_, ls : {lsmult_, lsadd_}, logFileFun_, texFileFun_] :=
     Module[{keys, cleanup, name, content,
             texfile, pdffile, pdfgsfile, logfile, auxfile,
-            return, results,
+            return, results, stderr,
             width, height, depth},
 
       (* If all entries are already cached, use cache; otherwise recompile using LaTeX *)
@@ -368,6 +378,21 @@ iMaTeX[tex:{__String}, preamble_, display_, fontsize_, strut_, ls : {lsmult_, ls
         texErrorQ[return["StandardOutput"]] (* workaround for Windows, where the exit code may be misreported *)
         ,
         Message[MaTeX::texerr, parseTeXError[fromUTF8@return["StandardOutput"]]];
+        (* MiKTeX will output useful messages to stderr when there was a serious system error. *)
+        If[KeyExistsQ[return, "StandardError"],
+          stderr = StringTrim@stringDelete[return["StandardError"], "\r"];
+          If[stderr =!= "",
+            Block[{$MessagePrePrint = Identity}, (* do not truncate the error message *)
+              Message[MaTeX::stderr, Style[stderr, "OutputForm"]]
+            ]
+          ]
+        ];
+        cleanup[];
+        Return[$Failed]
+      ];
+
+      If[Not@FileExistsQ[pdffile],
+        Message[MaTeX::nopdf];
         cleanup[];
         Return[$Failed]
       ];
