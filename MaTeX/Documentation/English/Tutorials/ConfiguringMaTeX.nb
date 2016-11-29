@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     43570,       1386]
-NotebookOptionsPosition[     36071,       1105]
-NotebookOutlinePosition[     36502,       1122]
-CellTagsIndexPosition[     36459,       1119]
+NotebookDataLength[     44296,       1397]
+NotebookOptionsPosition[     36730,       1114]
+NotebookOutlinePosition[     37161,       1131]
+CellTagsIndexPosition[     37118,       1128]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -191,7 +191,7 @@ Cell[TextData[{
   BaseStyle->"Hyperlink",
   ButtonData->{
     URL["http://ghostscript.com/"], None}],
- " 9.15 or later. On OS X, On OS X, MacTeX 2015 includes a compatible version \
+ " 9.15 or later. On OS X, MacTeX 2015 and later include a compatible version \
 of Ghostscript. If you use an older TeX distribution on OS X, get a recent \
 Ghostscript from ",
  ButtonBox["Richard Koch's page",
@@ -200,7 +200,8 @@ Ghostscript from ",
     URL["http://pages.uoregon.edu/koch/"], None}],
  "."
 }], "BulletedText",
- CellChangeTimes->{{3.6881931342637053`*^9, 3.688193224601275*^9}},
+ CellChangeTimes->{{3.6881931342637053`*^9, 3.688193224601275*^9}, {
+  3.689438693426922*^9, 3.689438701809043*^9}},
  CellID->1251784128]
 }, Open  ]],
 
@@ -432,12 +433,13 @@ AxWHgFvSNYlBanA+enoGAPMMPec=
 
 Cell[TextData[{
  "If everything works well, continue with the ",
- ButtonBox["Basic Usage",
+ ButtonBox["Typesetting with MaTeX",
   BaseStyle->"Link",
-  ButtonData->"paclet:MaTeX/tutorial/BasicUsage"],
+  ButtonData->"paclet:MaTeX/tutorial/TypesettingWithMaTeX"],
  " tutorial to learn how to use MaTeX effectively."
 }], "Text",
- CellChangeTimes->{{3.688368159378274*^9, 3.688368178103404*^9}},
+ CellChangeTimes->{{3.688368159378274*^9, 3.688368178103404*^9}, {
+  3.689438838485532*^9, 3.689438862953947*^9}},
  CellID->330769954],
 
 Cell[TextData[StyleBox["Notes:",
@@ -604,8 +606,6 @@ Cell["Troubleshooting", "Section",
  CellChangeTimes->{{3.6880526318192472`*^9, 3.6880526338581533`*^9}},
  CellID->1830783538],
 
-Cell[CellGroupData[{
-
 Cell[TextData[{
  "If having difficulties with MaTeX, make sure that you have the latest \
 version. The most recent version is always available at ",
@@ -617,6 +617,13 @@ version. The most recent version is always available at ",
  CellChangeTimes->{{3.6880526439522133`*^9, 3.688052659488866*^9}, {
    3.6881938431145144`*^9, 3.688193867479786*^9}, 3.688198972408457*^9},
  CellID->338100563],
+
+Cell[CellGroupData[{
+
+Cell["Check the loaded version:", "MathCaption",
+ CellChangeTimes->{{3.3703745915818357`*^9, 3.37037459387849*^9}, {
+  3.6894390306784487`*^9, 3.689439039163957*^9}},
+ CellID->1825449234],
 
 Cell[CellGroupData[{
 
@@ -644,194 +651,6 @@ GitHub: ",
 }], "Text",
  CellChangeTimes->{{3.688198356474606*^9, 3.688198413493147*^9}},
  CellID->1452302517],
-
-Cell[CellGroupData[{
-
-Cell[TextData[{
- "MaTeX doesn't work when configured to use ",
- StyleBox["lualatex", "InlineCode",
-  FontWeight->"Bold"]
-}], "Subsection",
- CellChangeTimes->{{3.688193897946418*^9, 3.688193909119709*^9}},
- CellID->817653266],
-
-Cell[TextData[{
- "When using LuaTeX 0.85 or later, it may be necessary to use ",
- ButtonBox["the ",
-  BaseStyle->"Hyperlink",
-  ButtonData->{
-    URL["https://www.ctan.org/pkg/luatex85?lang=en"], None}],
- StyleBox[ButtonBox["luatex85",
-  BaseStyle->"Hyperlink",
-  ButtonData->{
-    URL["https://www.ctan.org/pkg/luatex85?lang=en"], None}], "InlineCode"],
- ButtonBox[" package",
-  BaseStyle->"Hyperlink",
-  ButtonData->{
-    URL["https://www.ctan.org/pkg/luatex85?lang=en"], None}],
- ". The package documentation explains why this is needed."
-}], "Text",
- CellChangeTimes->{{3.688193931713319*^9, 3.688193954782344*^9}, {
-  3.688407808104582*^9, 3.688407818997128*^9}},
- CellID->380896318],
-
-Cell[CellGroupData[{
-
-Cell[TextData[{
- "Add ",
- Cell[BoxData["\"\<\\\\usepackage{luatex85}\>\""], "InlineFormula"],
- " to the ",
- Cell[BoxData["\"\<BasePreamble\>\""], "InlineFormula"],
- " or ",
- Cell[BoxData["\"\<Preamble\>\""], "InlineFormula"],
- " options."
-}], "Text",
- CellChangeTimes->{{3.688193965783647*^9, 3.688193990928637*^9}},
- CellID->1126609408],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"Lookup", "[", 
-  RowBox[{
-   RowBox[{"ConfigureMaTeX", "[", "]"}], ",", "\"\<pdfLaTeX\>\""}], 
-  "]"}]], "Input",
- CellChangeTimes->{{3.688575670519637*^9, 3.688575688940915*^9}},
- CellLabel->"In[8]:=",
- CellID->1252204246],
-
-Cell[BoxData["\<\"/Library/TeX/texbin/lualatex\"\>"], "Output",
- CellChangeTimes->{3.688575690037766*^9, 3.688575729993552*^9},
- CellLabel->"Out[8]=",
- CellID->2108975216]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"MaTeX", "[", "\"\<x\>\"", "]"}]], "Input",
- CellChangeTimes->{{3.68857573107756*^9, 3.6885757381956244`*^9}},
- CellLabel->"In[9]:=",
- CellID->1328861577],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"MaTeX", "::", "texerr"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Error while running \
-LaTeX.\\n\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\"! Undefined control \
-sequence.\\\\\\\\n\\\\\\\\\\\\\\\\sa@placebox ->\\\\\\\\\\\\\\\\newpage \
-\\\\\\\\\\\\\\\\global \\\\\\\\\\\\\\\\pdfpagewidth \\\\\\\\n                 \
-                             =\\\\\\\\\\\\\\\\wd \\\\\\\\\\\\\\\\sa@box \
-\\\\\\\\\\\\\\\\global \
-\\\\\\\\\\\\\\\\pdfpageh...\\\\\\\\n\\\\\\\\\\\\\\\\MaTeX{x}\\\\\\\\n!  ==> \
-Fatal error occurred, no output PDF file produced!\\\\\\\"\\\", \
-\\\"OutputForm\\\", Rule[StripOnInput, False]]\\)\[NoBreak] \
-\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
-ButtonFrame->None, ButtonData:>\\\"paclet:MaTeX/ref/message/MaTeX/texerr\\\", \
-ButtonNote -> \\\"MaTeX`MaTeX::texerr\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.688575740276559*^9},
- CellLabel->"During evaluation of In[9]:=",
- CellID->678048031],
-
-Cell[BoxData["$Failed"], "Output",
- CellChangeTimes->{3.68857574028587*^9},
- CellLabel->"Out[9]=",
- CellID->1405026035]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"MaTeX", "[", 
-  RowBox[{"\"\<x\>\"", ",", 
-   RowBox[{"\"\<Preamble\>\"", "\[Rule]", 
-    RowBox[{"{", "\"\<\\\\usepackage{luatex85}\>\"", "}"}]}]}], 
-  "]"}]], "Input",
- CellChangeTimes->{{3.688575741953727*^9, 3.688575763490302*^9}},
- CellLabel->"In[10]:=",
- CellID->542387833],
-
-Cell[BoxData[
- GraphicsBox[
-  {Thickness[0.11560693641618497`], FilledCurveBox[CompressedData["
-1:eJxTTMoPymNmYGBgBGI5IIaxWZDYzCSwGaB8BjL0DhR7oNwMAEUOAp8=
-    
-    "], CompressedData["
-1:eJxdlH9IU1EUx+dmmKjT+dzae05ybqL2g0wNzKId/5DQTCUFfxGWtJlIGBiY
-MSMlEzEKKsSJZf4gFVYqYaSUGNEvUAsNDYUU9I+WGhkp/l67976dkQcuj8+9
-7557zvece7X5xWeMMolE4uYYmY4hdYzB2oHKmFkBAsruXRl214CTMxbHlurj
-NTCTkBff0CNAZLTDSjQQ9kdvayh08cKtS7VRGzzy3v7HA8ZfPFQFe4QOxYj/
-f+IhhqyPBUI68VuhZv6b90BOaJZm5JUShohZlXDS+q5dUs8h0++CApmjcSrA
-PL06GT2vQn7qf0Be8F29Y90Zh4LF9Uxg/lcVcJPMfw2CNyTfVo7Nh4ewfHID
-4KLJYXU6sBBbU8La4vzg0VY9XCN+96uRy0ReFZn+b+FxvZ6yAMrbST/dM/RA
-ZIjmeJg73zwec0iPetD8GnXIv1u6gofDXVxA4wmBl+lxWfYCHl4XmxctxhCm
-KycgU10rAnewBqYigqx2mQ6Z+u9w8Y2NuMsjHXqmQ6wAD6qrcsY0oSKrkYOJ
-jilK5LtZtalu3Rxkeaqqo7vEeOM5pssxHat/hD9E7uvkvriHgne8PKm+UI77
-afzPvZEnfKZUxhUp8kyK7dxW04ah9O2LBMuWFtn3bNp0VKmLM8n5eVowEp1M
-m4bOFdvVIdCC+Uflel3fFnJs/sETu8CO/PDj/baiJ3YD7ZsLWmibbJ89LJMA
-Pa9cCxJiIGP11OnZ/Wj1xPqyfLyRabmz/ZBpvT74Qc3xxH5Tiw7ZTszXxXRf
-TQjr4+t+4Mx3eWCpt2Dcl9XrW7DYT96iroHs/Agv1j/JaqDpm3bjfWHxyJA1
-Paom6YwUOZfcP7MEuTepO7ZxbdNA+/yUCryIf5ubeF9VYCufLfpslcIdUnc/
-NTKte7OL/5K463iWp8GN5RkmiOdvG5zM4l5HHt14P/Eoe1lkHtn5XvzP4vuQ
-vG2gefYFYL2cnDaXOHpkzAM5lTDnBeFEvxoVnKbsI+qgFvWVox6svxW4n/Zr
-CYdMdUhTIzvfT/bOCLDzff0H/muFeg==
-    "]]},
-  AspectRatio->Automatic,
-  BaselinePosition->Scaled[0.32439307852814453`],
-  ImageSize->{8.644612702366127, 16.338709838107096`},
-  PlotRange->{{0., 8.65}, {0., 16.34}}]], "Output",
- CellChangeTimes->{3.6885757654542*^9},
- CellLabel->"Out[10]=",
- CellID->87599246]
-}, Open  ]]
-}, Open  ]]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell["MaTeX no longer works on OS X 10.11 El Capitan", "Subsection",
- CellChangeTimes->{3.688194020135438*^9},
- CellID->495667237],
-
-Cell[CellGroupData[{
-
-Cell[TextData[{
- "If you use MacTeX on OS X El Capitan, the path to ",
- StyleBox["pdflatex", "InlineCode"],
- " or ",
- StyleBox["xelatex", "InlineCode"],
- " must be set as"
-}], "Text",
- CellChangeTimes->{{3.688194034280346*^9, 3.688194034614674*^9}},
- CellID->590185546],
-
-Cell[BoxData[
- RowBox[{"ConfigureMaTeX", "[", 
-  RowBox[{
-  "\"\<pdfLaTeX\>\"", "\[Rule]", "\"\</Library/TeX/texbin/pdflatex\>\""}], 
-  "]"}]], "Input",
- CellChangeTimes->{3.688194044254744*^9},
- CellID->1374779525]
-}, Open  ]],
-
-Cell[TextData[{
- "If you used the path ",
- StyleBox["/usr/texbin/pdflatex", "InlineCode"],
- " on OS X 10.10 or earlier, it will no longer work on 10.11. You must \
-reconfigure MaTeX with the new path. ",
- ButtonBox["Please see the explanation here.",
-  BaseStyle->"Hyperlink",
-  ButtonData->{
-    URL["https://tug.org/mactex/UpdatingForElCapitan.pdf"], None}],
- "\nThe path to Ghostscript is unchanged, ",
- StyleBox["/usr/local/bin/gs", "InlineCode"],
- "."
-}], "Text",
- CellChangeTimes->{{3.688194052999703*^9, 3.688194081209948*^9}},
- CellID->1939205046]
-}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -918,10 +737,12 @@ Cell[TextData[{
  " and ",
  StyleBox["amssymb", "InlineCode"],
  ". All these are part of most TeX distributions, but may not get installed \
-if choosing the smallest installation option. The \"LogFileFunction\" option \
-(described above) can help in diagnosing missing packages."
+if choosing the smallest installation option. The ",
+ Cell[BoxData["\"\<LogFileFunction\>\""], "InlineFormula",
+  FormatType->"StandardForm"],
+ " option (described above) can help in diagnosing missing packages."
 }], "BulletedText",
- CellChangeTimes->{3.6881990852275553`*^9},
+ CellChangeTimes->{3.6881990852275553`*^9, 3.689439173931118*^9},
  CellID->982827801],
 
 Cell[TextData[{
@@ -1045,6 +866,194 @@ like ",
   3.68819938623003*^9, 3.688199386346016*^9}, {3.688407906946886*^9, 
   3.688407908000634*^9}},
  CellID->1575444036]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "MaTeX doesn't work when configured to use ",
+ StyleBox["lualatex", "InlineCode",
+  FontWeight->"Bold"]
+}], "Subsection",
+ CellChangeTimes->{{3.688193897946418*^9, 3.688193909119709*^9}},
+ CellID->817653266],
+
+Cell[TextData[{
+ "When using LuaTeX 0.85 or later, it may be necessary to use ",
+ ButtonBox["the ",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://www.ctan.org/pkg/luatex85?lang=en"], None}],
+ StyleBox[ButtonBox["luatex85",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://www.ctan.org/pkg/luatex85?lang=en"], None}], "InlineCode"],
+ ButtonBox[" package",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://www.ctan.org/pkg/luatex85?lang=en"], None}],
+ ". The package documentation explains why this is needed."
+}], "Text",
+ CellChangeTimes->{{3.688193931713319*^9, 3.688193954782344*^9}, {
+  3.688407808104582*^9, 3.688407818997128*^9}},
+ CellID->380896318],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Add ",
+ Cell[BoxData["\"\<\\\\usepackage{luatex85}\>\""], "InlineFormula"],
+ " to the ",
+ Cell[BoxData["\"\<BasePreamble\>\""], "InlineFormula"],
+ " or ",
+ Cell[BoxData["\"\<Preamble\>\""], "InlineFormula"],
+ " options."
+}], "Text",
+ CellChangeTimes->{{3.688193965783647*^9, 3.688193990928637*^9}},
+ CellID->1126609408],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Lookup", "[", 
+  RowBox[{
+   RowBox[{"ConfigureMaTeX", "[", "]"}], ",", "\"\<pdfLaTeX\>\""}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.688575670519637*^9, 3.688575688940915*^9}},
+ CellLabel->"In[8]:=",
+ CellID->1252204246],
+
+Cell[BoxData["\<\"/Library/TeX/texbin/lualatex\"\>"], "Output",
+ CellChangeTimes->{3.688575690037766*^9, 3.688575729993552*^9},
+ CellLabel->"Out[8]=",
+ CellID->2108975216]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MaTeX", "[", "\"\<x\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.68857573107756*^9, 3.6885757381956244`*^9}},
+ CellLabel->"In[9]:=",
+ CellID->1328861577],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"MaTeX", "::", "texerr"}], "MessageName"], ":", 
+  " ", "\<\"Error while running LaTeX.\\n\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\
+\\\"! Undefined control sequence.\\\\\\\\n\\\\\\\\\\\\\\\\sa@placebox \
+->\\\\\\\\\\\\\\\\newpage \\\\\\\\\\\\\\\\global \\\\\\\\\\\\\\\\pdfpagewidth \
+\\\\\\\\n                                              =\\\\\\\\\\\\\\\\wd \\\
+\\\\\\\\\\\\\\sa@box \\\\\\\\\\\\\\\\global \\\\\\\\\\\\\\\\pdfpageh...\\\\\\\
+\\n\\\\\\\\\\\\\\\\MaTeX{x}\\\\\\\\n!  ==> Fatal error occurred, no output \
+PDF file produced!\\\\\\\"\\\", \\\"OutputForm\\\", Rule[StripOnInput, \
+False]]\\)\[NoBreak] \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:MaTeX/ref/message/MaTeX/texerr\\\", ButtonNote -> \
+\\\"MaTeX`MaTeX::texerr\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.688575740276559*^9},
+ CellLabel->"During evaluation of In[9]:=",
+ CellID->678048031],
+
+Cell[BoxData["$Failed"], "Output",
+ CellChangeTimes->{3.68857574028587*^9},
+ CellLabel->"Out[9]=",
+ CellID->1405026035]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MaTeX", "[", 
+  RowBox[{"\"\<x\>\"", ",", 
+   RowBox[{"\"\<Preamble\>\"", "\[Rule]", 
+    RowBox[{"{", "\"\<\\\\usepackage{luatex85}\>\"", "}"}]}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.688575741953727*^9, 3.688575763490302*^9}},
+ CellLabel->"In[10]:=",
+ CellID->542387833],
+
+Cell[BoxData[
+ GraphicsBox[
+  {Thickness[0.11560693641618497`], 
+   FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {0,
+     1, 0}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+    3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 
+    3, 3}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {
+    1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}}}, CompressedData["
+1:eJxdlH9IU1EUx+dmmKjT+dzae05ybqL2g0wNzKId/5DQTCUFfxGWtJlIGBiY
+MSMlEzEKKsSJZf4gFVYqYaSUGNEvUAsNDYUU9I+WGhkp/l67976dkQcuj8+9
+7557zvece7X5xWeMMolE4uYYmY4hdYzB2oHKmFkBAsruXRl214CTMxbHlurj
+NTCTkBff0CNAZLTDSjQQ9kdvayh08cKtS7VRGzzy3v7HA8ZfPFQFe4QOxYj/
+f+IhhqyPBUI68VuhZv6b90BOaJZm5JUShohZlXDS+q5dUs8h0++CApmjcSrA
+PL06GT2vQn7qf0Be8F29Y90Zh4LF9Uxg/lcVcJPMfw2CNyTfVo7Nh4ewfHID
+4KLJYXU6sBBbU8La4vzg0VY9XCN+96uRy0ReFZn+b+FxvZ6yAMrbST/dM/RA
+ZIjmeJg73zwec0iPetD8GnXIv1u6gofDXVxA4wmBl+lxWfYCHl4XmxctxhCm
+KycgU10rAnewBqYigqx2mQ6Z+u9w8Y2NuMsjHXqmQ6wAD6qrcsY0oSKrkYOJ
+jilK5LtZtalu3Rxkeaqqo7vEeOM5pssxHat/hD9E7uvkvriHgne8PKm+UI77
+afzPvZEnfKZUxhUp8kyK7dxW04ah9O2LBMuWFtn3bNp0VKmLM8n5eVowEp1M
+m4bOFdvVIdCC+Uflel3fFnJs/sETu8CO/PDj/baiJ3YD7ZsLWmibbJ89LJMA
+Pa9cCxJiIGP11OnZ/Wj1xPqyfLyRabmz/ZBpvT74Qc3xxH5Tiw7ZTszXxXRf
+TQjr4+t+4Mx3eWCpt2Dcl9XrW7DYT96iroHs/Agv1j/JaqDpm3bjfWHxyJA1
+Paom6YwUOZfcP7MEuTepO7ZxbdNA+/yUCryIf5ubeF9VYCufLfpslcIdUnc/
+NTKte7OL/5K463iWp8GN5RkmiOdvG5zM4l5HHt14P/Eoe1lkHtn5XvzP4vuQ
+vG2gefYFYL2cnDaXOHpkzAM5lTDnBeFEvxoVnKbsI+qgFvWVox6svxW4n/Zr
+CYdMdUhTIzvfT/bOCLDzff0H/muFeg==
+    "]]},
+  AspectRatio->Automatic,
+  BaselinePosition->Scaled[0.32439307852814453`],
+  ImageSize->{8.644612702366127, 16.338709838107096`},
+  PlotRange->{{0., 8.65}, {0., 16.34}}]], "Output",
+ CellChangeTimes->{3.6885757654542*^9},
+ CellLabel->"Out[10]=",
+ CellID->87599246]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["MaTeX no longer works on OS X 10.11 El Capitan", "Subsection",
+ CellChangeTimes->{3.688194020135438*^9},
+ CellID->495667237],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "If you use MacTeX on OS X El Capitan, the path to ",
+ StyleBox["pdflatex", "InlineCode"],
+ " or ",
+ StyleBox["xelatex", "InlineCode"],
+ " must be set as"
+}], "Text",
+ CellChangeTimes->{{3.688194034280346*^9, 3.688194034614674*^9}},
+ CellID->590185546],
+
+Cell[BoxData[
+ RowBox[{"ConfigureMaTeX", "[", 
+  RowBox[{
+  "\"\<pdfLaTeX\>\"", "\[Rule]", "\"\</Library/TeX/texbin/pdflatex\>\""}], 
+  "]"}]], "Input",
+ CellChangeTimes->{3.688194044254744*^9},
+ CellID->1374779525]
+}, Open  ]],
+
+Cell[TextData[{
+ "If you used the path ",
+ StyleBox["/usr/texbin/pdflatex", "InlineCode"],
+ " on OS X 10.10 or earlier, it will no longer work on 10.11. You must \
+reconfigure MaTeX with the new path. ",
+ ButtonBox["Please see the explanation here.",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://tug.org/mactex/UpdatingForElCapitan.pdf"], None}],
+ "\nThe path to Ghostscript is unchanged, ",
+ StyleBox["/usr/local/bin/gs", "InlineCode"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.688194052999703*^9, 3.688194081209948*^9}},
+ CellID->1939205046]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1174,217 +1183,219 @@ Cell[3079, 136, 356, 9, 23, "Text",
  CellID->1703085124],
 Cell[3438, 147, 1094, 39, 40, "BulletedText",
  CellID->1088631257],
-Cell[4535, 188, 545, 15, 38, "BulletedText",
+Cell[4535, 188, 594, 16, 38, "BulletedText",
  CellID->1251784128]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5117, 208, 123, 2, 43, "Section",
+Cell[5166, 209, 123, 2, 43, "Section",
  CellID->389691836],
 Cell[CellGroupData[{
-Cell[5265, 214, 462, 9, 57, "Text",
+Cell[5314, 215, 462, 9, 57, "Text",
  CellID->1534169418],
 Cell[CellGroupData[{
-Cell[5752, 227, 210, 5, 24, "Input",
+Cell[5801, 228, 210, 5, 24, "Input",
  CellID->1640634666],
 Cell[CellGroupData[{
-Cell[5987, 236, 181, 3, 20, "Print",
+Cell[6036, 237, 181, 3, 20, "Print",
  CellID->782798985],
-Cell[6171, 241, 259, 4, 36, "Print",
+Cell[6220, 242, 259, 4, 36, "Print",
  CellID->1017719373],
-Cell[6433, 247, 183, 3, 20, "Print",
+Cell[6482, 248, 183, 3, 20, "Print",
  CellID->102253656],
-Cell[6619, 252, 260, 5, 36, "Print",
+Cell[6668, 253, 260, 5, 36, "Print",
  CellID->590278792],
-Cell[6882, 259, 948, 16, 21, "Print",
+Cell[6931, 260, 948, 16, 21, "Print",
  CellID->1588691651]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[7891, 282, 503, 12, 41, "Text",
+Cell[7940, 283, 503, 12, 41, "Text",
  CellID->1125038529],
 Cell[CellGroupData[{
-Cell[8419, 298, 506, 12, 73, "Input",
+Cell[8468, 299, 506, 12, 73, "Input",
  CellID->1768050685],
-Cell[8928, 312, 520, 13, 40, "Output",
+Cell[8977, 313, 520, 13, 40, "Output",
  CellID->492182815]
 }, Open  ]]
 }, Open  ]],
-Cell[9475, 329, 291, 6, 40, "Text",
+Cell[9524, 330, 291, 6, 40, "Text",
  CellID->1411884930],
 Cell[CellGroupData[{
-Cell[9791, 339, 158, 2, 23, "Text",
+Cell[9840, 340, 158, 2, 23, "Text",
  CellID->1877514704],
 Cell[CellGroupData[{
-Cell[9974, 345, 174, 4, 25, "Input",
+Cell[10023, 346, 174, 4, 25, "Input",
  CellID->1947478611],
-Cell[10151, 351, 377, 10, 40, "Output",
+Cell[10200, 352, 377, 10, 40, "Output",
  CellID->1077518277]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[10577, 367, 137, 2, 23, "Text",
+Cell[10626, 368, 137, 2, 23, "Text",
  CellID->1468837617],
 Cell[CellGroupData[{
-Cell[10739, 373, 177, 4, 24, "Input",
+Cell[10788, 374, 177, 4, 24, "Input",
  CellID->1320175261],
-Cell[10919, 379, 2718, 49, 26, "Output",
+Cell[10968, 380, 2718, 49, 26, "Output",
  CellID->1051416698]
 }, Open  ]]
 }, Open  ]],
-Cell[13664, 432, 312, 8, 23, "Text",
+Cell[13713, 433, 382, 9, 40, "Text",
  CellID->330769954],
-Cell[13979, 442, 149, 3, 23, "Text",
+Cell[14098, 444, 149, 3, 23, "Text",
  CellID->120086388],
-Cell[14131, 447, 891, 27, 40, "BulletedText",
+Cell[14250, 449, 891, 27, 40, "BulletedText",
  CellID->874045736],
-Cell[15025, 476, 456, 10, 38, "BulletedText",
+Cell[15144, 478, 456, 10, 38, "BulletedText",
  CellID->1638087321]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[15518, 491, 138, 2, 43, "Section",
+Cell[15637, 493, 138, 2, 43, "Section",
  CellID->857614431],
-Cell[15659, 495, 363, 9, 41, "Text",
+Cell[15778, 497, 363, 9, 41, "Text",
  CellID->1896226899],
 Cell[CellGroupData[{
-Cell[16047, 508, 147, 2, 23, "Text",
+Cell[16166, 510, 147, 2, 23, "Text",
  CellID->1632656571],
 Cell[CellGroupData[{
-Cell[16219, 514, 185, 4, 24, "Input",
+Cell[16338, 516, 185, 4, 24, "Input",
  CellID->1702426077],
-Cell[16407, 520, 792, 18, 23, "Output",
+Cell[16526, 522, 792, 18, 23, "Output",
  CellID->1110830294]
 }, Open  ]]
 }, Open  ]],
-Cell[17226, 542, 377, 9, 42, "Text",
+Cell[17345, 544, 377, 9, 42, "Text",
  CellID->978902278],
 Cell[CellGroupData[{
-Cell[17628, 555, 144, 2, 23, "Text",
+Cell[17747, 557, 144, 2, 23, "Text",
  CellID->39858178],
 Cell[CellGroupData[{
-Cell[17797, 561, 193, 4, 24, "Input",
+Cell[17916, 563, 193, 4, 24, "Input",
  CellID->818926783],
-Cell[17993, 567, 1348, 28, 104, "Output",
+Cell[18112, 569, 1348, 28, 104, "Output",
  CellID->628481183]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[19402, 602, 125, 2, 43, "Section",
+Cell[19521, 604, 125, 2, 43, "Section",
  CellID->1830783538],
-Cell[CellGroupData[{
-Cell[19552, 608, 483, 10, 40, "Text",
+Cell[19649, 608, 483, 10, 40, "Text",
  CellID->338100563],
 Cell[CellGroupData[{
-Cell[20060, 622, 161, 3, 25, "Input",
+Cell[20157, 622, 187, 3, 39, "MathCaption",
+ CellID->1825449234],
+Cell[CellGroupData[{
+Cell[20369, 629, 161, 3, 25, "Input",
  CellID->667848324],
-Cell[20224, 627, 269, 5, 23, "Output",
+Cell[20533, 634, 269, 5, 23, "Output",
  CellID->1718139963]
 }, Open  ]]
 }, Open  ]],
-Cell[20520, 636, 346, 9, 40, "Text",
+Cell[20829, 643, 346, 9, 40, "Text",
  CellID->1452302517],
 Cell[CellGroupData[{
-Cell[20891, 649, 224, 6, 40, "Subsection",
+Cell[21200, 656, 274, 7, 40, "Subsection",
+ CellID->477558058],
+Cell[21477, 665, 147, 2, 23, "Text",
+ CellID->2071153153],
+Cell[21627, 669, 734, 13, 93, "Text",
+ CellID->304381793],
+Cell[CellGroupData[{
+Cell[22386, 686, 121, 2, 23, "Text",
+ CellID->1225851384],
+Cell[22510, 690, 386, 9, 25, "Input",
+ CellID->2084234669]
+}, Open  ]],
+Cell[22911, 702, 476, 13, 41, "Text",
+ CellID->1288068061],
+Cell[23390, 717, 372, 8, 57, "Text",
+ CellID->2018525447],
+Cell[23765, 727, 697, 18, 54, "BulletedText",
+ CellID->982827801],
+Cell[24465, 747, 1839, 43, 233, "BulletedText",
+ CellID->2090122330],
+Cell[26307, 792, 571, 15, 54, "BulletedText",
+ CellID->179301219]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[26915, 812, 275, 7, 58, "Subsection",
+ CellID->1188374091],
+Cell[27193, 821, 132, 2, 23, "Text",
+ CellID->40252424],
+Cell[27328, 825, 646, 18, 39, "BulletedText",
+ CellID->1761711618],
+Cell[27977, 845, 822, 22, 55, "BulletedText",
+ CellID->1575444036]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28836, 872, 224, 6, 40, "Subsection",
  CellID->817653266],
-Cell[21118, 657, 688, 18, 40, "Text",
+Cell[29063, 880, 688, 18, 40, "Text",
  CellID->380896318],
 Cell[CellGroupData[{
-Cell[21831, 679, 337, 10, 25, "Text",
+Cell[29776, 902, 337, 10, 25, "Text",
  CellID->1126609408],
 Cell[CellGroupData[{
-Cell[22193, 693, 247, 7, 25, "Input",
+Cell[30138, 916, 247, 7, 25, "Input",
  CellID->1252204246],
-Cell[22443, 702, 171, 3, 24, "Output",
+Cell[30388, 925, 171, 3, 24, "Output",
  CellID->2108975216]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[22651, 710, 177, 4, 24, "Input",
+Cell[30596, 933, 177, 4, 24, "Input",
  CellID->1328861577],
-Cell[22831, 716, 1005, 19, 124, "Message",
+Cell[30776, 939, 990, 17, 124, "Message",
  CellID->678048031],
-Cell[23839, 737, 119, 3, 23, "Output",
+Cell[31769, 958, 119, 3, 23, "Output",
  CellID->1405026035]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[23995, 745, 303, 8, 25, "Input",
+Cell[31925, 966, 303, 8, 25, "Input",
  CellID->542387833],
-Cell[24301, 755, 1532, 31, 26, "Output",
+Cell[32231, 976, 1801, 33, 26, "Output",
  CellID->87599246]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[25894, 793, 130, 2, 39, "Subsection",
+Cell[34093, 1016, 130, 2, 39, "Subsection",
  CellID->495667237],
 Cell[CellGroupData[{
-Cell[26049, 799, 269, 8, 23, "Text",
+Cell[34248, 1022, 269, 8, 23, "Text",
  CellID->590185546],
-Cell[26321, 809, 215, 6, 25, "Input",
+Cell[34520, 1032, 215, 6, 25, "Input",
  CellID->1374779525]
 }, Open  ]],
-Cell[26551, 818, 555, 14, 69, "Text",
+Cell[34750, 1041, 555, 14, 69, "Text",
  CellID->1939205046]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[27143, 837, 274, 7, 40, "Subsection",
- CellID->477558058],
-Cell[27420, 846, 147, 2, 23, "Text",
- CellID->2071153153],
-Cell[27570, 850, 734, 13, 93, "Text",
- CellID->304381793],
-Cell[CellGroupData[{
-Cell[28329, 867, 121, 2, 23, "Text",
- CellID->1225851384],
-Cell[28453, 871, 386, 9, 25, "Input",
- CellID->2084234669]
-}, Open  ]],
-Cell[28854, 883, 476, 13, 41, "Text",
- CellID->1288068061],
-Cell[29333, 898, 372, 8, 57, "Text",
- CellID->2018525447],
-Cell[29708, 908, 601, 16, 54, "BulletedText",
- CellID->982827801],
-Cell[30312, 926, 1839, 43, 233, "BulletedText",
- CellID->2090122330],
-Cell[32154, 971, 571, 15, 54, "BulletedText",
- CellID->179301219]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[32762, 991, 275, 7, 58, "Subsection",
- CellID->1188374091],
-Cell[33040, 1000, 132, 2, 23, "Text",
- CellID->40252424],
-Cell[33175, 1004, 646, 18, 39, "BulletedText",
- CellID->1761711618],
-Cell[33824, 1024, 822, 22, 55, "BulletedText",
- CellID->1575444036]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[34683, 1051, 134, 2, 39, "Subsection",
+Cell[35342, 1060, 134, 2, 39, "Subsection",
  CellID->1194226010],
-Cell[34820, 1055, 400, 10, 40, "Text",
+Cell[35479, 1064, 400, 10, 40, "Text",
  CellID->128288467],
-Cell[35223, 1067, 105, 2, 23, "Text",
+Cell[35882, 1076, 105, 2, 23, "Text",
  CellID->2001529215]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[35377, 1075, 65, 1, 72, "TutorialMoreAboutSection",
+Cell[36036, 1084, 65, 1, 72, "TutorialMoreAboutSection",
  CellID->23220180],
-Cell[35445, 1078, 54, 1, 22, "TutorialMoreAbout",
+Cell[36104, 1087, 54, 1, 22, "TutorialMoreAbout",
  CellID->1567025153]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[35536, 1084, 72, 1, 72, "RelatedTutorialsSection",
+Cell[36195, 1093, 72, 1, 72, "RelatedTutorialsSection",
  CellID->415694126],
-Cell[35611, 1087, 238, 5, 22, "RelatedTutorials",
+Cell[36270, 1096, 238, 5, 22, "RelatedTutorials",
  CellID->250940407]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[35886, 1097, 98, 1, 72, "TutorialRelatedLinksSection",
+Cell[36545, 1106, 98, 1, 72, "TutorialRelatedLinksSection",
  CellID->415694148],
-Cell[35987, 1100, 56, 1, 22, "TutorialRelatedLinks",
+Cell[36646, 1109, 56, 1, 22, "TutorialRelatedLinks",
  CellID->415694149]
 }, Open  ]]
 }, Open  ]]

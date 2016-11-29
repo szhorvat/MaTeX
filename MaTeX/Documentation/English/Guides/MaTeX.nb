@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     10084,        383]
-NotebookOptionsPosition[      7292,        284]
-NotebookOutlinePosition[      7723,        301]
-CellTagsIndexPosition[      7680,        298]
+NotebookDataLength[     10200,        384]
+NotebookOptionsPosition[      7408,        285]
+NotebookOutlinePosition[      7839,        302]
+CellTagsIndexPosition[      7796,        299]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -135,13 +135,14 @@ GitHub at ",
     URL["https://github.com/szhorvat/MaTeX"], None}],
  ". MaTeX is licensed under the ",
  ButtonBox["MIT license",
-  BaseStyle->"Hyperlink",
-  ButtonData->{
-    URL["https://opensource.org/licenses/MIT"], None}],
+  BaseStyle->"Link",
+  ButtonData->"paclet:MaTeX/License/MIT"],
  "."
 }], "GuideAbstract",
  CellChangeTimes->{{3.688409356005567*^9, 3.688409421280478*^9}, {
-   3.688578472064713*^9, 3.6885784831768436`*^9}, 3.688580928967751*^9},
+   3.688578472064713*^9, 3.6885784831768436`*^9}, 3.688580928967751*^9, {
+   3.6894374064547997`*^9, 3.689437419852798*^9}, {3.689437577764381*^9, 
+   3.6894375834676437`*^9}, {3.689437622074119*^9, 3.689437622200808*^9}},
  CellID->396060580]
 }, Open  ]],
 
@@ -344,46 +345,46 @@ Cell[2066, 103, 67, 2, 70, "Details",
 Cell[CellGroupData[{
 Cell[2170, 110, 47, 1, 77, "GuideTitle",
  CellID->942062912],
-Cell[2220, 113, 1079, 31, 77, "GuideAbstract",
+Cell[2220, 113, 1195, 32, 77, "GuideAbstract",
  CellID->396060580]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[3336, 149, 54, 1, 70, "GuideFunctionsSection",
+Cell[3452, 150, 54, 1, 70, "GuideFunctionsSection",
  CellID->1866139230],
-Cell[3393, 152, 809, 24, 24, "GuideText",
+Cell[3509, 153, 809, 24, 24, "GuideText",
  CellID->203374175],
-Cell[4205, 178, 849, 24, 24, "GuideText",
+Cell[4321, 179, 849, 24, 24, "GuideText",
  CellID->1463276848],
-Cell[5057, 204, 407, 10, 23, "GuideText",
+Cell[5173, 205, 407, 10, 23, "GuideText",
  CellID->1690080009],
-Cell[5467, 216, 563, 17, 23, "GuideText",
+Cell[5583, 217, 563, 17, 23, "GuideText",
  CellID->1580182154],
 Cell[CellGroupData[{
-Cell[6055, 237, 48, 1, 26, "GuideDelimiter",
+Cell[6171, 238, 48, 1, 26, "GuideDelimiter",
  CellID->311258892],
-Cell[6106, 240, 71, 1, 20, "InlineGuideFunctionListing",
+Cell[6222, 241, 71, 1, 20, "InlineGuideFunctionListing",
  CellID->58033752]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[6226, 247, 62, 1, 72, "GuideTutorialsSection",
+Cell[6342, 248, 62, 1, 72, "GuideTutorialsSection",
  CellID->415694126],
-Cell[6291, 250, 229, 4, 22, "GuideTutorial",
+Cell[6407, 251, 229, 4, 22, "GuideTutorial",
  CellID->1481783382],
-Cell[6523, 256, 234, 4, 22, "GuideTutorial",
+Cell[6639, 257, 234, 4, 22, "GuideTutorial",
  CellID->1049061760],
-Cell[6760, 262, 50, 1, 22, "GuideTutorial",
+Cell[6876, 263, 50, 1, 22, "GuideTutorial",
  CellID->1885805579]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[6847, 268, 62, 1, 72, "GuideMoreAboutSection",
+Cell[6963, 269, 62, 1, 72, "GuideMoreAboutSection",
  CellID->23220180],
-Cell[6912, 271, 239, 4, 22, "GuideMoreAbout",
+Cell[7028, 272, 239, 4, 22, "GuideMoreAbout",
  CellID->1567025153],
-Cell[7154, 277, 50, 1, 22, "GuideMoreAbout",
+Cell[7270, 278, 50, 1, 22, "GuideMoreAbout",
  CellID->252299663]
 }, Open  ]],
-Cell[7219, 281, 69, 1, 72, "GuideRelatedLinksSection",
+Cell[7335, 282, 69, 1, 72, "GuideRelatedLinksSection",
  CellID->415694148]
 }
 ]
