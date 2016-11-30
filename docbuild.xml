@@ -92,13 +92,17 @@ or set Mathematica.DocumentationBuild.createHTML.setting to Mathematica.Document
 	  	</taskdef>
 
 		<property name="JLinkLoaded" value="true"/>
-		
+
+		<!--
+		In-memory patching of DocumentationBuild.
+		Prevent rasterization of output cells and breaking up CamelCase MaTeX to Ma Te X.
+		-->
 		<mathematica exe="${mathExe}">
 		    <![CDATA[
 		        If[Not@MemberQ[$Path, #], PrependTo[$Path, #]]&@AntProperty["appPath"]
 		        Needs["DocumentationBuild`"]
 		        ConvertGraphicsToBitmaps = Null&
-				DownValues[AddSpaceToCamelCase] = DownValues[AddSpaceToCamelCase] /. HoldPattern[Alternatives][s__String] :> Alternatives[s, "MaTeX"]
+		        DownValues[AddSpaceToCamelCase] = DownValues[AddSpaceToCamelCase] /. HoldPattern[Alternatives][s__String] :> Alternatives[s, "MaTeX"]
 		    ]]> 
 		</mathematica>
 		<ant antfile="${appPath}/DocumentationBuild/SystemFiles/ant/Build/notebook.xml"
