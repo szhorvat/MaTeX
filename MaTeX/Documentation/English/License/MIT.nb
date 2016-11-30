@@ -10,10 +10,11 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      2144,         70]
-NotebookOptionsPosition[      1751,         50]
-NotebookOutlinePosition[      2176,         69]
-CellTagsIndexPosition[      2133,         66]
+NotebookDataLength[      2681,         82]
+NotebookOptionsPosition[      1778,         51]
+NotebookOutlinePosition[      2713,         81]
+CellTagsIndexPosition[      2670,         78]
+WindowTitle->MaTeX License
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -48,14 +49,25 @@ SOFTWARE.\
 \>", "Program"]
 }, Open  ]]
 },
-Editable->False,
 WindowSize->{808, 751},
-WindowMargins->{{4, Automatic}, {Automatic, 4}},
-ShowCellBracket->False,
+WindowMargins->{{Automatic, 183}, {49, Automatic}},
+WindowTitle->"MaTeX License",
+TaggingRules->{"LinkTrails" -> GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "MaTeX", ButtonData -> "paclet:MaTeX/guide/MaTeX", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
+    Left], "SearchTextTranslated" -> ""},
 TrackCellChangeTimes->False,
 FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
 2014)",
-StyleDefinitions->"Default.nb"
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
+  CharacterEncoding -> "UTF-8"],
+"LinkTrails" -> GridBox[{{
+    RowBox[{
+      ButtonBox[
+      "MaTeX", ButtonData -> "paclet:MaTeX/guide/MaTeX", 
+       BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> Left]
 ]
 (* End of Notebook Content *)
 
@@ -69,8 +81,8 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 30, 0, 92, "Title"],
-Cell[613, 24, 1122, 23, 326, "Program"]
+Cell[607, 23, 30, 0, 47, "Title"],
+Cell[640, 25, 1122, 23, 374, "Program"]
 }, Open  ]]
 }
 ]
