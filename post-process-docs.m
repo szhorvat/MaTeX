@@ -28,7 +28,9 @@ code =
         process[file_] :=
             Module[{nb},
               Print[file];
-              nb = Import[file];
+              Block[{$Context="System`"},
+                nb = Import[file];
+              ];
               nb = NBSetOptions[Saveable -> False]@NBDeleteCellTags["HideInput"]@NBRemoveURL@NBHideInput[nb];
               Export[file, nb];
             ];
