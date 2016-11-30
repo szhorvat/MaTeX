@@ -93,6 +93,11 @@ The limiting factor in the speed of `MaTeX` calls is running the `pdflatex` proc
 
 ## Revision history
 
+#### Version 1.6.3
+
+ - More robust error checking and reporting
+ - Documentation improvements
+
 #### Version 1.6.2
 
  - The documentation is now integrated into the Documentation Center.
