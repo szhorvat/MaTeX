@@ -94,11 +94,16 @@ or set Mathematica.DocumentationBuild.createHTML.setting to Mathematica.Document
 		<property name="JLinkLoaded" value="true"/>
 
 		<!--
-		In-memory patching of DocumentationBuild.
-		Prevent rasterization of output cells and breaking up CamelCase MaTeX to Ma Te X.
+		Load package to allow option detection to work. This causes "Details and Options"
+		to be generated instead of "Details", when appropriate.
+
+		In-memory patching of DocumentationBuild to:
+		  - Prevent rasterization of output cells
+		  - Prevent breaking up CamelCase MaTeX to Ma Te X.
 		-->
 		<mathematica exe="${mathExe}">
 		    <![CDATA[
+			    Needs["MaTeX`"];
 		        If[Not@MemberQ[$Path, #], PrependTo[$Path, #]]&@AntProperty["appPath"]
 		        Needs["DocumentationBuild`"]
 		        ConvertGraphicsToBitmaps = Null&
