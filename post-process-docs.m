@@ -24,17 +24,19 @@ If[Not@DirectoryQ[$docDir],
 code =
     With[{$docDir = $docDir, $appName = $appName},
       MCode[
-        files = FileNames["*.nb", $docDir, Infinity];
-        process[file_] :=
-            Module[{nb},
-              Print[file];
-              Block[{$Context="System`"},
-                nb = Import[file];
-              ];
-              nb = NBSetOptions[Saveable -> False]@NBDeleteCellTags["HideInput"]@NBRemoveURL@NBHideInput[nb];
-              Export[file, nb];
-            ];
-        Scan[process, files]
+        echo = (Print[#];#)&;
+        FileNames["*.nb", $docDir, Infinity] //
+          Scan[
+            echo /*
+            RewriteNotebook[
+              NBHideInput /*
+              NBRemoveURL /*
+              NBDeleteCellTags["HideInput"] /*
+              NBSetOptions[Saveable -> False] /*
+              NBRemoveChangeTimes /*
+              NBResetWindow
+            ]
+          ]
       ]
     ];
 
