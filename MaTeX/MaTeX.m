@@ -132,7 +132,7 @@ If[Not@SubsetQ[Keys[$config], Keys[$defaultConfigBase]],
 Export[$configFile, $config, "Package"];
 
 (* True if file exists and is not a directory *)
-fileQ[file_] := FileExistsQ[file] && Not@DirectoryQ[file]
+fileQ[file_] := FileType[file] === File
 
 checkConfig[] :=
   Module[{pdflatex, gs, pdflatexOK, gsOK, cacheSizeOK, gsver},
@@ -391,7 +391,7 @@ iMaTeX[tex:{__String}, preamble_, display_, fontsize_, strut_, ls : {lsmult_, ls
         Return[$Failed]
       ];
 
-      If[Not@FileExistsQ[pdffile],
+      If[Not@fileQ[pdffile],
         Message[MaTeX::nopdf];
         cleanup[];
         Return[$Failed]
