@@ -27,7 +27,7 @@ If[$OperatingSystem === "Windows" && $VersionNumber == 10.0 && $SystemWordLength
 
 BeginPackage["MaTeX`"];
 
-Unprotect /@ Names["MaTeX`*"];
+Unprotect["MaTeX`*", "MaTeX`Developer`*", "MaTeX`Information`*"];
 
 MaTeX::usage = "\
 MaTeX[\"texcode\"] compiles texcode using LaTeX and returns the result as Mathematica graphics.  texcode must be valid inline math-mode LaTeX code.
@@ -578,7 +578,9 @@ BlackFrame = Directive[AbsoluteThickness[0.5], Black];
 
 
 (* Protect all package symbols *)
-With[{syms = Names["MaTeX`*"]}, SetAttributes[syms, {Protected, ReadProtected}] ];
+With[{syms = Join @@ Names /@ {"MaTeX`*", "MaTeX`Developer`*", "MaTeX`Information`*"}},
+  SetAttributes[syms, {Protected, ReadProtected}]
+];
 
 End[]; (* End Private Context *)
 
