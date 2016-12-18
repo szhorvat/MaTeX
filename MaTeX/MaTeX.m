@@ -10,6 +10,7 @@
 (* :Mathematica Version: %%mathversion%% *)
 (* :Copyright: (c) 2016 Szabolcs Horvát *)
 
+
 (* Abort for old, unsupported versions of Mathematica *)
 If[$VersionNumber < 10,
   Print["MaTeX requires Mathematica 10.0 or later."];
@@ -22,6 +23,7 @@ If[$OperatingSystem === "Windows" && $VersionNumber == 10.0 && $SystemWordLength
     "If you encounter problems, consider using a 64-bit version or upgrading to a later Mathematica version."
   ]
 ]
+
 
 BeginPackage["MaTeX`"];
 
@@ -40,12 +42,19 @@ ConfigureMaTeX[] returns the current configuration.";
 
 ClearMaTeXCache::usage = "ClearMaTeXCache[] clears MaTeX's cache.";
 
-`Developer`$Version = "%%version%% (%%date%%)";
+`Information`$Version = "%%version%% (%%date%%)";
+`Developer`$Version = `Information`$Version;
+
+`Developer`ResetConfiguration::usage = "MaTeX`Developer`ResetConfiguration[] resets the configuration to its default value and attempts to automatically the location of external dependencies.";
+`Developer`WorkingDirectory::usage = "MaTeX`Developer`WorkingDirectory[] returns the directory where MaTeX creates temporary files.";
+
 
 Begin["`Private`"]; (* Begin Private Context *)
 
 
-(* workaround for Mathematica bug on Windows where RunProcess fails when run in directories with special chars in name *)
+(********* Helper and compatibility functions *********)
+
+(* Workaround for Mathematica bug on Windows where RunProcess fails when run in directories with special chars in name *)
 If[$OperatingSystem === "Windows",
   runProcess[args___] :=
       Module[{res},
@@ -58,29 +67,34 @@ If[$OperatingSystem === "Windows",
   runProcess = RunProcess
 ];
 
+(* Fix for StringDelete not being available in M10.0 *)
+If[$VersionNumber >= 10.1,
+  stringDelete = StringDelete,
+  stringDelete[s_String, patt_] := StringReplace[s, patt -> ""]
+]
 
-(* Load and check persistent configuration *)
+(* True if file exists and is not a directory *)
+fileQ[file_] := FileType[file] === File
+
+
+(********* Package variables *********)
+
+$packageDirectory = DirectoryName[$InputFileName];
 
 $applicationDataDirectory = FileNameJoin[{$UserBaseDirectory, "ApplicationData", "MaTeX"}];
 If[Not@DirectoryQ[$applicationDataDirectory], CreateDirectory[$applicationDataDirectory]]
 
+
+(********* Load and check persistent configuration *********)
+
 $configFile = FileNameJoin[{$applicationDataDirectory, "config.m"}];
 
-(* The following are best guess configurations for first-time setup *)
 
-$defaultConfigBase = <| "pdfLaTeX" -> None, "Ghostscript" -> None, "CacheSize" -> 100 |>;
+(* Functions for detecting the location of Ghostscript *)
 
-$defaultConfigOSX := <|
-    "Ghostscript" -> Quiet@Check[If[FileExistsQ["/usr/local/bin/gs"], "/usr/local/bin/gs", None], None],
-    "pdfLaTeX" -> Quiet@Check[If[FileExistsQ["/Library/TeX/texbin/pdflatex"], "/Library/TeX/texbin/pdflatex", None], None]
-|>;
+findGhostscript[] := findGhostscript[$OperatingSystem]
 
-$defaultConfigLinux := <|
-    "Ghostscript" -> Quiet@Check[First@ReadList["!which gs", String, 1], None],
-    "pdfLaTeX" -> Quiet@Check[First@ReadList["!which pdflatex", String, 1], None]
-|>;
-
-winFindGS[] :=
+findGhostscript["Windows"] :=
     Quiet@Check[Module[{base, keys, vals, key, dll, exe},
       base = "HKEY_LOCAL_MACHINE\\SOFTWARE\\GPL Ghostscript";
       keys = Developer`EnumerateRegistrySubkeys[base];
@@ -104,36 +118,74 @@ winFindGS[] :=
       AbsoluteFileName@FileNameJoin[{DirectoryName[dll], exe}]
     ], None]
 
-winFindPL[] := Quiet@Check[AbsoluteFileName@First@ReadList["!where pdflatex.exe", String, 1], None]
+findGhostscript["MacOSX"] :=
+    Quiet@Check[If[FileExistsQ["/usr/local/bin/gs"], "/usr/local/bin/gs", None], None]
 
-$defaultConfigWindows := <|
-    "Ghostscript" -> winFindGS[],
-    "pdfLaTeX" -> winFindPL[]
-|>
+findGhostscript["Unix"] :=
+    Quiet@Check[First@ReadList["!which gs", String, 1], None]
 
-$defaultConfig :=
-    Switch[$OperatingSystem,
-      "MacOSX", Join[$defaultConfigBase, $defaultConfigOSX],
-      "Unix", Join[$defaultConfigBase, $defaultConfigLinux],
-      "Windows", Join[$defaultConfigBase, $defaultConfigWindows],
-      _, $defaultConfigBase
+findGhostscript[_] := None (* unknown operating system *)
+
+
+(* Functions for detecting the location of LaTeX *)
+
+findLaTeX[] := findLaTeX[$OperatingSystem]
+
+findLaTeX["Windows"] :=
+    Quiet@Check[AbsoluteFileName@First@ReadList["!where pdflatex.exe", String, 1], None]
+
+findLaTeX["MacOSX"] :=
+    Quiet@Check[If[FileExistsQ["/Library/TeX/texbin/pdflatex"], "/Library/TeX/texbin/pdflatex", None], None]
+
+findLaTeX["Unix"] :=
+    Quiet@Check[First@ReadList["!which pdflatex", String, 1], None]
+
+findLaTeX[_] := None (* unknown operating system *)
+
+
+(* The following are best guess configurations for first-time setup *)
+
+$defaultConfigBase = <| "pdfLaTeX" -> None, "Ghostscript" -> None, "CacheSize" -> 100 |>;
+
+defaultConfig[] := Join[$defaultConfigBase, <|"pdfLaTeX" -> findLaTeX[], "Ghostscript" -> findGhostscript[]|>]
+
+$config   (* call loadConfig[] to set it *)
+$configOK (* call checkConfig[] to set it *)
+
+
+(* Load the config file and set $config. Create the config file if it doesn't exist. *)
+loadConfig[] :=
+    Module[{},
+      (* Load configuration, if it exists *)
+      If[FileExistsQ[$configFile], $config = Get[$configFile], $config = <||>];
+
+      If[Not@AssociationQ[$config],
+        Print["The MaTeX configuration was corrupted so it had to be re-set. If you can reproduce this problem, please go to https://github.com/szhorvat/MaTeX and create a bug report."];
+        $config = <||>
+      ];
+
+      (* Auto-detect any missing values *)
+      If[Not@SubsetQ[Keys[$config], Keys[$defaultConfigBase]],
+        $config = Join[defaultConfig[], $config]
+      ];
+
+      (* Re-write config file *)
+      Put[$config, $configFile];
     ]
 
-(* Load configuration, if it exists *)
-If[FileExistsQ[$configFile], $config = Import[$configFile, "Package"], $config = <||>];
-If[Not@AssociationQ[$config],
-  Print["The MaTeX configuration was corrupted so it had to be re-set. If you can reproduce this problem, please go to https://github.com/szhorvat/MaTeX and create a bug report."];
-  $config = <||>
-];
 
-If[Not@SubsetQ[Keys[$config], Keys[$defaultConfigBase]],
-  $config = Join[$defaultConfig, $config]
-];
-Export[$configFile, $config, "Package"];
+(* Discard the existing configuration and re-run detection *)
+MaTeX`Developer`ResetConfiguration[] := resetConfiguration[]
+resetConfiguration[] :=
+    Module[{},
+      $config = defaultConfig[];
+      Put[$config, $configFile];
+      checkConfig[];
+      Normal[$config]
+    ]
 
-(* True if file exists and is not a directory *)
-fileQ[file_] := FileType[file] === File
 
+(* Verify the configuration and set $configOK *)
 checkConfig[] :=
   Module[{pdflatex, gs, pdflatexOK, gsOK, cacheSizeOK, gsver},
     pdflatex = $config["pdfLaTeX"];
@@ -157,7 +209,7 @@ checkConfig[] :=
         gsOK = False
       ],
       Print["The path to Ghostscipt is not configured."];
-      gsOK= False
+      gsOK = False
     ];
 
     If[gsOK,
@@ -179,7 +231,7 @@ checkConfig[] :=
     $configOK = pdflatexOK && gsOK && cacheSizeOK;
     If[Not[$configOK] && $Notebooks, 
       Print@StringForm["`` for documentation on configuring MaTeX.", Hyperlink["Click here", "paclet:MaTeX/tutorial/ConfiguringMaTeX"]]
-	];
+	  ];
   ]
 
 
@@ -201,42 +253,44 @@ fixSystemPath[] :=
     ]
 
 
+(********** Initialization code **********)
+
+loadConfig[]; (* load configuration and set $config *)
 checkConfig[]; (* check configuration and set $configOK *)
 fixSystemPath[]; (* fix path for XeTeX *)
 
 
-ConfigureMaTeX::badkey = "Unknown configuration key: ``. Valid keys are: " <> ToString[Keys[$defaultConfig], InputForm] <> ".";
-SyntaxInformation[ConfigureMaTeX] = {"ArgumentsPattern" -> {OptionsPattern[]}, "OptionNames" -> Keys[$defaultConfig]};
+(********** Main definitions **********)
 
-ConfigureMaTeX[rules___Rule] :=
-    (Scan[
-      If[KeyExistsQ[$defaultConfig, First[#]], AppendTo[$config, #], Message[ConfigureMaTeX::badkey, First[#]]]&,
-      {rules}
-    ];
-    checkConfig[];
-    fixSystemPath[];
-    Export[$configFile, $config, "Package"];
-    Normal[$config]
-    )
+ConfigureMaTeX::badkey = "Unknown configuration key: ``. Valid keys are: " <> ToString[Keys[$defaultConfigBase], InputForm] <> ".";
+SyntaxInformation[ConfigureMaTeX] = {"ArgumentsPattern" -> {OptionsPattern[]}, "OptionNames" -> Keys[$defaultConfigBase]};
+
+ConfigureMaTeX[rules : (_Rule|_RuleDelayed)...] :=
+    Module[{},
+      Scan[
+        If[KeyExistsQ[$defaultConfigBase, First[#]], AppendTo[$config, #], Message[ConfigureMaTeX::badkey, First[#]]]&,
+        {rules}
+      ];
+      checkConfig[];
+      fixSystemPath[];
+      Put[$config, $configFile];
+      Normal[$config]
+    ]
 
 
 ranid[] := StringJoin@RandomChoice[CharacterRange["a", "z"], 16]
 
 
 (* Create temporary directory *)
-dirpath = FileNameJoin[{$TemporaryDirectory, StringJoin["MaTeX_", ranid[]]}];
-CreateDirectory[dirpath];
+dirpath := dirpath = CreateDirectory@FileNameJoin[{$TemporaryDirectory, StringJoin["MaTeX_", ranid[]]}];
+
+MaTeX`Developer`WorkingDirectory[] := dirpath
 
 
 (* Thank you to David Carlisle and Tom Hejda for help with the LaTeX code in template.tex. *)
 (* Warning: Do not use FileTemplate because it mishandles CR/LF. *)
-template = StringTemplate@Import[FileNameJoin[{DirectoryName[$InputFileName], "template.tex"}], "Text", CharacterEncoding -> "UTF-8"];
+template := template = StringTemplate@Import[FileNameJoin[{$packageDirectory, "template.tex"}], "Text", CharacterEncoding -> "UTF-8"];
 
-(* Fix for StringDelete not being available in M10.0 *)
-If[$VersionNumber >= 10.1,
-  stringDelete = StringDelete,
-  stringDelete[s_String, patt_] := StringReplace[s, patt -> ""]
-]
 
 (* Interprets a UTF-8 encoded string stored as a byte sequence *)
 fromUTF8[s_String] := FromCharacterCode[ToCharacterCode[s], "UTF-8"]
