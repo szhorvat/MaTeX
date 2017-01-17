@@ -4,7 +4,7 @@ $appName = "MaTeX";
 
 
 printAbort[str_] := (Print["ABORTING: ", Style[str, Red, Bold]]; Quit[])
-If[$Version < 10.0, printAbort["Mathematica 10.0 or later required."]]
+If[$VersionNumber < 10.0, printAbort["Mathematica 10.0 or later required."]]
 
 $dir =
     Which[
@@ -52,7 +52,7 @@ template =
 versionData = <|
   "version" -> Lookup[PacletInformation[$appName], "Version"],
   "mathversion" -> Lookup[PacletInformation[$appName], "WolframVersion"],
-  "date" -> DateString[{"MonthName", " ", "Day", ", ", "Year"}]
+  "date" -> DateString[{"MonthName", " ", "DayShort", ", ", "Year"}]
 |>
 
 
