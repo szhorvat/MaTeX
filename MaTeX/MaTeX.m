@@ -59,12 +59,12 @@ If[$OperatingSystem === "Windows",
   runProcess[args___] :=
       Module[{res},
         SetDirectory["\\"];
-        res = RunProcess[args];
+        res = RunProcess[args, ProcessEnvironment -> $environment];
         ResetDirectory[];
         res
       ]
   ,
-  runProcess = RunProcess
+  runProcess[args___] = RunProcess[args, ProcessEnvironment -> $environment]
 ];
 
 (* Fix for StringDelete not being available in M10.0 *)
@@ -83,6 +83,9 @@ $packageDirectory = DirectoryName[$InputFileName];
 
 $applicationDataDirectory = FileNameJoin[{$UserBaseDirectory, "ApplicationData", "MaTeX"}];
 If[Not@DirectoryQ[$applicationDataDirectory], CreateDirectory[$applicationDataDirectory]]
+
+$environment = Association@GetEnvironment[];
+KeyDropFrom[$environment, "LD_LIBRARY_PATH"] (* prevent library conflicts on Linux due to Mathematica changing LD_LIBRARY_PATH *)
 
 
 (********* Load and check persistent configuration *********)
@@ -243,13 +246,13 @@ fixSystemPath[] :=
       texpath = AbsoluteFileName@DirectoryName@ExpandFileName[$config["pdfLaTeX"]];
       pathSeparator = If[$OperatingSystem === "Windows", ";", ":"];
       pathList = Quiet[
-        AbsoluteFileName /@ StringSplit[Environment["PATH"], pathSeparator],
+        AbsoluteFileName /@ StringSplit[$environment["PATH"], pathSeparator],
         {AbsoluteFileName::nffil, AbsoluteFileName::fdnfnd, General::fstr}
       ];
       If[Not@MemberQ[pathList, texpath],
-        SetEnvironment["PATH" -> Environment["PATH"] <> pathSeparator <> texpath]
+        $environment["PATH"] = $environment["PATH"] <> pathSeparator <> texpath
       ];
-      Environment["PATH"]
+      $environment["PATH"]
     ]
 
 
