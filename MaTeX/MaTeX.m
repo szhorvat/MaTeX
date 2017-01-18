@@ -45,7 +45,7 @@ ClearMaTeXCache::usage = "ClearMaTeXCache[] clears MaTeX's cache.";
 `Information`$Version = "%%version%% (%%date%%)";
 `Developer`$Version = `Information`$Version;
 
-`Developer`ResetConfiguration::usage = "MaTeX`Developer`ResetConfiguration[] resets the configuration to its default value and attempts to automatically the location of external dependencies.";
+`Developer`ResetConfiguration::usage = "MaTeX`Developer`ResetConfiguration[] resets the configuration to its default value and attempts to automatically detect the location of external dependencies.";
 `Developer`WorkingDirectory::usage = "MaTeX`Developer`WorkingDirectory[] returns the directory where MaTeX creates temporary files.";
 
 
@@ -84,7 +84,7 @@ $packageDirectory = DirectoryName[$InputFileName];
 $applicationDataDirectory = FileNameJoin[{$UserBaseDirectory, "ApplicationData", "MaTeX"}];
 If[Not@DirectoryQ[$applicationDataDirectory], CreateDirectory[$applicationDataDirectory]]
 
-$environment = Association@GetEnvironment[];
+$environment = Association@GetEnvironment[]; (* environment variables *)
 KeyDropFrom[$environment, "LD_LIBRARY_PATH"] (* prevent library conflicts on Linux due to Mathematica changing LD_LIBRARY_PATH *)
 
 
@@ -118,6 +118,7 @@ findGhostscript["Windows"] :=
         "gsdll32.dll", exe = "gswin32c.exe",
         _, Return[None]
       ];
+      (* AbsoluteFileName ensures that the path has a standard form with the correct path separator: *)
       AbsoluteFileName@FileNameJoin[{DirectoryName[dll], exe}]
     ], None]
 
@@ -287,6 +288,7 @@ ranid[] := StringJoin@RandomChoice[CharacterRange["a", "z"], 16]
 (* Create temporary directory *)
 dirpath := dirpath = CreateDirectory@FileNameJoin[{$TemporaryDirectory, StringJoin["MaTeX_", ranid[]]}];
 
+(* This is a function, not a variable, to ensure that users do not try to set it. *)
 MaTeX`Developer`WorkingDirectory[] := dirpath
 
 
