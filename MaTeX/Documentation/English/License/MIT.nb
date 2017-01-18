@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      2681,         82]
+NotebookDataLength[      2485,         77]
 NotebookOptionsPosition[      1778,         51]
-NotebookOutlinePosition[      2713,         81]
-CellTagsIndexPosition[      2670,         78]
+NotebookOutlinePosition[      2517,         76]
+CellTagsIndexPosition[      2474,         73]
 WindowTitle->MaTeX License
 WindowFrame->Normal*)
 
@@ -26,7 +26,7 @@ Cell["MaTeX License", "Title"],
 Cell["\<\
 The MIT License (MIT)
 
-Copyright (c) 2016 Szabolcs Horv\[AAcute]t
+Copyright (c) 2017 Szabolcs Horv\[AAcute]t
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the \"Software\"), to deal
@@ -62,12 +62,7 @@ TrackCellChangeTimes->False,
 FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
 2014)",
 StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Reference.nb", 
-  CharacterEncoding -> "UTF-8"],
-"LinkTrails" -> GridBox[{{
-    RowBox[{
-      ButtonBox[
-      "MaTeX", ButtonData -> "paclet:MaTeX/guide/MaTeX", 
-       BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> Left]
+  CharacterEncoding -> "UTF-8"]
 ]
 (* End of Notebook Content *)
 
@@ -89,3 +84,4 @@ Cell[640, 25, 1122, 23, 374, "Program"]
 *)
 
 (* End of internal cache information *)
+
