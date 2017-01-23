@@ -221,16 +221,19 @@ checkConfig[] :=
     ];
 
     If[gsOK,
-      gsver = StringTrim@runProcess[{gs, "--version"}, "StandardOutput"];
-      If[Not@StringMatchQ[gsver, DigitCharacter..~~"."~~DigitCharacter..],
-        Print[gs <> " is either not working or is not Ghostscript."];
-        gsOK = False;
-      ]
+      gsver = StringTrim@runProcess[{gs, "--version"}, "StandardOutput"]
     ];
 
+    (* Verify that gs is Ghostscript and that it is working. We expect a version string as output. *)
+    If[gsOK && Not@StringMatchQ[gsver, DigitCharacter..~~"."~~DigitCharacter..],
+      Print[gs <> " is either not working or is not Ghostscript."];
+      gsOK = False
+    ];
+
+    (* Verify the Ghostscript version. *)
     If[gsOK && Not@OrderedQ[{{9,15}, FromDigits /@ StringSplit[gsver, "."]}],
       Print["Ghostscript version " <> gsver <> " found.  MaTeX requires Ghostscript 9.15 or later."];
-      gsOK = False;
+      gsOK = False
     ];
 
     If[!gsOK, Print["Please configure Ghostscript using ConfigureMaTeX[\"Ghostscript\" -> \"path to gs executable\[Ellipsis]\"]"]];
