@@ -86,6 +86,10 @@ If[Not@DirectoryQ[$applicationDataDirectory], CreateDirectory[$applicationDataDi
 
 $environment = Association@GetEnvironment[]; (* environment variables *)
 KeyDropFrom[$environment, "LD_LIBRARY_PATH"] (* prevent library conflicts on Linux due to Mathematica changing LD_LIBRARY_PATH *)
+If[$OperatingSystem === "Windows",
+  (* Environment variables are not case sensitive on Windows. Make sure PATH is uppercase. *)
+  $environment = KeyMap[ToUpperCase, $environment];
+]
 
 
 (********* Load and check persistent configuration *********)
