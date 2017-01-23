@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     46840,       1482]
-NotebookOptionsPosition[     38348,       1169]
-NotebookOutlinePosition[     38779,       1186]
-CellTagsIndexPosition[     38736,       1183]
+NotebookDataLength[     48917,       1554]
+NotebookOptionsPosition[     40079,       1227]
+NotebookOutlinePosition[     40510,       1244]
+CellTagsIndexPosition[     40467,       1241]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -579,21 +579,22 @@ Cell[BoxData[
  RowBox[{"{", 
   InterpretationBox[
    RowBox[{
-   "Paclet", "[", "\<\"MaTeX\"\>", ",", "\<\"1.6.2\"\>", ",", "<>", "]"}],
+   "Paclet", "[", "\<\"MaTeX\"\>", ",", "\<\"1.7.0\"\>", ",", "<>", "]"}],
    PacletManager`Paclet[
-   "Name" -> "MaTeX", "Version" -> "1.6.2", "MathematicaVersion" -> "10.0+", 
+   "Name" -> "MaTeX", "Version" -> "1.7.0", "MathematicaVersion" -> "10.0+", 
     "Description" -> "Create LaTeX-typeset labels within Mathematica.", 
-    "Creator" -> "Szabolcs Horv\[AAcute]t", 
+    "Creator" -> "Szabolcs Horv\[AAcute]t <szhorvat@gmail.com>", "URL" -> 
+    "https://github.com/szhorvat/MaTeX", "Thumbnail" -> "Logo.png", 
     "Extensions" -> {{
       "Documentation", "Language" -> "English", "MainPage" -> 
        "Guides/MaTeX"}, {"Kernel", "Root" -> ".", "Context" -> "MaTeX`"}}, 
     "Location" -> 
-    "/Users/szhorvat/Library/Mathematica/Paclets/Repository/MaTeX-1.6.2"]], 
+    "/Users/szhorvat/Library/Mathematica/Paclets/Repository/MaTeX-1.7.0"]], 
   "}"}]], "Output",
  CellChangeTimes->{{3.688197971337862*^9, 3.688197996541058*^9}, 
-   3.68819817641138*^9, 3.688198730416047*^9},
+   3.68819817641138*^9, 3.688198730416047*^9, 3.69372594347475*^9},
  CellLabel->"Out[5]=",
- CellID->1110830294]
+ CellID->1069127473]
 }, Open  ]]
 }, Open  ]],
 
@@ -626,7 +627,7 @@ Cell[BoxData[
  RowBox[{"{", 
   RowBox[{
    RowBox[{"\<\"Name\"\>", "\[Rule]", "\<\"MaTeX\"\>"}], ",", 
-   RowBox[{"\<\"Version\"\>", "\[Rule]", "\<\"1.6.2\"\>"}], ",", 
+   RowBox[{"\<\"Version\"\>", "\[Rule]", "\<\"1.7.0\"\>"}], ",", 
    RowBox[{"\<\"BuildNumber\"\>", "\[Rule]", "\<\"\"\>"}], ",", 
    RowBox[{"\<\"Qualifier\"\>", "\[Rule]", "\<\"\"\>"}], ",", 
    RowBox[{"\<\"WolframVersion\"\>", "\[Rule]", "\<\"10.0+\"\>"}], ",", 
@@ -635,22 +636,76 @@ Cell[BoxData[
     "\[Rule]", "\<\"Create LaTeX-typeset labels within Mathematica.\"\>"}], 
    ",", 
    RowBox[{"\<\"Category\"\>", "\[Rule]", "\<\"\"\>"}], ",", 
-   RowBox[{"\<\"Creator\"\>", "\[Rule]", "\<\"Szabolcs Horv\[AAcute]t\"\>"}], 
-   ",", 
+   RowBox[{"\<\"Creator\"\>", 
+    "\[Rule]", "\<\"Szabolcs Horv\[AAcute]t <szhorvat@gmail.com>\"\>"}], ",", 
+   
    RowBox[{"\<\"Publisher\"\>", "\[Rule]", "\<\"\"\>"}], ",", 
    RowBox[{"\<\"Support\"\>", "\[Rule]", "\<\"\"\>"}], ",", 
    RowBox[{"\<\"Internal\"\>", "\[Rule]", "False"}], ",", 
    RowBox[{"\<\"Location\"\>", 
     "\[Rule]", \
-"\<\"/Users/szhorvat/Library/Mathematica/Paclets/Repository/MaTeX-1.6.2\"\>"}]\
+"\<\"/Users/szhorvat/Library/Mathematica/Paclets/Repository/MaTeX-1.7.0\"\>"}]\
 , ",", 
    RowBox[{"\<\"Context\"\>", "\[Rule]", 
     RowBox[{"{", "\<\"MaTeX`\"\>", "}"}]}], ",", 
    RowBox[{"\<\"Enabled\"\>", "\[Rule]", "True"}], ",", 
    RowBox[{"\<\"Loading\"\>", "\[Rule]", "Manual"}]}], "}"}]], "Output",
- CellChangeTimes->{3.688198254597577*^9, 3.6881987333666573`*^9},
+ CellChangeTimes->{3.688198254597577*^9, 3.6881987333666573`*^9, 
+  3.69372596510261*^9},
  CellLabel->"Out[6]=",
- CellID->628481183]
+ CellID->1511241553]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Resetting the configuration", "Section",
+ CellChangeTimes->{{3.693726157453189*^9, 3.6937261612848253`*^9}},
+ CellID->378763460],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "To reset the configuration to its default, and try to auto-detect the \
+location of Ghostscript and ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"L", 
+     StyleBox[
+      AdjustmentBox["A",
+       BoxBaselineShift->-0.4,
+       BoxMargins->{{-0.5, -0.3}, {0, 0}}],
+      FontSize->Smaller], "T", 
+     AdjustmentBox["E",
+      BoxBaselineShift->0.5,
+      BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}],
+    SingleLetterItalics->False], TraditionalForm]]],
+ " again, evaluate"
+}], "Text",
+ CellChangeTimes->{{3.693726197317436*^9, 3.6937262341523046`*^9}},
+ CellID->2138547774],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MaTeX`Developer`ResetConfiguration", "[", "]"}]], "Input",
+ CellChangeTimes->{{3.69372624030219*^9, 3.6937262600633097`*^9}},
+ CellLabel->"In[7]:=",
+ CellID->1892413021],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"\<\"pdfLaTeX\"\>", 
+    "\[Rule]", "\<\"/Library/TeX/texbin/pdflatex\"\>"}], ",", 
+   RowBox[{"\<\"Ghostscript\"\>", "\[Rule]", "\<\"/usr/local/bin/gs\"\>"}], 
+   ",", 
+   RowBox[{"\<\"CacheSize\"\>", "\[Rule]", "100"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.693726263733511*^9},
+ CellLabel->"Out[7]=",
+ CellID->627583356]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
@@ -682,17 +737,20 @@ Cell["Check the loaded version:", "MathCaption",
 
 Cell[CellGroupData[{
 
-Cell[BoxData["MaTeX`Developer`$Version"], "Input",
- CellChangeTimes->{{3.6881937597524843`*^9, 3.688193774561335*^9}},
- CellLabel->"In[7]:=",
+Cell[BoxData["MaTeX`Information`$Version"], "Input",
+ CellChangeTimes->{{3.6881937597524843`*^9, 3.688193774561335*^9}, {
+  3.693725492608708*^9, 3.693725493689294*^9}},
+ CellLabel->"In[8]:=",
  CellID->667848324],
 
-Cell[BoxData["\<\"1.6.2 (November 20, 2016)\"\>"], "Output",
+Cell[BoxData["\<\"1.7.0 (January 23, 2017)\"\>"], "Output",
  CellChangeTimes->{
   3.6881937706905823`*^9, 3.688193821492909*^9, {3.688198755550508*^9, 
-   3.688198760830853*^9}, 3.688407933729082*^9, 3.6884079644175177`*^9},
- CellLabel->"Out[7]=",
- CellID->1718139963]
+   3.688198760830853*^9}, 3.688407933729082*^9, 3.6884079644175177`*^9, 
+   3.693725984099352*^9, 3.693726033563467*^9, 3.69372626786207*^9, 
+   3.694161404825798*^9},
+ CellLabel->"Out[8]=",
+ CellID->247718708]
 }, Open  ]]
 }, Open  ]],
 
@@ -1346,141 +1404,155 @@ Cell[17784, 565, 147, 2, 23, "Text",
 Cell[CellGroupData[{
 Cell[17956, 571, 185, 4, 24, "Input",
  CellID->1702426077],
-Cell[18144, 577, 792, 18, 23, "Output",
- CellID->1110830294]
+Cell[18144, 577, 912, 19, 23, "Output",
+ CellID->1069127473]
 }, Open  ]]
 }, Open  ]],
-Cell[18963, 599, 377, 9, 42, "Text",
+Cell[19083, 600, 377, 9, 42, "Text",
  CellID->978902278],
 Cell[CellGroupData[{
-Cell[19365, 612, 144, 2, 23, "Text",
+Cell[19485, 613, 144, 2, 23, "Text",
  CellID->39858178],
 Cell[CellGroupData[{
-Cell[19534, 618, 193, 4, 24, "Input",
+Cell[19654, 619, 193, 4, 24, "Input",
  CellID->818926783],
-Cell[19730, 624, 1348, 28, 104, "Output",
- CellID->628481183]
+Cell[19850, 625, 1399, 30, 120, "Output",
+ CellID->1511241553]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[21139, 659, 125, 2, 43, "Section",
+Cell[21310, 662, 134, 2, 43, "Section",
+ CellID->378763460],
+Cell[CellGroupData[{
+Cell[21469, 668, 598, 19, 42, "Text",
+ CellID->2138547774],
+Cell[CellGroupData[{
+Cell[22092, 691, 193, 4, 25, "Input",
+ CellID->1892413021],
+Cell[22288, 697, 377, 10, 40, "Output",
+ CellID->627583356]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22726, 714, 125, 2, 43, "Section",
  CellID->1830783538],
-Cell[21267, 663, 483, 10, 40, "Text",
+Cell[22854, 718, 483, 10, 40, "Text",
  CellID->338100563],
 Cell[CellGroupData[{
-Cell[21775, 677, 187, 3, 39, "MathCaption",
+Cell[23362, 732, 187, 3, 39, "MathCaption",
  CellID->1825449234],
 Cell[CellGroupData[{
-Cell[21987, 684, 161, 3, 25, "Input",
+Cell[23574, 739, 212, 4, 24, "Input",
  CellID->667848324],
-Cell[22151, 689, 269, 5, 23, "Output",
- CellID->1718139963]
+Cell[23789, 745, 362, 7, 24, "Output",
+ CellID->247718708]
 }, Open  ]]
 }, Open  ]],
-Cell[22447, 698, 346, 9, 40, "Text",
+Cell[24178, 756, 346, 9, 40, "Text",
  CellID->1452302517],
 Cell[CellGroupData[{
-Cell[22818, 711, 274, 7, 40, "Subsection",
+Cell[24549, 769, 274, 7, 40, "Subsection",
  CellID->477558058],
-Cell[23095, 720, 147, 2, 23, "Text",
+Cell[24826, 778, 147, 2, 23, "Text",
  CellID->2071153153],
-Cell[23245, 724, 734, 13, 93, "Text",
+Cell[24976, 782, 734, 13, 93, "Text",
  CellID->304381793],
 Cell[CellGroupData[{
-Cell[24004, 741, 121, 2, 23, "Text",
+Cell[25735, 799, 121, 2, 23, "Text",
  CellID->1225851384],
-Cell[24128, 745, 386, 9, 25, "Input",
+Cell[25859, 803, 386, 9, 25, "Input",
  CellID->2084234669]
 }, Open  ]],
-Cell[24529, 757, 476, 13, 41, "Text",
+Cell[26260, 815, 476, 13, 41, "Text",
  CellID->1288068061],
-Cell[25008, 772, 372, 8, 57, "Text",
+Cell[26739, 830, 372, 8, 57, "Text",
  CellID->2018525447],
-Cell[25383, 782, 697, 18, 54, "BulletedText",
+Cell[27114, 840, 697, 18, 55, "BulletedText",
  CellID->982827801],
-Cell[26083, 802, 1839, 43, 233, "BulletedText",
+Cell[27814, 860, 1839, 43, 233, "BulletedText",
  CellID->2090122330],
-Cell[27925, 847, 571, 15, 54, "BulletedText",
+Cell[29656, 905, 571, 15, 54, "BulletedText",
  CellID->179301219]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[28533, 867, 275, 7, 58, "Subsection",
+Cell[30264, 925, 275, 7, 58, "Subsection",
  CellID->1188374091],
-Cell[28811, 876, 132, 2, 23, "Text",
+Cell[30542, 934, 132, 2, 23, "Text",
  CellID->40252424],
-Cell[28946, 880, 646, 18, 39, "BulletedText",
+Cell[30677, 938, 646, 18, 39, "BulletedText",
  CellID->1761711618],
-Cell[29595, 900, 822, 22, 55, "BulletedText",
+Cell[31326, 958, 822, 22, 55, "BulletedText",
  CellID->1575444036]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[30454, 927, 224, 6, 40, "Subsection",
+Cell[32185, 985, 224, 6, 40, "Subsection",
  CellID->817653266],
-Cell[30681, 935, 688, 18, 40, "Text",
+Cell[32412, 993, 688, 18, 40, "Text",
  CellID->380896318],
 Cell[CellGroupData[{
-Cell[31394, 957, 337, 10, 25, "Text",
+Cell[33125, 1015, 337, 10, 25, "Text",
  CellID->1126609408],
 Cell[CellGroupData[{
-Cell[31756, 971, 247, 7, 25, "Input",
+Cell[33487, 1029, 247, 7, 25, "Input",
  CellID->1252204246],
-Cell[32006, 980, 171, 3, 24, "Output",
+Cell[33737, 1038, 171, 3, 24, "Output",
  CellID->2108975216]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[32214, 988, 177, 4, 24, "Input",
+Cell[33945, 1046, 177, 4, 24, "Input",
  CellID->1328861577],
-Cell[32394, 994, 990, 17, 124, "Message",
+Cell[34125, 1052, 990, 17, 124, "Message",
  CellID->678048031],
-Cell[33387, 1013, 119, 3, 23, "Output",
+Cell[35118, 1071, 119, 3, 23, "Output",
  CellID->1405026035]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[33543, 1021, 303, 8, 25, "Input",
+Cell[35274, 1079, 303, 8, 25, "Input",
  CellID->542387833],
-Cell[33849, 1031, 1801, 33, 26, "Output",
+Cell[35580, 1089, 1801, 33, 26, "Output",
  CellID->87599246]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[35711, 1071, 130, 2, 39, "Subsection",
+Cell[37442, 1129, 130, 2, 39, "Subsection",
  CellID->495667237],
 Cell[CellGroupData[{
-Cell[35866, 1077, 269, 8, 23, "Text",
+Cell[37597, 1135, 269, 8, 23, "Text",
  CellID->590185546],
-Cell[36138, 1087, 215, 6, 25, "Input",
+Cell[37869, 1145, 215, 6, 25, "Input",
  CellID->1374779525]
 }, Open  ]],
-Cell[36368, 1096, 555, 14, 69, "Text",
+Cell[38099, 1154, 555, 14, 69, "Text",
  CellID->1939205046]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[36960, 1115, 134, 2, 39, "Subsection",
+Cell[38691, 1173, 134, 2, 39, "Subsection",
  CellID->1194226010],
-Cell[37097, 1119, 400, 10, 40, "Text",
+Cell[38828, 1177, 400, 10, 40, "Text",
  CellID->128288467],
-Cell[37500, 1131, 105, 2, 23, "Text",
+Cell[39231, 1189, 105, 2, 23, "Text",
  CellID->2001529215]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[37654, 1139, 65, 1, 72, "TutorialMoreAboutSection",
+Cell[39385, 1197, 65, 1, 72, "TutorialMoreAboutSection",
  CellID->23220180],
-Cell[37722, 1142, 54, 1, 22, "TutorialMoreAbout",
+Cell[39453, 1200, 54, 1, 22, "TutorialMoreAbout",
  CellID->1567025153]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[37813, 1148, 72, 1, 72, "RelatedTutorialsSection",
+Cell[39544, 1206, 72, 1, 72, "RelatedTutorialsSection",
  CellID->415694126],
-Cell[37888, 1151, 238, 5, 22, "RelatedTutorials",
+Cell[39619, 1209, 238, 5, 22, "RelatedTutorials",
  CellID->250940407]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[38163, 1161, 98, 1, 72, "TutorialRelatedLinksSection",
+Cell[39894, 1219, 98, 1, 72, "TutorialRelatedLinksSection",
  CellID->415694148],
-Cell[38264, 1164, 56, 1, 22, "TutorialRelatedLinks",
+Cell[39995, 1222, 56, 1, 22, "TutorialRelatedLinks",
  CellID->415694149]
 }, Open  ]]
 }, Open  ]]
