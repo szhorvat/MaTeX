@@ -6,9 +6,9 @@ See [the blog post](http://szhorvat.net/pelican/latex-typesetting-in-mathematica
 
 ## Installation
 
- - [Download the latest release](https://github.com/szhorvat/MaTeX/releases), distributed as a `.paclet` file, and install it using the `PacletInstall` function in Mathematica.  For example, assuming that the file `MaTeX-1.6.2.paclet` was downloaded into the directory `~/Downloads`, evaluate
+ - [Download the latest release](https://github.com/szhorvat/MaTeX/releases), distributed as a `.paclet` file, and install it using the `PacletInstall` function in Mathematica.  For example, assuming that the file `MaTeX-1.7.0.paclet` was downloaded into the directory `~/Downloads`, evaluate
 
-        PacletInstall["~/Downloads/MaTeX-1.6.2.paclet"]
+        PacletInstall["~/Downloads/MaTeX-1.7.0.paclet"]
 
  - Make sure that a TeX system and Ghostscript 9.15 or later are installed.  
 
@@ -20,7 +20,7 @@ See [the blog post](http://szhorvat.net/pelican/latex-typesetting-in-mathematica
 
  - Test MaTeX using `MaTeX["x^2"]`.
 
-    Open the documentation center and search for "matex" to get started.
+    Open the documentation center and search for "MaTeX" to get started.
 
 ## Upgrading or uninstalling
 
@@ -92,6 +92,12 @@ The limiting factor in the speed of `MaTeX` calls is running the `pdflatex` proc
 
 ## Revision history
 
+#### Version 1.7.0
+
+ - Internal refactoring, minor bug fixes and polish
+ - New functions in ``MaTeX`Developer` `` to aid troubleshooting
+ - Bug fix: running Ghostscript or pdflatex would fail on certain Linux distributions due to Mathematica changing `LD_LIBRARY_PATH`
+
 #### Version 1.6.3
 
  - More robust error checking and reporting
@@ -142,7 +148,7 @@ The limiting factor in the speed of `MaTeX` calls is running the `pdflatex` proc
 
  - Reliability fixes for Windows
  - Windows: Work around Mathematica bug causing MaTeX to fail when the current directory has special characters in its name
- - Windows: Ensure that autodetected paths do not use `/` as path separator
+ - Windows: Ensure that auto-detected paths do not use `/` as path separator
 
 #### Version 1.1.0
 
