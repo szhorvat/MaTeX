@@ -64,7 +64,7 @@ If[$OperatingSystem === "Windows",
         res
       ]
   ,
-  runProcess[args___] = RunProcess[args, ProcessEnvironment -> $environment]
+  runProcess[args___] := RunProcess[args, ProcessEnvironment -> $environment]
 ];
 
 (* Fix for StringDelete not being available in M10.0 *)
@@ -221,7 +221,8 @@ checkConfig[] :=
     ];
 
     If[gsOK,
-      gsver = StringTrim@runProcess[{gs, "--version"}, "StandardOutput"]
+      (* runProcess[{gs, "--version"}, "StandardOutput"] sometimes fails on 10.0.2/Linux, use alternate form: *)
+      gsver = StringTrim[ runProcess[{gs, "--version"}]["StandardOutput"] ]
     ];
 
     (* Verify that gs is Ghostscript and that it is working. We expect a version string as output. *)
