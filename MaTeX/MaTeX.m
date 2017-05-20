@@ -227,7 +227,10 @@ checkConfig[] :=
 
     (* Verify that gs is Ghostscript and that it is working. We expect a version string as output. *)
     If[gsOK && Not@StringMatchQ[gsver, DigitCharacter..~~"."~~DigitCharacter..],
-      Print[gs <> " is either not working or is not Ghostscript."];
+      Print[gs <> " is either not working or is not a command line version of Ghostscript."];
+      If[$OperatingSystem === "Windows" && StringMatchQ[FileNameTake[gs], "gswin"~~DigitCharacter~~DigitCharacter~~".exe"],
+        Print["On Windows, the c-suffixed command line version of Ghostscript must be used. Use gswin64c.exe or gswin32c.exe instead of gswin64.exe or gswin32.exe."]
+      ];
       gsOK = False
     ];
 
