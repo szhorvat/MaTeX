@@ -1,22 +1,3 @@
-(* Content-type: application/vnd.wolfram.mathematica *)
-
-(*** Wolfram Notebook File ***)
-(* http://www.wolfram.com/nb *)
-
-(* CreatedBy='Mathematica 11.0' *)
-
-(*CacheID: 234*)
-(* Internal cache information:
-NotebookFileLineBreakTest
-NotebookFileLineBreakTest
-NotebookDataPosition[       158,          7]
-NotebookDataLength[     49658,       1580]
-NotebookOptionsPosition[     40661,       1247]
-NotebookOutlinePosition[     41092,       1264]
-CellTagsIndexPosition[     41049,       1261]
-WindowFrame->Normal*)
-
-(* Beginning of Notebook Content *)
 Notebook[{
 Cell[TextData[{
  "New in: ",
@@ -271,12 +252,12 @@ Cell[CellGroupData[{
 Cell["\<\
 After installing MaTeX, it is necessary to tell it the location of the \
 pdfLaTeX and Ghostscript executables. On some systems it is able to \
-automatically detect these. If it doesn't succeed, you will see the following \
-message after loading MaTeX:\
+automatically detect these. If it does not succeed, you will see the \
+following message after loading MaTeX:\
 \>", "Text",
  CellChangeTimes->{{3.688050888602846*^9, 3.688050923895825*^9}, {
   3.6880510591543283`*^9, 3.688051059994138*^9}, {3.688052295827531*^9, 
-  3.688052337882386*^9}},
+  3.688052337882386*^9}, {3.704257427133894*^9, 3.704257427469924*^9}},
  CellID->1534169418],
 
 Cell[CellGroupData[{
@@ -871,8 +852,7 @@ Cell[TextData[{
  StyleBox["amssymb", "InlineCode"],
  ". All these are part of most TeX distributions, but may not get installed \
 if choosing the smallest installation option. The ",
- Cell[BoxData["\"\<LogFileFunction\>\""], "InlineFormula",
-  FormatType->"StandardForm"],
+ Cell[BoxData["\"\<LogFileFunction\>\""], "InlineFormula"],
  " option (described above) can help in diagnosing missing packages."
 }], "BulletedText",
  CellChangeTimes->{3.6881990852275553`*^9, 3.689439173931118*^9},
@@ -944,6 +924,31 @@ correctly. I have no information about 10.1 and 10.2."
 Cell[CellGroupData[{
 
 Cell[TextData[{
+ StyleBox["gswin64.exe", "InlineCode"],
+ " is either not working or is not a command line version of Ghostscript"
+}], "Subsection",
+ CellChangeTimes->{{3.6881992889386473`*^9, 3.688199293489882*^9}, {
+  3.7042576333727903`*^9, 3.704257683423077*^9}, {3.7042577736435623`*^9, 
+  3.704257773826301*^9}},
+ CellID->301027317],
+
+Cell[TextData[{
+ "On Windows, Ghostscript comes with both a graphical version, usually named \
+as ",
+ StyleBox["gswin64.exe", "InlineCode"],
+ ", and a command line version, which has a ",
+ StyleBox["c", "InlineCode"],
+ " suffix in its name: ",
+ StyleBox["gswin64c.exe", "InlineCode"],
+ ". MaTeX must be configured to use the command line version."
+}], "Text",
+ CellChangeTimes->{{3.704257779171356*^9, 3.7042578601242313`*^9}},
+ CellID->429144537]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
  "Loading MaTeX or using the MaTeX function triggers a ",
  Cell[BoxData[
   RowBox[{"RunProcess", "::", "pnfd"}]], "InlineFormula"],
@@ -1004,11 +1009,12 @@ like ",
 Cell[CellGroupData[{
 
 Cell[TextData[{
- "MaTeX doesn't work when configured to use ",
+ "MaTeX does not work when configured to use ",
  StyleBox["lualatex", "InlineCode",
   FontWeight->"Bold"]
 }], "Subsection",
- CellChangeTimes->{{3.688193897946418*^9, 3.688193909119709*^9}},
+ CellChangeTimes->{{3.688193897946418*^9, 3.688193909119709*^9}, {
+  3.704257410492107*^9, 3.704257410786109*^9}},
  CellID->817653266],
 
 Cell[TextData[{
@@ -1238,6 +1244,7 @@ Cell[TextData[ButtonBox["Typesetting with MaTeX",
 Cell[CellGroupData[{
 
 Cell["Related Wolfram Education Group Courses", "TutorialRelatedLinksSection",
+ 
  CellID->415694148],
 
 Cell["XXXX", "TutorialRelatedLinks",
@@ -1252,337 +1259,3 @@ FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
 StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "TutorialPageStyles.nb", 
   CharacterEncoding -> "UTF-8"]
 ]
-(* End of Notebook Content *)
-
-(* Internal cache information *)
-(*CellTagsOutline
-CellTagsIndex->{}
-*)
-(*CellTagsIndex
-CellTagsIndex->{}
-*)
-(*NotebookFileOutline
-Notebook[{
-Cell[558, 20, 325, 14, 24, "History",
- CellID->1247902091],
-Cell[CellGroupData[{
-Cell[908, 38, 68, 1, 29, "CategorizationSection",
- CellID->1122911449],
-Cell[979, 41, 81, 2, 30, "Categorization",
- CellID->686433507],
-Cell[1063, 45, 78, 2, 30, "Categorization",
- CellID->605800465],
-Cell[1144, 49, 75, 2, 30, "Categorization",
- CellID->468444828],
-Cell[1222, 53, 118, 2, 30, "Categorization"]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[1377, 60, 56, 1, 19, "KeywordsSection",
- CellID->1427428552],
-Cell[1436, 63, 124, 2, 19, "Keywords",
- CellID->765955750],
-Cell[1563, 67, 125, 2, 19, "Keywords",
- CellID->570990823],
-Cell[1691, 71, 125, 2, 19, "Keywords",
- CellID->1948768684],
-Cell[1819, 75, 116, 2, 19, "Keywords",
- CellID->767534049],
-Cell[1938, 79, 113, 2, 19, "Keywords",
- CellID->279234244],
-Cell[2054, 83, 112, 2, 19, "Keywords",
- CellID->1781529218],
-Cell[2169, 87, 115, 2, 19, "Keywords",
- CellID->1646595088],
-Cell[2287, 91, 115, 2, 19, "Keywords",
- CellID->1810161587],
-Cell[2405, 95, 120, 2, 19, "Keywords",
- CellID->1460955296],
-Cell[2528, 99, 110, 2, 19, "Keywords",
- CellID->455018988],
-Cell[2641, 103, 117, 2, 19, "Keywords",
- CellID->525407435],
-Cell[2761, 107, 128, 2, 19, "Keywords",
- CellID->1876630958],
-Cell[2892, 111, 117, 2, 19, "Keywords",
- CellID->660948595],
-Cell[3012, 115, 117, 2, 19, "Keywords",
- CellID->564000903],
-Cell[3132, 119, 112, 2, 19, "Keywords",
- CellID->625708990],
-Cell[3247, 123, 117, 2, 19, "Keywords",
- CellID->1215249238]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[3401, 130, 53, 1, 19, "DetailsSection",
- CellID->307771771],
-Cell[3457, 133, 63, 2, 30, "Details",
- CellID->218895918],
-Cell[3523, 137, 69, 2, 30, "Details",
- CellID->350963985],
-Cell[3595, 141, 66, 2, 30, "Details",
- CellID->795871300],
-Cell[3664, 145, 71, 2, 30, "Details",
- CellID->199739161],
-Cell[3738, 149, 60, 2, 30, "Details",
- CellID->40625308],
-Cell[3801, 153, 61, 2, 30, "Details",
- CellID->357121918],
-Cell[3865, 157, 62, 2, 30, "Details",
- CellID->35949532],
-Cell[3930, 161, 78, 2, 30, "Details",
- CellID->929432370],
-Cell[4011, 165, 67, 2, 30, "Details",
- CellID->240026365]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[4115, 172, 169, 3, 106, "Title",
- CellID->509267359],
-Cell[4287, 177, 262, 6, 23, "Text",
- CellID->100371240],
-Cell[CellGroupData[{
-Cell[4574, 187, 120, 2, 43, "Section",
- CellID->707881275],
-Cell[4697, 191, 356, 9, 23, "Text",
- CellID->1703085124],
-Cell[5056, 202, 1094, 39, 40, "BulletedText",
- CellID->1088631257],
-Cell[6153, 243, 594, 16, 38, "BulletedText",
- CellID->1251784128]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[6784, 264, 123, 2, 43, "Section",
- CellID->389691836],
-Cell[CellGroupData[{
-Cell[6932, 270, 462, 9, 57, "Text",
- CellID->1534169418],
-Cell[CellGroupData[{
-Cell[7419, 283, 210, 5, 24, "Input",
- CellID->1640634666],
-Cell[CellGroupData[{
-Cell[7654, 292, 181, 3, 20, "Print",
- CellID->782798985],
-Cell[7838, 297, 259, 4, 36, "Print",
- CellID->1017719373],
-Cell[8100, 303, 183, 3, 20, "Print",
- CellID->102253656],
-Cell[8286, 308, 260, 5, 36, "Print",
- CellID->590278792],
-Cell[8549, 315, 948, 16, 21, "Print",
- CellID->1588691651]
-}, Open  ]]
-}, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[9558, 338, 503, 12, 41, "Text",
- CellID->1125038529],
-Cell[CellGroupData[{
-Cell[10086, 354, 506, 12, 73, "Input",
- CellID->1768050685],
-Cell[10595, 368, 520, 13, 40, "Output",
- CellID->492182815]
-}, Open  ]]
-}, Open  ]],
-Cell[11142, 385, 291, 6, 40, "Text",
- CellID->1411884930],
-Cell[CellGroupData[{
-Cell[11458, 395, 158, 2, 23, "Text",
- CellID->1877514704],
-Cell[CellGroupData[{
-Cell[11641, 401, 174, 4, 25, "Input",
- CellID->1947478611],
-Cell[11818, 407, 377, 10, 40, "Output",
- CellID->1077518277]
-}, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[12244, 423, 137, 2, 23, "Text",
- CellID->1468837617],
-Cell[CellGroupData[{
-Cell[12406, 429, 177, 4, 24, "Input",
- CellID->1320175261],
-Cell[12586, 435, 2718, 49, 26, "Output",
- CellID->1051416698]
-}, Open  ]]
-}, Open  ]],
-Cell[15331, 488, 382, 9, 40, "Text",
- CellID->330769954],
-Cell[15716, 499, 149, 3, 23, "Text",
- CellID->120086388],
-Cell[15868, 504, 891, 27, 40, "BulletedText",
- CellID->874045736],
-Cell[16762, 533, 456, 10, 38, "BulletedText",
- CellID->1638087321]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[17255, 548, 138, 2, 43, "Section",
- CellID->857614431],
-Cell[17396, 552, 363, 9, 41, "Text",
- CellID->1896226899],
-Cell[CellGroupData[{
-Cell[17784, 565, 147, 2, 23, "Text",
- CellID->1632656571],
-Cell[CellGroupData[{
-Cell[17956, 571, 185, 4, 24, "Input",
- CellID->1702426077],
-Cell[18144, 577, 912, 19, 23, "Output",
- CellID->1069127473]
-}, Open  ]]
-}, Open  ]],
-Cell[19083, 600, 377, 9, 42, "Text",
- CellID->978902278],
-Cell[CellGroupData[{
-Cell[19485, 613, 144, 2, 23, "Text",
- CellID->39858178],
-Cell[CellGroupData[{
-Cell[19654, 619, 193, 4, 24, "Input",
- CellID->818926783],
-Cell[19850, 625, 1399, 30, 120, "Output",
- CellID->1511241553]
-}, Open  ]]
-}, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[21310, 662, 134, 2, 43, "Section",
- CellID->378763460],
-Cell[CellGroupData[{
-Cell[21469, 668, 598, 19, 42, "Text",
- CellID->2138547774],
-Cell[CellGroupData[{
-Cell[22092, 691, 193, 4, 25, "Input",
- CellID->1892413021],
-Cell[22288, 697, 377, 10, 40, "Output",
- CellID->627583356]
-}, Open  ]]
-}, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[22726, 714, 125, 2, 43, "Section",
- CellID->1830783538],
-Cell[22854, 718, 483, 10, 40, "Text",
- CellID->338100563],
-Cell[CellGroupData[{
-Cell[23362, 732, 187, 3, 39, "MathCaption",
- CellID->1825449234],
-Cell[CellGroupData[{
-Cell[23574, 739, 212, 4, 24, "Input",
- CellID->667848324],
-Cell[23789, 745, 387, 7, 24, "Output",
- CellID->1567308850]
-}, Open  ]]
-}, Open  ]],
-Cell[24203, 756, 346, 9, 40, "Text",
- CellID->1452302517],
-Cell[CellGroupData[{
-Cell[24574, 769, 206, 4, 39, "Subsection",
- CellID->1252792574],
-Cell[24783, 775, 311, 9, 24, "Text",
- CellID->589084486]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[25131, 789, 274, 7, 40, "Subsection",
- CellID->477558058],
-Cell[25408, 798, 147, 2, 23, "Text",
- CellID->2071153153],
-Cell[25558, 802, 734, 13, 93, "Text",
- CellID->304381793],
-Cell[CellGroupData[{
-Cell[26317, 819, 121, 2, 23, "Text",
- CellID->1225851384],
-Cell[26441, 823, 386, 9, 25, "Input",
- CellID->2084234669]
-}, Open  ]],
-Cell[26842, 835, 476, 13, 41, "Text",
- CellID->1288068061],
-Cell[27321, 850, 372, 8, 57, "Text",
- CellID->2018525447],
-Cell[27696, 860, 697, 18, 55, "BulletedText",
- CellID->982827801],
-Cell[28396, 880, 1839, 43, 233, "BulletedText",
- CellID->2090122330],
-Cell[30238, 925, 571, 15, 54, "BulletedText",
- CellID->179301219]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[30846, 945, 275, 7, 58, "Subsection",
- CellID->1188374091],
-Cell[31124, 954, 132, 2, 23, "Text",
- CellID->40252424],
-Cell[31259, 958, 646, 18, 39, "BulletedText",
- CellID->1761711618],
-Cell[31908, 978, 822, 22, 55, "BulletedText",
- CellID->1575444036]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[32767, 1005, 224, 6, 40, "Subsection",
- CellID->817653266],
-Cell[32994, 1013, 688, 18, 40, "Text",
- CellID->380896318],
-Cell[CellGroupData[{
-Cell[33707, 1035, 337, 10, 25, "Text",
- CellID->1126609408],
-Cell[CellGroupData[{
-Cell[34069, 1049, 247, 7, 25, "Input",
- CellID->1252204246],
-Cell[34319, 1058, 171, 3, 24, "Output",
- CellID->2108975216]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[34527, 1066, 177, 4, 24, "Input",
- CellID->1328861577],
-Cell[34707, 1072, 990, 17, 124, "Message",
- CellID->678048031],
-Cell[35700, 1091, 119, 3, 23, "Output",
- CellID->1405026035]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[35856, 1099, 303, 8, 25, "Input",
- CellID->542387833],
-Cell[36162, 1109, 1801, 33, 26, "Output",
- CellID->87599246]
-}, Open  ]]
-}, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[38024, 1149, 130, 2, 39, "Subsection",
- CellID->495667237],
-Cell[CellGroupData[{
-Cell[38179, 1155, 269, 8, 23, "Text",
- CellID->590185546],
-Cell[38451, 1165, 215, 6, 25, "Input",
- CellID->1374779525]
-}, Open  ]],
-Cell[38681, 1174, 555, 14, 69, "Text",
- CellID->1939205046]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[39273, 1193, 134, 2, 39, "Subsection",
- CellID->1194226010],
-Cell[39410, 1197, 400, 10, 40, "Text",
- CellID->128288467],
-Cell[39813, 1209, 105, 2, 23, "Text",
- CellID->2001529215]
-}, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[39967, 1217, 65, 1, 72, "TutorialMoreAboutSection",
- CellID->23220180],
-Cell[40035, 1220, 54, 1, 22, "TutorialMoreAbout",
- CellID->1567025153]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[40126, 1226, 72, 1, 72, "RelatedTutorialsSection",
- CellID->415694126],
-Cell[40201, 1229, 238, 5, 22, "RelatedTutorials",
- CellID->250940407]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[40476, 1239, 98, 1, 72, "TutorialRelatedLinksSection",
- CellID->415694148],
-Cell[40577, 1242, 56, 1, 22, "TutorialRelatedLinks",
- CellID->415694149]
-}, Open  ]]
-}, Open  ]]
-}
-]
-*)
-
