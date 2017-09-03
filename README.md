@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/31675019.svg)](https://zenodo.org/badge/latestdoi/31675019)
+
 # MaTeX
 
 Create LaTeX labels in *Mathematica*.
