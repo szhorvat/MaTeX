@@ -6,9 +6,10 @@ See [the blog post](http://szhorvat.net/pelican/latex-typesetting-in-mathematica
 
 ## Installation
 
- - [Download the latest release](https://github.com/szhorvat/MaTeX/releases), distributed as a `.paclet` file, and install it using the `PacletInstall` function in Mathematica.  For example, assuming that the file `MaTeX-1.7.0.paclet` was downloaded into the directory `~/Downloads`, evaluate
+ - [Download the latest release](https://github.com/szhorvat/MaTeX/releases), distributed as a `.paclet` file, and install it using the `PacletInstall` function in Mathematica.  For example, assuming that the file `MaTeX-1.7.1.paclet` was downloaded into the directory `~/Downloads`, evaluate
 
-        PacletInstall["~/Downloads/MaTeX-1.7.0.paclet"]
+        Needs["PacletManager`"]
+        PacletInstall["~/Downloads/MaTeX-1.7.1.paclet"]
 
  - Make sure that a TeX system and Ghostscript 9.15 or later are installed.  
 
@@ -91,6 +92,11 @@ For many usage instructions, search for "MaTeX" in the documentation center.
 The limiting factor in the speed of `MaTeX` calls is running the `pdflatex` process, which might take as long as a second and cannot be sped up further.  However, MaTeX caches results, making subsequent calls with the same TeX code near-instantaneous.  MaTeX can also process a list of expressions using a single run of LaTeX, which is much faster than processing each separately.
 
 ## Revision history
+
+#### Version 1.7.1
+
+ - Work around a rare `RunProcess` bug that affects some Mathematica 10.0 installations on Linux
+ - Documentation improvements, along with a new tutorial on figure preparation
 
 #### Version 1.7.0
 
