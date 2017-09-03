@@ -108,6 +108,7 @@ or set Mathematica.DocumentationBuild.createHTML.setting to Mathematica.Document
 		        Needs["DocumentationBuild`"]
 		        ConvertGraphicsToBitmaps = Null&
 		        DownValues[AddSpaceToCamelCase] = DownValues[AddSpaceToCamelCase] /. HoldPattern[Alternatives][s__String] :> Alternatives[s, "MaTeX"]
+			      DownValues[ConvertNotebook] = DownValues[ConvertNotebook] /. HoldPattern[systemQ = True] :> (systemQ = False)
 		    ]]> 
 		</mathematica>
 		<ant antfile="${appPath}/DocumentationBuild/SystemFiles/ant/Build/notebook.xml"

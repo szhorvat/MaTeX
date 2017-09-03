@@ -34,7 +34,36 @@ code =
               NBDeleteCellTags["HideInput"] /*
               NBSetOptions[Saveable -> False] /*
               NBRemoveChangeTimes /*
-              NBResetWindow
+              NBResetWindow /*
+              Function[nb,
+                Replace[nb, sd : HoldPattern[StyleDefinitions -> Except[_Notebook]] ->
+                    StyleDefinitions -> Notebook[{Cell@StyleData[sd]}],
+                  {1}
+                ]
+              ] /*
+              Function[nb,
+                Replace[nb,
+                  HoldPattern[StyleDefinitions -> Notebook[{cells___}, rest___]] ->
+                    (StyleDefinitions -> Notebook[
+                      {
+                      cells,
+                      Cell[StyleData[#], ShowGroupOpener -> True]& /@ Unevaluated@Sequence["NotesSection", "PrimaryExamplesSection", "ExampleSection", "ExampleSubsection"],
+                      Cell[StyleData["GuideTutorialsSection", StyleDefinitions -> StyleData["SeeAlsoSection"]]]
+                      }, rest]),
+                  {1}
+                ]
+              ] /*
+              Function[nb,
+                Replace[nb,
+                  (BaseStyle->{"InlineFormula", FontFamily -> "Verdana"}) ->
+                      (BaseStyle -> FEPrivate`If[
+                        FEPrivate`Less[ FEPrivate`$VersionNumber, 11.1],
+                        {"InlineFormula", FontFamily -> "Verdana"},
+                        {"InlineFormula"}
+                      ]),
+                  Infinity
+                ]
+              ]
             ]
           ]
       ]
