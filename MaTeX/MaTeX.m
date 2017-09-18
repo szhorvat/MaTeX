@@ -404,7 +404,7 @@ Options[MaTeX] = {
 };
 SyntaxInformation[MaTeX] = {"ArgumentsPattern" -> {_, OptionsPattern[]}};
 
-MaTeX::gserr     = "Error while running Ghostscript.";
+MaTeX::gserr     = "Error while running Ghostscript.\n``";
 MaTeX::texerr    = "Error while running LaTeX.\n``";
 MaTeX::stderr    = "Additional error information received:\n``";
 MaTeX::nopdf     = "LaTeX failed to produce a PDF file.";
@@ -480,7 +480,7 @@ iMaTeX[tex:{__String}, preamble_, display_, fontsize_, strut_, ls : {lsmult_, ls
 
       return = runProcess[{$config["Ghostscript"], "-o", pdfgsfile, "-dNoOutputFonts", "-sDEVICE=pdfwrite", pdffile}, ProcessDirectory -> dirpath];
       If[return["ExitCode"] != 0,
-        Message[MaTeX::gserr];
+        Message[MaTeX::gserr, Style[StringTrim@StringJoin[return["StandardOutput"], return["StandardError"]], "OutputForm"]];
         cleanup[];
         Return[$Failed]
       ];
@@ -522,7 +522,7 @@ checkForCommonErrors[str_String] :=
     ]
 
 
-(* Convert supported expression types to a string contaninig TeX code *)
+(* Convert supported expression types to a string containing TeX code *)
 texify[expr_String] := expr
 texify[expr_StringForm] := ToString[expr] (* per user request, StringForm is treated like the string it represents; may be removed in the future; use StringTemplate instead. *)
 texify[expr_TeXForm] := ToString[expr]
