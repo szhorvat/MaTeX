@@ -74,6 +74,19 @@ CopyDirectory[
 ]
 
 
+AddPath["PackageTools"]
+Needs["PackageTools`"]
+SetDirectory@FileNameJoin[{$appDir, "Documentation", "English"}];
+MRun[
+  MCode[
+    Needs["DocumentationSearch`"];
+    DocumentationSearch`CreateDocumentationIndex[Directory[], Directory[], "TextSearchIndex", "UseWolframLanguageData" -> False];
+  ],
+  "11.2"
+]
+ResetDirectory[];
+
+
 CopyFile["LICENSE.txt", FileNameJoin[{$appDir, "LICENSE.txt"}]]
 
 
