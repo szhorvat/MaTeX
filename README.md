@@ -1,3 +1,5 @@
+[![GitHub (pre-)release](https://img.shields.io/github/release/szhorvat/MaTeX/all.svg)](https://github.com/szhorvat/MaTeX/releases)
+[![Github All Releases](https://img.shields.io/github/downloads/szhorvat/MaTeX/total.svg)](https://github.com/szhorvat/MaTeX/releases)
 [![DOI](https://zenodo.org/badge/31675019.svg)](https://zenodo.org/badge/latestdoi/31675019)
 
 # MaTeX
@@ -8,10 +10,10 @@ See [the blog post](http://szhorvat.net/pelican/latex-typesetting-in-mathematica
 
 ## Installation
 
- - [Download the latest release](https://github.com/szhorvat/MaTeX/releases), distributed as a `.paclet` file, and install it using the `PacletInstall` function in Mathematica.  For example, assuming that the file `MaTeX-1.7.1.paclet` was downloaded into the directory `~/Downloads`, evaluate
+ - [Download the latest release](https://github.com/szhorvat/MaTeX/releases), distributed as a `.paclet` file, and install it using the `PacletInstall` function in Mathematica.  For example, assuming that the file `MaTeX-1.7.2.paclet` was downloaded into the directory `~/Downloads`, evaluate
 
         Needs["PacletManager`"]
-        PacletInstall["~/Downloads/MaTeX-1.7.1.paclet"]
+        PacletInstall["~/Downloads/MaTeX-1.7.2.paclet"]
 
  - Make sure that a TeX system and Ghostscript 9.15 or later are installed.  
 
@@ -190,7 +192,7 @@ The limiting factor in the speed of `MaTeX` calls is running the `pdflatex` proc
 
  - Initial release
 
-##Feedback
+## Feedback
 
 MaTeX was primarily created for my own needs.  However, if you find it useful, feel free to drop me an email.
 
