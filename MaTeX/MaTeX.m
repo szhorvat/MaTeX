@@ -478,7 +478,7 @@ iMaTeX[tex:{__String}, preamble_, display_, fontsize_, strut_, ls : {lsmult_, ls
       height += depth+2;
       {width, height, depth} *= $psfactor; (* correct for PostScript point *)
 
-      return = runProcess[{$config["Ghostscript"], "-o", pdfgsfile, "-dNoOutputFonts", "-sDEVICE=pdfwrite", pdffile}, ProcessDirectory -> dirpath];
+      return = runProcess[{$config["Ghostscript"], "-q", "-o", pdfgsfile, "-dNoOutputFonts", "-sDEVICE=pdfwrite", pdffile}, ProcessDirectory -> dirpath];
       If[return["ExitCode"] != 0,
         Message[MaTeX::gserr, Style[StringTrim@StringJoin[return["StandardOutput"], return["StandardError"]], "OutputForm"]];
         cleanup[];
