@@ -48,6 +48,7 @@ ClearMaTeXCache::usage = "ClearMaTeXCache[] clears MaTeX's cache.";
 `Developer`ResetConfiguration::usage = "MaTeX`Developer`ResetConfiguration[] resets the configuration to its default value and attempts to automatically detect the location of external dependencies.";
 `Developer`WorkingDirectory::usage = "MaTeX`Developer`WorkingDirectory[] returns the directory where MaTeX creates temporary files.";
 
+`Developer`Texify::usage = "MaTeX`Developer`Texify[expr] converts expr to TeX code suitable for MateX.";
 
 Begin["`Private`"]; (* Begin Private Context *)
 
@@ -523,10 +524,10 @@ checkForCommonErrors[str_String] :=
 
 
 (* Convert supported expression types to a string containing TeX code *)
-texify[expr_String] := expr
-texify[expr_StringForm] := ToString[expr] (* per user request, StringForm is treated like the string it represents; may be removed in the future; use StringTemplate instead. *)
-texify[expr_TeXForm] := ToString[expr]
-texify[expr_] := ToString@TeXForm[expr]
+MaTeX`Developer`Texify[expr_String] := expr
+MaTeX`Developer`Texify[expr_StringForm] := ToString[expr] (* per user request, StringForm is treated like the string it represents; may be removed in the future; use StringTemplate instead. *)
+MaTeX`Developer`Texify[expr_TeXForm] := ToString[expr]
+MaTeX`Developer`Texify[expr_] := ToString@TeXForm[expr]
 
 
 MaTeX[tex:{__String}, opt:OptionsPattern[]] :=
@@ -590,7 +591,7 @@ MaTeX[tex:{__String}, opt:OptionsPattern[]] :=
 
 MaTeX[{}, opt:OptionsPattern[]] := {} (* prevent infinite recursion *)
 
-MaTeX[tex_List, opt:OptionsPattern[]] := MaTeX[texify /@ tex, opt]
+MaTeX[tex_List, opt:OptionsPattern[]] := MaTeX[MaTeX`Developer`Texify /@ tex, opt]
 
 MaTeX[tex_, opt:OptionsPattern[]] := With[{result = MaTeX[{tex}, opt]}, If[result === $Failed, $Failed, First[result]]]
 
