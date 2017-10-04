@@ -216,7 +216,7 @@ checkConfig[] :=
         Print["Ghostscript is not found at " <> gs];
         gsOK = False
       ],
-      Print["The path to Ghostscipt is not configured."];
+      Print["The path to Ghostscript is not configured."];
       gsOK = False
     ];
 
