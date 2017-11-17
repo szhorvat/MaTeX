@@ -55,18 +55,7 @@ Begin["`Private`"]; (* Begin Private Context *)
 
 (********* Helper and compatibility functions *********)
 
-(* Workaround for Mathematica bug on Windows where RunProcess fails when run in directories with special chars in name *)
-If[$OperatingSystem === "Windows",
-  runProcess[args___] :=
-      Module[{res},
-        SetDirectory["\\"];
-        res = RunProcess[args, ProcessEnvironment -> $environment];
-        ResetDirectory[];
-        res
-      ]
-  ,
-  runProcess[args___] := RunProcess[args, ProcessEnvironment -> $environment]
-];
+runProcess[args___] := RunProcess[args, ProcessEnvironment -> $environment]
 
 (* Fix for StringDelete not being available in M10.0 *)
 If[$VersionNumber >= 10.1,
@@ -154,7 +143,7 @@ findLaTeX[_] := None (* unknown operating system *)
 
 (* The following are best guess configurations for first-time setup *)
 
-$defaultConfigBase = <| "pdfLaTeX" -> None, "Ghostscript" -> None, "CacheSize" -> 100 |>;
+$defaultConfigBase = <| "pdfLaTeX" -> None, "Ghostscript" -> None, "CacheSize" -> 100, "WorkingDirectory" -> Automatic |>;
 
 defaultConfig[] := Join[$defaultConfigBase, <|"pdfLaTeX" -> findLaTeX[], "Ghostscript" -> findGhostscript[]|>]
 
@@ -196,7 +185,7 @@ resetConfiguration[] :=
 
 (* Verify the configuration and set $configOK *)
 checkConfig[] :=
-  Module[{pdflatex, gs, pdflatexOK, gsOK, cacheSizeOK, gsver},
+  Module[{pdflatex, gs, pdflatexOK, gsOK, cacheSizeOK, workingDirectoryOK, gsver},
     pdflatex = $config["pdfLaTeX"];
     If[StringQ[pdflatex],
       If[fileQ[pdflatex],
@@ -249,7 +238,13 @@ checkConfig[] :=
       cacheSizeOK = True
     ];
 
-    $configOK = pdflatexOK && gsOK && cacheSizeOK;
+    If[Not[$config["WorkingDirectory"] === Automatic || FileType[$config["WorkingDirectory"]] === Directory],
+      Print["The specified WorkingDirectory is not a valid directory.  Please update the configuration ConfigureMaTeX[\"WorkingDirectory\" -> \[Ellipsis]]."];
+      workingDirectoryOK = False,
+      workingDirectoryOK = True
+    ];
+
+    $configOK = pdflatexOK && gsOK && cacheSizeOK && workingDirectoryOK;
     If[Not[$configOK] && $Notebooks, 
       Print@StringForm["`` for documentation on configuring MaTeX.", Hyperlink["Click here", "paclet:MaTeX/tutorial/ConfiguringMaTeX"]]
 	  ];
@@ -294,6 +289,9 @@ ConfigureMaTeX[rules : (_Rule|_RuleDelayed)...] :=
       ];
       checkConfig[];
       fixSystemPath[];
+      If[KeyExistsQ[{rules}, "WorkingDirectory"],
+        dirpath = getWorkingDir[] (* immediately refresh the working directory if setting has changed *)
+      ];
       Put[$config, $configFile];
       Normal[$config]
     ]
@@ -301,9 +299,15 @@ ConfigureMaTeX[rules : (_Rule|_RuleDelayed)...] :=
 
 ranid[] := StringJoin@RandomChoice[CharacterRange["a", "z"], 16]
 
+getWorkingDir[] :=
+    Replace[
+      $config["WorkingDirectory"],
+      Automatic :> AbsoluteFileName@CreateDirectory@FileNameJoin[{$TemporaryDirectory, StringJoin["MaTeX_", ranid[]]}]
+    ];
 
 (* Create temporary directory *)
-dirpath := dirpath = CreateDirectory@FileNameJoin[{$TemporaryDirectory, StringJoin["MaTeX_", ranid[]]}];
+dirpath := dirpath = getWorkingDir[]
+
 
 (* This is a function, not a variable, to ensure that users do not try to set it. *)
 MaTeX`Developer`WorkingDirectory[] := dirpath
