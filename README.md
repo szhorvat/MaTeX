@@ -4,6 +4,8 @@
 
 # MaTeX
 
+[![Join the chat at https://gitter.im/MaTeX-help/Lobby](https://badges.gitter.im/MaTeX-help/Lobby.svg)](https://gitter.im/MaTeX-help/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Create LaTeX labels in *Mathematica*.
 
 See [the blog post](http://szhorvat.net/pelican/latex-typesetting-in-mathematica.html) for a detailed introduction to MaTeX and up to date troubleshooting information.
