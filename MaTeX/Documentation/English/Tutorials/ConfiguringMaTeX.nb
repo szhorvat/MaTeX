@@ -428,10 +428,12 @@ Cell[BoxData[
 
 Cell[BoxData[
  GraphicsBox[
-  {Thickness[0.07473841554559042], FilledCurveBox[CompressedData["
-1:eJxTTMoPymNmYGBgBGI5IIaxWZDYzCSwGaB8BjL0DhR7oNwMAEUOAp8=
-    
-    "], CompressedData["
+  {Thickness[0.07473841554559042], 
+   FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {0,
+     1, 0}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+    3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 
+    3, 3}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {
+    1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}}}, CompressedData["
 1:eJxdlH9IU1EUx+dmmKjT+dzae05ybqL2g0wNzKId/5DQTCUFfxGWtJlIGBiY
 MSMlEzEKKsSJZf4gFVYqYaSUGNEvUAsNDYUU9I+WGhkp/l67976dkQcuj8+9
 7557zvece7X5xWeMMolE4uYYmY4hdYzB2oHKmFkBAsruXRl214CTMxbHlurj
@@ -983,13 +985,17 @@ Cell[TextData[{
  ButtonBox["RunProcess",
   BaseStyle->"Link",
   ButtonData->"paclet:ref/RunProcess"],
- " will fail. This is a bug in certain versions of ",
- StyleBox["Mathematica ",
+ " will fail in some versions of ",
+ StyleBox["Mathematica",
   FontSlant->"Italic"],
- "for Windows. Earlier versions of MaTeX contained a partial workaround for \
-this issue, however, that workaround had the potential to cause problems. \
-Since MaTeX 1.7.3, it is possible to set MaTeX's working directory manually. \
-Create a directory which only has ASCII characters in its path, e.g. ",
+ " for Windows. This is a bug in ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ ". Earlier versions of MaTeX contained a partial workaround for this issue, \
+however, that workaround had the potential to cause problems, therefore it \
+was removed. Since MaTeX 1.7.3, it is possible to set MaTeX's working \
+directory manually. Create a directory which only has ASCII characters in its \
+path, e.g. ",
  StyleBox["C:\\temp\\MateX", "InlineCode"],
  ", and use ",
  Cell[BoxData[
@@ -1012,7 +1018,9 @@ sessions. To revert to the default behaviour, set ",
 }], "BulletedText",
  CellChangeTimes->{{3.68819931605287*^9, 3.688199368733449*^9}, {
   3.715855868304122*^9, 3.715855870239983*^9}, {3.7213737352282677`*^9, 
-  3.72137388169128*^9}, {3.721373912503817*^9, 3.721374013411809*^9}},
+  3.72137388169128*^9}, {3.721373912503817*^9, 3.721374013411809*^9}, {
+  3.721387024919347*^9, 3.721387035773848*^9}, {3.721387071209054*^9, 
+  3.721387074857595*^9}},
  CellID->1761711618],
 
 Cell[TextData[{
@@ -1025,18 +1033,15 @@ Cell[TextData[{
    ButtonData->"paclet:MaTeX/ref/ConfigureMaTeX"]], "InlineFormula"],
  " and change the paths to use backslashes (",
  StyleBox["\\", "InlineCode"],
- ") as the separator. Remember that in ",
- StyleBox["Mathematica",
-  FontSlant->"Italic"],
- " strings backslashes must be escaped, so a path string will look something \
-like ",
+ ") as the separator. Remember that backslashes must be escaped within \
+Mathematica strings, so a path string will look something like ",
  StyleBox["\"C:\\\\texlive\\\\2014\\\\bin\\\\win64\\\\pdflatex.exe\"", 
   "InlineCode"],
  "."
 }], "BulletedText",
  CellChangeTimes->{{3.68819931605287*^9, 3.688199337467422*^9}, {
   3.68819938623003*^9, 3.688199386346016*^9}, {3.688407906946886*^9, 
-  3.688407908000634*^9}},
+  3.688407908000634*^9}, {3.7213871749439383`*^9, 3.72138720878903*^9}},
  CellID->1575444036]
 }, Open  ]],
 

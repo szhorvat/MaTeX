@@ -210,12 +210,13 @@ Cell[TextData[{
       BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}],
     SingleLetterItalics->False], TraditionalForm]]],
  " without leaving Mathematica. It is primarily intended for creating \
-beautifully typeset figure labels. The latest version is always available on \
-GitHub at ",
- ButtonBox["https://github.com/szhorvat/MaTeX",
+beautifully typeset figure labels. The latest version is always available \
+from ",
+ ButtonBox["http://szhorvat.net/mathematica/MaTeX",
   BaseStyle->"Hyperlink",
   ButtonData->{
-    URL["https://github.com/szhorvat/MaTeX"], None}],
+    URL["http://szhorvat.net/mathematica/MaTeX"], None},
+  ButtonNote->"http://szhorvat.net/mathematica/MaTeX"],
  ". MaTeX is licensed under the ",
  ButtonBox["MIT license",
   BaseStyle->"Link",
@@ -225,7 +226,8 @@ GitHub at ",
  CellChangeTimes->{{3.688409356005567*^9, 3.688409421280478*^9}, {
    3.688578472064713*^9, 3.6885784831768436`*^9}, 3.688580928967751*^9, {
    3.6894374064547997`*^9, 3.689437419852798*^9}, {3.689437577764381*^9, 
-   3.6894375834676437`*^9}, {3.689437622074119*^9, 3.689437622200808*^9}},
+   3.6894375834676437`*^9}, {3.689437622074119*^9, 3.689437622200808*^9}, {
+   3.7213865489915743`*^9, 3.721386572643949*^9}},
  CellID->396060580]
 }, Open  ]],
 
@@ -386,3 +388,4 @@ FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
 StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "GuidePageStyles.nb", 
   CharacterEncoding -> "UTF-8"]
 ]
+
