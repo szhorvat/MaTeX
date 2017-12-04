@@ -100,15 +100,16 @@ or set Mathematica.DocumentationBuild.createHTML.setting to Mathematica.Document
 		In-memory patching of DocumentationBuild to:
 		  - Prevent rasterization of output cells
 		  - Prevent breaking up CamelCase MaTeX to Ma Te X.
+		  - Prevent removal of Tutorials section from guide page (ref line 2248 in DocumentationBuild/Make.m, "systemQ = True")
 		-->
 		<mathematica exe="${mathExe}">
 		    <![CDATA[
-			    Needs["MaTeX`"];
+			      Needs["MaTeX`"];
 		        If[Not@MemberQ[$Path, #], PrependTo[$Path, #]]&@AntProperty["appPath"]
 		        Needs["DocumentationBuild`"]
 		        ConvertGraphicsToBitmaps = Null&
 		        DownValues[AddSpaceToCamelCase] = DownValues[AddSpaceToCamelCase] /. HoldPattern[Alternatives][s__String] :> Alternatives[s, "MaTeX"]
-			      DownValues[ConvertNotebook] = DownValues[ConvertNotebook] /. HoldPattern[systemQ = True] :> (systemQ = False)
+			      DownValues[DocumentationBuild`Make`Private`ConvertNotebook] = DownValues[DocumentationBuild`Make`Private`ConvertNotebook] /. HoldPattern[DocumentationBuild`Make`Private`systemQ = True] :> (DocumentationBuild`Make`Private`systemQ = False)
 		    ]]> 
 		</mathematica>
 		<ant antfile="${appPath}/DocumentationBuild/SystemFiles/ant/Build/notebook.xml"
