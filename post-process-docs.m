@@ -36,14 +36,14 @@ code =
               NBRemoveChangeTimes /*
               NBResetWindow /*
               Function[nb,
-                Replace[nb, sd : HoldPattern[StyleDefinitions -> Except[_Notebook]] ->
+                Replace[nb, sd : HoldPattern[StyleDefinitions -> Except[_Notebook]] :>
                     StyleDefinitions -> Notebook[{Cell@StyleData[sd]}],
                   {1}
                 ]
               ] /*
               Function[nb,
                 Replace[nb,
-                  HoldPattern[StyleDefinitions -> Notebook[{cells___}, rest___]] ->
+                  HoldPattern[StyleDefinitions -> Notebook[{cells___}, rest___]] :>
                     (StyleDefinitions -> Notebook[
                       {
                       cells,
