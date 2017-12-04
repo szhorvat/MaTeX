@@ -1,22 +1,3 @@
-(* Content-type: application/vnd.wolfram.mathematica *)
-
-(*** Wolfram Notebook File ***)
-(* http://www.wolfram.com/nb *)
-
-(* CreatedBy='Mathematica 10.0' *)
-
-(*CacheID: 234*)
-(* Internal cache information:
-NotebookFileLineBreakTest
-NotebookFileLineBreakTest
-NotebookDataPosition[       158,          7]
-NotebookDataLength[     12057,        471]
-NotebookOptionsPosition[      8023,        329]
-NotebookOutlinePosition[      8652,        354]
-CellTagsIndexPosition[      8574,        349]
-WindowFrame->Normal*)
-
-(* Beginning of Notebook Content *)
 Notebook[{
 Cell[TextData[{
  "New in: ",
@@ -198,10 +179,20 @@ Cell[TextData[{
  CellID->329808222],
 
 Cell["\<\
-Make sure that MaTeX is configured to use Ghostscript version 9.15 or later.\
+Make sure that MaTeX is configured to use Ghostscript version 9.15 or later. \
+Earlier versions are not supported.\
 \>", "Notes",
- CellChangeTimes->{{3.688232625582076*^9, 3.6882326473295317`*^9}},
- CellID->666228394]
+ CellChangeTimes->{{3.688232625582076*^9, 3.6882326473295317`*^9}, {
+  3.7150697750230618`*^9, 3.715069780219993*^9}},
+ CellID->666228394],
+
+Cell[TextData[{
+ "Make sure that Ghostscript works and can create PDF files (",
+ StyleBox["-sDEVICE=pdfwrite", "InlineCode"],
+ " option) when invoked independently of MaTeX."
+}], "Notes",
+ CellChangeTimes->{{3.7150697819872627`*^9, 3.715069876581395*^9}},
+ CellID->1283310933]
 }, Open  ]],
 
 Cell["Tutorials", "TutorialsSection",
@@ -335,146 +326,3 @@ FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
 StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "FunctionPageStyles.nb", 
   CharacterEncoding -> "UTF-8"]
 ]
-(* End of Notebook Content *)
-
-(* Internal cache information *)
-(*CellTagsOutline
-CellTagsIndex->{
- "ExtendedExamples"->{
-  Cell[6503, 271, 100, 2, 55, "ExtendedExamplesSection",
-   CellTags->"ExtendedExamples",
-   CellID->1854448968]}
- }
-*)
-(*CellTagsIndex
-CellTagsIndex->{
- {"ExtendedExamples", 8436, 342}
- }
-*)
-(*NotebookFileOutline
-Notebook[{
-Cell[558, 20, 325, 14, 24, "History",
- CellID->1247902091],
-Cell[CellGroupData[{
-Cell[908, 38, 68, 1, 29, "CategorizationSection",
- CellID->1122911449],
-Cell[979, 41, 148, 3, 30, "Categorization",
- CellID->686433507],
-Cell[1130, 46, 78, 2, 30, "Categorization",
- CellID->605800465],
-Cell[1211, 50, 75, 2, 30, "Categorization",
- CellID->468444828],
-Cell[1289, 54, 140, 2, 30, "Categorization"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[1466, 61, 55, 1, 29, "KeywordsSection",
- CellID->477174294],
-Cell[1524, 64, 166, 3, 19, "Keywords",
- CellID->1445826828]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[1727, 72, 65, 1, 29, "TemplatesSection",
- CellID->1872225408],
-Cell[1795, 75, 94, 2, 70, "Template",
- CellID->1562036412],
-Cell[1892, 79, 82, 2, 70, "Template",
- CellID->158391909],
-Cell[1977, 83, 81, 2, 70, "Template",
- CellID->1360575930],
-Cell[2061, 87, 82, 2, 70, "Template",
- CellID->793782254]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[2180, 94, 53, 1, 19, "DetailsSection",
- CellID->307771771],
-Cell[2236, 97, 63, 2, 70, "Details",
- CellID->670882175],
-Cell[2302, 101, 69, 2, 70, "Details",
- CellID->350963985],
-Cell[2374, 105, 64, 2, 70, "Details",
- CellID->8391405],
-Cell[2441, 109, 69, 2, 70, "Details",
- CellID->3610269],
-Cell[2513, 113, 61, 2, 70, "Details",
- CellID->401364205],
-Cell[2577, 117, 61, 2, 70, "Details",
- CellID->350204745],
-Cell[2641, 121, 63, 2, 70, "Details",
- CellID->732958810],
-Cell[2707, 125, 78, 2, 70, "Details",
- CellID->222905350],
-Cell[2788, 129, 67, 2, 70, "Details",
- CellID->240026365]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[2892, 136, 121, 2, 63, "ObjectName",
- CellID->1224892054],
-Cell[3016, 140, 372, 8, 22, "Message",
- CellID->508735689],
-Cell[3391, 150, 187, 3, 25, "Notes",
- CellID->1067943069],
-Cell[3581, 155, 1299, 42, 45, "Notes",
- CellID->329808222],
-Cell[4883, 199, 189, 4, 25, "Notes",
- CellID->666228394]
-}, Open  ]],
-Cell[5087, 206, 57, 1, 43, "TutorialsSection",
- CellID->250839057],
-Cell[CellGroupData[{
-Cell[5169, 211, 83, 1, 22, "RelatedDemonstrationsSection",
- CellID->1268215905],
-Cell[5255, 214, 58, 1, 16, "RelatedDemonstrations",
- CellID->1129518860]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[5350, 220, 65, 1, 30, "RelatedLinksSection",
- CellID->1584193535],
-Cell[5418, 223, 49, 1, 16, "RelatedLinks",
- CellID->1038487239]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[5504, 229, 55, 1, 30, "SeeAlsoSection",
- CellID->1255426704],
-Cell[5562, 232, 402, 12, 19, "SeeAlso",
- CellID->929782353]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[6001, 249, 57, 1, 30, "MoreAboutSection",
- CellID->38303248],
-Cell[6061, 252, 46, 1, 16, "MoreAbout",
- CellID->1665078683]
-}, Open  ]],
-Cell[6122, 256, 356, 11, 69, "PrimaryExamplesSection",
- CellID->880084151],
-Cell[CellGroupData[{
-Cell[6503, 271, 100, 2, 55, "ExtendedExamplesSection",
- CellTags->"ExtendedExamples",
- CellID->1854448968],
-Cell[6606, 275, 125, 3, 33, "ExampleSection",
- CellID->1293636265],
-Cell[6734, 280, 148, 3, 21, "ExampleSection",
- CellID->1020263627],
-Cell[CellGroupData[{
-Cell[6907, 287, 127, 3, 21, "ExampleSection",
- CellID->2061341341],
-Cell[7037, 292, 130, 3, 70, "ExampleSubsection",
- CellID->1757724783],
-Cell[7170, 297, 130, 3, 70, "ExampleSubsection",
- CellID->1295379749]
-}, Closed]],
-Cell[7315, 303, 131, 3, 21, "ExampleSection",
- CellID->258228157],
-Cell[7449, 308, 142, 3, 21, "ExampleSection",
- CellID->2123667759],
-Cell[7594, 313, 135, 3, 21, "ExampleSection",
- CellID->1305812373],
-Cell[7732, 318, 140, 3, 21, "ExampleSection",
- CellID->1653164318],
-Cell[7875, 323, 132, 3, 21, "ExampleSection",
- CellID->589267740]
-}, Open  ]]
-}
-]
-*)
-
-(* End of internal cache information *)

@@ -1,22 +1,3 @@
-(* Content-type: application/vnd.wolfram.mathematica *)
-
-(*** Wolfram Notebook File ***)
-(* http://www.wolfram.com/nb *)
-
-(* CreatedBy='Mathematica 11.0' *)
-
-(*CacheID: 234*)
-(* Internal cache information:
-NotebookFileLineBreakTest
-NotebookFileLineBreakTest
-NotebookDataPosition[       158,          7]
-NotebookDataLength[     78862,       1814]
-NotebookOptionsPosition[     72112,       1574]
-NotebookOutlinePosition[     72744,       1599]
-CellTagsIndexPosition[     72664,       1594]
-WindowFrame->Normal*)
-
-(* Beginning of Notebook Content *)
 Notebook[{
 Cell[TextData[{
  "New in: ",
@@ -190,9 +171,12 @@ Cell[BoxData[GridBox[{
    {Cell["      ", "ModInfo"], "\"\<Ghostscript\>\"", Cell[
     "path to the Ghostscript executable", "TableText"]},
    {Cell["      ", "ModInfo"], "\"\<CacheSize\>\"", Cell[
-    "upper limit on number of results cached", "TableText"]}
+    "upper limit on number of results cached", "TableText"]},
+   {Cell["      ", "ModInfo"], "\"\<WorkingDirectory\>\"", Cell[
+    "the directory in which MaTeX creates temporary files", "TableText"]}
   }]], "2ColumnTableMod",
- CellChangeTimes->{{3.688051196527289*^9, 3.688051283759185*^9}},
+ CellChangeTimes->{{3.688051196527289*^9, 3.688051283759185*^9}, {
+  3.71990895130612*^9, 3.719909046336954*^9}},
  CellID->1869029028],
 
 Cell[TextData[{
@@ -213,19 +197,66 @@ Cell[TextData[{
  StyleBox["xelatex", "InlineCode"],
  " and ",
  StyleBox["lualatex", "InlineCode"],
- ". XeLaTeX can load any installed system font.",
+ ". The advantage of XeLaTeX is that it can load any installed system font.",
  ButtonBox["741737087",
   BaseStyle->"ExampleLink",
   ButtonData->741737087]
 }], "Notes",
  CellChangeTimes->{{3.688106712900187*^9, 3.68810673914939*^9}, {
    3.6882002654742107`*^9, 3.688200276159904*^9}, {3.688275327511261*^9, 
-   3.688275336007574*^9}, 3.700314746189251*^9},
+   3.688275336007574*^9}, 3.700314746189251*^9, {3.721374761799055*^9, 
+   3.7213747667016287`*^9}},
  CellID->1145204213],
 
 Cell["Ghostscript must be of version 9.15 or later.", "Notes",
  CellChangeTimes->{{3.688106756293359*^9, 3.6881067649635563`*^9}},
  CellID->424370657],
+
+Cell[TextData[{
+ Cell[BoxData["\"\<CacheSize\>\""], "InlineFormula"],
+ " may be set to 0, a postive integer, or ",
+ Cell[BoxData["Infinity"], "InlineFormula"],
+ "."
+}], "Notes",
+ CellChangeTimes->{{3.719909059217649*^9, 3.719909062749825*^9}, {
+  3.7199090939652967`*^9, 3.7199091155183697`*^9}},
+ CellID->497260257],
+
+Cell[TextData[{
+ Cell[BoxData["\"\<WorkingDirectory\>\""], "InlineFormula"],
+ " should normally be left at its default setting of ",
+ Cell[BoxData["Automatic"], "InlineFormula"],
+ ". This setting is provided to allow working around a bug in ",
+ ButtonBox["RunProcess",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/RunProcess"],
+ " in certain versions of ",
+ StyleBox["Mathematica ",
+  FontSlant->"Italic"],
+ "for Windows."
+}], "Notes",
+ CellChangeTimes->{{3.719909293962305*^9, 3.719909332171032*^9}, {
+  3.719909368778186*^9, 3.719909395497376*^9}, {3.721374797142459*^9, 
+  3.721374798316617*^9}},
+ CellID->577495523],
+
+Cell[TextData[{
+ "If ",
+ Cell[BoxData["\"\<WorkingDirectory\>\""], "InlineFormula"],
+ " is set to ",
+ Cell[BoxData["Automatic"], "InlineFormula"],
+ ", MaTeX will create a new working directory within ",
+ ButtonBox["$TemporaryDirectory",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/$TemporaryDirectory"],
+ " upon startup. The current working directory can be retrieved using ",
+ Cell[BoxData[
+  RowBox[{"MaTeX`Developer`WorkingDirectory", "[", "]"}]], "InlineFormula"],
+ "."
+}], "Notes",
+ CellChangeTimes->{{3.719909122863407*^9, 3.719909261790619*^9}, {
+  3.7199097195679483`*^9, 3.71990972016383*^9}},
+ CellID->1661587228],
 
 Cell[TextData[{
  Cell[BoxData[
@@ -234,11 +265,12 @@ Cell[TextData[{
     BaseStyle->"Link",
     ButtonData->"paclet:MaTeX/ref/ConfigureMaTeX"], "[", "\[Ellipsis]", 
    "]"}]], "InlineFormula"],
- " will also verify that the current configuration is valid."
+ " will always verify that the current configuration is valid."
 }], "Notes",
  CellChangeTimes->{{3.68805061572437*^9, 3.6880506352741623`*^9}, {
   3.6881313458754883`*^9, 3.688131364022292*^9}, {3.688275285423334*^9, 
-  3.688275286005102*^9}, {3.69372500760846*^9, 3.693725007656506*^9}},
+  3.688275286005102*^9}, {3.69372500760846*^9, 3.693725007656506*^9}, {
+  3.7213748285829372`*^9, 3.721374829051277*^9}},
  CellID->1067943069],
 
 Cell[TextData[{
@@ -261,7 +293,17 @@ Cell[TextData[{
    3.68810685354349*^9, 3.688106859925449*^9}, {3.6882002143434772`*^9, 
    3.688200248706399*^9}, {3.688289442457982*^9, 3.688289480514786*^9}, 
    3.688300874032338*^9, {3.689499973528434*^9, 3.689499973569293*^9}},
- CellID->730430005]
+ CellID->730430005],
+
+Cell[TextData[{
+ "The configuration can be reset to its default value using the ",
+ Cell[BoxData[
+  RowBox[{"MaTeX`Developer`ResetConfiguration", "[", "]"}]], 
+  "InlineFormula"],
+ " command."
+}], "Notes",
+ CellChangeTimes->{{3.7150703168794518`*^9, 3.7150704227762737`*^9}},
+ CellID->1972285543]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -502,6 +544,7 @@ Cell[BoxData[
 
 Cell[BoxData[
  RowBox[{"Needs", "[", "\"\<MaTeX`\>\"", "]"}]], "Input",
+ CellLabel->"In[8]:=",
  CellID->2077233026],
 
 Cell[TextData[{
@@ -530,21 +573,23 @@ Cell[BoxData[
  RowBox[{"ConfigureMaTeX", "[", 
   RowBox[{"\"\<CacheSize\>\"", "\[Rule]", "Infinity"}], "]"}]], "Input",
  CellChangeTimes->{{3.6880507306102257`*^9, 3.688050738456602*^9}},
- CellLabel->"In[14]:=",
+ CellLabel->"In[11]:=",
  CellID->1564406370],
 
 Cell[BoxData[
  RowBox[{"{", 
   RowBox[{
-   RowBox[{"\<\"Ghostscript\"\>", "\[Rule]", "\<\"/usr/local/bin/gs\"\>"}], 
-   ",", 
    RowBox[{"\<\"pdfLaTeX\"\>", 
     "\[Rule]", "\<\"/Library/TeX/texbin/pdflatex\"\>"}], ",", 
-   RowBox[{"\<\"CacheSize\"\>", "\[Rule]", "\[Infinity]"}]}], "}"}]], "Output",\
-
- CellChangeTimes->{3.688050740453796*^9, 3.688301148974444*^9},
- CellLabel->"Out[14]=",
- CellID->1727821062]
+   RowBox[{"\<\"Ghostscript\"\>", "\[Rule]", "\<\"/usr/local/bin/gs\"\>"}], 
+   ",", 
+   RowBox[{"\<\"WorkingDirectory\"\>", "\[Rule]", "Automatic"}], ",", 
+   RowBox[{"\<\"CacheSize\"\>", "\[Rule]", "\[Infinity]"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.688050740453796*^9, 3.688301148974444*^9, {3.721374898871046*^9, 
+   3.7213749233244143`*^9}},
+ CellLabel->"Out[11]=",
+ CellID->363963643]
 }, Open  ]],
 
 Cell["Limit the number of cached results to 100:", "ExampleText",
@@ -557,20 +602,22 @@ Cell[BoxData[
  RowBox[{"ConfigureMaTeX", "[", 
   RowBox[{"\"\<CacheSize\>\"", "\[Rule]", "100"}], "]"}]], "Input",
  CellChangeTimes->{{3.688050762110284*^9, 3.688050762302219*^9}},
- CellLabel->"In[15]:=",
+ CellLabel->"In[12]:=",
  CellID->499669077],
 
 Cell[BoxData[
  RowBox[{"{", 
   RowBox[{
-   RowBox[{"\<\"Ghostscript\"\>", "\[Rule]", "\<\"/usr/local/bin/gs\"\>"}], 
-   ",", 
    RowBox[{"\<\"pdfLaTeX\"\>", 
     "\[Rule]", "\<\"/Library/TeX/texbin/pdflatex\"\>"}], ",", 
+   RowBox[{"\<\"Ghostscript\"\>", "\[Rule]", "\<\"/usr/local/bin/gs\"\>"}], 
+   ",", 
+   RowBox[{"\<\"WorkingDirectory\"\>", "\[Rule]", "Automatic"}], ",", 
    RowBox[{"\<\"CacheSize\"\>", "\[Rule]", "100"}]}], "}"}]], "Output",
- CellChangeTimes->{{3.688301141559638*^9, 3.6883011504380836`*^9}},
- CellLabel->"Out[15]=",
- CellID->2027869569]
+ CellChangeTimes->{{3.688301141559638*^9, 3.6883011504380836`*^9}, 
+   3.72137492586268*^9},
+ CellLabel->"Out[12]=",
+ CellID->1170592971]
 }, Open  ]]
 }, Open  ]],
 
@@ -603,7 +650,7 @@ Cell[BoxData[
   "\"\<pdfLaTeX\>\"", "\[Rule]", "\"\</Library/TeX/texbin/xelatex\>\""}], 
   "]"}]], "Input",
  CellChangeTimes->{{3.688301510831105*^9, 3.688301527647249*^9}},
- CellLabel->"In[16]:=",
+ CellLabel->"In[13]:=",
  CellID->1627347613],
 
 Cell[BoxData[
@@ -611,12 +658,13 @@ Cell[BoxData[
   RowBox[{
    RowBox[{"\<\"Ghostscript\"\>", "\[Rule]", "\<\"/usr/local/bin/gs\"\>"}], 
    ",", 
+   RowBox[{"\<\"WorkingDirectory\"\>", "\[Rule]", "Automatic"}], ",", 
    RowBox[{"\<\"CacheSize\"\>", "\[Rule]", "100"}], ",", 
    RowBox[{"\<\"pdfLaTeX\"\>", 
     "\[Rule]", "\<\"/Library/TeX/texbin/xelatex\"\>"}]}], "}"}]], "Output",
- CellChangeTimes->{3.6883016074639273`*^9},
- CellLabel->"Out[16]=",
- CellID->91954952]
+ CellChangeTimes->{3.6883016074639273`*^9, 3.721374932039225*^9},
+ CellLabel->"Out[13]=",
+ CellID->432263719]
 }, Open  ]],
 
 Cell["Now we can use any installed system font:", "ExampleText",
@@ -639,7 +687,7 @@ Cell[BoxData[
    RowBox[{"FontSize", "\[Rule]", "24"}]}], "\[IndentingNewLine]", 
   "]"}]], "Input",
  CellChangeTimes->{{3.688301744669417*^9, 3.688301799229088*^9}},
- CellLabel->"In[18]:=",
+ CellLabel->"In[14]:=",
  CellID->286450299],
 
 Cell[BoxData[
@@ -1544,9 +1592,10 @@ cEBPbwC4HxRI
   BaselinePosition->Scaled[0.4497952624362223],
   ImageSize->{291.54669987546697`, 82.74967870485679},
   PlotRange->{{0., 291.55}, {0., 82.75}}]], "Output",
- CellChangeTimes->{{3.6883017918192053`*^9, 3.688301800468367*^9}},
- CellLabel->"Out[18]=",
- CellID->1090610422]
+ CellChangeTimes->{{3.6883017918192053`*^9, 3.688301800468367*^9}, 
+   3.72137493850432*^9},
+ CellLabel->"Out[14]=",
+ CellID->1482337707]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
@@ -1573,250 +1622,11 @@ Cell[BoxData[
 }, Open  ]]
 },
 WindowSize->{700, 770},
-WindowMargins->{{4, Automatic}, {Automatic, 0}},
+WindowMargins->{{269, Automatic}, {Automatic, 15}},
 CellContext->"Global`",
 FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
 2014)",
 StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "FunctionPageStyles.nb", 
   CharacterEncoding -> "UTF-8"]
 ]
-(* End of Notebook Content *)
-
-(* Internal cache information *)
-(*CellTagsOutline
-CellTagsIndex->{
- "ExtendedExamples"->{
-  Cell[12319, 455, 100, 2, 55, "ExtendedExamplesSection",
-   CellTags->"ExtendedExamples",
-   CellID->1854448968]}
- }
-*)
-(*CellTagsIndex
-CellTagsIndex->{
- {"ExtendedExamples", 72525, 1587}
- }
-*)
-(*NotebookFileOutline
-Notebook[{
-Cell[558, 20, 325, 14, 24, "History",
- CellID->1247902091],
-Cell[CellGroupData[{
-Cell[908, 38, 68, 1, 29, "CategorizationSection",
- CellID->1122911449],
-Cell[979, 41, 79, 2, 70, "Categorization",
- CellID->686433507],
-Cell[1061, 45, 78, 2, 70, "Categorization",
- CellID->605800465],
-Cell[1142, 49, 75, 2, 70, "Categorization",
- CellID->468444828],
-Cell[1220, 53, 69, 1, 70, "Categorization"]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[1326, 59, 55, 1, 19, "KeywordsSection",
- CellID->477174294],
-Cell[1384, 62, 122, 2, 19, "Keywords",
- CellID->1164421360],
-Cell[1509, 66, 126, 2, 19, "Keywords",
- CellID->1261722308],
-Cell[1638, 70, 117, 2, 19, "Keywords",
- CellID->1385579525],
-Cell[1758, 74, 113, 2, 19, "Keywords",
- CellID->32124023]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[1908, 81, 65, 1, 19, "TemplatesSection",
- CellID->1872225408],
-Cell[1976, 84, 94, 2, 70, "Template",
- CellID->1562036412],
-Cell[2073, 88, 82, 2, 70, "Template",
- CellID->158391909],
-Cell[2158, 92, 81, 2, 70, "Template",
- CellID->1360575930],
-Cell[2242, 96, 82, 2, 70, "Template",
- CellID->793782254]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[2361, 103, 53, 1, 19, "DetailsSection",
- CellID->307771771],
-Cell[2417, 106, 63, 2, 70, "Details",
- CellID->670882175],
-Cell[2483, 110, 69, 2, 70, "Details",
- CellID->350963985],
-Cell[2555, 114, 64, 2, 70, "Details",
- CellID->8391405],
-Cell[2622, 118, 69, 2, 70, "Details",
- CellID->3610269],
-Cell[2694, 122, 61, 2, 70, "Details",
- CellID->401364205],
-Cell[2758, 126, 61, 2, 70, "Details",
- CellID->350204745],
-Cell[2822, 130, 63, 2, 70, "Details",
- CellID->732958810],
-Cell[2888, 134, 78, 2, 70, "Details",
- CellID->222905350],
-Cell[2969, 138, 67, 2, 70, "Details",
- CellID->240026365]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[3073, 145, 57, 1, 63, "ObjectName",
- CellID->1224892054],
-Cell[3133, 148, 1212, 32, 112, "Usage",
- CellID->982511436],
-Cell[4348, 182, 137, 2, 25, "Notes",
- CellID->1958581069],
-Cell[4488, 186, 482, 9, 59, "2ColumnTableMod",
- CellID->1869029028],
-Cell[4973, 197, 838, 26, 43, "Notes",
- CellID->1145204213],
-Cell[5814, 225, 150, 2, 25, "Notes",
- CellID->424370657],
-Cell[5967, 229, 505, 12, 26, "Notes",
- CellID->1067943069],
-Cell[6475, 243, 816, 20, 42, "Notes",
- CellID->730430005]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[7328, 268, 57, 1, 43, "TutorialsSection",
- CellID->250839057],
-Cell[7388, 271, 220, 4, 16, "Tutorials",
- CellID->341631938]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[7645, 280, 83, 1, 30, "RelatedDemonstrationsSection",
- CellID->1268215905],
-Cell[7731, 283, 58, 1, 16, "RelatedDemonstrations",
- CellID->1129518860]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[7826, 289, 65, 1, 30, "RelatedLinksSection",
- CellID->1584193535],
-Cell[7894, 292, 49, 1, 16, "RelatedLinks",
- CellID->1038487239]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[7980, 298, 55, 1, 30, "SeeAlsoSection",
- CellID->1255426704],
-Cell[8038, 301, 403, 12, 19, "SeeAlso",
- CellID->929782353]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[8478, 318, 57, 1, 30, "MoreAboutSection",
- CellID->38303248],
-Cell[8538, 321, 46, 1, 16, "MoreAbout",
- CellID->1665078683]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[8621, 327, 356, 11, 69, "PrimaryExamplesSection",
- CellID->880084151],
-Cell[8980, 340, 135, 2, 22, "ExampleText",
- CellID->1288533835],
-Cell[9118, 344, 92, 2, 24, "Input",
- CellID->1860373157],
-Cell[9213, 348, 144, 2, 22, "ExampleText",
- CellID->1544757699],
-Cell[CellGroupData[{
-Cell[9382, 354, 172, 4, 25, "Input",
- CellID->950221111],
-Cell[9557, 360, 457, 12, 40, "Output",
- CellID->770840415]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[10051, 377, 126, 3, 17, "ExampleDelimiter",
- CellID->1043175235],
-Cell[10180, 382, 434, 14, 38, "ExampleText",
- CellID->1357637048],
-Cell[10617, 398, 132, 2, 22, "ExampleText",
- CellID->589680537],
-Cell[CellGroupData[{
-Cell[10774, 404, 223, 5, 25, "Input",
- CellID->1186091910],
-Cell[11000, 411, 376, 10, 40, "Output",
- CellID->976852693]
-}, Open  ]],
-Cell[11391, 424, 213, 3, 22, "ExampleText",
- CellID->1785312418],
-Cell[CellGroupData[{
-Cell[11629, 431, 226, 5, 25, "Input",
- CellID->517855910],
-Cell[11858, 438, 400, 10, 40, "Output",
- CellID->363702667]
-}, Open  ]]
-}, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[12319, 455, 100, 2, 55, "ExtendedExamplesSection",
- CellTags->"ExtendedExamples",
- CellID->1854448968],
-Cell[12422, 459, 125, 3, 33, "ExampleSection",
- CellID->1293636265],
-Cell[12550, 464, 148, 3, 21, "ExampleSection",
- CellID->1020263627],
-Cell[CellGroupData[{
-Cell[12723, 471, 127, 3, 21, "ExampleSection",
- CellID->2061341341],
-Cell[12853, 476, 130, 3, 70, "ExampleSubsection",
- CellID->1757724783],
-Cell[12986, 481, 130, 3, 70, "ExampleSubsection",
- CellID->1295379749]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[13153, 489, 131, 3, 21, "ExampleSection",
- CellID->258228157],
-Cell[CellGroupData[{
-Cell[13309, 496, 209, 4, 24, "ExampleSubsection",
- CellID->1650841456],
-Cell[13521, 502, 92, 2, 24, "Input",
- CellID->2077233026],
-Cell[13616, 506, 434, 14, 38, "ExampleText",
- CellID->1893496201],
-Cell[14053, 522, 133, 2, 22, "ExampleText",
- CellID->1243605851],
-Cell[CellGroupData[{
-Cell[14211, 528, 232, 5, 25, "Input",
- CellID->1564406370],
-Cell[14446, 535, 411, 11, 40, "Output",
- CellID->1727821062]
-}, Open  ]],
-Cell[14872, 549, 152, 2, 22, "ExampleText",
- CellID->1382463778],
-Cell[CellGroupData[{
-Cell[15049, 555, 224, 5, 25, "Input",
- CellID->499669077],
-Cell[15276, 562, 405, 10, 40, "Output",
- CellID->2027869569]
-}, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[15730, 578, 225, 4, 24, "ExampleSubsection",
- CellID->741737087],
-Cell[15958, 584, 405, 11, 37, "ExampleText",
- CellID->1935194351],
-Cell[CellGroupData[{
-Cell[16388, 599, 262, 7, 25, "Input",
- CellID->1627347613],
-Cell[16653, 608, 378, 10, 40, "Output",
- CellID->91954952]
-}, Open  ]],
-Cell[17046, 621, 202, 3, 22, "ExampleText",
- CellID->1446136071],
-Cell[CellGroupData[{
-Cell[17273, 628, 527, 14, 72, "Input",
- CellID->286450299],
-Cell[17803, 644, 53696, 904, 93, "Output",
- CellID->1090610422]
-}, Open  ]]
-}, Open  ]]
-}, Open  ]],
-Cell[71538, 1553, 142, 3, 33, "ExampleSection",
- CellID->2123667759],
-Cell[71683, 1558, 135, 3, 21, "ExampleSection",
- CellID->1305812373],
-Cell[71821, 1563, 140, 3, 21, "ExampleSection",
- CellID->1653164318],
-Cell[71964, 1568, 132, 3, 21, "ExampleSection",
- CellID->589267740]
-}, Open  ]]
-}
-]
-*)
 

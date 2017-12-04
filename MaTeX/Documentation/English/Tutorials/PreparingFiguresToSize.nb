@@ -329,9 +329,9 @@ Cell[BoxData[
     ImageSize->300]}], "}"}]], "Output",
  CellChangeTimes->{{3.704388590949747*^9, 3.704388607450829*^9}, 
    3.704389090287745*^9, 3.704389152185567*^9, {3.713436408266158*^9, 
-   3.713436417895563*^9}},
+   3.713436417895563*^9}, {3.715854539524634*^9, 3.715854551733986*^9}},
  CellLabel->"Out[1]=",
- CellID->1879242811,
+ CellID->511723163,
  ExpressionUUID -> "99061bf9-ea5c-4a35-89d3-fa599bca4054"]
 }, Open  ]]
 }, Open  ]],
@@ -354,7 +354,7 @@ elements is understanding ",
 }], "Text",
  CellChangeTimes->{{3.704386972426343*^9, 3.704387010629795*^9}, {
   3.704387117259737*^9, 3.7043871193299026`*^9}, {3.704388708686945*^9, 
-  3.7043887130468817`*^9}},
+  3.7043887130468817`*^9}, {3.715853837100799*^9, 3.7158539240001307`*^9}},
  CellID->1990746165,
  ExpressionUUID -> "a13645f6-76d2-481f-94bf-32fb129fb030"],
 
@@ -474,9 +474,9 @@ Cell[BoxData[
     ImageSize->300]}], "}"}]], "Output",
  CellChangeTimes->{
   3.7043875035107927`*^9, {3.704389071233459*^9, 3.7043890751961193`*^9}, 
-   3.704389154637353*^9, 3.713436420888894*^9},
+   3.704389154637353*^9, 3.713436420888894*^9, 3.7158545552520857`*^9},
  CellLabel->"Out[2]=",
- CellID->1478230960,
+ CellID->973403884,
  ExpressionUUID -> "1ca9c727-7bb7-4ce4-bff7-ecd821737698"]
 }, Open  ]]
 }, Open  ]],
@@ -550,7 +550,8 @@ elements with different scaling behaviours. The following figure contains a \
  ButtonBox["Scaled",
   BaseStyle->"Link",
   ButtonData->"paclet:ref/Scaled"],
- " coordinates, which serves as a light green background; a ",
+ " coordinates, which serves as a light green background within the plot \
+frame; a ",
  ButtonBox["Circle",
   BaseStyle->"Link",
   ButtonData->"paclet:ref/Circle"],
@@ -561,7 +562,8 @@ elements with different scaling behaviours. The following figure contains a \
  " hat of matching size over it, in absolute coordinates."
 }], "Text",
  CellChangeTimes->{{3.69944590104919*^9, 3.699445920360713*^9}, {
-  3.699446368382597*^9, 3.6994464787140417`*^9}},
+  3.699446368382597*^9, 3.6994464787140417`*^9}, {3.7158542582006598`*^9, 
+  3.7158542609452477`*^9}},
  CellID->1993258448,
  ExpressionUUID -> "1b27ae6c-a0b7-46c8-b0db-3210fb189479"],
 
@@ -654,9 +656,10 @@ Cell[BoxData[
   3.699445929513001*^9, {3.6994459673525457`*^9, 3.699446004497506*^9}, {
    3.6994460408844633`*^9, 3.699446050765401*^9}, {3.6994460988490267`*^9, 
    3.699446324167994*^9}, 3.6994463574254*^9, 3.704387821495214*^9, 
-   3.704389156798436*^9, 3.713436423108879*^9},
+   3.704389156798436*^9, 3.713436423108879*^9, 3.7158542016113977`*^9, 
+   3.7158545581326637`*^9},
  CellLabel->"Out[3]=",
- CellID->1738330620,
+ CellID->849795247,
  ExpressionUUID -> "e3d95dc9-0cf8-44a9-88ae-75db4acbc805"]
 }, Open  ]]
 }, Open  ]],
@@ -664,15 +667,13 @@ Cell[BoxData[
 Cell[CellGroupData[{
 
 Cell["\<\
-When resizing this figure, the background rectangle and the circle scale with \
-the frame, while the text and the polygon remain at the specified size in \
-pixels (or printer's points).\
+Try resizing this figure with the mouse and see how the different elements \
+scale. The background rectangle and the circle scale with the frame, while \
+the text and the polygon remain at the same pixel size (or size in points, if \
+exporting to printable formats).\
 \>", "Text",
- CellChangeTimes->{{3.699446483601419*^9, 3.6994465398077803`*^9}, {
-  3.699446625289925*^9, 3.6994466254627953`*^9}, {3.713425359316873*^9, 
-  3.713425383641321*^9}},
- CellID->1821559037,
- ExpressionUUID -> "0899dbb1-18aa-4120-8456-d666e253b78f"],
+ CellChangeTimes->{{3.715854108498951*^9, 3.715854192108159*^9}},
+ CellID->1678985967],
 
 Cell[CellGroupData[{
 
@@ -700,9 +701,10 @@ Cell[BoxData[
   ImageSize->360,
   PlotRangePadding->0.2]], "Output",
  CellChangeTimes->{{3.699446337970222*^9, 3.699446358061316*^9}, 
-   3.70438782310257*^9, 3.7043891588425503`*^9, 3.713436426077448*^9},
+   3.70438782310257*^9, 3.7043891588425503`*^9, 3.713436426077448*^9, 
+   3.715854205511541*^9, 3.715854561261491*^9},
  CellLabel->"Out[4]=",
- CellID->443652664,
+ CellID->878842314,
  ExpressionUUID -> "b54b443e-6db1-41b2-a6ea-53834d4a33bc"]
 }, Open  ]]
 }, Open  ]],
@@ -716,7 +718,7 @@ text. The size of the text (and its hat) stays constant.\
 \>", "Text",
  CellChangeTimes->{{3.704387855407607*^9, 3.704387872454563*^9}, {
   3.7043879144290457`*^9, 3.7043879706037397`*^9}, {3.7043899132584343`*^9, 
-  3.704389936656052*^9}},
+  3.704389936656052*^9}, {3.715854220999864*^9, 3.715854224103484*^9}},
  CellID->1567184842,
  ExpressionUUID -> "7de65eae-c43f-4a74-aa9b-f653f57eb9ab"],
 
@@ -756,9 +758,10 @@ Cell[BoxData[
   PlotRangePadding->0.2]], "Output",
  CellChangeTimes->{
   3.704387835371274*^9, {3.704387881846629*^9, 3.704387909839375*^9}, 
-   3.704389160589299*^9, 3.713436428872267*^9},
+   3.704389160589299*^9, 3.713436428872267*^9, 3.715854208208391*^9, 
+   3.7158545642675133`*^9},
  CellLabel->"Out[5]=",
- CellID->267157314,
+ CellID->1779401859,
  ExpressionUUID -> "6c31933b-36e6-4274-817a-9369bcd54516"]
 }, Open  ]]
 }, Open  ]]
@@ -825,7 +828,8 @@ Cell[BoxData[
      RowBox[{"ImageSize", "\[Rule]", 
       RowBox[{"10", "cm"}]}]}], "]"}], ",", "\"\<PDF\>\""}], "]"}]], "Input",
  Evaluatable->False,
- CellChangeTimes->{{3.704389427069378*^9, 3.704389453116941*^9}},
+ CellChangeTimes->{{3.704389427069378*^9, 3.704389453116941*^9}, {
+  3.715854585778779*^9, 3.7158545869950113`*^9}},
  CellID->1452409357,
  ExpressionUUID -> "a26987f5-779e-4666-b686-67068d7e171b"]
 }, Open  ]],
@@ -2755,9 +2759,9 @@ o5QVkAtb7uKDbB9cqtc6V6eqgNS6aA/Lso9i3U1Z1rPqCmiZ7u3/fd+q/D82
      Scaled[0.05]}},
   Ticks->{Automatic, Automatic}]], "Output",
  CellChangeTimes->{3.704389775909288*^9, 3.704389891580222*^9, 
-  3.7134364435013933`*^9},
+  3.7134364435013933`*^9, 3.715854603264873*^9},
  CellLabel->"Out[8]=",
- CellID->2009208712,
+ CellID->1503769661,
  ExpressionUUID -> "3d73e888-92ce-498c-80b5-5a36c2e2bb7b"]
 }, Open  ]]
 }, Open  ]],
@@ -2975,9 +2979,9 @@ o5QVkAtb7uKDbB9cqtc6V6eqgNS6aA/Lso9i3U1Z1rPqCmiZ7u3/fd+q/D82
   StripOnInput->False,
   Magnification->1.5 Inherited]], "Output",
  CellChangeTimes->{3.704389804035692*^9, 3.7043898961508408`*^9, 
-  3.713436450372015*^9},
+  3.713436450372015*^9, 3.7158546061517773`*^9},
  CellLabel->"Out[10]=",
- CellID->1368395544,
+ CellID->1983073828,
  ExpressionUUID -> "450dea45-6db2-4ae9-a2e4-1e7563f76b77"]
 }, Open  ]]
 }, Open  ]]
@@ -3080,12 +3084,15 @@ Cell[BoxData[
 }, Open  ]],
 
 Cell[TextData[{
- "Warning: this setting will maintain its effect until ",
+ StyleBox["Warning:",
+  FontWeight->"Bold"],
+ " This setting will maintain its effect until ",
  StyleBox["Mathematica",
   FontSlant->"Italic"],
  " is fully restarted."
 }], "Text",
- CellChangeTimes->{{3.713435906285549*^9, 3.71343592408291*^9}},
+ CellChangeTimes->{{3.713435906285549*^9, 3.71343592408291*^9}, 
+   3.715854638560547*^9},
  CellID->596062456,
  ExpressionUUID -> "db3d9634-ecbf-45f7-9eb4-b2628e731ac1"],
 
@@ -3637,6 +3644,7 @@ ZIGrq9m4OWXGYR95DRYLFp1aLaxJma085rWdzYKteQ1cjPLStjMFnMUsMHrV
              "]]},
            
            Annotation[#, 
+            
             "Charting`Private`Tag$4405#2"]& ], {}}, {{}, {}, {}, {}}}, {}, \
 {}}, {}},
       AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
@@ -5002,6 +5010,7 @@ sg==
             JoinedCurveBox[{{{0, 2, 0}}}, {{{2.1921899999999996`, 
              6.466019999999999}, {10.4039, 6.466019999999999}}}, 
              CurveClosed -> {0}], 
+            
             FilledCurveBox[{{{0, 2, 0}, {1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {0, 
              1, 0}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1,
               3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {
@@ -5113,6 +5122,7 @@ PlheWBHOLz28zXXmXEUHbkc+rxkrofqZlVDNB/Lnn5i8JFsNwTcA0Zv/wvlP
 KP5FBOB8cLhGCEL9owTnw8IfxofFzwFQulDmdYgBxYOMNMR/azih8SLpkD01
 odDi8w97SLwLwcMXbP5mQTg/+O3ljzMWIviQdCQAT68wPnp6BgB28EAU
              "]], 
+            
             FilledCurveBox[{{{1, 4, 3}, {0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {1, 
              3, 3}, {1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {1,
               3, 3}, {1, 3, 3}, {0, 1, 0}, {0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {
@@ -6159,6 +6169,7 @@ B6cnXjgfHO33BaDhogxJrxMEHZSvPQpmeKMIDz9YeobxK+7/uGXMLY8R/gAM
           Graphics[{
             Thickness[0.11185682326621925`], 
             Style[{
+              
               FilledCurve[{{{1, 4, 3}, {0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {1, 3,
                 3}, {1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {1,
                 3, 3}, {1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {0, 1, 0}, {1, 3, 
@@ -6234,6 +6245,7 @@ A5y+RB1kQen2HYIP9p+VApwPtidMAeL+dlGHNSD78xSg5otC0lutAsT8mSIO
               JoinedCurve[{{{0, 2, 0}}}, {{{2.1921899999999996`, 
                6.466019999999999}, {6.751170000000001, 6.466019999999999}}}, 
                CurveClosed -> {0}], 
+              
               FilledCurve[{{{0, 2, 0}, {1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {0, 1,
                 0}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1,
                 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {0, 1, 
@@ -6306,6 +6318,7 @@ sg==
               JoinedCurve[{{{0, 2, 0}}}, {{{2.1921899999999996`, 
                6.466019999999999}, {10.4039, 6.466019999999999}}}, 
                CurveClosed -> {0}], 
+              
               FilledCurve[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {1, 3, 3}, {1, 3,
                  3}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {1, 3, 3}, {
                 0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
@@ -6808,7 +6821,6 @@ EN9+cYGKQ0rsHTfmHToOIGfOXKkENVfbYY2QDl/6OwWHF8VbRX9nazuIVE4q
 OasiB+dPB6m/KQnnB4HCw1HcwecEu+3sqdoOwmD1wg4mxkAwWQcSfsd4of7X
 dUgDgWcscPeB5d3+28Pcj8JfgeDD/H/h97Hr824i+LD4BQBWPe55
              "]], 
-            
             FilledCurve[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
              3}, {0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3,
               3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 
@@ -7632,6 +7644,7 @@ h6ZHx2esNofYd0EQHn9pINAm6oAevwD4OOHB
 {-3.1406055819981074`, -1.3105866276291245`}], 
           Offset[{16.503381174324048`, -28.999999999999996`}, \
 {-3.1406055819981074`, -1.3105866276291245`}], 
+          
           Offset[{-16.496618825675952`, -29.000000000000004`}, \
 {-3.1406055819981074`, -1.3105866276291245`}], 
           Offset[{-16.49661882567596, -10.000000000000004`}, \
@@ -7913,6 +7926,7 @@ PV6vWK7oQ8zjUoLzweYtQ/DB6q8j+KUg82KVHbaA4vsPInzA9HEDOB+cLm8i
            
            JoinedCurveBox[{{{0, 2, 0}}}, {{{9.35898, 6.466019999999999}, {
             17.571099999999998`, 6.466019999999999}}}, CurveClosed -> {0}], 
+           
            FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {1, 3, 3}, {1, 3,
               3}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {1, 3, 3}, {0, 
              1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {1,
@@ -8168,6 +8182,7 @@ PwOUjiylIeY/R4TnD5D9zFpwvszyFx569gg+LD+i82H5FQDq2Z7c
             1.9468799999999995`, 6.26406}, {2.0906299999999995`, 6.26406}, {
             7.1046900000000015`, 6.26406}, {7.231249999999999, 6.26406}, {
             7.42031, 6.26406}, {7.42031, 6.454689999999999}}}], 
+           
            FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3,
              3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3,
              3}, {1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {1, 3,
@@ -8801,6 +8816,7 @@ sg==
            JoinedCurveBox[{{{0, 2, 0}}}, {{{2.1921899999999996`, 
             6.466019999999999}, {10.4039, 6.466019999999999}}}, 
             CurveClosed -> {0}], 
+           
            FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {1, 3, 3}, {1, 3,
               3}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {1, 3, 3}, {0, 
              1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {1,

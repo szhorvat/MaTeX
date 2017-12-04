@@ -331,6 +331,7 @@ Cell["This loads the package:", "MathCaption",
 
 Cell[BoxData[
  RowBox[{"<<", "MaTeX`"}]], "Input",
+ InitializationCell->True,
  CellChangeTimes->{{3.688205852217601*^9, 3.688205854704165*^9}, {
   3.6882058851937637`*^9, 3.688205890944483*^9}, {3.688206334176961*^9, 
   3.68820633974691*^9}},
@@ -13420,12 +13421,14 @@ Cell[BoxData[
    RowBox[{"\<\"Ghostscript\"\>", "\[Rule]", "\<\"/usr/local/bin/gs\"\>"}], 
    ",", 
    RowBox[{"\<\"CacheSize\"\>", "\[Rule]", "100"}], ",", 
+   RowBox[{"\<\"WorkingDirectory\"\>", "\[Rule]", "Automatic"}], ",", 
    RowBox[{"\<\"pdfLaTeX\"\>", 
     "\[Rule]", "\<\"/Library/TeX/texbin/pdflatex\"\>"}]}], "}"}]], "Output",
  CellChangeTimes->{{3.688232004296796*^9, 3.6882320195370417`*^9}, 
-   3.688232064331373*^9, 3.688232329221093*^9, 3.688371665498991*^9},
+   3.688232064331373*^9, 3.688232329221093*^9, 3.688371665498991*^9, 
+   3.721375218374741*^9},
  CellLabel->"Out[15]=",
- CellID->1578643725]
+ CellID->1589297654]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -13442,15 +13445,12 @@ Cell[BoxData[{
 
 Cell[BoxData[
  RowBox[{"{", 
-  RowBox[{"0.35968499999999997696065179297875147313`5.576522240024845", ",", 
+  RowBox[{"0.42514899999999999913313786237267777324`5.649141075182155", ",", 
    GraphicsBox[
-    {Thickness[0.11560693641618497`], 
-     FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {
-      0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
-      3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {
-      1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
-      3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
-      3}}}, CompressedData["
+    {Thickness[0.11560693641618497`], FilledCurveBox[CompressedData["
+1:eJxTTMoPymNmYGBgBGI5IIaxWZDYzCSwGaB8BjL0DhR7oNwMAEUOAp8=
+      
+      "], CompressedData["
 1:eJxdlH9IU1EUx+dmmKjT+dzae05ybqL2g0wNzKId/5DQTCUFfxGWtJlIGBiY
 MSMlEzEKKsSJZf4gFVYqYaSUGNEvUAsNDYUU9I+WGhkp/l67976dkQcuj8+9
 7557zvece7X5xWeMMolE4uYYmY4hdYzB2oHKmFkBAsruXRl214CTMxbHlurj
@@ -13476,9 +13476,9 @@ CYdMdUhTIzvfT/bOCLDzff0H/muFeg==
     PlotRange->{{0., 8.65}, {0., 16.34}}]}], "}"}]], "Output",
  CellChangeTimes->{{3.688232024197253*^9, 3.688232028654146*^9}, {
    3.688232072106949*^9, 3.688232077760497*^9}, 3.6882323301697187`*^9, 
-   3.688371666775525*^9},
+   3.688371666775525*^9, {3.721375228203659*^9, 3.7213752696499968`*^9}},
  CellLabel->"Out[17]=",
- CellID->987396725]
+ CellID->694517576]
 }, Open  ]]
 }, Open  ]],
 
@@ -13514,12 +13514,14 @@ Cell[BoxData[
    RowBox[{"\<\"Ghostscript\"\>", "\[Rule]", "\<\"/usr/local/bin/gs\"\>"}], 
    ",", 
    RowBox[{"\<\"CacheSize\"\>", "\[Rule]", "100"}], ",", 
+   RowBox[{"\<\"WorkingDirectory\"\>", "\[Rule]", "Automatic"}], ",", 
    RowBox[{"\<\"pdfLaTeX\"\>", 
     "\[Rule]", "\<\"/Library/TeX/texbin/xelatex\"\>"}]}], "}"}]], "Output",
  CellChangeTimes->{{3.688232004296796*^9, 3.6882320195370417`*^9}, 
-   3.688232064331373*^9, 3.6882321968483953`*^9, 3.688371667663159*^9},
+   3.688232064331373*^9, 3.6882321968483953`*^9, 3.688371667663159*^9, 
+   3.7213752731099577`*^9},
  CellLabel->"Out[18]=",
- CellID->876330875]
+ CellID->358965077]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -13536,15 +13538,12 @@ Cell[BoxData[{
 
 Cell[BoxData[
  RowBox[{"{", 
-  RowBox[{"0.60406199999999998784261379114468581975`5.801681429510021", ",", 
+  RowBox[{"0.681790000000000007140954494389006868`5.85425054030352", ",", 
    GraphicsBox[
-    {Thickness[0.11574074074074076`], 
-     FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {
-      0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
-      3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {
-      1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
-      3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
-      3}}}, CompressedData["
+    {Thickness[0.11574074074074076`], FilledCurveBox[CompressedData["
+1:eJxTTMoPymNmYGBgBGI5IIaxWZDYzCSwGaB8BjL0DhR7oNwMAEUOAp8=
+      
+      "], CompressedData["
 1:eJxdlH9IU1EUx+dmmKjT+dzae05ybqL2g0wNzKId/5DQTCUFfxGWtJlIGBiY
 MSMlEzEKKsSJZf4gFVYqYaSUGNEvUAsNDYUU9I+WGhkp/l67976dkQcuj8+9
 7557zvece7X5xWeMMolE4uYYmY4hdYzB2oHKmFkBAsruXRl214CTMxbHlurj
@@ -13570,9 +13569,9 @@ CYdMdUhTIzvfT/bOCLDzff0H/muFeg==
     PlotRange->{{0., 8.639999999999999}, {0., 16.34}}]}], "}"}]], "Output",
  CellChangeTimes->{{3.688232024197253*^9, 3.688232028654146*^9}, {
    3.688232072106949*^9, 3.688232077760497*^9}, 3.688232199615448*^9, 
-   3.688371669123632*^9},
+   3.688371669123632*^9, 3.72137527708633*^9},
  CellLabel->"Out[20]=",
- CellID->917709413]
+ CellID->860575306]
 }, Open  ]]
 }, Open  ]],
 
@@ -13610,13 +13609,14 @@ Cell[BoxData[
    RowBox[{"\<\"Ghostscript\"\>", "\[Rule]", "\<\"/usr/local/bin/gs\"\>"}], 
    ",", 
    RowBox[{"\<\"CacheSize\"\>", "\[Rule]", "100"}], ",", 
+   RowBox[{"\<\"WorkingDirectory\"\>", "\[Rule]", "Automatic"}], ",", 
    RowBox[{"\<\"pdfLaTeX\"\>", 
     "\[Rule]", "\<\"/Library/TeX/texbin/lualatex\"\>"}]}], "}"}]], "Output",
  CellChangeTimes->{{3.688232004296796*^9, 3.6882320195370417`*^9}, 
    3.688232064331373*^9, 3.6882321968483953`*^9, 3.688232317562284*^9, 
-   3.6883716709868107`*^9},
+   3.6883716709868107`*^9, {3.721375284815213*^9, 3.7213752956475983`*^9}},
  CellLabel->"Out[21]=",
- CellID->281333983]
+ CellID->1560111850]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -13637,15 +13637,12 @@ Cell[BoxData[{
 
 Cell[BoxData[
  RowBox[{"{", 
-  RowBox[{"0.39778700000000000169819713846663944423`5.620250499206002", ",", 
+  RowBox[{"0.55296199999999995355892679071985185146`5.763295200538471", ",", 
    GraphicsBox[
-    {Thickness[0.11560693641618497`], 
-     FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {
-      0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
-      3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {
-      1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
-      3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
-      3}}}, CompressedData["
+    {Thickness[0.11560693641618497`], FilledCurveBox[CompressedData["
+1:eJxTTMoPymNmYGBgBGI5IIaxWZDYzCSwGaB8BjL0DhR7oNwMAEUOAp8=
+      
+      "], CompressedData["
 1:eJxdlH9IU1EUx+dmmKjT+dzae05ybqL2g0wNzKId/5DQTCUFfxGWtJlIGBiY
 MSMlEzEKKsSJZf4gFVYqYaSUGNEvUAsNDYUU9I+WGhkp/l67976dkQcuj8+9
 7557zvece7X5xWeMMolE4uYYmY4hdYzB2oHKmFkBAsruXRl214CTMxbHlurj
@@ -13671,9 +13668,10 @@ CYdMdUhTIzvfT/bOCLDzff0H/muFeg==
     PlotRange->{{0., 8.65}, {0., 16.34}}]}], "}"}]], "Output",
  CellChangeTimes->{{3.688232024197253*^9, 3.688232028654146*^9}, {
    3.688232072106949*^9, 3.688232094139995*^9}, 3.688232208544098*^9, 
-   3.6882322596444473`*^9, 3.688232318996908*^9, 3.688371672457919*^9},
+   3.6882322596444473`*^9, 3.688232318996908*^9, 3.688371672457919*^9, {
+   3.721375286717997*^9, 3.721375319702364*^9}},
  CellLabel->"Out[23]=",
- CellID->1866436021]
+ CellID->468522900]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
@@ -13698,6 +13696,8 @@ Cell[TextData[{
   3.688374533673901*^9, 3.688374536690597*^9}},
  CellID->611478332],
 
+Cell[CellGroupData[{
+
 Cell[TextData[{
  "If ",
  Cell[BoxData[
@@ -13721,12 +13721,38 @@ to ",
  ButtonBox["TeXForm",
   BaseStyle->"Link",
   ButtonData->"paclet:ref/TeXForm"],
- "."
+ ". This is handled by the ",
+ Cell[BoxData["MaTeX`Developer`Texify"], "InlineFormula",
+  FormatType->"StandardForm"],
+ " function, which is user customizable (see the Neat Examples section of the \
+",
+ Cell[BoxData[
+  ButtonBox["MaTeX",
+   BaseStyle->"Link",
+   ButtonData->"paclet:MaTeX/ref/MaTeX"]], "InlineFormula"],
+ " documentation page)."
 }], "Text",
  CellChangeTimes->{{3.688372286547249*^9, 3.68837233384374*^9}, {
   3.688372714322536*^9, 3.688372717914289*^9}, {3.6885810740602007`*^9, 
-  3.6885810749133673`*^9}},
+  3.6885810749133673`*^9}, {3.7213753654413767`*^9, 3.721375412168025*^9}},
  CellID->142037782],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "MaTeX`Developer`Texify"}]], "Input",
+ CellChangeTimes->{{3.721375422905951*^9, 3.721375427003628*^9}},
+ CellLabel->"In[24]:=",
+ CellID->1232843756],
+
+Cell[BoxData[
+ StyleBox["\<\"MaTeX`Developer`Texify[expr] converts expr to TeX code \
+suitable for MateX.\"\>", "MSG"]], "Print", "PrintUsage",
+ CellChangeTimes->{3.72137544187035*^9},
+ CellTags->"Info3721379041-5565412",
+ CellID->132434638]
+}, Open  ]]
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -13752,7 +13778,7 @@ Cell[BoxData[
        RowBox[{"FindFile", "[", "\"\<MaTeX`\>\"", "]"}]}]}], ",", 
      "\"\<template.tex\>\""}], "}"}], "]"}]}]], "Input",
  CellChangeTimes->{{3.688372189041768*^9, 3.68837224716605*^9}},
- CellLabel->"In[24]:=",
+ CellLabel->"In[25]:=",
  CellID->655324147],
 
 Cell["\<\
@@ -13781,9 +13807,10 @@ Cell["\<\
 `tex`
 \\end{document}\
 \>", "Print",
- CellChangeTimes->{3.688372247544366*^9, 3.6884086600591288`*^9},
- CellLabel->"During evaluation of In[24]:=",
- CellID->1470252817]
+ CellChangeTimes->{3.688372247544366*^9, 3.6884086600591288`*^9, 
+  3.7213753352396793`*^9, 3.721375454805924*^9},
+ CellLabel->"During evaluation of In[25]:=",
+ CellID->1727902894]
 }, Open  ]]
 }, Open  ]],
 
@@ -13863,11 +13890,22 @@ Cell[TextData[{
       BoxBaselineShift->0.5,
       BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}],
     SingleLetterItalics->False], TraditionalForm]]],
- " log file."
+ " log file, provided by the ",
+ StyleBox["\\typeout", "InlineCode"],
+ " commands in the ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"T", 
+     AdjustmentBox["E",
+      BoxBaselineShift->0.5,
+      BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}],
+    SingleLetterItalics->False], TraditionalForm]]],
+ " template."
 }], "Text",
  CellChangeTimes->{{3.688372545768619*^9, 3.688372680397085*^9}, {
   3.6883728073198357`*^9, 3.6883728133507023`*^9}, {3.688374685376625*^9, 
-  3.688374685492529*^9}},
+  3.688374685492529*^9}, {3.72137550362101*^9, 3.721375517126773*^9}},
  CellID->816514963]
 }, Open  ]],
 
@@ -13875,6 +13913,12 @@ Cell[CellGroupData[{
 
 Cell["More About", "TutorialMoreAboutSection",
  CellID->23220180],
+
+Cell[TextData[ButtonBox["MaTeX",
+ BaseStyle->"Link",
+ ButtonData->"paclet:MaTeX/guide/MaTeX"]], "TutorialMoreAbout",
+ CellChangeTimes->{{3.7158553753658257`*^9, 3.7158554000942173`*^9}},
+ CellID->1353603806],
 
 Cell["XXXX", "TutorialMoreAbout",
  CellID->1567025153]
@@ -13905,9 +13949,10 @@ Cell["XXXX", "TutorialRelatedLinks",
 }, Open  ]]
 },
 WindowSize->{720, 851},
-WindowMargins->{{Automatic, 351}, {Automatic, -22}},
+WindowMargins->{{345, Automatic}, {Automatic, 36}},
 FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
 2014)",
 StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "TutorialPageStyles.nb", 
   CharacterEncoding -> "UTF-8"]
 ]
+

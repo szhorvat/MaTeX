@@ -1,22 +1,3 @@
-(* Content-type: application/vnd.wolfram.mathematica *)
-
-(*** Wolfram Notebook File ***)
-(* http://www.wolfram.com/nb *)
-
-(* CreatedBy='Mathematica 10.0' *)
-
-(*CacheID: 234*)
-(* Internal cache information:
-NotebookFileLineBreakTest
-NotebookFileLineBreakTest
-NotebookDataPosition[       158,          7]
-NotebookDataLength[     12406,        472]
-NotebookOptionsPosition[      8425,        332]
-NotebookOutlinePosition[      9057,        357]
-CellTagsIndexPosition[      8979,        352]
-WindowFrame->Normal*)
-
-(* Beginning of Notebook Content *)
 Notebook[{
 Cell[TextData[{
  "New in: ",
@@ -137,12 +118,11 @@ Cell["MaTeX::nopdf", "ObjectName",
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"MaTeX", "::", "nopdf"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"LaTeX failed to produce a PDF file. \
-\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
-ButtonFrame->None, ButtonData:>\\\"paclet:MaTeX/ref/message/MaTeX/nopdf\\\", \
-ButtonNote -> \\\"MaTeX`MaTeX::nopdf\\\"]\\)\"\>"}]], "Message", "MSG",
+   RowBox[{"MaTeX", "::", "nopdf"}], "MessageName"], ":", 
+  " ", "\<\"LaTeX failed to produce a PDF file. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:MaTeX/ref/message/MaTeX/nopdf\\\", ButtonNote -> \
+\\\"MaTeX`MaTeX::nopdf\\\"]\\)\"\>"}]], "Message", "MSG",
  CellChangeTimes->{3.689432830071685*^9},
  CellLabel->"During evaluation of In[14]:=",
  CellID->1125965131],
@@ -195,7 +175,36 @@ Cell[TextData[{
   3.6882275157419558`*^9, 3.688227556994628*^9}, {3.6894326332169943`*^9, 
   3.68943270510133*^9}, {3.689432750059223*^9, 3.689432753675036*^9}, {
   3.689432918047168*^9, 3.6894329332277822`*^9}},
- CellID->350257649]
+ CellID->350257649],
+
+Cell[TextData[{
+ "If this message is accompanied by a ",
+ Cell[BoxData[
+  RowBox[{"RunProcess", "::", "pnfd"}]], "InlineFormula",
+  FormatType->"StandardForm"],
+ " message on a Windows system, it may indicate that your version of ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " is affected by a ",
+ ButtonBox["RunProcess",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/RunProcess"],
+ " bug related to non-ASCII characters in the current directory. Use ",
+ Cell[BoxData[
+  ButtonBox["ConfigureMaTeX",
+   BaseStyle->"Link",
+   ButtonData->"paclet:MaTeX/ref/ConfigureMaTeX"]], "InlineFormula"],
+ " to explicitly set MaTeX's ",
+ Cell[BoxData["\"\<WorkingDirectory\>\""], "InlineFormula",
+  FormatType->"StandardForm"],
+ " to a location that does not contain non-ASCII characters in its path (e.g. \
+",
+ Cell[BoxData["\"\<C:\\\\temp\>\""], "InlineFormula",
+  FormatType->"StandardForm"],
+ "). "
+}], "Notes",
+ CellChangeTimes->{{3.7199094799587803`*^9, 3.7199096650299187`*^9}},
+ CellID->889665713]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -338,144 +347,3 @@ FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
 StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "FunctionPageStyles.nb", 
   CharacterEncoding -> "UTF-8"]
 ]
-(* End of Notebook Content *)
-
-(* Internal cache information *)
-(*CellTagsOutline
-CellTagsIndex->{
- "ExtendedExamples"->{
-  Cell[6905, 274, 100, 2, 55, "ExtendedExamplesSection",
-   CellTags->"ExtendedExamples",
-   CellID->1854448968]}
- }
-*)
-(*CellTagsIndex
-CellTagsIndex->{
- {"ExtendedExamples", 8841, 345}
- }
-*)
-(*NotebookFileOutline
-Notebook[{
-Cell[558, 20, 325, 14, 24, "History",
- CellID->1247902091],
-Cell[CellGroupData[{
-Cell[908, 38, 68, 1, 29, "CategorizationSection",
- CellID->1122911449],
-Cell[979, 41, 146, 3, 30, "Categorization",
- CellID->686433507],
-Cell[1128, 46, 78, 2, 30, "Categorization",
- CellID->605800465],
-Cell[1209, 50, 75, 2, 30, "Categorization",
- CellID->468444828],
-Cell[1287, 54, 240, 4, 30, "Categorization"]
-}, Open  ]],
-Cell[1542, 61, 55, 1, 29, "KeywordsSection",
- CellID->477174294],
-Cell[CellGroupData[{
-Cell[1622, 66, 65, 1, 19, "TemplatesSection",
- CellID->1872225408],
-Cell[1690, 69, 94, 2, 70, "Template",
- CellID->1562036412],
-Cell[1787, 73, 82, 2, 70, "Template",
- CellID->158391909],
-Cell[1872, 77, 81, 2, 70, "Template",
- CellID->1360575930],
-Cell[1956, 81, 82, 2, 70, "Template",
- CellID->793782254]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[2075, 88, 53, 1, 19, "DetailsSection",
- CellID->307771771],
-Cell[2131, 91, 63, 2, 70, "Details",
- CellID->670882175],
-Cell[2197, 95, 69, 2, 70, "Details",
- CellID->350963985],
-Cell[2269, 99, 64, 2, 70, "Details",
- CellID->8391405],
-Cell[2336, 103, 69, 2, 70, "Details",
- CellID->3610269],
-Cell[2408, 107, 61, 2, 70, "Details",
- CellID->401364205],
-Cell[2472, 111, 61, 2, 70, "Details",
- CellID->350204745],
-Cell[2536, 115, 63, 2, 70, "Details",
- CellID->732958810],
-Cell[2602, 119, 78, 2, 70, "Details",
- CellID->222905350],
-Cell[2683, 123, 67, 2, 70, "Details",
- CellID->240026365]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[2787, 130, 220, 4, 63, "ObjectName",
- CellID->1224892054],
-Cell[3010, 136, 490, 11, 22, "Message",
- CellID->1125965131],
-Cell[3503, 149, 1099, 30, 45, "Notes",
- CellID->1067943069],
-Cell[4605, 181, 609, 16, 27, "Notes",
- CellID->350257649]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[5251, 202, 57, 1, 43, "TutorialsSection",
- CellID->250839057],
-Cell[5311, 205, 222, 4, 16, "Tutorials",
- CellID->341631938]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[5570, 214, 83, 1, 30, "RelatedDemonstrationsSection",
- CellID->1268215905],
-Cell[5656, 217, 58, 1, 16, "RelatedDemonstrations",
- CellID->1129518860]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[5751, 223, 65, 1, 30, "RelatedLinksSection",
- CellID->1584193535],
-Cell[5819, 226, 49, 1, 16, "RelatedLinks",
- CellID->1038487239]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[5905, 232, 55, 1, 30, "SeeAlsoSection",
- CellID->1255426704],
-Cell[5963, 235, 403, 12, 19, "SeeAlso",
- CellID->929782353]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[6403, 252, 57, 1, 30, "MoreAboutSection",
- CellID->38303248],
-Cell[6463, 255, 46, 1, 16, "MoreAbout",
- CellID->1665078683]
-}, Open  ]],
-Cell[6524, 259, 356, 11, 69, "PrimaryExamplesSection",
- CellID->880084151],
-Cell[CellGroupData[{
-Cell[6905, 274, 100, 2, 55, "ExtendedExamplesSection",
- CellTags->"ExtendedExamples",
- CellID->1854448968],
-Cell[7008, 278, 125, 3, 33, "ExampleSection",
- CellID->1293636265],
-Cell[7136, 283, 148, 3, 21, "ExampleSection",
- CellID->1020263627],
-Cell[CellGroupData[{
-Cell[7309, 290, 127, 3, 21, "ExampleSection",
- CellID->2061341341],
-Cell[7439, 295, 130, 3, 24, "ExampleSubsection",
- CellID->1757724783],
-Cell[7572, 300, 130, 3, 20, "ExampleSubsection",
- CellID->1295379749]
-}, Closed]],
-Cell[7717, 306, 131, 3, 21, "ExampleSection",
- CellID->258228157],
-Cell[7851, 311, 142, 3, 21, "ExampleSection",
- CellID->2123667759],
-Cell[7996, 316, 135, 3, 21, "ExampleSection",
- CellID->1305812373],
-Cell[8134, 321, 140, 3, 21, "ExampleSection",
- CellID->1653164318],
-Cell[8277, 326, 132, 3, 21, "ExampleSection",
- CellID->589267740]
-}, Open  ]]
-}
-]
-*)
-
-(* End of internal cache information *)
