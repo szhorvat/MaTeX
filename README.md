@@ -66,7 +66,7 @@ The following function will automatically download the latest release of MaTeX a
           ,
           Return[$Failed]
         ];
-        If[FileExistsQ[target], PacletInstall[target], $Failed]
+        If[FileExistsQ[target], PacletManager`PacletInstall[target], $Failed]
       ]
 
 After evaluating the function definition above, just run `updateMaTeX[]`.
