@@ -14,7 +14,7 @@ See [the blog post](http://szhorvat.net/pelican/latex-typesetting-in-mathematica
  - [Download the latest release](https://github.com/szhorvat/MaTeX/releases), distributed as a `.paclet` file, and install it using the `PacletInstall` function in Mathematica.  For example, assuming that the file `MaTeX-1.7.3.paclet` was downloaded into the directory `~/Downloads`, evaluate
 
         Needs["PacletManager`"]
-        PacletInstall["~/Downloads/MaTeX-1.7.3.paclet"]
+        PacletInstall["~/Downloads/MaTeX-1.7.4.paclet"]
 
  - Make sure that a TeX system and Ghostscript 9.15 or later are installed.  
 
@@ -98,11 +98,15 @@ The limiting factor in the speed of `MaTeX` calls is running the `pdflatex` proc
 
 ## Revision history
 
+#### Version 1.7.4
+
+ - Documentation improvements
+
 #### Version 1.7.3
 
  - Added `"WorkingDirectory"` configuration option. This allows users to work around a `RunProcess` bug in some Mathematica versions on Windows where `RunProcess` would fail in a directory with non-ASCII characters in its name.
  - Exposed ``MaTeX`Developer`Texify``, to allow users to customize the expression to TeX code conversion. See Neat Examples in the MaTeX symbol documentation page.
- - Documentation improvements.
+ - Documentation improvements
 
 #### Version 1.7.2
 
