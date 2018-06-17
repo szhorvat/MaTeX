@@ -8,7 +8,7 @@
 (* :Date: 2015-03-04 *)
 
 (* :Mathematica Version: %%mathversion%% *)
-(* :Copyright: (c) 2017 Szabolcs Horvát *)
+(* :Copyright: (c) 2018 Szabolcs Horvát *)
 
 
 (* Abort for old, unsupported versions of Mathematica *)
