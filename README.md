@@ -11,7 +11,7 @@ See [the blog post](http://szhorvat.net/pelican/latex-typesetting-in-mathematica
 
 ## Installation
 
- - [Download the latest release](https://github.com/szhorvat/MaTeX/releases), distributed as a `.paclet` file, and install it using the `PacletInstall` function in Mathematica.  For example, assuming that the file `MaTeX-1.7.3.paclet` was downloaded into the directory `~/Downloads`, evaluate
+ - [Download the latest release](https://github.com/szhorvat/MaTeX/releases), distributed as a `.paclet` file, and install it using the `PacletInstall` function in Mathematica.  For example, assuming that the file `MaTeX-1.7.4.paclet` was downloaded into the directory `~/Downloads`, evaluate
 
         Needs["PacletManager`"]
         PacletInstall["~/Downloads/MaTeX-1.7.4.paclet"]
@@ -22,7 +22,7 @@ See [the blog post](http://szhorvat.net/pelican/latex-typesetting-in-mathematica
 
      On OS X, MacTeX 2015 and later already include a compatible version of Ghostscript. If you use an older TeX distribution that doesn't, please obtain a recent Ghostscript from [Richard Koch's page](http://pages.uoregon.edu/koch/).
 
- - Evaluate ``Needs["MaTeX`"]``.  MaTeX will attempt to auto-configure itself when it is loaded for the first time.  If auto-configuration fails, it will display instructions on how to configure the path to the `pdflatex` and Ghostscript executables manually.  *Note:* On Windows systems use the command line Ghostscript executable, i.e. the one with the name ending in c: `gswin32c.exe` or `gswin64c.exe`.
+ - Evaluate ``<<MaTeX` ``.  MaTeX will attempt to auto-configure itself when it is loaded for the first time.  If auto-configuration fails, it will display instructions on how to configure the path to the `pdflatex` and Ghostscript executables manually.  *Note:* On Windows systems use the command line Ghostscript executable, i.e. the one with the name ending in c: `gswin32c.exe` or `gswin64c.exe`.
 
  - Test MaTeX using `MaTeX["x^2"]`.
 
@@ -30,7 +30,7 @@ See [the blog post](http://szhorvat.net/pelican/latex-typesetting-in-mathematica
 
 ## Upgrading or uninstalling
 
-A newer version can be safely installed when an older version is already present.  ``Needs["MaTeX`"]`` will always load the latest installed MaTeX that is compatible with your version of Mathematica.
+A newer version can be safely installed when an older version is already present.  ``<<MaTeX` `` will always load the latest installed MaTeX that is compatible with your version of Mathematica.
 
 A list of all installed versions can be retrieved using
 
@@ -69,7 +69,7 @@ The following function will automatically download the latest release of MaTeX a
         If[FileExistsQ[target], PacletManager`PacletInstall[target], $Failed]
       ]
 
-After evaluating the function definition above, just run `updateMaTeX[]`.
+After evaluating the function definition above, just run `updateMaTeX[]`, then ``<<MaTeX` `` to load the updated version.
 
 
 ## Usage
