@@ -454,7 +454,7 @@ iMaTeX[tex:{__String}, preamble_, display_, fontsize_, strut_, ls : {lsmult_, ls
       If[logFileFun =!= None, With[{str = Import[logfile, "Text", CharacterEncoding -> "UTF-8"]}, logFileFun[str]]];
 
       If[
-        return["ExitCode"] != 0 ||
+        return["ExitCode"] =!= 0 ||
         texErrorQ[return["StandardOutput"]] (* workaround for Windows, where the exit code may be misreported *)
         ,
         Message[MaTeX::texerr, parseTeXError[fromUTF8@return["StandardOutput"]]];
@@ -484,7 +484,9 @@ iMaTeX[tex:{__String}, preamble_, display_, fontsize_, strut_, ls : {lsmult_, ls
       {width, height, depth} *= $psfactor; (* correct for PostScript point *)
 
       return = runProcess[{$config["Ghostscript"], "-q", "-o", pdfgsfile, "-dNoOutputFonts", "-sDEVICE=pdfwrite", pdffile}, ProcessDirectory -> dirpath];
-      If[return["ExitCode"] != 0,
+      (* Note: Up to at least Mathematica 11.3, if the process crashes, RunProcess returns ExitCode -> None.
+         Thus we must check the exit code not with != but with =!= *)
+      If[return["ExitCode"] =!= 0,
         Message[MaTeX::gserr, Style[StringTrim@StringJoin[return["StandardOutput"], return["StandardError"]], "OutputForm"]];
         cleanup[];
         Return[$Failed]
