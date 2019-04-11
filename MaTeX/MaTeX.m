@@ -168,6 +168,10 @@ resetConfiguration[] :=
 
 
 (* Verify the configuration and set $configOK *)
+(* Note: This function issues messages with Print[] instead of Message[].
+ * If lots of Message[]s are issued when a package is loaded, they give
+ * the impression that the package is broken. The style of Print[] makes it
+ * clearer that MaTeX is communicating important information to the user. *)
 checkConfig[] :=
   Module[{pdflatex, gs, pdflatexOK, gsOK, cacheSizeOK, workingDirectoryOK, gsver},
     pdflatex = $config["pdfLaTeX"];
