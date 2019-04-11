@@ -76,6 +76,7 @@ CopyDirectory[
 
 AddPath["PackageTools"]
 Needs["PackageTools`"]
+(* Note: Indexing must be done with 11.2, not any later version, as indices are not backwards-compatible. *)
 SetDirectory@FileNameJoin[{$appDir, "Documentation", "English"}];
 MRun[
   MCode[
