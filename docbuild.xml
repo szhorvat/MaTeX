@@ -54,8 +54,8 @@ or set Mathematica.DocumentationBuild.createHTML.setting to Mathematica.Document
  These need to be set appropriately for your build.
 -->		
 		<property name="appPath" value="${appPath.default}"/>
-		<property name="mathematicaInstallDir" value="/Applications/Mathematica 11.app/Contents"/>
-		<property name="mathExe" value="/Applications/Mathematica 11.app/Contents/MacOS/MathKernel"/>
+		<property name="mathematicaInstallDir" value="/Applications/Mathematica 10.0.app/Contents"/>
+		<property name="mathExe" value="/Applications/Mathematica 10.0.app/Contents/MacOS/MathKernel"/>
 
 <!--
  If you move the build file, you need to change inputDir, outputDir, and logDir.
