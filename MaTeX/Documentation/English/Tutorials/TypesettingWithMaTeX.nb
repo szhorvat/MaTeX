@@ -237,10 +237,11 @@ Cell[TextData[{
       BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}],
     SingleLetterItalics->False], TraditionalForm]]],
  " code into Mathematica graphics. It is meant for creating beautiful labels \
-with high quality typesetting for publication figures."
+with high-quality typesetting for publication figures."
 }], "Text",
  CellChangeTimes->{{3.688048308065214*^9, 3.688048355308371*^9}, {
-  3.688205576837413*^9, 3.688205626344098*^9}},
+  3.688205576837413*^9, 3.688205626344098*^9}, {3.762667647398241*^9, 
+  3.762667647693921*^9}},
  CellID->1534169418],
 
 Cell[BoxData[GridBox[{
@@ -5279,7 +5280,7 @@ Cell["Recommended workflow", "Section",
 
 Cell[TextData[{
  "When using MaTeX to create multiple labels for publication figures, it is \
-convenient to start by setting promiment options for the session using ",
+convenient to start by setting prominent options for the session using ",
  ButtonBox["SetOptions",
   BaseStyle->"Link",
   ButtonData->"paclet:ref/SetOptions"],
@@ -5290,7 +5291,8 @@ convenient to start by setting promiment options for the session using ",
 }], "Text",
  CellChangeTimes->{{3.688289800601877*^9, 3.688289827943591*^9}, {
    3.688289953131679*^9, 3.688289976091545*^9}, 3.6883026054696407`*^9, {
-   3.6883684237647533`*^9, 3.688368464459181*^9}},
+   3.6883684237647533`*^9, 3.688368464459181*^9}, {3.762667672601173*^9, 
+   3.7626676729733562`*^9}},
  CellID->760497221],
 
 Cell[BoxData[GridBox[{
@@ -5512,18 +5514,22 @@ Cell[BoxData[
 
 Cell[CellGroupData[{
 
-Cell["\<\
-It is useful to prepare publication figures to a specific print size. This \
-will allow matching font sizes between the figure and document. Let us define \
-the centimetre unit:\
-\>", "MathCaption",
+Cell[TextData[{
+ "It is useful ",
+ ButtonBox["to prepare publication figures to a specific print size",
+  BaseStyle->"Link",
+  ButtonData->"paclet:MaTeX/tutorial/PreparingFiguresToSize"],
+ ". This will allow matching font sizes between the figure and document. Let \
+us define the centimetre unit:"
+}], "MathCaption",
  CellChangeTimes->{{3.6882059150741587`*^9, 3.688205923473674*^9}, {
   3.6882061018245163`*^9, 3.688206148015046*^9}, {3.688206368150949*^9, 
   3.688206375272719*^9}, {3.688230615379849*^9, 3.6882306323291597`*^9}, {
   3.688290565191565*^9, 3.68829062842424*^9}, {3.688291088759761*^9, 
   3.688291088806898*^9}, {3.688291135672052*^9, 3.688291138403327*^9}, {
   3.68829125085888*^9, 3.6882912549781313`*^9}, {3.68829129657495*^9, 
-  3.6882913200286903`*^9}, {3.6882913681695004`*^9, 3.688291419155591*^9}},
+  3.6882913200286903`*^9}, {3.6882913681695004`*^9, 3.688291419155591*^9}, {
+  3.762667750332452*^9, 3.762667778207376*^9}},
  CellID->18792821],
 
 Cell[BoxData[
@@ -10026,7 +10032,7 @@ jTO1vqb+ts3zWX+n2E1VqCcUmPW/0a/D8jlunF8Ji3/fx1+n2GBu
 }, Open  ]],
 
 Cell[TextData[{
- "Colors can be changed either directly in ",
+ "Colours can be changed either directly in ",
  StyleBox["Mathematica",
   FontSlant->"Italic"],
  ", or within ",
@@ -10048,7 +10054,7 @@ Cell[TextData[{
  " package."
 }], "Text",
  CellChangeTimes->{{3.6883779943129*^9, 3.688378013573317*^9}, {
-  3.6883783473624067`*^9, 3.688378347408122*^9}},
+   3.6883783473624067`*^9, 3.688378347408122*^9}, 3.7626678662257338`*^9},
  CellID->1952499642],
 
 Cell[CellGroupData[{
@@ -12444,8 +12450,8 @@ OiS+rynA+aDseqYHwYf4RwESDwsQfLB/PqrB+bDwgqUPcPwLqDgog8JLRhnO
         3}, {0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
         3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
         3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {1, 3, 
-        3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3},
-         {1, 3, 3}}}, CompressedData["
+        3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+        3}, {1, 3, 3}}}, CompressedData["
 1:eJxdlH9IU1EUx+dmmKjT+dzae05ybqL2g0wNzKId/5DQTCUFfxGWtJlIGBiY
 MSMlEzEKKsSJZf4gFVYqYaSUGNEvUAsNDYUU9I+WGhkp/l67976dkQcuj8+9
 7557zvece7X5xWeMMolE4uYYmY4hdYzB2oHKmFkBAsruXRl214CTMxbHlurj
@@ -13447,10 +13453,13 @@ Cell[BoxData[
  RowBox[{"{", 
   RowBox[{"0.42514899999999999913313786237267777324`5.649141075182155", ",", 
    GraphicsBox[
-    {Thickness[0.11560693641618497`], FilledCurveBox[CompressedData["
-1:eJxTTMoPymNmYGBgBGI5IIaxWZDYzCSwGaB8BjL0DhR7oNwMAEUOAp8=
-      
-      "], CompressedData["
+    {Thickness[0.11560693641618497`], 
+     FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {
+      0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+      3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {
+      1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+      3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+      3}}}, CompressedData["
 1:eJxdlH9IU1EUx+dmmKjT+dzae05ybqL2g0wNzKId/5DQTCUFfxGWtJlIGBiY
 MSMlEzEKKsSJZf4gFVYqYaSUGNEvUAsNDYUU9I+WGhkp/l67976dkQcuj8+9
 7557zvece7X5xWeMMolE4uYYmY4hdYzB2oHKmFkBAsruXRl214CTMxbHlurj
@@ -13540,10 +13549,13 @@ Cell[BoxData[
  RowBox[{"{", 
   RowBox[{"0.681790000000000007140954494389006868`5.85425054030352", ",", 
    GraphicsBox[
-    {Thickness[0.11574074074074076`], FilledCurveBox[CompressedData["
-1:eJxTTMoPymNmYGBgBGI5IIaxWZDYzCSwGaB8BjL0DhR7oNwMAEUOAp8=
-      
-      "], CompressedData["
+    {Thickness[0.11574074074074076`], 
+     FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {
+      0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+      3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {
+      1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+      3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+      3}}}, CompressedData["
 1:eJxdlH9IU1EUx+dmmKjT+dzae05ybqL2g0wNzKId/5DQTCUFfxGWtJlIGBiY
 MSMlEzEKKsSJZf4gFVYqYaSUGNEvUAsNDYUU9I+WGhkp/l67976dkQcuj8+9
 7557zvece7X5xWeMMolE4uYYmY4hdYzB2oHKmFkBAsruXRl214CTMxbHlurj
@@ -13639,10 +13651,13 @@ Cell[BoxData[
  RowBox[{"{", 
   RowBox[{"0.55296199999999995355892679071985185146`5.763295200538471", ",", 
    GraphicsBox[
-    {Thickness[0.11560693641618497`], FilledCurveBox[CompressedData["
-1:eJxTTMoPymNmYGBgBGI5IIaxWZDYzCSwGaB8BjL0DhR7oNwMAEUOAp8=
-      
-      "], CompressedData["
+    {Thickness[0.11560693641618497`], 
+     FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {
+      0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+      3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {
+      1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+      3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+      3}}}, CompressedData["
 1:eJxdlH9IU1EUx+dmmKjT+dzae05ybqL2g0wNzKId/5DQTCUFfxGWtJlIGBiY
 MSMlEzEKKsSJZf4gFVYqYaSUGNEvUAsNDYUU9I+WGhkp/l67976dkQcuj8+9
 7557zvece7X5xWeMMolE4uYYmY4hdYzB2oHKmFkBAsruXRl214CTMxbHlurj
@@ -13722,8 +13737,7 @@ to ",
   BaseStyle->"Link",
   ButtonData->"paclet:ref/TeXForm"],
  ". This is handled by the ",
- Cell[BoxData["MaTeX`Developer`Texify"], "InlineFormula",
-  FormatType->"StandardForm"],
+ Cell[BoxData["MaTeX`Developer`Texify"], "InlineFormula"],
  " function, which is user customizable (see the Neat Examples section of the \
 ",
  Cell[BoxData[
@@ -13949,7 +13963,7 @@ Cell["XXXX", "TutorialRelatedLinks",
 }, Open  ]]
 },
 WindowSize->{720, 851},
-WindowMargins->{{345, Automatic}, {Automatic, 36}},
+WindowMargins->{{324, Automatic}, {Automatic, 0}},
 FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
 2014)",
 StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "TutorialPageStyles.nb", 

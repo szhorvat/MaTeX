@@ -254,14 +254,16 @@ Cell["First time setup", "Section",
 Cell[CellGroupData[{
 
 Cell["\<\
-After installing MaTeX, it is necessary to tell it the location of the \
-pdfLaTeX and Ghostscript executables. On some systems it is able to \
-automatically detect these. If it does not succeed, you will see the \
-following message after loading MaTeX:\
+MaTeX needs to know the location of the pdfLaTeX and Ghostscript executables \
+in order to function. On most systems, these will be automatically detected. \
+If auto-detection fails, you will see the following messages after loading \
+MaTeX:\
 \>", "Text",
  CellChangeTimes->{{3.688050888602846*^9, 3.688050923895825*^9}, {
-  3.6880510591543283`*^9, 3.688051059994138*^9}, {3.688052295827531*^9, 
-  3.688052337882386*^9}, {3.704257427133894*^9, 3.704257427469924*^9}},
+   3.6880510591543283`*^9, 3.688051059994138*^9}, {3.688052295827531*^9, 
+   3.688052337882386*^9}, {3.704257427133894*^9, 3.704257427469924*^9}, {
+   3.763996712189818*^9, 3.763996739954974*^9}, {3.763996809361758*^9, 
+   3.7639968137605057`*^9}, 3.763996872791319*^9},
  CellID->1534169418],
 
 Cell[CellGroupData[{
@@ -375,11 +377,12 @@ Cell[BoxData[
 }, Open  ]],
 
 Cell["\<\
-Note that the paths must point to the executables, not the to directory \
+Note that the paths must point to the executables, not to the directory \
 containing them. Make sure to use correct capitalization.\
 \>", "Text",
  CellChangeTimes->{{3.688052592162796*^9, 3.688052614930335*^9}, {
-  3.688198854406661*^9, 3.688198861795597*^9}},
+  3.688198854406661*^9, 3.688198861795597*^9}, {3.7639810021305027`*^9, 
+  3.763981004078438*^9}},
  CellID->1411884930],
 
 Cell[CellGroupData[{
@@ -759,9 +762,11 @@ GitHub: ",
  ButtonBox["https://github.com/szhorvat/MaTeX",
   BaseStyle->"Hyperlink",
   ButtonData->{
-    URL["https://github.com/szhorvat/MaTeX"], None}]
+    URL["https://github.com/szhorvat/MaTeX"], None}],
+ ". The most common issues are discussed below."
 }], "Text",
- CellChangeTimes->{{3.688198356474606*^9, 3.688198413493147*^9}},
+ CellChangeTimes->{{3.688198356474606*^9, 3.688198413493147*^9}, {
+  3.7639813055292187`*^9, 3.763981329315955*^9}},
  CellID->1452302517],
 
 Cell[CellGroupData[{
@@ -850,11 +855,14 @@ cached result. To force calling them, clear the cache using ",
 Cell[TextData[{
  StyleBox["If this error appears with any input to MaTeX,",
   FontWeight->"Bold"],
- " even with a simple example such as MaTeX[\"x^2\"], then there may be a \
-problem with your setup or MaTeX may be incompatible with your system. Check \
-for the following:"
+ " even with a simple example such as ",
+ Cell[BoxData[
+  RowBox[{"MaTeX", "[", "\"\<x^2\>\"", "]"}]], "InlineFormula"],
+ ", then there may be a problem with your setup or MaTeX may be incompatible \
+with your system. Check the following:"
 }], "Text",
- CellChangeTimes->{{3.688199058897211*^9, 3.688199059391541*^9}},
+ CellChangeTimes->{{3.688199058897211*^9, 3.688199059391541*^9}, 
+   3.762667471331374*^9, {3.762667531014041*^9, 3.762667531796586*^9}},
  CellID->2018525447],
 
 Cell[TextData[{

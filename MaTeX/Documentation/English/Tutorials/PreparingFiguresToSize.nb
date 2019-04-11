@@ -134,14 +134,14 @@ Cell["Preparing Figures to Size", "Title",
  ExpressionUUID -> "478c2d8b-33bd-4994-a4bd-b2ba31e0c4b7"],
 
 Cell["\<\
-This is a tutorial on preparing high quality publication figures which have \
+This is a tutorial on preparing high-quality publication figures which have \
 easily readable labels and fit well with the style of the surrounding \
 document. MaTeX is not needed to achieve this. However, this is a task that \
 most MaTeX users will face.\
 \>", "Text",
  CellChangeTimes->{{3.704385702641531*^9, 3.704385735844418*^9}, {
   3.704385863633407*^9, 3.704385895822589*^9}, {3.7117041909236107`*^9, 
-  3.711704196184894*^9}},
+  3.711704196184894*^9}, {3.7626668944008913`*^9, 3.76266689466083*^9}},
  CellID->1254100846,
  ExpressionUUID -> "bba66d4e-9b14-4ed9-9b3d-c3958838a21d"],
 
@@ -185,24 +185,25 @@ arbitrarily re-scaled when including it in a document. This way we can \
 control the text size in the figure precisely. We can make sure that it is \
 big enough to be readable and that it matches the surrounding text, as well \
 as the text in other figures. Deciding on a physical size also makes it \
-straightfoward to choose an appropriate resolution for rasterized figure \
+straightforward to choose an appropriate resolution for rasterized figure \
 elements (such as ",
  StyleBox["Mathematica",
   FontSlant->"Italic"],
  "'s 3D graphics)."
 }], "Text",
  CellChangeTimes->{{3.704386452978236*^9, 3.7043864551701603`*^9}, {
-  3.704386497848774*^9, 3.704386602492983*^9}, {3.704388328407516*^9, 
-  3.704388349052814*^9}, {3.704388462880807*^9, 3.704388481975779*^9}, {
-  3.708385373524744*^9, 3.708385375953525*^9}, {3.711704229506349*^9, 
-  3.711704256586602*^9}, {3.711786643844514*^9, 3.711786695289144*^9}},
+   3.704386497848774*^9, 3.704386602492983*^9}, {3.704388328407516*^9, 
+   3.704388349052814*^9}, {3.704388462880807*^9, 3.704388481975779*^9}, {
+   3.708385373524744*^9, 3.708385375953525*^9}, {3.711704229506349*^9, 
+   3.711704256586602*^9}, {3.711786643844514*^9, 3.711786695289144*^9}, 
+   3.7626669035360193`*^9},
  CellID->2061274276,
  ExpressionUUID -> "7fd3b70d-5ba1-49e7-b522-42410b0dc05f"],
 
 Cell[CellGroupData[{
 
 Cell[TextData[{
- "Thus, do not specify a size when inlcuding the figure in ",
+ "Thus, do not specify the size when including the figure in ",
  Cell[BoxData[
   FormBox[
    StyleBox[
@@ -222,7 +223,8 @@ Cell[TextData[{
  CellChangeTimes->{{3.704386758647354*^9, 3.7043867858540697`*^9}, {
   3.704387656216166*^9, 3.704387685965624*^9}, {3.7043883733960457`*^9, 
   3.7043883879474897`*^9}, {3.708385386551311*^9, 3.708385403246303*^9}, {
-  3.711704277198563*^9, 3.711704301715527*^9}},
+  3.711704277198563*^9, 3.711704301715527*^9}, {3.7626669144609337`*^9, 
+  3.7626669322221613`*^9}},
  CellID->1977409684,
  ExpressionUUID -> "89bb6fa1-5ba9-4354-8f77-8a49d49dd4df"],
 
@@ -3065,10 +3067,10 @@ Cell[TextData[{
  StyleBox["Mathematica",
   FontSlant->"Italic"],
  " handles plot legends, we must set one additional option to avoid shrinking \
-legended plot at the time of export:"
+legended plots at the time of export:"
 }], "Text",
  CellChangeTimes->{{3.7134358035450163`*^9, 3.7134358882452707`*^9}, 
-   3.713436541049779*^9},
+   3.713436541049779*^9, 3.762666792300868*^9},
  CellID->1044917025,
  ExpressionUUID -> "1f381ff6-d606-4dad-9eeb-f41d591bb2e7"],
 

@@ -9943,261 +9943,73 @@ Cell[BoxData[
    RowBox[{"\"\<LogFileFunction\>\"", "\[Rule]", "Print"}]}], "]"}]], "Input",
  
  CellChangeTimes->{{3.6880471249106007`*^9, 3.6880471545391903`*^9}},
- CellLabel->"In[2]:=",
+ CellLabel->"In[13]:=",
  CellID->1786318007,
  ExpressionUUID -> "3aa34083-6fba-47b7-8187-968eb5ad948e"],
 
-Cell[BoxData["\<\"This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live \
-2016) (preloaded format=pdflatex 2016.6.12)  16 NOV 2016 10:10\\nentering \
+Cell[BoxData["\<\"This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live \
+2018) (preloaded format=pdflatex 2018.12.14)  11 APR 2019 11:21\\nentering \
 extended mode\\n restricted \\\\write18 enabled.\\n %&-line parsing \
-enabled.\\n**/var/folders/31/l_62jfs110lf0dh7k5n_y2th0000gn/T/MaTeX_\
-tblvkkaqgwkzuzbh/yxqtl\\nrqzgjvclvvq.tex\\n\\n(/var/folders/31/l_\
-62jfs110lf0dh7k5n_y2th0000gn/T/MaTeX_tblvkkaqgwkzuzbh/yxqtlr\\nqzgjvclvvq.tex\
-\\nLaTeX2e <2016/03/31>\\nBabel <3.9r> and hyphenation patterns for 83 \
-language(s) \
-loaded.\\n(/usr/local/texlive/2016/texmf-dist/tex/latex/standalone/standalone.\
-cls\\nDocument Class: standalone 2015/07/15 v1.2 Class to compile TeX \
-sub-files \
-stand\\nalone\\n(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/\
-ifluatex.sty\\nPackage: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch \
+enabled.\\n**/private/var/folders/31/l_62jfs110lf0dh7k5n_y2th0000gq/T/MaTeX_\
+tywgieiofxvzjv\\nya/jokpnkdftegbrrmz.tex\\n\\n(/private/var/folders/31/l_\
+62jfs110lf0dh7k5n_y2th0000gq/T/MaTeX_tywgieiofxvzjvy\\na/jokpnkdftegbrrmz.tex\
+\\nLaTeX2e \
+<2018-12-01>\\n(/usr/local/texlive/2018/texmf-dist/tex/latex/standalone/\
+standalone.cls\\nDocument Class: standalone 2018/03/26 v1.3a Class to compile \
+TeX sub-files \
+stan\\ndalone\\n(/usr/local/texlive/2018/texmf-dist/tex/latex/tools/shellesc.\
+sty\\nPackage: shellesc 2016/06/07 v0.02a unified shell escape interface for \
+LaTeX\\nPackage shellesc Info: Restricted shell escape enabled on input line \
+69.\\n)\\n(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifluatex.\
+sty\\nPackage: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch \
 (HO)\\nPackage ifluatex Info: LuaTeX not \
-detected.\\n)\\n(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/\
-ifpdf.sty\\nPackage: ifpdf 2016/05/14 v3.1 Provides the ifpdf \
-switch\\n)\\n(/usr/local/texlive/2016/texmf-dist/tex/generic/ifxetex/ifxetex.\
+detected.\\n)\\n(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/\
+ifpdf.sty\\nPackage: ifpdf 2018/09/07 v3.3 Provides the ifpdf \
+switch\\n)\\n(/usr/local/texlive/2018/texmf-dist/tex/generic/ifxetex/ifxetex.\
 sty\\nPackage: ifxetex 2010/09/12 v0.6 Provides ifxetex \
-conditional\\n)\\n(/usr/local/texlive/2016/texmf-dist/tex/latex/xkeyval/\
+conditional\\n)\\n(/usr/local/texlive/2018/texmf-dist/tex/latex/xkeyval/\
 xkeyval.sty\\nPackage: xkeyval 2014/12/03 v2.7a package option processing \
-(HA)\\n\\n(/usr/local/texlive/2016/texmf-dist/tex/generic/xkeyval/xkeyval.tex\
-\\n(/usr/local/texlive/2016/texmf-dist/tex/generic/xkeyval/xkvutils.tex\\n\\\\\
+(HA)\\n\\n(/usr/local/texlive/2018/texmf-dist/tex/generic/xkeyval/xkeyval.tex\
+\\n(/usr/local/texlive/2018/texmf-dist/tex/generic/xkeyval/xkvutils.tex\\n\\\\\
 XKV@toks=\\\\toks14\\n\\\\XKV@tempa@toks=\\\\toks15\\n\\n(/usr/local/texlive/\
-2016/texmf-dist/tex/generic/xkeyval/keyval.tex))\\n\\\\XKV@depth=\\\\count79\\\
+2018/texmf-dist/tex/generic/xkeyval/keyval.tex))\\n\\\\XKV@depth=\\\\count80\\\
 nFile: xkeyval.tex 2014/12/03 v2.7a key=value parser \
-(HA)\\n))\\n\\\\sa@internal=\\\\count80\\n\\\\c@sapage=\\\\count81\\n\\n(/usr/\
-local/texlive/2016/texmf-dist/tex/latex/standalone/standalone.cfg\\nFile: \
-standalone.cfg 2015/07/15 v1.2 Default configuration file for 'standalone\\n' \
-class\\n)\\n(/usr/local/texlive/2016/texmf-dist/tex/latex/base/article.cls\\\
-nDocument Class: article 2014/09/29 v1.4h Standard LaTeX document \
-class\\n(/usr/local/texlive/2016/texmf-dist/tex/latex/base/size12.clo\\nFile: \
-size12.clo 2014/09/29 v1.4h Standard LaTeX file (size \
-option)\\n)\\n\\\\c@part=\\\\count82\\n\\\\c@section=\\\\count83\\n\\\\c@\
-subsection=\\\\count84\\n\\\\c@subsubsection=\\\\count85\\n\\\\c@paragraph=\\\
-\\count86\\n\\\\c@subparagraph=\\\\count87\\n\\\\c@figure=\\\\count88\\n\\\\c@\
-table=\\\\count89\\n\\\\abovecaptionskip=\\\\skip41\\n\\\\belowcaptionskip=\\\
-\\skip42\\n\\\\bibindent=\\\\dimen102\\n)\\n\\\\sa@box=\\\\box26\\n)\\n\\\\\
-MaTeXbox=\\\\box27\\n\\n(/usr/local/texlive/2016/texmf-dist/tex/latex/base/\
-inputenc.sty\\nPackage: inputenc 2015/03/17 v1.2c Input encoding \
-file\\n\\\\inpenc@prehook=\\\\toks16\\n\\\\inpenc@posthook=\\\\toks17\\n\\n(/\
-usr/local/texlive/2016/texmf-dist/tex/latex/base/utf8.def\\nFile: utf8.def \
-2016/02/28 v1.1s UTF-8 support for inputenc\\nNow handling font encoding OML \
-...\\n... no UTF-8 mapping file for font encoding OML\\nNow handling font \
-encoding T1 ...\\n... processing UTF-8 mapping file for font encoding \
-T1\\n\\n(/usr/local/texlive/2016/texmf-dist/tex/latex/base/t1enc.dfu\\nFile: \
-t1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc\\n   defining Unicode \
-char U+00A0 (decimal 160)\\n   defining Unicode char U+00A1 (decimal 161)\\n  \
- defining Unicode char U+00A3 (decimal 163)\\n   defining Unicode char U+00AB \
-(decimal 171)\\n   defining Unicode char U+00AD (decimal 173)\\n   defining \
-Unicode char U+00BB (decimal 187)\\n   defining Unicode char U+00BF (decimal \
-191)\\n   defining Unicode char U+00C0 (decimal 192)\\n   defining Unicode \
-char U+00C1 (decimal 193)\\n   defining Unicode char U+00C2 (decimal 194)\\n  \
- defining Unicode char U+00C3 (decimal 195)\\n   defining Unicode char U+00C4 \
-(decimal 196)\\n   defining Unicode char U+00C5 (decimal 197)\\n   defining \
-Unicode char U+00C6 (decimal 198)\\n   defining Unicode char U+00C7 (decimal \
-199)\\n   defining Unicode char U+00C8 (decimal 200)\\n   defining Unicode \
-char U+00C9 (decimal 201)\\n   defining Unicode char U+00CA (decimal 202)\\n  \
- defining Unicode char U+00CB (decimal 203)\\n   defining Unicode char U+00CC \
-(decimal 204)\\n   defining Unicode char U+00CD (decimal 205)\\n   defining \
-Unicode char U+00CE (decimal 206)\\n   defining Unicode char U+00CF (decimal \
-207)\\n   defining Unicode char U+00D0 (decimal 208)\\n   defining Unicode \
-char U+00D1 (decimal 209)\\n   defining Unicode char U+00D2 (decimal 210)\\n  \
- defining Unicode char U+00D3 (decimal 211)\\n   defining Unicode char U+00D4 \
-(decimal 212)\\n   defining Unicode char U+00D5 (decimal 213)\\n   defining \
-Unicode char U+00D6 (decimal 214)\\n   defining Unicode char U+00D8 (decimal \
-216)\\n   defining Unicode char U+00D9 (decimal 217)\\n   defining Unicode \
-char U+00DA (decimal 218)\\n   defining Unicode char U+00DB (decimal 219)\\n  \
- defining Unicode char U+00DC (decimal 220)\\n   defining Unicode char U+00DD \
-(decimal 221)\\n   defining Unicode char U+00DE (decimal 222)\\n   defining \
-Unicode char U+00DF (decimal 223)\\n   defining Unicode char U+00E0 (decimal \
-224)\\n   defining Unicode char U+00E1 (decimal 225)\\n   defining Unicode \
-char U+00E2 (decimal 226)\\n   defining Unicode char U+00E3 (decimal 227)\\n  \
- defining Unicode char U+00E4 (decimal 228)\\n   defining Unicode char U+00E5 \
-(decimal 229)\\n   defining Unicode char U+00E6 (decimal 230)\\n   defining \
-Unicode char U+00E7 (decimal 231)\\n   defining Unicode char U+00E8 (decimal \
-232)\\n   defining Unicode char U+00E9 (decimal 233)\\n   defining Unicode \
-char U+00EA (decimal 234)\\n   defining Unicode char U+00EB (decimal 235)\\n  \
- defining Unicode char U+00EC (decimal 236)\\n   defining Unicode char U+00ED \
-(decimal 237)\\n   defining Unicode char U+00EE (decimal 238)\\n   defining \
-Unicode char U+00EF (decimal 239)\\n   defining Unicode char U+00F0 (decimal \
-240)\\n   defining Unicode char U+00F1 (decimal 241)\\n   defining Unicode \
-char U+00F2 (decimal 242)\\n   defining Unicode char U+00F3 (decimal 243)\\n  \
- defining Unicode char U+00F4 (decimal 244)\\n   defining Unicode char U+00F5 \
-(decimal 245)\\n   defining Unicode char U+00F6 (decimal 246)\\n   defining \
-Unicode char U+00F8 (decimal 248)\\n   defining Unicode char U+00F9 (decimal \
-249)\\n   defining Unicode char U+00FA (decimal 250)\\n   defining Unicode \
-char U+00FB (decimal 251)\\n   defining Unicode char U+00FC (decimal 252)\\n  \
- defining Unicode char U+00FD (decimal 253)\\n   defining Unicode char U+00FE \
-(decimal 254)\\n   defining Unicode char U+00FF (decimal 255)\\n   defining \
-Unicode char U+0100 (decimal 256)\\n   defining Unicode char U+0101 (decimal \
-257)\\n   defining Unicode char U+0102 (decimal 258)\\n   defining Unicode \
-char U+0103 (decimal 259)\\n   defining Unicode char U+0104 (decimal 260)\\n  \
- defining Unicode char U+0105 (decimal 261)\\n   defining Unicode char U+0106 \
-(decimal 262)\\n   defining Unicode char U+0107 (decimal 263)\\n   defining \
-Unicode char U+0108 (decimal 264)\\n   defining Unicode char U+0109 (decimal \
-265)\\n   defining Unicode char U+010A (decimal 266)\\n   defining Unicode \
-char U+010B (decimal 267)\\n   defining Unicode char U+010C (decimal 268)\\n  \
- defining Unicode char U+010D (decimal 269)\\n   defining Unicode char U+010E \
-(decimal 270)\\n   defining Unicode char U+010F (decimal 271)\\n   defining \
-Unicode char U+0110 (decimal 272)\\n   defining Unicode char U+0111 (decimal \
-273)\\n   defining Unicode char U+0112 (decimal 274)\\n   defining Unicode \
-char U+0113 (decimal 275)\\n   defining Unicode char U+0114 (decimal 276)\\n  \
- defining Unicode char U+0115 (decimal 277)\\n   defining Unicode char U+0116 \
-(decimal 278)\\n   defining Unicode char U+0117 (decimal 279)\\n   defining \
-Unicode char U+0118 (decimal 280)\\n   defining Unicode char U+0119 (decimal \
-281)\\n   defining Unicode char U+011A (decimal 282)\\n   defining Unicode \
-char U+011B (decimal 283)\\n   defining Unicode char U+011C (decimal 284)\\n  \
- defining Unicode char U+011D (decimal 285)\\n   defining Unicode char U+011E \
-(decimal 286)\\n   defining Unicode char U+011F (decimal 287)\\n   defining \
-Unicode char U+0120 (decimal 288)\\n   defining Unicode char U+0121 (decimal \
-289)\\n   defining Unicode char U+0122 (decimal 290)\\n   defining Unicode \
-char U+0123 (decimal 291)\\n   defining Unicode char U+0124 (decimal 292)\\n  \
- defining Unicode char U+0125 (decimal 293)\\n   defining Unicode char U+0128 \
-(decimal 296)\\n   defining Unicode char U+0129 (decimal 297)\\n   defining \
-Unicode char U+012A (decimal 298)\\n   defining Unicode char U+012B (decimal \
-299)\\n   defining Unicode char U+012C (decimal 300)\\n   defining Unicode \
-char U+012D (decimal 301)\\n   defining Unicode char U+012E (decimal 302)\\n  \
- defining Unicode char U+012F (decimal 303)\\n   defining Unicode char U+0130 \
-(decimal 304)\\n   defining Unicode char U+0131 (decimal 305)\\n   defining \
-Unicode char U+0132 (decimal 306)\\n   defining Unicode char U+0133 (decimal \
-307)\\n   defining Unicode char U+0134 (decimal 308)\\n   defining Unicode \
-char U+0135 (decimal 309)\\n   defining Unicode char U+0136 (decimal 310)\\n  \
- defining Unicode char U+0137 (decimal 311)\\n   defining Unicode char U+0139 \
-(decimal 313)\\n   defining Unicode char U+013A (decimal 314)\\n   defining \
-Unicode char U+013B (decimal 315)\\n   defining Unicode char U+013C (decimal \
-316)\\n   defining Unicode char U+013D (decimal 317)\\n   defining Unicode \
-char U+013E (decimal 318)\\n   defining Unicode char U+0141 (decimal 321)\\n  \
- defining Unicode char U+0142 (decimal 322)\\n   defining Unicode char U+0143 \
-(decimal 323)\\n   defining Unicode char U+0144 (decimal 324)\\n   defining \
-Unicode char U+0145 (decimal 325)\\n   defining Unicode char U+0146 (decimal \
-326)\\n   defining Unicode char U+0147 (decimal 327)\\n   defining Unicode \
-char U+0148 (decimal 328)\\n   defining Unicode char U+014A (decimal 330)\\n  \
- defining Unicode char U+014B (decimal 331)\\n   defining Unicode char U+014C \
-(decimal 332)\\n   defining Unicode char U+014D (decimal 333)\\n   defining \
-Unicode char U+014E (decimal 334)\\n   defining Unicode char U+014F (decimal \
-335)\\n   defining Unicode char U+0150 (decimal 336)\\n   defining Unicode \
-char U+0151 (decimal 337)\\n   defining Unicode char U+0152 (decimal 338)\\n  \
- defining Unicode char U+0153 (decimal 339)\\n   defining Unicode char U+0154 \
-(decimal 340)\\n   defining Unicode char U+0155 (decimal 341)\\n   defining \
-Unicode char U+0156 (decimal 342)\\n   defining Unicode char U+0157 (decimal \
-343)\\n   defining Unicode char U+0158 (decimal 344)\\n   defining Unicode \
-char U+0159 (decimal 345)\\n   defining Unicode char U+015A (decimal 346)\\n  \
- defining Unicode char U+015B (decimal 347)\\n   defining Unicode char U+015C \
-(decimal 348)\\n   defining Unicode char U+015D (decimal 349)\\n   defining \
-Unicode char U+015E (decimal 350)\\n   defining Unicode char U+015F (decimal \
-351)\\n   defining Unicode char U+0160 (decimal 352)\\n   defining Unicode \
-char U+0161 (decimal 353)\\n   defining Unicode char U+0162 (decimal 354)\\n  \
- defining Unicode char U+0163 (decimal 355)\\n   defining Unicode char U+0164 \
-(decimal 356)\\n   defining Unicode char U+0165 (decimal 357)\\n   defining \
-Unicode char U+0168 (decimal 360)\\n   defining Unicode char U+0169 (decimal \
-361)\\n   defining Unicode char U+016A (decimal 362)\\n   defining Unicode \
-char U+016B (decimal 363)\\n   defining Unicode char U+016C (decimal 364)\\n  \
- defining Unicode char U+016D (decimal 365)\\n   defining Unicode char U+016E \
-(decimal 366)\\n   defining Unicode char U+016F (decimal 367)\\n   defining \
-Unicode char U+0170 (decimal 368)\\n   defining Unicode char U+0171 (decimal \
-369)\\n   defining Unicode char U+0172 (decimal 370)\\n   defining Unicode \
-char U+0173 (decimal 371)\\n   defining Unicode char U+0174 (decimal 372)\\n  \
- defining Unicode char U+0175 (decimal 373)\\n   defining Unicode char U+0176 \
-(decimal 374)\\n   defining Unicode char U+0177 (decimal 375)\\n   defining \
-Unicode char U+0178 (decimal 376)\\n   defining Unicode char U+0179 (decimal \
-377)\\n   defining Unicode char U+017A (decimal 378)\\n   defining Unicode \
-char U+017B (decimal 379)\\n   defining Unicode char U+017C (decimal 380)\\n  \
- defining Unicode char U+017D (decimal 381)\\n   defining Unicode char U+017E \
-(decimal 382)\\n   defining Unicode char U+01CD (decimal 461)\\n   defining \
-Unicode char U+01CE (decimal 462)\\n   defining Unicode char U+01CF (decimal \
-463)\\n   defining Unicode char U+01D0 (decimal 464)\\n   defining Unicode \
-char U+01D1 (decimal 465)\\n   defining Unicode char U+01D2 (decimal 466)\\n  \
- defining Unicode char U+01D3 (decimal 467)\\n   defining Unicode char U+01D4 \
-(decimal 468)\\n   defining Unicode char U+01E2 (decimal 482)\\n   defining \
-Unicode char U+01E3 (decimal 483)\\n   defining Unicode char U+01E6 (decimal \
-486)\\n   defining Unicode char U+01E7 (decimal 487)\\n   defining Unicode \
-char U+01E8 (decimal 488)\\n   defining Unicode char U+01E9 (decimal 489)\\n  \
- defining Unicode char U+01EA (decimal 490)\\n   defining Unicode char U+01EB \
-(decimal 491)\\n   defining Unicode char U+01F0 (decimal 496)\\n   defining \
-Unicode char U+01F4 (decimal 500)\\n   defining Unicode char U+01F5 (decimal \
-501)\\n   defining Unicode char U+0218 (decimal 536)\\n   defining Unicode \
-char U+0219 (decimal 537)\\n   defining Unicode char U+021A (decimal 538)\\n  \
- defining Unicode char U+021B (decimal 539)\\n   defining Unicode char U+1E02 \
-(decimal 7682)\\n   defining Unicode char U+1E03 (decimal 7683)\\n   defining \
-Unicode char U+200C (decimal 8204)\\n   defining Unicode char U+2010 (decimal \
-8208)\\n   defining Unicode char U+2011 (decimal 8209)\\n   defining Unicode \
-char U+2012 (decimal 8210)\\n   defining Unicode char U+2013 (decimal \
-8211)\\n   defining Unicode char U+2014 (decimal 8212)\\n   defining Unicode \
-char U+2015 (decimal 8213)\\n   defining Unicode char U+2018 (decimal \
-8216)\\n   defining Unicode char U+2019 (decimal 8217)\\n   defining Unicode \
-char U+201A (decimal 8218)\\n   defining Unicode char U+201C (decimal \
-8220)\\n   defining Unicode char U+201D (decimal 8221)\\n   defining Unicode \
-char U+201E (decimal 8222)\\n   defining Unicode char U+2030 (decimal \
-8240)\\n   defining Unicode char U+2031 (decimal 8241)\\n   defining Unicode \
-char U+2039 (decimal 8249)\\n   defining Unicode char U+203A (decimal \
-8250)\\n   defining Unicode char U+2423 (decimal 9251)\\n)\\nNow handling \
-font encoding OT1 ...\\n... processing UTF-8 mapping file for font encoding \
-OT1\\n\\n(/usr/local/texlive/2016/texmf-dist/tex/latex/base/ot1enc.dfu\\nFile:\
- ot1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc\\n   defining Unicode \
-char U+00A0 (decimal 160)\\n   defining Unicode char U+00A1 (decimal 161)\\n  \
- defining Unicode char U+00A3 (decimal 163)\\n   defining Unicode char U+00AD \
-(decimal 173)\\n   defining Unicode char U+00B8 (decimal 184)\\n   defining \
-Unicode char U+00BF (decimal 191)\\n   defining Unicode char U+00C5 (decimal \
-197)\\n   defining Unicode char U+00C6 (decimal 198)\\n   defining Unicode \
-char U+00D8 (decimal 216)\\n   defining Unicode char U+00DF (decimal 223)\\n  \
- defining Unicode char U+00E6 (decimal 230)\\n   defining Unicode char U+00EC \
-(decimal 236)\\n   defining Unicode char U+00ED (decimal 237)\\n   defining \
-Unicode char U+00EE (decimal 238)\\n   defining Unicode char U+00EF (decimal \
-239)\\n   defining Unicode char U+00F8 (decimal 248)\\n   defining Unicode \
-char U+0131 (decimal 305)\\n   defining Unicode char U+0141 (decimal 321)\\n  \
- defining Unicode char U+0142 (decimal 322)\\n   defining Unicode char U+0152 \
-(decimal 338)\\n   defining Unicode char U+0153 (decimal 339)\\n   defining \
-Unicode char U+0174 (decimal 372)\\n   defining Unicode char U+0175 (decimal \
-373)\\n   defining Unicode char U+0176 (decimal 374)\\n   defining Unicode \
-char U+0177 (decimal 375)\\n   defining Unicode char U+0218 (decimal 536)\\n  \
- defining Unicode char U+0219 (decimal 537)\\n   defining Unicode char U+021A \
-(decimal 538)\\n   defining Unicode char U+021B (decimal 539)\\n   defining \
-Unicode char U+2013 (decimal 8211)\\n   defining Unicode char U+2014 (decimal \
-8212)\\n   defining Unicode char U+2018 (decimal 8216)\\n   defining Unicode \
-char U+2019 (decimal 8217)\\n   defining Unicode char U+201C (decimal \
-8220)\\n   defining Unicode char U+201D (decimal 8221)\\n)\\nNow handling \
-font encoding OMS ...\\n... processing UTF-8 mapping file for font encoding \
-OMS\\n\\n(/usr/local/texlive/2016/texmf-dist/tex/latex/base/omsenc.dfu\\nFile:\
- omsenc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc\\n   defining Unicode \
-char U+00A7 (decimal 167)\\n   defining Unicode char U+00B6 (decimal 182)\\n  \
- defining Unicode char U+00B7 (decimal 183)\\n   defining Unicode char U+2020 \
-(decimal 8224)\\n   defining Unicode char U+2021 (decimal 8225)\\n   defining \
-Unicode char U+2022 (decimal 8226)\\n)\\nNow handling font encoding OMX \
-...\\n... no UTF-8 mapping file for font encoding OMX\\nNow handling font \
-encoding U ...\\n... no UTF-8 mapping file for font encoding U\\n   defining \
-Unicode char U+00A9 (decimal 169)\\n   defining Unicode char U+00AA (decimal \
-170)\\n   defining Unicode char U+00AE (decimal 174)\\n   defining Unicode \
-char U+00BA (decimal 186)\\n   defining Unicode char U+02C6 (decimal 710)\\n  \
- defining Unicode char U+02DC (decimal 732)\\n   defining Unicode char U+200C \
-(decimal 8204)\\n   defining Unicode char U+2026 (decimal 8230)\\n   defining \
-Unicode char U+2122 (decimal 8482)\\n   defining Unicode char U+2423 (decimal \
-9251)\\n))\\n(/usr/local/texlive/2016/texmf-dist/tex/latex/lm/lmodern.sty\\\
-nPackage: lmodern 2009/10/30 v1.6 Latin Modern Fonts\\nLaTeX Font Info:    \
-Overwriting symbol font `operators' in version `normal'\\n(Font)              \
-    OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.\\nLaTeX Font Info:    \
-Overwriting symbol font `letters' in version `normal'\\n(Font)                \
-  OML/cmm/m/it --> OML/lmm/m/it on input line 23.\\nLaTeX Font Info:    \
-Overwriting symbol font `symbols' in version `normal'\\n(Font)                \
-  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.\\nLaTeX Font Info:    \
-Overwriting symbol font `largesymbols' in version `normal'\\n(Font)           \
-       OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.\\nLaTeX Font Info:    \
-Overwriting symbol font `operators' in version `bold'\\n(Font)                \
-  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.\\nLaTeX Font Info:    \
-Overwriting symbol font `letters' in version `bold'\\n(Font)                  \
-OML/cmm/b/it --> OML/lmm/b/it on input line 27.\\nLaTeX Font Info:    \
-Overwriting symbol font `symbols' in version `bold'\\n(Font)                  \
-OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.\\nLaTeX Font Info:    \
-Overwriting symbol font `largesymbols' in version `bold'\\n(Font)             \
-     OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.\\nLaTeX Font Info:    \
-Overwriting math alphabet `\\\\mathbf' in version `normal'\\n(Font)           \
-       OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.\\nLaTeX Font Info:    \
+(HA)\\n))\\n\\\\sa@internal=\\\\count81\\n\\\\c@sapage=\\\\count82\\n\\n(/usr/\
+local/texlive/2018/texmf-dist/tex/latex/standalone/standalone.cfg\\nFile: \
+standalone.cfg 2018/03/26 v1.3a Default configuration file for \
+'standalon\\ne' \
+class\\n)\\n(/usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls\\\
+nDocument Class: article 2018/09/03 v1.4i Standard LaTeX document \
+class\\n(/usr/local/texlive/2018/texmf-dist/tex/latex/base/size12.clo\\nFile: \
+size12.clo 2018/09/03 v1.4i Standard LaTeX file (size \
+option)\\n)\\n\\\\c@part=\\\\count83\\n\\\\c@section=\\\\count84\\n\\\\c@\
+subsection=\\\\count85\\n\\\\c@subsubsection=\\\\count86\\n\\\\c@paragraph=\\\
+\\count87\\n\\\\c@subparagraph=\\\\count88\\n\\\\c@figure=\\\\count89\\n\\\\c@\
+table=\\\\count90\\n\\\\abovecaptionskip=\\\\skip41\\n\\\\belowcaptionskip=\\\
+\\skip42\\n\\\\bibindent=\\\\dimen102\\n)\\n\\\\sa@box=\\\\box27\\n)\\n\\\\\
+MaTeXbox=\\\\box28\\n\\n(/usr/local/texlive/2018/texmf-dist/tex/latex/base/\
+inputenc.sty\\nPackage: inputenc 2018/08/11 v1.3c Input encoding \
+file\\n\\\\inpenc@prehook=\\\\toks16\\n\\\\inpenc@posthook=\\\\toks17\\n)\\n(/\
+usr/local/texlive/2018/texmf-dist/tex/latex/lm/lmodern.sty\\nPackage: lmodern \
+2009/10/30 v1.6 Latin Modern Fonts\\nLaTeX Font Info:    Overwriting symbol \
+font `operators' in version `normal'\\n(Font)                  OT1/cmr/m/n \
+--> OT1/lmr/m/n on input line 22.\\nLaTeX Font Info:    Overwriting symbol \
+font `letters' in version `normal'\\n(Font)                  OML/cmm/m/it --> \
+OML/lmm/m/it on input line 23.\\nLaTeX Font Info:    Overwriting symbol font \
+`symbols' in version `normal'\\n(Font)                  OMS/cmsy/m/n --> \
+OMS/lmsy/m/n on input line 24.\\nLaTeX Font Info:    Overwriting symbol font \
+`largesymbols' in version `normal'\\n(Font)                  OMX/cmex/m/n --> \
+OMX/lmex/m/n on input line 25.\\nLaTeX Font Info:    Overwriting symbol font \
+`operators' in version `bold'\\n(Font)                  OT1/cmr/bx/n --> \
+OT1/lmr/bx/n on input line 26.\\nLaTeX Font Info:    Overwriting symbol font \
+`letters' in version `bold'\\n(Font)                  OML/cmm/b/it --> \
+OML/lmm/b/it on input line 27.\\nLaTeX Font Info:    Overwriting symbol font \
+`symbols' in version `bold'\\n(Font)                  OMS/cmsy/b/n --> \
+OMS/lmsy/b/n on input line 28.\\nLaTeX Font Info:    Overwriting symbol font \
+`largesymbols' in version `bold'\\n(Font)                  OMX/cmex/m/n --> \
+OMX/lmex/m/n on input line 29.\\nLaTeX Font Info:    Overwriting math \
+alphabet `\\\\mathbf' in version `normal'\\n(Font)                  \
+OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.\\nLaTeX Font Info:    \
 Overwriting math alphabet `\\\\mathsf' in version `normal'\\n(Font)           \
        OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.\\nLaTeX Font Info:    \
 Overwriting math alphabet `\\\\mathit' in version `normal'\\n(Font)           \
@@ -10212,55 +10024,55 @@ Overwriting math alphabet `\\\\mathit' in version `bold'\\n(Font)             \
      OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.\\nLaTeX Font Info:    \
 Overwriting math alphabet `\\\\mathtt' in version `bold'\\n(Font)             \
      OT1/cmtt/m/n --> OT1/lmtt/m/n on input line \
-38.\\n)\\n(/usr/local/texlive/2016/texmf-dist/tex/latex/base/exscale.sty\\\
-nPackage: exscale 2014/09/29 v2.1h Standard LaTeX package exscale\\nLaTeX \
+38.\\n)\\n(/usr/local/texlive/2018/texmf-dist/tex/latex/base/exscale.sty\\\
+nPackage: exscale 2018/09/24 v2.1i Standard LaTeX package exscale\\nLaTeX \
 Font Info:    Redeclaring symbol font `largesymbols' on input line \
 57.\\nLaTeX Font Info:    Overwriting symbol font `largesymbols' in version \
 `normal'\\n(Font)                  OMX/lmex/m/n --> OMX/cmex/m/n on input \
 line 57.\\nLaTeX Font Info:    Overwriting symbol font `largesymbols' in \
 version `bold'\\n(Font)                  OMX/lmex/m/n --> OMX/cmex/m/n on \
 input line \
-57.\\n\\\\big@size=\\\\dimen103\\n)\\n(/usr/local/texlive/2016/texmf-dist/tex/\
-latex/amsmath/amsmath.sty\\nPackage: amsmath 2016/06/28 v2.15d AMS math \
+57.\\n\\\\big@size=\\\\dimen103\\n)\\n(/usr/local/texlive/2018/texmf-dist/tex/\
+latex/amsmath/amsmath.sty\\nPackage: amsmath 2018/12/01 v2.17b AMS math \
 features\\n\\\\@mathmargin=\\\\skip43\\n\\nFor additional information on \
 amsmath, use the `?' \
-option.\\n(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amstext.sty\\\
+option.\\n(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amstext.sty\\\
 nPackage: amstext 2000/06/29 v2.01 AMS \
-text\\n\\n(/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsgen.sty\\\
+text\\n\\n(/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsgen.sty\\\
 nFile: amsgen.sty 1999/11/30 v2.0 generic \
 functions\\n\\\\@emptytoks=\\\\toks18\\n\\\\ex@=\\\\dimen104\\n))\\n(/usr/\
-local/texlive/2016/texmf-dist/tex/latex/amsmath/amsbsy.sty\\nPackage: amsbsy \
+local/texlive/2018/texmf-dist/tex/latex/amsmath/amsbsy.sty\\nPackage: amsbsy \
 1999/11/29 v1.2d Bold \
-Symbols\\n\\\\pmbraise@=\\\\dimen105\\n)\\n(/usr/local/texlive/2016/texmf-\
+Symbols\\n\\\\pmbraise@=\\\\dimen105\\n)\\n(/usr/local/texlive/2018/texmf-\
 dist/tex/latex/amsmath/amsopn.sty\\nPackage: amsopn 2016/03/08 v2.02 operator \
-names\\n)\\n\\\\inf@bad=\\\\count90\\nLaTeX Info: Redefining \\\\frac on \
-input line 199.\\n\\\\uproot@=\\\\count91\\n\\\\leftroot@=\\\\count92\\nLaTeX \
+names\\n)\\n\\\\inf@bad=\\\\count91\\nLaTeX Info: Redefining \\\\frac on \
+input line 223.\\n\\\\uproot@=\\\\count92\\n\\\\leftroot@=\\\\count93\\nLaTeX \
 Info: Redefining \\\\overline on input line \
-297.\\n\\\\classnum@=\\\\count93\\n\\\\DOTSCASE@=\\\\count94\\nLaTeX Info: \
-Redefining \\\\ldots on input line 394.\\nLaTeX Info: Redefining \\\\dots on \
-input line 397.\\nLaTeX Info: Redefining \\\\cdots on input line \
-518.\\n\\\\Mathstrutbox@=\\\\box28\\n\\\\strutbox@=\\\\box29\\n\\\\big@size=\\\
+385.\\n\\\\classnum@=\\\\count94\\n\\\\DOTSCASE@=\\\\count95\\nLaTeX Info: \
+Redefining \\\\ldots on input line 482.\\nLaTeX Info: Redefining \\\\dots on \
+input line 485.\\nLaTeX Info: Redefining \\\\cdots on input line \
+606.\\n\\\\Mathstrutbox@=\\\\box29\\n\\\\strutbox@=\\\\box30\\n\\\\big@size=\\\
 \\dimen106\\nLaTeX Font Info:    Redeclaring font encoding OML on input line \
-634.\\nLaTeX Font Info:    Redeclaring font encoding OMS on input line \
-635.\\n\\\\macc@depth=\\\\count95\\n\\\\c@MaxMatrixCols=\\\\count96\\n\\\\\
-dotsspace@=\\\\muskip10\\n\\\\c@parentequation=\\\\count97\\n\\\\dspbrk@lvl=\\\
-\\count98\\n\\\\tag@help=\\\\toks19\\n\\\\row@=\\\\count99\\n\\\\column@=\\\\\
-count100\\n\\\\maxfields@=\\\\count101\\n\\\\andhelp@=\\\\toks20\\n\\\\\
+729.\\nLaTeX Font Info:    Redeclaring font encoding OMS on input line \
+730.\\n\\\\macc@depth=\\\\count96\\n\\\\c@MaxMatrixCols=\\\\count97\\n\\\\\
+dotsspace@=\\\\muskip10\\n\\\\c@parentequation=\\\\count98\\n\\\\dspbrk@lvl=\\\
+\\count99\\n\\\\tag@help=\\\\toks19\\n\\\\row@=\\\\count100\\n\\\\column@=\\\\\
+count101\\n\\\\maxfields@=\\\\count102\\n\\\\andhelp@=\\\\toks20\\n\\\\\
 eqnshift@=\\\\dimen107\\n\\\\alignsep@=\\\\dimen108\\n\\\\tagshift@=\\\\\
 dimen109\\n\\\\tagwidth@=\\\\dimen110\\n\\\\totwidth@=\\\\dimen111\\n\\\\\
 lineht@=\\\\dimen112\\n\\\\@envbody=\\\\toks21\\n\\\\multlinegap=\\\\skip44\\\
 n\\\\multlinetaggap=\\\\skip45\\n\\\\mathdisplay@stack=\\\\toks22\\nLaTeX \
-Info: Redefining \\\\[ on input line 2739.\\nLaTeX Info: Redefining \\\\] on \
+Info: Redefining \\\\[ on input line 2844.\\nLaTeX Info: Redefining \\\\] on \
 input line \
-2740.\\n)\\n(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/amssymb.\
+2845.\\n)\\n(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/amssymb.\
 sty\\nPackage: amssymb 2013/01/14 v3.01 AMS font \
-symbols\\n\\n(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/amsfonts.\
+symbols\\n\\n(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/amsfonts.\
 sty\\nPackage: amsfonts 2013/01/14 v3.01 Basic AMSFonts \
 support\\n\\\\symAMSa=\\\\mathgroup4\\n\\\\symAMSb=\\\\mathgroup5\\nLaTeX \
 Font Info:    Overwriting math alphabet `\\\\mathfrak' in version \
 `bold'\\n(Font)                  U/euf/m/n --> U/euf/b/n on input line \
-106.\\n))\\nNo file yxqtlrqzgjvclvvq.aux.\\n\\\\openout1 = \
-`yxqtlrqzgjvclvvq.aux'.\\n\\nLaTeX Font Info:    Checking defaults for \
+106.\\n))\\nNo file jokpnkdftegbrrmz.aux.\\n\\\\openout1 = \
+`jokpnkdftegbrrmz.aux'.\\n\\nLaTeX Font Info:    Checking defaults for \
 OML/cmm/m/it on input line 22.\\nLaTeX Font Info:    ... okay on input line \
 22.\\nLaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line \
 22.\\nLaTeX Font Info:    ... okay on input line 22.\\nLaTeX Font Info:    \
@@ -10272,33 +10084,33 @@ OMS/cmsy/m/n on input line 22.\\nLaTeX Font Info:    ... okay on input line \
 Checking defaults for U/cmr/m/n on input line 22.\\nLaTeX Font Info:    ... \
 okay on input line 22.\\nLaTeX Font Info:    Try loading font information for \
 OT1+lmr on input line \
-22.\\n(/usr/local/texlive/2016/texmf-dist/tex/latex/lm/ot1lmr.fd\\nFile: \
+22.\\n(/usr/local/texlive/2018/texmf-dist/tex/latex/lm/ot1lmr.fd\\nFile: \
 ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern\\n)\\nLaTeX Font Info:   \
  Try loading font information for OML+lmm on input line \
-24.\\n\\n(/usr/local/texlive/2016/texmf-dist/tex/latex/lm/omllmm.fd\\nFile: \
+24.\\n\\n(/usr/local/texlive/2018/texmf-dist/tex/latex/lm/omllmm.fd\\nFile: \
 omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern\\n)\\nLaTeX Font Info:   \
  Try loading font information for OMS+lmsy on input line \
-24.\\n\\n\\n(/usr/local/texlive/2016/texmf-dist/tex/latex/lm/omslmsy.fd\\\
+24.\\n\\n\\n(/usr/local/texlive/2018/texmf-dist/tex/latex/lm/omslmsy.fd\\\
 nFile: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern\\n)\\nLaTeX Font \
 Info:    Try loading font information for U+msa on input line \
-24.\\n\\n(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd\\\
+24.\\n\\n(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd\\\
 nFile: umsa.fd 2013/01/14 v3.01 AMS symbols A\\n)\\nLaTeX Font Info:    Try \
 loading font information for U+msb on input line \
-24.\\n\\n(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd\\\
+24.\\n\\n(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd\\\
 nFile: umsb.fd 2013/01/14 v3.01 AMS symbols B\\n)\\n! Undefined control \
 sequence.\\n<argument> \\\\nosuchcommand \\n                          \
 {x}\\nl.24 \\\\MaTeX{\\\\nosuchcommand{x}}\\n                               \
-\\nHere is how much of TeX's memory you used:\\n 1973 strings out of \
-493014\\n 25876 string characters out of 6133351\\n 77246 words of memory out \
-of 5000000\\n 5502 multiletter control sequences out of 15000+600000\\n 16648 \
+\\nHere is how much of TeX's memory you used:\\n 1707 strings out of \
+492616\\n 24166 string characters out of 6128981\\n 81726 words of memory out \
+of 5000000\\n 5613 multiletter control sequences out of 15000+600000\\n 16648 \
 words of font info for 33 fonts, out of 8000000 for 9000\\n 1141 hyphenation \
-exceptions out of 8191\\n 34i,5n,56p,320b,97s stack positions out of \
+exceptions out of 8191\\n 34i,5n,56p,335b,97s stack positions out of \
 5000i,500n,10000p,200000b,80000s\\n\\n!  ==> Fatal error occurred, no output \
 PDF file produced!\"\>"], "Print",
  CellChangeTimes->{3.688047155618384*^9, 3.6881946434664307`*^9, 
-  3.688195381553925*^9, 3.688276223570157*^9},
- CellLabel->"During evaluation of In[2]:=",
- CellID->511848593,
+  3.688195381553925*^9, 3.688276223570157*^9, 3.763963312821986*^9},
+ CellLabel->"During evaluation of In[13]:=",
+ CellID->349850928,
  ExpressionUUID -> "b34fc68d-9583-4cb0-bd0a-632d9c5e0726"],
 
 Cell[BoxData[
@@ -10315,18 +10127,71 @@ Rule[StripOnInput, False]]\\)\[NoBreak] \\!\\(\\*ButtonBox[\\\"\
 ButtonData:>\\\"paclet:MaTeX/ref/message/MaTeX/texerr\\\", ButtonNote -> \
 \\\"MaTeX`MaTeX::texerr\\\"]\\)\"\>"}]], "Message", "MSG",
  CellChangeTimes->{{3.68804714170858*^9, 3.688047155635613*^9}, 
-   3.688194643597795*^9, 3.688195381832116*^9, 3.688276223628304*^9},
- CellLabel->"During evaluation of In[2]:=",
- CellID->1967296316,
+   3.688194643597795*^9, 3.688195381832116*^9, 3.688276223628304*^9, 
+   3.7639633129024067`*^9},
+ CellLabel->"During evaluation of In[13]:=",
+ CellID->134321410,
  ExpressionUUID -> "079d7851-02de-454b-917e-a9ca47ffad11"],
 
 Cell[BoxData["$Failed"], "Output",
  CellChangeTimes->{{3.6880471417193127`*^9, 3.688047155650949*^9}, 
-   3.688194644603505*^9, 3.6881953818393784`*^9, 3.688276223637802*^9},
- CellLabel->"Out[2]=",
- CellID->1690953800,
+   3.688194644603505*^9, 3.6881953818393784`*^9, 3.688276223637802*^9, 
+   3.763963312909618*^9},
+ CellLabel->"Out[13]=",
+ CellID->534624873,
  ExpressionUUID -> "f78dd1c9-e99a-42dc-bcef-6941c640b78e"]
-}, Open  ]]
+}, Open  ]],
+
+Cell[TextData[{
+ "This options only takes effect when ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"L", 
+     StyleBox[
+      AdjustmentBox["A",
+       BoxBaselineShift->-0.4,
+       BoxMargins->{{-0.5, -0.3}, {0, 0}}],
+      FontSize->Smaller], "T", 
+     AdjustmentBox["E",
+      BoxBaselineShift->0.5,
+      BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}],
+    SingleLetterItalics->False], TraditionalForm]],
+  ExpressionUUID -> "b23d5322-1c6b-4b09-9c8c-8c1019105e10"],
+ " is actually run. This does not happen when MaTeX uses a cached result. \
+Clear the cache with ",
+ Cell[BoxData[
+  ButtonBox["ClearMaTeXCache",
+   BaseStyle->"Link",
+   ButtonData->"paclet:MaTeX/ref/ClearMaTeXCache"]], "InlineFormula",
+  ExpressionUUID -> "6e0d09e7-a908-4406-86d9-a80d67070c98"],
+ " to force running ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"L", 
+     StyleBox[
+      AdjustmentBox["A",
+       BoxBaselineShift->-0.4,
+       BoxMargins->{{-0.5, -0.3}, {0, 0}}],
+      FontSize->Smaller], "T", 
+     AdjustmentBox["E",
+      BoxBaselineShift->0.5,
+      BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}],
+    SingleLetterItalics->False], TraditionalForm]],
+  ExpressionUUID -> "67b7b1f3-0a12-4e02-bfbb-8f6f5a3302e5"],
+ " upon the next call to ",
+ Cell[BoxData[
+  ButtonBox["MaTeX",
+   BaseStyle->"Link",
+   ButtonData->"paclet:MaTeX/ref/MaTeX"]], "InlineFormula",
+  ExpressionUUID -> "352a1cbf-e082-45c1-8eec-a0649d49456d"],
+ "."
+}], "ExampleText",
+ CellChangeTimes->{{3.763963846838189*^9, 3.763963906071278*^9}, {
+  3.763963999134103*^9, 3.763964054939189*^9}},
+ CellID->89590881,
+ ExpressionUUID -> "8b52659a-bd09-4591-8b66-60948ae1dcae"]
 }, Closed]],
 
 Cell[CellGroupData[{
@@ -10369,11 +10234,12 @@ Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{"MaTeX", "[", 
-  RowBox[{"\"\<x^2\>\"", ",", 
+  RowBox[{"\"\<x^5\>\"", ",", 
    RowBox[{"\"\<TeXFileFunction\>\"", "\[Rule]", "Print"}]}], "]"}]], "Input",
  
- CellChangeTimes->{{3.688047235707622*^9, 3.688047249587555*^9}},
- CellLabel->"In[14]:=",
+ CellChangeTimes->{{3.688047235707622*^9, 3.688047249587555*^9}, 
+   3.763963365481532*^9},
+ CellLabel->"In[16]:=",
  CellID->2098618828,
  ExpressionUUID -> "d8d1f000-2dfe-40cc-8d82-1009acec2352"],
 
@@ -10387,11 +10253,13 @@ n\\t\\t\\\\typeout{MATEXHEIGHT:\\\\the\\\\ht\\\\MaTeXbox}%\\n\\t\\t\\\\\
 typeout{MATEXWIDTH:\\\\the\\\\wd\\\\MaTeXbox}%\\n\\t\\t\\\\unhbox\\\\MaTeXbox%\
 \\n\\t\\\\end{matex}\\n}\\n\\\\usepackage[utf8]{inputenc}\\n\\\\usepackage{\
 lmodern,exscale}\\n\\\\usepackage{amsmath,amssymb}\\n\\\\begin{document}\\n\\\
-\\fontsize{12pt}{14.4pt}\\\\selectfont\\n\\\\MaTeX{x^2}\\n\\\\end{document}\"\
+\\fontsize{12pt}{14.4pt}\\\\selectfont\\n\\\\MaTeX{x^5}\\n\\\\end{document}\"\
 \>"], "Print",
- CellChangeTimes->{3.688582151303301*^9, 3.688582206800806*^9},
- CellLabel->"During evaluation of In[14]:=",
- CellID->2063369324,
+ CellChangeTimes->{
+  3.688582151303301*^9, 3.688582206800806*^9, {3.763963350164073*^9, 
+   3.763963368221302*^9}},
+ CellLabel->"During evaluation of In[16]:=",
+ CellID->269714759,
  ExpressionUUID -> "196b926b-2504-4a21-bf51-deba66d65104"],
 
 Cell[BoxData[
@@ -10421,21 +10289,27 @@ NTKte7OL/5K463iWp8GN5RkmiOdvG5zM4l5HHt14P/Eoe1lkHtn5XvzP4vuQ
 vG2gefYFYL2cnDaXOHpkzAM5lTDnBeFEvxoVnKbsI+qgFvWVox6svxW4n/Zr
 CYdMdUhTIzvfT/bOCLDzff0H/muFeg==
     "]], 
-   FilledCurveBox[{{{0, 2, 0}, {1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {0, 1, 0}, {1,
-     3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
-    3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}, {0, 
-    1, 0}}}, CompressedData["
-1:eJxTTMoPSmVmYGBgBGI9IGYC4jmLlHf+Oa7mcOqw09pMO3WHhJAg9QWeCP6L
-LO1v023VHDaoPmme91bNYUp7a9RlGTUHU5u9QdMU1RxeFW8V/f1a1SEj/0Pr
-ySuqDqI9Xq9YYPQWVYg581TgfLB5sQj+TBDoVITz1wrp8KWvU3Yw0FopfGGJ
-ugMDCHxQdjAD2fdQ3aHm04aA7FkqDmB3p2s4bNLLW8x4R8XhUYT49osLNBxS
-Yu+4Md9Qdaj9bVVwrkPTAea/ehA/QwvOB5tzSxvOl1n+wkNvv66DzLw4zdMG
-qhBzfug5iFROKjlrogznK197FMzgowjnV9//ccuYW8Ghhdd//ZRWXTh/A8hd
-MjpwPjh8QrQh/l2pANFvoe3QbeO5K+0Rgu++5uhyBgtFOD89DQi2KUL0lyD4
-TxIXXjPh14Hz/7x9fcDysY6D84RmobRXCnD+DJB9OxF8cHgaKDq8AMUbt57D
-ym8vK844KDn8+Vb6YE6hHsR+DmU4X2LqFc6MJhU4H+xPV1VoOOnC+bDwhPFN
-jEFAC5peVCDp4J8GJPxslBz+gswTVIfyFSDxx6AKDy9IOlKB89+A3HsawU8D
-AxWHgFvSNYlBanA+enoGAPMMPec=
+   FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {1,
+     3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {0, 1, 
+    0}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 
+    3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {
+    1, 3, 3}}}, CompressedData["
+1:eJxTTMoPSmVmYGBgBGJvIGYC4jmLlHf+Oa7mINrj9YpliroDjP+qeKvo72xN
+h8Bb0jWJRaoOTxIXXjPh13botPHclTZJGc5PTQOCY0pwPn9swH0jdiUHFs4u
++eRzWg6nzwBBjqKD/8WJMf+cEfyM/A+tJ0N0He67xjvOWqjooK+1UviCi66D
+cOWkkrMuSg4b9PIWM8roOoRzirUbv0fwwe56rQLnm9rsDZqmqOYgPvUKZ0aT
+Hpwvs/yFh95+BP8FWJ+egwHIHhY1h5TYO27MP/Qcju3a0cv2QRXOP4rGZwCB
+Bwj+hathb/R3qzr4gvzzWM9hSntr1GUZVQf3/bWyFsv1HMxA9iWqOPicYLed
+XarnsCe/5u3MVmU4fy+IP1UJzl8rpMOXfk7RwcQYCDbrOfwHAX9FuPnua44u
+Z9BQhNtfff/HLWNp3Px0UHw8U8DgT53AX2V2GsGHhReMX/NpQ0D2LU04X2pe
+nObpCQg+2F3xmnD3oPA9EHxw/IUoQsK1QNPhw6L1CmczFOHmzQQDRYf1qk+a
+553VdLijKbvmv7GSw/Ms7W/T52pBwqNPGc7/+630wZxCFTgfEh8qDhIg9z/S
+hIQTs6pDJig9TdF0SAgJUl/gqQqRZ9KE6A9UdfAAxY+7Bpzf8Nuq4NwKdTgf
+TAuqO2wAuctX1UFXUf5LjpmawyZQOruj4vDr7esDls2qkHTdp+JQC9LPoeqg
+cu1RMMMbZYcZoPDtVoH4RxjBB8cPtxKcD8kfihD7DFUh4bESGv5WapD0sVUB
+bj84v13Czb8Nss9ZEc4vPbzNdeZcRQc5UPqvR/BfgMLvL4IPy++w+KwD+eeE
+OiS+rynA+aDseqYHwYf4RwESDwsQfLB/PqrB+bDwgqUPcPwLqDgog8JLRhnO
+3+HQ9Oi4hCqcDyt/wOE+R9UBvXwCAEogAzk=
     "]]},
   AspectRatio->Automatic,
   BaselinePosition->Scaled[0.3237956353650342],
@@ -10443,11 +10317,63 @@ AxWHgFvSNYlBanA+enoGAPMMPec=
   PlotRange->{{0., 13.38}, {0., 16.37}}]], "Output",
  CellChangeTimes->{
   3.688047250546029*^9, {3.688195397455611*^9, 3.688195412647871*^9}, 
-   3.68827622389717*^9, 3.688582151633491*^9, 3.688582207499077*^9},
- CellLabel->"Out[14]=",
- CellID->1482296712,
+   3.68827622389717*^9, 3.688582151633491*^9, 3.688582207499077*^9, {
+   3.763963350737986*^9, 3.763963368717786*^9}},
+ CellLabel->"Out[16]=",
+ CellID->1905459343,
  ExpressionUUID -> "ce1f320a-6938-4772-a0a3-1eebb9c249f7"]
-}, Open  ]]
+}, Open  ]],
+
+Cell[TextData[{
+ "This options only takes effect when ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"L", 
+     StyleBox[
+      AdjustmentBox["A",
+       BoxBaselineShift->-0.4,
+       BoxMargins->{{-0.5, -0.3}, {0, 0}}],
+      FontSize->Smaller], "T", 
+     AdjustmentBox["E",
+      BoxBaselineShift->0.5,
+      BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}],
+    SingleLetterItalics->False], TraditionalForm]],
+  ExpressionUUID -> "b23d5322-1c6b-4b09-9c8c-8c1019105e10"],
+ " is actually run. This does not happen when MaTeX uses a cached result. \
+Clear the cache with ",
+ Cell[BoxData[
+  ButtonBox["ClearMaTeXCache",
+   BaseStyle->"Link",
+   ButtonData->"paclet:MaTeX/ref/ClearMaTeXCache"]], "InlineFormula",
+  ExpressionUUID -> "b89fed57-9fed-4189-a895-187433bd8509"],
+ " to force running ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"L", 
+     StyleBox[
+      AdjustmentBox["A",
+       BoxBaselineShift->-0.4,
+       BoxMargins->{{-0.5, -0.3}, {0, 0}}],
+      FontSize->Smaller], "T", 
+     AdjustmentBox["E",
+      BoxBaselineShift->0.5,
+      BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}],
+    SingleLetterItalics->False], TraditionalForm]],
+  ExpressionUUID -> "1b39e8c3-2c08-4a84-bfba-61cac574e6ad"],
+ " upon the next call to ",
+ Cell[BoxData[
+  ButtonBox["MaTeX",
+   BaseStyle->"Link",
+   ButtonData->"paclet:MaTeX/ref/MaTeX"]], "InlineFormula",
+  ExpressionUUID -> "760f8b00-6519-4525-8bd5-425b2e4b2b91"],
+ "."
+}], "ExampleText",
+ CellChangeTimes->{{3.763963846838189*^9, 3.763963906071278*^9}, {
+  3.763963999134103*^9, 3.763964054939189*^9}},
+ CellID->1505081962,
+ ExpressionUUID -> "e8717351-b150-48ef-b0fa-3f8c3dbc29d1"]
 }, Closed]]
 }, Open  ]],
 
@@ -10621,9 +10547,9 @@ nyoZwg/R/UtjIKcux/y7S0yYv59OswjzekklxB+fCneXLMmTYD1/0IQd+znY
 gfy5Rk36+ff7+QcJ6U8a
         "]], 
        FilledCurveBox[{{{0, 2, 0}, {1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {0, 1, 
-        0}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
-        3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {1, 3, 
-        3}, {0, 1, 0}, {0, 1, 0}}}, CompressedData["
+        0}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3},
+         {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {0,
+         1, 0}, {0, 1, 0}}}, CompressedData["
 1:eJxTTMoPSmVmYGBgBGI9IGYCYh7/9VNSI5wcTh12Wptpp+5Q+9uq4JwFgi/v
 +DH5jKmTwwbVJ83z3qo5eJ9gt52t6+RgarM3aJqimkPi4cvaqYpODhn5H1pP
 XlF1yOb8uSBd2slBtMfrFcsWVYcI8e0XGc45wvlg8/Yi+PUg+zgQ/OUvPPT+
@@ -10680,6 +10606,7 @@ CcKL
              2.2156300000000004`, 8.04219}, {2.3828099999999997`, 8.04219}, {
              8.879690000000002, 8.04219}, {9.04688, 8.04219}, {
              9.273439999999999, 8.04219}, {9.273439999999999, 8.27969}}}], 
+            
             FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 
              3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1,
               3, 3}, {1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {
@@ -11668,8 +11595,7 @@ mK9UoeZn4K8yR/kfw+S9c0vl4f//X/g/S7t39Q==
              3}, {1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {1, 3,
              3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3,
              3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {1, 3,
-             3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}}}, CompressedData[
-"
+             3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}}}, CompressedData["
 1:eJxllH9IFFEQx/f8VR7q7q12P/T0zjM1wYhaE4loJ0LCCJX8I6UoEFRCwiQh
 JI2wMuSMIME8Ee2H4D8GRiQpdBTSjz+sSKHCIiWFlBIyQrwzve692Z0lHXgM
 n3fvzc18Z96mV9Ydq4oUBMEUXsXhFRFeT8r2lYdeJYF79I6/KsEKOpctTi51
@@ -12990,6 +12916,7 @@ Cell[BoxData[
                    3.141592653589793}]},
                  
                  ImageSizeCache->{{15.085786437626904`, 
+                  
                   91.41421356237309}, {-67.06708074052933, \
 -0.5857864376269113}}], {}},
                StatusArea[#, 1]& ,
@@ -13226,8 +13153,7 @@ S68eIAuOqzugp2cAYtY8HA==
            "MouseClicked" :> FEPrivate`Set[DynamicChart`click$36139$36172, 
               FEPrivate`Not[DynamicChart`click$36139$36172]], PassEventsDown -> 
             True, Method -> "Preemptive", PassEventsUp -> True}]], Dynamic[
-         If[
-          DynamicChart`click$36139$36172, {{{1., 0}, {0, 1.}}, {
+         If[DynamicChart`click$36139$36172, {{{1., 0}, {0, 1.}}, {
             1.2246467991473533`*^-17, -0.2}}, {{1, 0}, {0, 1}}, {{1, 0}, {0, 
            1}}], TrackedSymbols :> {
            DynamicChart`click$36139$36172}]]}, {}}, {}}, {}, {}},
@@ -13572,6 +13498,7 @@ Cell[BoxData[
              20.1926}, {1.8546899999999997`, 10.7461}, {1.8546899999999997`, 
              9.560549999999997}, {2.81602, 8.59922}, {4.0015600000000004`, 
              8.59922}}}, CurveClosed -> {1}], 
+            
             FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}}}, {{{
              6.79258, 12.0344}, {6.79258, 12.8645}, {6.11992, 
              13.537100000000002`}, {5.28984, 13.537100000000002`}, {4.45977, 
@@ -13777,7 +13704,6 @@ Cell[BoxData[
              3.78711, 18.904700000000002`}, {3.78711, 18.0746}, {4.45977, 
              17.4016}, {5.28984, 17.4016}, {6.11992, 17.4016}, {6.79258, 
              18.0746}, {6.79258, 18.904700000000002`}}}], 
-            
             FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}}}, {{{
              13.6629, 12.0344}, {13.6629, 12.8645}, {12.9898, 
              13.537100000000002`}, {12.159799999999999`, 
@@ -13848,7 +13774,7 @@ Cell[BoxData[
 
 Cell[BoxData[
  RowBox[{"Needs", "[", "\"\<MaTeX`\>\"", "]"}]], "Input",
- CellLabel->"In[1]:=",
+ CellLabel->"In[8]:=",
  CellID->1401198997,
  ExpressionUUID -> "d84b88d4-fd63-4697-a7d2-179f78c4aebc"],
 
@@ -15197,7 +15123,8 @@ Cell[TextData[{
      AdjustmentBox["E",
       BoxBaselineShift->0.5,
       BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}],
-    SingleLetterItalics->False], TraditionalForm]]],
+    SingleLetterItalics->False], TraditionalForm]],
+  ExpressionUUID -> "0d498c48-95c6-4075-b71b-41bec570a1a2"],
  " environments, such as ",
  StyleBox["itemize", "InlineCode"],
  ", will not work inside of a ",
@@ -15226,19 +15153,18 @@ Cell[BoxData[
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"MaTeX", "::", "texerr"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Error while running \
-LaTeX.\\n\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\\\"! LaTeX Error: Something's \
-wrong--perhaps a missing \\\\\\\\\\\\\\\\item.\\\\\\\\n}}\\\\\\\\n!  ==> \
-Fatal error occurred, no output PDF file produced!\\\\\\\"\\\", \
-\\\"OutputForm\\\", Rule[StripOnInput, False]]\\)\[NoBreak] \
-\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+   RowBox[{"MaTeX", "::", "texerr"}], "MessageName"], ":", 
+  " ", "\<\"Error while running LaTeX.\\n\[NoBreak]\\!\\(\\*StyleBox[\\\"\\\\\
+\\\"! LaTeX Error: Something's wrong--perhaps a missing \\\\\\\\\\\\\\\\item.\
+\\\\\\\\n}}\\\\\\\\n!  ==> Fatal error occurred, no output PDF file produced!\
+\\\\\\\"\\\", \\\"OutputForm\\\", Rule[StripOnInput, False]]\\)\[NoBreak] \\!\
+\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
 ButtonFrame->None, ButtonData:>\\\"paclet:MaTeX/ref/message/MaTeX/texerr\\\", \
 ButtonNote -> \\\"MaTeX`MaTeX::texerr\\\"]\\)\"\>"}]], "Message", "MSG",
  CellChangeTimes->{3.738243518680758*^9},
  CellLabel->"During evaluation of In[11]:=",
- CellID->1900509176],
+ CellID->1900509176,
+ ExpressionUUID -> "b78f39c2-139d-4205-8a78-ae3d74f52c3e"],
 
 Cell[BoxData["$Failed"], "Output",
  CellChangeTimes->{{3.738243242641057*^9, 3.738243272407464*^9}, 
@@ -15273,9 +15199,9 @@ Cell[BoxData[
  GraphicsBox[
   {Thickness[0.005811588307084326], 
    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {1, 3, 3}, {1,
-     3, 3}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}, {0, 1, 0}, {1, 3, 3},
-     {1, 3, 3}, {0, 1, 0}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {1, 3, 
-    3}, {1, 3, 3}, {0, 1, 0}}}, CompressedData["
+     3, 3}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}, {0, 1, 0}, {1, 3, 
+    3}, {1, 3, 3}, {0, 1, 0}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {1, 
+    3, 3}, {1, 3, 3}, {0, 1, 0}}}, CompressedData["
 1:eJxTTMoPSmVmYGBgBGItIGYC4nBOsXbj/4oOteu2JdU7Bjg8cI13nDVR0SEm
 9+i/Ta8DHGbMBALJX/Yw/ovax9nn13yzh6mX2Sg2n+nBLzifRf8X16Wev/aH
 L2unSu4KcLBI0rVjdfhvXwOSvxrgYGIMBJv5HGD8VgV21TMmAnB+5f0ft4y7
@@ -15286,10 +15212,11 @@ FXgcjmtaTTp93tcBFFwzfwrB+W0g/10RgfPB4btRDM5PAbljmTScfxZkrI4s
 f5zxUMwhGGTehQAHkcpJJWeXiMPDPx1kLpsEPH52BFtF/E+XhPP7I7r9GQOk
 4PzT4PBVgPNB0W+srOgASx/vF61XOFuBSH/o6REAfa1Grg==
     "]], 
-   FilledCurveBox[CompressedData["
-1:eJxTTMoPymNmYGBgBGIpIAaxQYAJSjNCxZiR+OjiuNjI6olhE2MXMW4YKL0A
-m38CQw==
-    "], CompressedData["
+   FilledCurveBox[{{{0, 2, 0}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {1,
+     3, 3}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {1, 3, 3}, {0, 1, 
+    0}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {0, 
+    1, 0}, {1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {
+    1, 3, 3}}}, CompressedData["
 1:eJxTTMoPSmVmYGBgBGJzIGYC4hfFW0V/Z+s7nAEDXwcYP6REZfr/H74ONZ82
 BGRb6cH54lOvcGYs0oXzN+jlLWaco+tQAtR2Ws0Pzv8A1DbL3h/OF/jkeD7t
 LIJvfu1orskPf4cniQuvmfDrOmhbTTpdLxLgcOKw09rMOB0Hz+pmfR+jAIf/
@@ -15361,10 +15288,13 @@ GYIP9s9sJzgfJf6S/BzQ4xMAPEzXyQ==
      64.67810000000001}, {35.65309999999999, 64.67810000000001}, {
      36.92969999999999, 64.67810000000001}, {36.99999999999999, 
      62.99689999999998}, {37.012499999999996`, 62.592199999999984`}}}], 
-   FilledCurveBox[CompressedData["
-1:eJxTTMoPymNmYGBgBGI1IAaxQYAJSjNCxZiR+OjipLKRzSGGTYwbiHHbSNML
-AA3FAos=
-    "], CompressedData["
+   FilledCurveBox[{{{0, 2, 0}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {1,
+     3, 3}, {1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+    0}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {0, 
+    1, 0}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {
+    0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}, {1, 3, 
+    3}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {1, 3, 
+    3}}}, CompressedData["
 1:eJxl1F9IU1EYAPCrjmRQEmikhWSQjjAS5vrDavjJdu/N2Lw3G6VPtmIpVNiD
 PZSl1YiCehKlNbMWFgUVrUJ8CCKI1NKpkQzKiBIfqhfL/qD4UDvf+M5X24HL
 5Qf3nO9833fOXbu/pS6YoyhKVvLZnXyyk09r/4rFkUEdRnH4gOxvXXf5z7wP
@@ -15380,10 +15310,11 @@ bttUaeyTqULs05fuRwr73O29r+w3DWmKT6b94XmsYlO8dFP+eH8sqqwP3ps9
 H5ydHgq3sT8+zbta+Y49J96zmqwvmepLpvhk2h/W5wOb4qWb8sf73cf1KRHr
 /mIvNR50BUt0aZzmZc8EbiQc1/X/+/PP//EvnzRkwQ==
     "]], 
-   FilledCurveBox[CompressedData["
-1:eJxTTMoPymNmYGBgBGJpIIaxWZDYzFRgM0D5DFQ0kxZsarkTAOT/Aoc=
-    
-    "], CompressedData["
+   FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1,
+     3, 3}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+    3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 
+    3, 3}, {1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {
+    1, 3, 3}, {1, 3, 3}}}, CompressedData["
 1:eJxllGtIVEEUx9dHPiiNgkyJkKhFJFlTl7TtdYSCmezObBLYl1CLffQ00PrU
 EiSEZISJoW4Wlh+WyHJhKzNSP4RY+ShRJCxQSmoLg/KDVGLbnZnde2AdGC6/
 e++cOf//OTObjlWVOuJMJlOMPpk+Y/X5bOrqkiNE4faunAnvdQYRPlyzpTk0
@@ -15470,10 +15401,11 @@ z730hfvnDBj4wv0D48P8A+PD3AfmvvHFcD8AtjW07w==
     19.067199999999996`, 37.00470000000001}, {20.117199999999997`, 35.9672}, {
     21.3688, 35.9672}, {22.667199999999998`, 35.9672}, {23.681299999999997`, 
     37.02809999999999}, {23.681299999999997`, 38.27969999999999}}}], 
-   FilledCurveBox[CompressedData["
-1:eJxTTMoPymNmYGBgBGJpIAaxQYCJAQEYCbAZofqYiRTHpYZU9ZSooZaZuMQB
-pOcCJw==
-    "], CompressedData["
+   FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {1, 3, 3}, {0,
+     1, 0}, {1, 3, 3}, {0, 1, 0}, {0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {0, 1, 
+    0}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}, {0, 
+    1, 0}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}, {
+    1, 3, 3}, {0, 1, 0}}}, CompressedData["
 1:eJxTTMoPSmVmYGBgBGI9IGYCYuFPjufTtjo59Hi9YjFJdHHwPsFuO7vXyUEE
 LO7qwOGmWsp0yg6DD1bf6epwVQgowWYP5x9pWx5+6hGCv0EvbzHjG3uHZS88
 9P5XIvgzQcARwRefeoUzQ8oJzl8OUv/QEW7eG959BjMvOcLtg/Fh7kHnp6cB
@@ -15513,10 +15445,12 @@ hS+Mz+O/fkrqDFeHbJD4YwRfHBTuUk5w/nKQOzid4XxY+It8cjyfdtUV4m4N
 aHx7ucH54HgJR/DB4R6F4IPDMwGaHtRdHDaC4ifEzaHH6xWLiaKLg0PTo+Mz
 rN0cGEBAAsGHpTcYH+yfQ84Q8Tg3h4v58eznNjpDzC1H8H1OsNvOnorgw9Kr
 N0j8KIIPMx8AljhJuQ==
-    "]], FilledCurveBox[CompressedData["
-1:eJxTTMoPymNmYGBgBGJpIIaxWZDYzFRgM0D5DFQ0kxZsarkTAOT/Aoc=
-    
-    "], CompressedData["
+    "]], 
+   FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1,
+     3, 3}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+    3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 
+    3, 3}, {1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {
+    1, 3, 3}, {1, 3, 3}}}, CompressedData["
 1:eJxllG1IU1EYx+9UEkH7VBhZlJH04gstF8mgeu6LnUNRDvuySLAZc4tlGpUE
 pR+KqNQgLG2uksXQXhgpgVRCayRqoC6kMCqoCIOyxFoQjZG2c87dfUAfOFx+
 956X5/k//3tyq2rLnamSJJkSY29ipCTGj6zQpo4ohZKJwRqLW4Ek82e/Apll
@@ -15553,10 +15487,12 @@ nxzPp7Wi8Z8i+LD4APvzK4IPMx8AId3J3Q==
     20.117199999999997`, 11.667199999999998`}, {21.3688, 
     11.667199999999998`}, {22.667199999999998`, 11.667199999999998`}, {
     23.681299999999997`, 12.7281}, {23.681299999999997`, 
-    13.979700000000001`}}}], FilledCurveBox[CompressedData["
-1:eJxTTMoPymNmYGBgBGJZIIaxWZDYzFDMAOUzoImTyibGHGrZRS02tdwMABjq
-AoU=
-    "], CompressedData["
+    13.979700000000001`}}}], 
+   FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {1,
+     3, 3}, {1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {0, 1, 
+    0}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 
+    3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {
+    1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {1, 3, 3}}}, CompressedData["
 1:eJx1lHtIVEEUxnfVrBCyEFMoe7q76b4fqS3W/UZRQ3tpRhK9zHwVpJBCmGYY
 YbCZJqllpqaBRQVFiRZUlpnhaiX5KBISUdJKUBH/SMvu3HHvBaMD88dv7syd
 c77zzaw9khaT6CyTyeT82MEPJ36EKTKdypeGYGb0R9OmBH84ONelpdDYq4bH
@@ -15621,10 +15557,12 @@ rxPstrOvqjucAQEbD4f631YF515oOGRz/lyQbu0Bda8WGl8bzt/q0PTouIUO
 nL9e9UnzvLW6Dm949xnMzPJw+A8C+/UchD85nk+b6uGQmgYEx/QdePzXT0m9
 4eHgf3FizD9hAwd5x4/JZ3g94XyY/1D4nZ4ONaCA2KUPMX+Tp8Ob4q2iv0/r
 wcPPxBgINuui8o11HNDDHwDEC7IS
-     "]}], FilledCurveBox[CompressedData["
-1:eJxTTMoPymNmYGBgBGIpIAaxQYAJSjNCxZiR+OjiuNjI6olhE2MXMW4YKL0A
-m38CQw==
-    "], CompressedData["
+     "]}], 
+   FilledCurveBox[{{{0, 2, 0}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {1,
+     3, 3}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {1, 3, 3}, {0, 1, 
+    0}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {0, 
+    1, 0}, {1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {
+    1, 3, 3}}}, CompressedData["
 1:eJxTTMoPSmVmYGBgBGJzIGYC4j8xuUf/zfJ1YAADNQcYX2ZenObpDWoOc210
 rszyQ/BdVUuZZmkg+Gu6b2cwqPs6zFmkvPNPujqcP30Cf5XZaW04X3zqFc4M
 Jj04f73qk+Z5a/UcKiJWmJ5l9nWQAJlXoO/wYUNA9qzrPg79wSUq0/UNHP6D
@@ -16724,6 +16662,254 @@ Ywzng93HYOaAHv8AcmDiMA==
 Cell[CellGroupData[{
 
 Cell[BoxData[
+ InterpretationBox[Cell["\t", "ExampleDelimiter"],
+  $Line = 0; Null]], "ExampleDelimiter",
+ CellID->1197331767],
+
+Cell[TextData[{
+ "Some expressions are cropped because they do not fully fit into the boundig \
+box provided by ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"L", 
+     StyleBox[
+      AdjustmentBox["A",
+       BoxBaselineShift->-0.4,
+       BoxMargins->{{-0.5, -0.3}, {0, 0}}],
+      FontSize->Smaller], "T", 
+     AdjustmentBox["E",
+      BoxBaselineShift->0.5,
+      BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}],
+    SingleLetterItalics->False], TraditionalForm]]],
+ "."
+}], "ExampleText",
+ CellChangeTimes->{{3.763977795031349*^9, 3.763977862942844*^9}},
+ CellID->1633235579],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MaTeX", "[", 
+  RowBox[{"\"\<\\\\vec{t}\>\"", ",", 
+   RowBox[{"Magnification", "\[Rule]", "5"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.763976691472793*^9, 3.763976705067794*^9}, {
+   3.763976757773932*^9, 3.763976758290103*^9}, 3.7639768115056067`*^9, {
+   3.763976914143161*^9, 3.763976914272374*^9}},
+ CellLabel->"In[9]:=",
+ CellID->433479914],
+
+Cell[BoxData[
+ GraphicsBox[
+  {Thickness[0.1607717041800643], 
+   FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {0,
+     1, 0}, {1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+    3}, {1, 3, 3}, {1, 3, 3}}}, CompressedData["
+1:eJxTTMoPSmVmYGBgBGJ1IGYC4rNngEBHzuH4rh29bBt0HWD81DQgeKbroP5J
+5eWsk7IO+lorhS+w6DmEvL38cUajrMOft68PWCrrOdTc/3HLWFvGoYHlaL/h
+dD2HL/s+bk2/Ju2wQS9vMaONvsMD13jHWRulHVp4/ddPadV3ABl/pkfaQUdR
+/kvONn2HHcFWEf/TpR3+g4G+Q4xqhMy5PVJwvoExEBQj+GD7H0o6uO+vlbV4
+juC/KN4q+rsbwc/I/9B6MkQf6j4pB/GpVzgzDuk5mIDME5Z2eJ6l/W26rJ7D
+TBCQZIPzwfbXsMD59iWOtafvMGHw40OC1Bes1IXzIf7VdQh44nnJdDILnA8z
+H8bvj+j2ZwyQgvMh/pV02O7Q9Oj4Dx2I+p/i0PBF8NerPmmed1YbzpeZF6d5
+eoK2QxoYSDjMAIlHajsEg/2P4MvvWrAv1U8SzgcHY72kw4nDTmsz67QdWhTY
+Vc9ckXQ4fzXsjf5ubYc5YPOlHPxvSdckFuk47O/e12TiLANNDzoQ98bIOvic
+YLedbaoLjW9Zh5pPGwKyoxDpBxzPOQg+LH0BANZ4I/A=
+    "]], 
+   FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1,
+     3, 3}, {0, 1, 0}, {0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {0, 1, 
+    0}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {0, 1, 0}, {1, 3, 3}, {1, 
+    3, 3}, {0, 1, 0}, {0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+    3}}}, CompressedData["
+1:eJxTTMoPSmVmYGBgBGJLIGYC4rVCOnzpdUIOIpWTSs6yyDjA+PK7FuxL9ZOB
+0kIOBsZAUCzjIAxWh8nXh/LftOV2G+0WhMsf7N7XZLJY0CHk7eWPMxxlHA6g
+8Svv/7hl3C3ooP5J5eUsTRmHVgV21TMmgg7paSAgDeULQMxhlnRoEa9lzWTj
+cTgDAmtEHRhAoIENzofYxwzn90d0+zMWMEP8dU8Mzq8B2ftaHCcfol7CYbvX
+Bos5O5kdHrjGO84qlHTgceTzmqHJ7fAkceE1E30VB/c1R5cz/BCE8/+DwH0h
+OB8cHtHCGPwp7a1Rl+cg+GB/PFCB2COI4EerRsickxGC87/v+7g1/Ro3nG9f
+4lh7Oobf4fzVsDf60RoQ+/fzO0jPi9M8vQHBnwyybw+C77G/VtbiOYKfEBKk
+vsBTExqefBDxek2HpbeWPzZ05oXzIfI8cH7B8pIN//y5HNarPmmel6sJCfce
+TofN5j8OpazScAh44nnJ9DIr3L01L5p+Tdv50x7G3yC9TffUm69wvgko3Rh/
+weC/Kt4q+jsbwYeFp9dW/+PJbV/h/HknJi/JVvsJ5xeC3MfPCg9/Fv1fXJd6
+/trvCLaK+H9c2sEDpJ/tj30MOJylHHKmJhRaFP+2h6RTSTgflv5gfHDyPCbm
+ILNRbD7TAwaHmSCwU8ThBu9tsVQzNjj/Kzi++OF8WP4Cp7MN0g7o+Q8AYpV5
+jg==
+    "]]},
+  AspectRatio->Automatic,
+  BaselinePosition->Scaled[0.3113383057354288],
+  ImageSize->{31.09843088418431, 85.11905354919053},
+  PlotRange->{{0., 6.22}, {0., 17.02}}]], "Output",
+ CellChangeTimes->{3.763977891145274*^9},
+ CellLabel->"Out[9]=",
+ CellID->548563308]
+}, Open  ]],
+
+Cell[TextData[{
+ "The most practical workaround is to add more space directly within ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"L", 
+     StyleBox[
+      AdjustmentBox["A",
+       BoxBaselineShift->-0.4,
+       BoxMargins->{{-0.5, -0.3}, {0, 0}}],
+      FontSize->Smaller], "T", 
+     AdjustmentBox["E",
+      BoxBaselineShift->0.5,
+      BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}],
+    SingleLetterItalics->False], TraditionalForm]]],
+ "."
+}], "ExampleText",
+ CellChangeTimes->{{3.7639778960306787`*^9, 3.763977905787509*^9}, {
+  3.7639788150670233`*^9, 3.7639788165628147`*^9}},
+ CellID->556220985],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MaTeX", "[", 
+  RowBox[{"\"\<\\\\vec{t}\\\\;\>\"", ",", 
+   RowBox[{"Magnification", "\[Rule]", "5"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.763977914758354*^9, 3.76397791651668*^9}},
+ CellLabel->"In[10]:=",
+ CellID->1213050437],
+
+Cell[BoxData[
+ GraphicsBox[
+  {Thickness[0.10482180293501049`], 
+   FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {0,
+     1, 0}, {1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+    3}, {1, 3, 3}, {1, 3, 3}}}, CompressedData["
+1:eJxTTMoPSmVmYGBgBGJ1IGYC4rNngEBHzuH4rh29bBt0HWD81DQgeKbroP5J
+5eWsk7IO+lorhS+w6DmEvL38cUajrMOft68PWCrrOdTc/3HLWFvGoYHlaL/h
+dD2HL/s+bk2/Ju2wQS9vMaONvsMD13jHWRulHVp4/ddPadV3ABl/pkfaQUdR
+/kvONn2HHcFWEf/TpR3+g4G+Q4xqhMy5PVJwvoExEBQj+GD7H0o6uO+vlbV4
+juC/KN4q+rsbwc/I/9B6MkQf6j4pB/GpVzgzDuk5mIDME5Z2eJ6l/W26rJ7D
+TBCQZIPzwfbXsMD59iWOtafvMGHw40OC1Bes1IXzIf7VdQh44nnJdDILnA8z
+H8bvj+j2ZwyQgvMh/pV02O7Q9Oj4Dx2I+p/i0PBF8NerPmmed1YbzpeZF6d5
+eoK2QxoYSDjMAIlHajsEg/2P4MvvWrAv1U8SzgcHY72kw4nDTmsz67QdWhTY
+Vc9ckXQ4fzXsjf5ubYc5YPOlHPxvSdckFuk47O/e12TiLANNDzoQ98bIOvic
+YLedbaoLjW9Zh5pPGwKyoxDpBxzPOQg+LH0BANZ4I/A=
+    "]], 
+   FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1,
+     3, 3}, {0, 1, 0}, {0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {0, 1, 
+    0}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {0, 1, 0}, {1, 3, 3}, {1, 
+    3, 3}, {0, 1, 0}, {0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+    3}}}, CompressedData["
+1:eJxTTMoPSmVmYGBgBGJLIGYC4rVCOnzpdUIOIpWTSs6yyDjA+PK7FuxL9ZOB
+0kIOBsZAUCzjIAxWh8nXh/LftOV2G+0WhMsf7N7XZLJY0CHk7eWPMxxlHA6g
+8Svv/7hl3C3ooP5J5eUsTRmHVgV21TMmgg7paSAgDeULQMxhlnRoEa9lzWTj
+cTgDAmtEHRhAoIENzofYxwzn90d0+zMWMEP8dU8Mzq8B2ftaHCcfol7CYbvX
+Bos5O5kdHrjGO84qlHTgceTzmqHJ7fAkceE1E30VB/c1R5cz/BCE8/+DwH0h
+OB8cHtHCGPwp7a1Rl+cg+GB/PFCB2COI4EerRsickxGC87/v+7g1/Ro3nG9f
+4lh7Oobf4fzVsDf60RoQ+/fzO0jPi9M8vQHBnwyybw+C77G/VtbiOYKfEBKk
+vsBTExqefBDxek2HpbeWPzZ05oXzIfI8cH7B8pIN//y5HNarPmmel6sJCfce
+TofN5j8OpazScAh44nnJ9DIr3L01L5p+Tdv50x7G3yC9TffUm69wvgko3Rh/
+weC/Kt4q+jsbwYeFp9dW/+PJbV/h/HknJi/JVvsJ5xeC3MfPCg9/Fv1fXJd6
+/trvCLaK+H9c2sEDpJ/tj30MOJylHHKmJhRaFP+2h6RTSTgflv5gfHDyPCbm
+ILNRbD7TAwaHmSCwU8ThBu9tsVQzNjj/Kzi++OF8WP4Cp7MN0g7o+Q8AYpV5
+jg==
+    "]]},
+  AspectRatio->Automatic,
+  BaselinePosition->Scaled[0.3113383057354288],
+  ImageSize->{47.70261519302615, 85.11905354919053},
+  PlotRange->{{0., 9.54}, {0., 17.02}}]], "Output",
+ CellChangeTimes->{3.763977917379859*^9},
+ CellLabel->"Out[10]=",
+ CellID->501354232]
+}, Open  ]],
+
+Cell[TextData[{
+ "An alternative workaround is to manually add padding to the output. This is \
+simple to do but it will effectively decrease the output size. To avoid that \
+both the ",
+ ButtonBox["ImageSize",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/ImageSize"],
+ " and the ",
+ ButtonBox["PlotRange",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/PlotRange"],
+ " option values would need to be scaled proportionally."
+}], "ExampleText",
+ CellChangeTimes->{{3.763978806041477*^9, 3.76397885339165*^9}, {
+  3.763979818978752*^9, 3.763979921296455*^9}},
+ CellID->1422852660],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Show", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"MaTeX", "[", 
+    RowBox[{"\"\<\\\\vec{t}\>\"", ",", 
+     RowBox[{"Magnification", "\[Rule]", "5"}]}], "]"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"PlotRangePadding", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"0", ",", "2"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "0"}], "}"}]}], "}"}]}]}], "\[IndentingNewLine]", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.763976922912814*^9, 3.7639769286257*^9}, {
+  3.7639769661458807`*^9, 3.763976986032507*^9}, {3.763977923654257*^9, 
+  3.7639779380565977`*^9}},
+ CellLabel->"In[11]:=",
+ CellID->1682230043],
+
+Cell[BoxData[
+ GraphicsBox[
+  {Thickness[0.1607717041800643], 
+   FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {0,
+     1, 0}, {1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+    3}, {1, 3, 3}, {1, 3, 3}}}, CompressedData["
+1:eJxTTMoPSmVmYGBgBGJ1IGYC4rNngEBHzuH4rh29bBt0HWD81DQgeKbroP5J
+5eWsk7IO+lorhS+w6DmEvL38cUajrMOft68PWCrrOdTc/3HLWFvGoYHlaL/h
+dD2HL/s+bk2/Ju2wQS9vMaONvsMD13jHWRulHVp4/ddPadV3ABl/pkfaQUdR
+/kvONn2HHcFWEf/TpR3+g4G+Q4xqhMy5PVJwvoExEBQj+GD7H0o6uO+vlbV4
+juC/KN4q+rsbwc/I/9B6MkQf6j4pB/GpVzgzDuk5mIDME5Z2eJ6l/W26rJ7D
+TBCQZIPzwfbXsMD59iWOtafvMGHw40OC1Bes1IXzIf7VdQh44nnJdDILnA8z
+H8bvj+j2ZwyQgvMh/pV02O7Q9Oj4Dx2I+p/i0PBF8NerPmmed1YbzpeZF6d5
+eoK2QxoYSDjMAIlHajsEg/2P4MvvWrAv1U8SzgcHY72kw4nDTmsz67QdWhTY
+Vc9ckXQ4fzXsjf5ubYc5YPOlHPxvSdckFuk47O/e12TiLANNDzoQ98bIOvic
+YLedbaoLjW9Zh5pPGwKyoxDpBxzPOQg+LH0BANZ4I/A=
+    "]], 
+   FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1,
+     3, 3}, {0, 1, 0}, {0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {0, 1, 
+    0}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {0, 1, 0}, {0, 1, 0}, {1, 3, 3}, {1, 
+    3, 3}, {0, 1, 0}, {0, 1, 0}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+    3}}}, CompressedData["
+1:eJxTTMoPSmVmYGBgBGJLIGYC4rVCOnzpdUIOIpWTSs6yyDjA+PK7FuxL9ZOB
+0kIOBsZAUCzjIAxWh8nXh/LftOV2G+0WhMsf7N7XZLJY0CHk7eWPMxxlHA6g
+8Svv/7hl3C3ooP5J5eUsTRmHVgV21TMmgg7paSAgDeULQMxhlnRoEa9lzWTj
+cTgDAmtEHRhAoIENzofYxwzn90d0+zMWMEP8dU8Mzq8B2ftaHCcfol7CYbvX
+Bos5O5kdHrjGO84qlHTgceTzmqHJ7fAkceE1E30VB/c1R5cz/BCE8/+DwH0h
+OB8cHtHCGPwp7a1Rl+cg+GB/PFCB2COI4EerRsickxGC87/v+7g1/Ro3nG9f
+4lh7Oobf4fzVsDf60RoQ+/fzO0jPi9M8vQHBnwyybw+C77G/VtbiOYKfEBKk
+vsBTExqefBDxek2HpbeWPzZ05oXzIfI8cH7B8pIN//y5HNarPmmel6sJCfce
+TofN5j8OpazScAh44nnJ9DIr3L01L5p+Tdv50x7G3yC9TffUm69wvgko3Rh/
+weC/Kt4q+jsbwYeFp9dW/+PJbV/h/HknJi/JVvsJ5xeC3MfPCg9/Fv1fXJd6
+/trvCLaK+H9c2sEDpJ/tj30MOJylHHKmJhRaFP+2h6RTSTgflv5gfHDyPCbm
+ILNRbD7TAwaHmSCwU8ThBu9tsVQzNjj/Kzi++OF8WP4Cp7MN0g7o+Q8AYpV5
+jg==
+    "]]},
+  AspectRatio->Automatic,
+  BaselinePosition->Scaled[0.3113383057354288],
+  ImageSize->{31.09843088418431, 85.11905354919053},
+  PlotRange->{{0., 6.22}, {0., 17.02}},
+  PlotRangePadding->{{0, 2}, {0, 0}}]], "Output",
+ CellChangeTimes->{3.7639779510689087`*^9},
+ CellLabel->"Out[11]=",
+ CellID->1505095346]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
  InterpretationBox[Cell["\t", "ExampleDelimiter",
    ExpressionUUID -> "1d2f73c0-bd0d-4b7d-913a-9cb4ff2952f6"],
   $Line = 0; Null]], "ExampleDelimiter",
@@ -17661,170 +17847,170 @@ HJkkP0yy7G/kdoQTuDbpz5soTv766v5T0fwz4N7/PpSQBeB++X2F4kkQf3h7
    RowBox[{"PlotRange", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
-      RowBox[{"-", "2"}], ",", "2.5"}], "}"}]}]}], "\[IndentingNewLine]", 
+      RowBox[{"-", "2"}], ",", "3"}], "}"}]}]}], "\[IndentingNewLine]", 
   "]"}]], "Input",
  CellChangeTimes->{{3.731061541107416*^9, 3.7310616015372057`*^9}, {
    3.731061661387821*^9, 3.7310617785657682`*^9}, {3.731061973243844*^9, 
    3.7310619787474823`*^9}, {3.731062614864936*^9, 3.7310627524158363`*^9}, 
-   3.73106281180199*^9, 3.731062969419636*^9},
- CellLabel->"In[84]:=",
+   3.73106281180199*^9, 3.731062969419636*^9, 3.7639641921342983`*^9},
+ CellLabel->"In[10]:=",
  CellID->246856850,
  ExpressionUUID -> "93671ccd-5f70-4536-81ec-0c33301100ed"],
 
 Cell[BoxData[
  GraphicsBox[
   TagBox[RasterBox[CompressedData["
-1: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
-
-    "], {{0, 117}, {180, 0}}, {0, 255},
+1:eJztnQlYk3eex+fZ3Wd2dqezM7Ptzm73md2ZTqvTdtppx3baqeNYR+t9bKu1
+ttWqiL4eSBSEAAoKGuTSgopFlEOjEBS5Ivd9Q0Ag4QgQIJCEhCQkhJAAgRzs
+780LGJFgIAkgvJ8H2/Am7z//vPm+v+N//HjtwIntyD/86Ec/OvUT+M92G5e/
+OzrauO34J/hltZvToQP/CA9Owr9k+Ic+HsHBsQQIgsx1F3DmFhE1gICgkIoF
+KsMn9AdxeSxeBFkkBCFL4UH+FYQQpzR4ChfGIkcpYrMEqCIExSEIEdcGzgRU
+qVeIoAQPKtPwKK6NRY9m9P9yBgEhVBkYDmSMOekWzpzDohCQEBr6SF5FQIiM
+p7UxV73CmRcoWSGoP0FTlbB8tuEzuDZwAKVSqdJMPIhrA8cYeLCBYwxcGDjG
+mFttVFRU9PT0PHtcIBDU1dXNfn9wDLGqNhobGwMDA409y+fzY2JijD0bEREh
+l8ut0y8ck7BqvNHf3w/yMPYsiUQaHh429iwI4/Lly9bpF45JWFwYTU1NVVVV
+OTk5KpUqJSWlpKQEDiYnJ5eWlsJTmZmZg4ODcESn0zk6Oo6fxePx8vLyIJMq
+Ly8Hh4IdPHHihGX7hjMtLKsNsVgcFhYGD2JjY6VSKcQMR44cGdEL5tNPP5VI
+JAwG48yZM3CEy+X6+vpiZwmFQpATk8ncv39/TU3NzZs3seMODg6YkHDmBMtq
+A5zIqlWrnJ2dwW5otVqwAJg2QBU7d+4c0cvAxsYGHoAGQkJCsLNEItGI3raM
+H8Hw9PSEmMSC3cOZFpaNN3r0FBUVgRLodPq4NsCG7NmzZ0SvDTAOI/owdUI4
+AYoC8wK+BgSGHXF1dZ00i8GZHSxrNxoaGjCfUlxcDJEDRBFY++BrvvnmmxF9
+brJ37154AM6CSCRiZwUFBcELVq5cCaYGThzXhmXjDdXggLy3RywS8Pk8AZ/L
+47D5XLZUxOuTiRVyiWpAodNqLfh2CwCLxxuFhYXw/ZaVlcGvcXFxIBVQSGJi
+4q1bt1gsVnx8PBxpaWkZ0ZsF7KyKigo4hc1mgyeCF2MHwYC4u7tbpFfq4WG5
+vLeTx21raWI1M9vaWC0sZkMdvbG2urWptr2lsaOtCaQiEgkhGNbiChljDse+
+IGeBENTYsxkZGdXV1ea/C1ihstJSV1fnTRvWrP1sxYG9X0WEBPqSzh49vN/m
+u527v9q2Y9u6rZvWbli3etvWzVevBra1s6fIrBcgGkHc6HpRhFzMNXxmbudT
+yGTypJmITCabYljMRDQada+sJzr63ooVf/nZz/7l1VdffuedJb/93a+3bvps
+/dqVv/jFz3/8zz9+6ac/+c+XX/r3X7z0by/99JWf/+uvX33F5uD+7JwciVS6
+SAyIIMsDIVCkmhE5i4ogJLbBbOycz6dMqo2BgQHzW25iNUVGhNkdO7j8rx8u
+XfrasmV/+Ojj95e88drSJb/bvWvH228tAUH88pcvvf6b//jtb/7rV796+X9+
+9fLr//3K/776ygcfvHfRz6e9owOcEbg283syn5GyiotZUvSRqgpBCItkbU9c
+wkMnx1Oujic9XZ2dCHbIge9OOdiFhgQ7OBL2gDi2b3vzzTeWLnntT8veXb78
+zx98+P5HHy1bs2r51o2rt29bf+Tgdw/uhTUz6WIhX9knXwReRkQhIoQw2rjZ
+0Gk1C1gb+YW59nbH9u3ebY8g7s4u3mfP+nidPe/hcth2386vdrgSic4O9qeJ
+J4L8Pe+EXk6ghGWnxdHyHtWWZrCqcttrS1pripmPC2sripiMCh63XdHXB05q
+rj+TVVAJaCQE8SDTDFf3DHByx9eLalSyOeucdSgpLfhq5xdff/n5ccT2OHLY
+4dhxooPjGaKzq5Ozg4PzOY9zN64GxlFu56Ql1JRncxsrZPzGfknbgKRF2dXU
+x2uQtNcLO5gcFoNJp9VW0VhNDd3dYpVKtcC8jIqbhUahNDQK1WieqEOtEMDx
+zugVnLA3OBFvd+cQBjqLdLoFEoMxmczTp90OHtjrdsrOnehAJNifPHb0pJ2d
+00kHFyeip/vp60EBCQ/u5mRQk+IoMeTIR4mx1ZUFPDZDAsLgNPTwmnu62N18
+trCzXcjvaG9vLasob2axQB5z/cksiCorADHAY0K8AWIY4OaLs49zIt4CkXRS
+/iaruqLu67RehyAF4HA4Q0ND1nuLETTZkcbFx7u6OPldcLsWcC7Q96yPp5vX
+aSc3Jwdnh5OIrc3+PXs9Pc9HUx6ER0R6eXm7u3v5+F6+/yCWVlpEryqroJWU
+08qqqysZjJqKiooHcQ+J7mdvRZKFIpHh/bWAMYw3NINSeV24IG4jakbC3hCl
+7lO2PtJpLH+bgCoePHjQ29tr8ZYNgW8wJzeXQDjmfBLxv0AMvXIh/PrF0Cuk
+q/6eF88RP1u9cunrv920ad314B+SUjL8vr9+2N7V7qQ7yfd65N3YjJyC6JjY
+U25uX+/es2HjxhUrV771zlsfLv/raS/vRlZL7+JYWDLp+IZKTJcWneHeeR8U
+wiN/IC31GpI0WPBNZ0cbQF1dLenCuS93bN28Yc2uHVscj9tcIrmGXvG+6Hlq
+9apPdu/5Zv2Gdfv37Ym6R87Pz0uiJkVFRcc+TKLcT6RQYovyc2+H3zx4YP/q
+NX//5K+fbP38c2dXFx9/34bGhh7ZopjlmSJP0aoHFKx4YfI3mBkRJGzra7ir
+VVnglpk1bfT397e0sLKysiIiItzcXL77dteX27ccPbTbkWD79a7tnp5eTk5O
+W7ZsCPAjJSXFZWemZqUlZ2cklxTkFORmF+XBw8TgoEte59wvXfK5TQ6Lirp9
+7XpQXUODWCK1ds/nA6bksMO97bKKgM7o5ahIIt/uznUY5JeaE67PmjbGAf/C
+5/PT0zO8znt+uf3zNav/tmXzeo+z5/z8/DdsWGdvdygmKjI58WHgpYunXR0j
+I26mpjzy9fY6cnDvti0bHR2OhYQEXr3qF3jV/2703XYuR65QzFrP5xDTxzd0
+Ws0AJ0ecdZQT/iYassas6q2+BpnODN509rUxTpdQ+OjRoxMnTq5du8bx1Clf
+f//169d+vm3TzRtXM9KoN28EI4cP+vhefBifiBw68JePPnj33T9s3rTu6693
+fPvtrsCgy7V1dYOqwQWWxhpjBvMpmgGJnHGLH7te72uWiNJs+tmpOs00ko45
+1MaIPktis9nBwdeOE+zs7e0//njZe3988+gRm6CgS6E3rjk4nCQQjvv7+SGI
+7bp1a9es+fvmzZsOHTwYGhrS2tqiVi/M4a9JMWdcVCWslhS6cW//EQ1Z7/65
+p4w0JG0y5cS51QaGUCi8ceMGcth27dpVK1Z8vGnj+l27du7e/e0XX/wfYLN/
+73G7Yy4uLgEB/jExlLKyMrFYvEhS13HMHzPXDvcrmmO7qF9hIWtX4hd9jdHa
+ob4pTpkP2gC/AB1oa2ttQmlsaGig0+mVehgMRmNjI4fD6e7uhmh2kXiQZ7Hg
+HP2wrK2H5se79zEohBv5Tnf+qUFB+aQXdj5o41nAXwzqGV4E06+mYPG5Np1W
+3d+RJc5AOOG/B5Hw76/urflBrRQavmZ+agNnAtabh9X0i+X0G/wHn6G+Jnyp
+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
+/h8t9CEv
+    "], {{0, 112}, {180, 0}}, {0, 255},
     ColorFunction->RGBColor],
    BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
    Selectable->False],
   DefaultBaseStyle->"ImageGraphics",
   ImageSize->Automatic,
-  ImageSizeRaw->{180, 117},
-  PlotRange->{{0, 180}, {0, 117}}]], "Output",
+  ImageSizeRaw->{180, 112},
+  PlotRange->{{0, 180}, {0, 112}}]], "Output",
  CellChangeTimes->{{3.7310615768244677`*^9, 3.731061602204608*^9}, {
    3.731061662412435*^9, 3.7310617789406843`*^9}, {3.731061974180163*^9, 
    3.731061979082266*^9}, {3.7310626345979433`*^9, 3.731062647514029*^9}, {
    3.731062679177885*^9, 3.731062752889264*^9}, 3.7310628136752157`*^9, 
-   3.731062971850458*^9},
- ImageSize->{184, 117},
+   3.731062971850458*^9, {3.763964189946827*^9, 3.763964192932156*^9}},
+ ImageSize->{184, 112},
  ImageMargins->{{0, 0}, {0, 0}},
  ImageRegion->{{0, 1}, {0, 1}},
- CellLabel->"Out[84]=",
- CellID->964378980,
- ExpressionUUID -> "0e9c2a5f-d4b1-4e79-a10a-41accd8b290b"]
+ CellLabel->"Out[10]=",
+ CellID->1413567955,
+ ExpressionUUID -> "7b5f6398-89b7-49db-8f4a-502cea5023c9"]
 }, Open  ]],
 
 Cell[TextData[{
@@ -18672,6 +18858,7 @@ HJkkP0yy7G/kdoQTuDbpz5soTv766v5T0fwz4N7/PpSQBeB++X2F4kkQf3h7
           Association[
            "Source" -> "http://www.faqs.org/photo-dict/phrase/211/car.html", 
             "URL" -> 
+            
             "http://www.wolframcdn.com/waimage/hset051/062/\
 0627c9d924f1afb977101cfce805796e_v001s.jpg"]],
          Selectable->False],
@@ -18685,169 +18872,163 @@ HJkkP0yy7G/kdoQTuDbpz5soTv766v5T0fwz4N7/PpSQBeB++X2F4kkQf3h7
    RowBox[{"PlotRange", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
-      RowBox[{"-", "2"}], ",", "2.5"}], "}"}]}]}], "\[IndentingNewLine]", 
+      RowBox[{"-", "2"}], ",", "3"}], "}"}]}]}], "\[IndentingNewLine]", 
   "]"}]], "Input",
  CellChangeTimes->{{3.731061541107416*^9, 3.7310616015372057`*^9}, {
    3.731061661387821*^9, 3.7310617785657682`*^9}, {3.731061973243844*^9, 
    3.7310619787474823`*^9}, {3.731062614864936*^9, 3.7310627524158363`*^9}, 
    3.73106281180199*^9, 3.731062969419636*^9, {3.731063086425074*^9, 
-   3.731063087159525*^9}},
- CellLabel->"In[86]:=",
+   3.731063087159525*^9}, 3.7639641983893433`*^9},
+ CellLabel->"In[11]:=",
  CellID->1880251575,
  ExpressionUUID -> "3b451a44-2596-4ec5-9480-8c0f3673e4d8"],
 
 Cell[BoxData[
  GraphicsBox[
   TagBox[RasterBox[CompressedData["
-1:eJztXQlYU1e+d9rO+2y/znSm1c6b107n9XVqta211ta2trXua2nR6rhUUazE
-laAgAdSoCMjqghtlBMEgsm9hE8ISIQhBtrAECBhIQkJCCCEQIJAE3j+5kEYI
-WxIQ5f6+iPeee+65597zu//lLP/77j6rzZgXZsyYYTMT/mw2t1tubW3u8PNL
-sLPC4YTFvhdhwwr+JcA/1XbfeIDBYMaVH8X0AUaNp10LFaKionp6esZ1Smho
-aG9v7wTVB8UUIcbly5fv3Lkz3rOys7OPHj06EfVB0WcMbjCZzNraWkNKIBKJ
-hw8f1u/c69eve3h4GHJ1FMPBQG6IxeJXXnll5syZzc3N+pXQ2tr6ySeftLe3
-63c66JRvvvmmrKxMv9NR9PUJiJ5YtWXhTOHJtA8YaG90dXXNmzfvgw8+6Ojo
-0K8EGxsbA1/8+Pj41atXG1LCdAaP5IzBEESwQfbGYKOkWoeerr3R1tY2a9Ys
-oVBoSCFKpfLtt98uLCw0Vq2mFaQCJoOnYgSP4oPBTSFu+Pn5rVy50vBywFyx
-tLQ0vJzpClmSNw6YgCfStVMxAxj5ZDA44+LioqOjeTwevOwNDQ1IemdnJ4vF
-qqio0OSEtxjkQGVlJWKBgNIpKiqi0+mQPrTYTZs2ubi4DHdRcGlpNFpjYyOy
-K5fLoSjNrjbA/50zZ87It4BiGCj6/5fQsBhsoZbgGJUV0EAWFhbwgtfV1QFD
-bty4AaZjYGAgHEpJSfn888//8Ic/vP/++5r8O3fufOutt2bMmBEUFARN5unp
-ef/+fVtbW8hTXV09qPDXX389KSlJ53WzsrLweDy4ML/88suFCxeAjWCZwK6p
-qam7u/ugzFAxuKJAIBjLs0ChDUYIFuNDVW1JCrEYHG083Lhy5Qq0kXYK7CLc
-QLB27VptbgCAA9BSIOeTk5M1iV988QXk1M7G5/MhG4PB0FFhBsPNzQ3Z5nA4
-L7zwwvbt22UyWX19PZyyZs2aQflBKL300ksZGRkj3wsKHZAyfFT6ROWq+JGZ
-2kdG5cauXbsGdT5QqVRtboCgGMQNkUgELbh8+XLtRHNz8zfeeEM7JS8vD7Lp
-9F7BeOju7ka2a2trIRvInz61ELt27RpIsKGngDkaEBAw8r2gGA5SqVSmGJw4
-qrFx9epVaJo9e/akpaVJJJI+dQOJxWJNhuG4YW9vr5146NChV155RTuFRCJB
-Np2d3mDYaLbv3r0L2crLy0e+u7lz53p5eY2cB8W4MKrcUCgUZmZmM9QA02LR
-okXaDdc3PDcGGZnAjZdfflk7JT4+/sUXXxy1hmDtvPnmm6Nmmz9//lA7BIUh
-GKMPC34HCBDQL9BM0O737t3THNKbG+np6ZANvI+RLw0OyLZt20atIdQB7OTR
-7wTFmDEqN4AS2rsdHR1gUi5YsECTojc3SktLIdvIHV/gMkMeHx8fTUpNTY3O
-nLNnz9ZmLArDMaq9Ae/sIN+zqKgIGkKzqzc3wAqFbMXFxYOuCE4H+KTINoFA
-gDw0Gk1z1MrKamglwXAFfYd2jRoXo8oN4MYgPwVcxY0bN2p2d+zY8d5772ln
-aG5uhgZ1cnLSTjx48ODMmTMHFQ76Ijg4eFDikSNH4PSqqirY3rp1q3bHRVJS
-ElgpQysJ5PnjH/+o95gOCp0YCzd++umnixcvIr4JtML69evB/IDtkpISSP/b
-3/4G7eLs7Pzo0SNIDAoKAusRGvSjjz7y9vZmsVh0Ov3y5cvvvPMOJNra2mqb
-svv37x8qB8CqMTExQdzVzMzMDRs2+Pr6wm5ISAik6KzkrVu3BrnMKAzHqNwA
-1xUR8uAhgpoAj1LTI1FXV0cmk7PUgEZEZnFQKJQHDx5kZ2dDIkgYMCc4HA4c
-hV1IhEMIhRCkpqbOmzdv0BW7uroCAgLgcojfCvoCNIubm1t+fv5wlQTxAjwc
-+UZkXZ2S1pYmAY/L5fC4bA6LyWUzRQJOm7ipXdIs62zv1dWrP53xdOcE9vb2
-vvvuu0NNjnFBIpGA/dPa2jpchs7OTjaLVVJUkPswK5+aU1FeQisqyHuYlZud
-8ejhg8K87AJqTlEBtby8lC/gj+o3TR889TmBfn5++/btM6QET09POzs7nYeA
-eyC4EuLjDhywWLni2xXLvt6x1eTaJZczp07s3rlli+l6042rN6z+bvWKb77/
-bsma1csdz50pKi6SSqXoNNS+KcANUFjff/892CT6nQ4+0aJFi6A1hx6Sybq4
-DRx///8sWbL4tddeffsfb3788Zx//O9ba1Z+t2Htilmz/vpfM//rT6++/N+z
-/zzr9T/95bVXZ//l1bf/Pnvb9q1hEWF19fXjndj8/OGpcwNQX18Pjo9mAGVc
-MDMzy8nJ0XmIVkb7zeemleWBVau++3TBh199tXDpd19+uXjRZ5/O37Vzy/z5
-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
-sQIZb6woGShQoECBAgUKFChQDML/A0mdZN4=
+1:eJztXQtYU1e27rT97viNbefrrbVz26lab1sf01qdVtvrqLU+p74f1VrfD4iA
+EgElYAUFRBBFEBUR5SERAXkIBHloeEQIQsBIeQWIECCEQCCBQAIESOCu5EAm
+hIRAEgTJ+T9LT3bO2Wef7P+s9a999l7ns8MntmHefOONN05Ogj/bDtn8ZGV1
+6PT2t+HDitOnjA+/BRsn4L9H8J90u3ckwGAwI9ofheEA5QYKdcDIMNatQDEe
+gRIDhTqME24IhUJbW1uJRDKio+zs7Hg83ig1CcV44EZnZ+cvv/xSXl4+0gPZ
+bPaWLVuAV6PRKhS6643r16/7+fnpUsOJEyfCwsK0OzYlJWXv3r26nB2FOuhI
+DLjZ35ChqalJuxpyc3OXL1+uSxu2bdsWFxenSw0oVEJHboBCsLS0BL+vdQ0r
+VqxITEzUpQ0UCmXu3Lk9PT26VGLA4BAuY2Xew5nMFil+MbYxbFFR0SeffDJS
+CToYwI3Hjx/rpUmGBjbRGYPBg6Bnk7ww2ChF6Ta2WvT06dNGRka614PD4Q4e
+PKh7PQYIIYdBZ0sZwSb7YHAj5kZjY+ONGze8vLzc3d2Dg4PJZDKVSoXyysrK
+kJAQKPfx8ZHvHB8fD9LU1dW1uLgYPiYkJMC2m5sbjUYbXPP8+fODgoLUnTc9
+Pf3ChQuBgYEQyMDHFy9ewMeAgICOjg6lPQkEwvTp0zVeCAo1ECV44YAJ9oQB
+faSRGxUVFT///DOHw0E+Qo+DF4iIiIDt/Px8R0fHyZMnQxfL9/f19YW4EtRp
+ZGQkfAsdCoXJycmTJk169OiRYs3QxW+++Sayw2AAnYBX4G48PDw2btwIvX/n
+zp329vbVq1cPNhFVVVVwxtra2mH9EigGQNz3/5Z8LAZLVTAcmH6oO9LMzAyM
+hmIJBK0INxCsW7dOkRu9/cELlNfV1ckLly1btnjxYsXdgFqwm8rBKzBHqamp
+yDbS7wgfCgsLYdvKykr58sTit956Ky0tTd1VoFAHeigW40ORbrVQsRhc/kBu
+DH3sjh071q5dKxL9R8Hm5eUpRhabN29W4gaTyYQePHTokGLhnj17Pv74Y8WS
+pKQk6FCVJzUxMZFvg2eB2qKjo5GPQBWVIcnUqVPxePzQ14JCBYR0H6k/kYYq
+fiSG4jcauQHGHLpm2rRpFhYWcDsPttvquAFOQbFw//79H374oWIJOJ133nln
+8Bmh68GRyT+6uLgAhfh8/tDtBL2hZN9QDB9CoVAkVi4cjhYF/Tlz5kxkjAsU
+wtGjR7u6uuTfquPG1atXFQuBG1OmTFEsCQ8PV8kNJYDVWrhwocbdZsyYoSiJ
+UegOjeMbIP+QDQaDERYWBi4G+t3BwUG+g9bcAKmpzqfI0d3dDfyBEFXjhXz0
+0UfAYY27oRg+NNoNY2NjpZJTp07NnTtX/lFrbgyhReXIysqCfSAulpfIhYci
+wA29/fbbRCJx6GtBMSJo5MaGDRuys7MVS3Jzc2fPni3/qDU3BALBn/70J1C2
+Smd8+fKll5cXWAzYPnv2LFTV0NCAfAVhr0obwmKxYDf4O/S1oBgRNPoU4Maq
+VasUh7VB8tna2so/rlmzZtasWYqHlJWVQU+BhlQsBGf03nvvKYUY8+bNGzz2
+tXz5clA1IHpBIMFRsC23LefPnwfiDW4kxE1KQRAK3aHRbmzZssXf39/S0hIi
+RLDtTk5OWCwWCWlBfqxfv/6DDz54//33gSGItT9w4MCCBQugBEKbrVu3FhUV
+QaSzceNGCFKgcOnSpYpaBWKfwQ0AUv36669xcXFWVlZcLtfZ2fnIkSNRUVHg
+y8BkqWyknZ3d4cOHh76QjvY2fjOXU8+urWWya5nMKgabyWhqZLU2NwhbeKIO
+YS/6tG4gNHJDfs+CNQD739raqsezv3jx4tNPPx08XlFfX0+j0eTGisPhFBcX
+i8WDoqx+ABuHEBtdnZ18fjOzuqqcXkIvozEYdPhbXJBXUvCioqywsrykqqK0
+prqyoYEDwht9nivHmM/7WrRoUXJysi41gKadM2eOum9B1ZDS0szNzdasWrZm
+9dKjh3eHBPo4nrU9arTv4N5fdu/ctG3D6o3rVq9d89PmTRv9/W+z6+uGIKFB
+YcznmaempoI/0qWGXbt2xcbGDi4Xi7t5XO6dO77z5s35y1/+6+9/nzpv3qxP
+Z3y8c+v6lSv+NWnSpD9P+vO770z625R33//r5PfemfzhX//y6SdTj584nkWh
+tLS0oAZkzO0GwMjISOkx3PCRkZGxfft2lV+V0ku9b1zDGO//buG8zz+fsXDh
+14u+nz/zs+mzvpxpdGDPtOmfTH538gfvv/vFzKnTp/1typT/nv7RB//78YfT
+/mfKoh++ve59o6GxUdzdbcgMGQ/cAC8PirempmakB4JSBZXb3Nys8tvwyAdm
+pqYOp3GOp20szDD7ftt+0vI4PijwuLnJ/n2/rft51UdTp/x92t+++HLm19/M
+/eyzGTM/n7Fg/tzF389funjRrp1bHobfq6oo4zfzQK5MZIaI2VF9874wePKA
+GHDMfQqCpqYmiFlG2gU2NjaKj3qVQEpPNT58+Mj+/SdMTJ3O2Lk5Obqdd3C0
+xx3Yu3Pzlk3n7M4cMzE6ZWHifsHO95rL/YAbj6JDMpKiqE8f0XKIjPyM0udP
+C7NJf1BIJUUvGjhs2RySCcgQNtEegw3liXtb6AQMxpmhILXGAzFGCZnPnq5c
+8eOB3TvMjxofxxy1NDO3sbKys8HZnLS2sLR2POfg530t+kFQ2pPYAkoqi/6c
+zy5t5zHaG+nCutIWZnFjZWF9VUlV2R/Fedn5VArEOBCyIbOMJhJ4dDKZLgtF
+RVQMBjuiZ/SvLyAKNjtmijlywM7a3A5necr8uIWpqcXx48AMG2sbR/szvtev
+EKJCUomPosODQ4MC4+OiCl6Qa6sKeaxiblVxE6usqa6yoZZRz6qsr61iMF5m
+PMusYDAmaBTDCcVhsH4UxWsbE25IJJJGUHqj/CM3N/Pw9+6dtMJecbG7fvmc
+58WzLudsHU6fsj1pYW1pceTQgYN791+4cDEiMvr2nTv29k729o4XL3k+jI6h
+UjL/oGZRsjOzKVl5ec/z8/MoFMr9sNATONvg0PBWgWCC0UPEpjhjMPb4AcTo
+5JVqnPc1GmhrawsPDxcIBKN6FuhBQlyckdHB30+BqLC9c/2Cv7fLravnvdwc
+nM9aL/7hu88/m75168bAgCBCItHJ1cPIzNrc8qyru++9kKhkEhkfHHLcymrn
+b7vXrF27eOmSL+fM+n7psgvuV2tq2fyWllFt+auEiEmUqlCKVIUqcr6jNgvK
+q/0+h3/s6E0tBf7dwvpX0J5Xw41e6ao34r69O35cunDbpjUnsUaXzlvf9HAM
+uHnR+dzJb76es2Xr+kWLvrM4YR7/KO7Zsyz8/fueXjcD8JHevsF+AfjMdJKT
+g/3yH5fOmv3lrNmzlixfZmFt43rJrbqmmtc8YRbhioiXMQqwV9IbnVxaE+Ui
+K2SJjCRf1MfvFZQ+kIhG8dZ4ZdyA8Ccj46m3t7eZmdnG9eu2b1lnZrzPwe6E
+rZXJpk3/dnO7bGRstH79mgC/WwkJsRlpKRkkYnrakyxyeloyMTszPfVx/HXP
+KzY2p6xxJz28rtzy9fb0ulxVw+Rqu4jv9YLcm0D82MHO5mb8XoP/p5QkAXMb
+iKZtjISebtHQNWiBV8YNOSC+KCwsdHe/sm3b5p/Xrty5fcOOHVtdXS+6uFxc
+tmzxOXtczMMHhJgIX++rN695xBEi054k+t/2vuhkZ2J8yPm8ffTD+1EPg0PD
+7voF+TNZtdwm1SMqEwyDxUaPuLOtitiYYs4M/AeQhBk0n/sU18Ei9/TouvpM
+jlfPDTlqamoiIyOPHsUs/+nHM2fs3C65L1nyw47tm+4H+xOT4m5c9zhwYJ/n
+VY+Y2Phdu3Z8++2Cr7+as2XL+l27ftm9e6eP7016+cuuri7dF+K9FhhChUo6
+BQL6Q07iwWr/L4EkNfd/aMpyFjUU6H7SMeRGryxKKikpvXTJzdTMFIvFfj1v
+9jfz5lhZHLtx4+otH+9jx0xPYLFXPNwPHti7auWKVSt/2rRpg4mpSWBgYC2L
+ZSCsQDCcCEXc3thaFFQXux1RrbXhK/lUry5+pdYnHVtuIGCxatyvXD5yZP/y
+5UvAdGzcuO6333bu27d78+ZNmzdvNjY6bG5+zNbW5sqVKxEREbk5OSBdJvLI
+uSqMKIDtaqniv7heG7EGIUldzJaWwgBxW8NITzoeuAEWoLz8ZWJifIwUD6E9
+eDwejMPdu3dDQ0MJBAKZTC4rK+PxeAZlKxSh3chGZ2NRU7YLK2QxEtpwEvYL
+yiIlncOd9jMeuDEYICQ6ZFBcYWHI0GXUC9RpR20WN/00E79ASpLAuQ3Jx9sq
+H/eINYQ245MbKJSglxFRIANQAogB9JCGNvgFQBigjbrQBuXGawH9DpiDWxGU
+RYCLAUcDJAGnA64HHJDSbuOKG3V1dfL1WSgUMUpPUsRtHJCpIFb7QpuINSBi
+Qcoi344rboDsrK6uHutWjEeM9lM2CHWbqV4Q9vaFNrHbRZwXKDfGG4R0AgYb
+qvSY5JU9hBU1FDRlOdfc/7/m555ybvSIx36qDMoNNjVUSoKBCZ16X/n8jR6J
+GDyLnBv8PJ/GFPO2quQxJImhc0NEu4zzIoQ6g90YW24gkHNDWBFfHSANbWrw
+/+RlnOlgZ7/6sUdD54YMYgaYjvHFDdiWiFoEpQ/q4/f0hzZLmigXO7kqEseN
+ElBu9Er1hmpujKrkADtQxxXk0uriMsoD4wo8w3KvhFA8Q56FhUcFEV54R1Kh
+JPBRIXxL/aOQlXWTHb2pL7SJ/Dc/72Z3q4qV0foFyg2AkPbq7EYVmx9HLr8U
+TDl68fF+x3j5v2OXiZZXU4wuJFpfT7PzzbC+TjK79ERxB9j/Fj46J/psdcjy
+vtCGsKO1+J64nTsa7QTExsaqXJtvUBDRo0Zbb1SwmoOTii08U5COhn4HsxCb
+/jKvrL6eJ+wWqx4mhfI6rhD2gT09Q3NN+9nids3vWZhFFX6RlCT+szhJh4Uv
+oyVden7rQVRUFJp8UiX0wg1hR1dSNuP0zadIn569TYZerqrTckkpHAVmJ+bp
+y7O3M6C2A45x3j7e+ZEm1XfnSQfkA79qTLVor07pkejhiZhYLAblw+WOllF6
+raGj2OC1tAcnFhu5JEEngrN4mFbGaWrTY/PA2kCdUDPUf9gxOizoWk28UXXA
+HGloc+87Htm+oy5Xl9CGz+cDNwYnOkbRq4PdgF7zJxQcOp8AvXYRn51XxpGM
+WvgJNT+hMBBfc9ApISjmGZsaVP9oNyJIWKFLm3MudfJKtai5oqICfb+GOmjB
+Db5AdPdRIfQR9BTICdAYo9EwlQBf4/XgOZwXOAlRD49T1ZJ/m/1wQ98yiqh1
+/D98ultHkPUrIyMjJydn9Br8WmNEPkXUJQYLj3gQYEUNR585fIYPUDJwdmiD
+sUsSCJvOLnFXE705150V1hfa1Mf92kq7L+7QsFKgs7MzMjJyiNXWBo7hEyOn
+mI0EIOcDnpVVj/3inZfMJgc/MrQHWpVdxO6ViVhRPZWXea4mGAltZnMeGwvL
+CZJu1Y/gGQxGTEyMwU7504jhcKOOKwBFAb1wwiM5q3AchXtAhmcFLISxl4Ip
+IIH6yoENTFJjmhUTCW3ufg3bUALlioeTSCTkZR8oVGJobnSLJWC0jzgngn9/
+QCzp6OweYuexgqizO/QJDfQPtBMiX8VRFOCIsDwOrAfYEGloE7wIrArYll5Z
+qtKIiAh55lIUgzGE3gCR+btPOtySTv6ZrIaxkRbDB4gfcHbQ2jM+6ZVs5cT4
+oD1AgYAO6QttwpY3ZHuU/JFpaMsKRgSVxIBbLyKl9IBTPMY1KTlH9TspxiGg
+ncScShCoYEPCk0tVDsN2C2ohloGIpi+0ebgBIp1uAfvVt3b8YzA34KZDRjjd
+7lG4/NdvImVjczu0HNoPRg8iGnW7dfJKm3Mus8KW9YU2j3YLSkIlIg1v4jAo
+KPoUiaQH/DVICzAXKc9f70eT0H4wIHAtoJfgutTtJl0hXpfLI9vX3PtOtkJ8
+TsMTjLAiXtKNjpT+x26AyHf0y4TbzTnwWUOzPse9xwqcpja4FrgiuC55CKMO
+PZKu9uqUxlQLZuBXshXi33BJp9pr0nskEypFz4iAcCONWm0ku8sekcu1HvrW
+4yNdfVUF1xKfWQG1gQ2BaxzWIV1twpcxnKTD1f6z+kKbZ44iTp5+G6b32kZj
+rgXU6Rmai3jn6voWpVOMk4+614YoKM+w3Na2zmEeK27nthbfk+c1qn2wovm5
+52i3U+8fxbKRveEzB4PCIDFMeiCobRTAIYXlhjL+U1DeYH4lGQwIPqGos3vE
+QqIv+VWoPPnVntFOfqU1OrvEQfFFyFA2nallBqqR0ul1h6CtE3mSa+v9tGrQ
+ENlwIEt+ReFlnKnBfzvaya+0QyWbb+NNgmu8Fk4VtGu/uMPQuIHgaR4T4nTQ
+3nE6aG9Z8qtkFcmvxi60gWgdYnZkFCI9b8T54ZWghSeaGIAI18k/E3msrDHC
+HRpqkl/l66upw4R0FKL/ihr0MfvOMImBAO4yQob0LoP4PTm3SvcKpaHNwORX
+zdLkVwzNR+qGHum8uEpkFEIXS6gEvXFDRHce+DZz7SDmUPvf2OBMZupYnTif
+4IXUhSerfWJSXddyRvZI8SI+W+PtJpTN1deoPtUkv+LId6AT5ClfnWm6XWVD
+E+ukpZmsKlxsQaNOdQ2EXnyKUJYQG4Ox1/EyoTdlb2zIF0t/PeBagi7yTswm
+YjBYKk8sYpPgd6Oprwt5tnjQSWpAHmdXqr3vpPxXsaZ4CPQnv/qXQvKrCEln
+fSgWg6cyeTwOm8nW+jeDdiZlM4ytzDGml8PSykpicPCL6VHr6MNuCAnOzngC
+HqMHuyGmk0k0nvT6hPk+cLvrVJ+QQ6NLzYWITcYCbzXxrKquxe6W1ICA166u
+H2wbRAnOGHs/H5y9ZruhBOXkV/4rT8O1RfuSU8lsoZadCebu3B3yfscorInZ
+/awyRn4+jc7g6CaclKA3nyKm4/ThU/oq41HtMRg/CkfzrprASJC5FXvCcDpU
+LJHNZbqQCDYk5DFNcS4Tk3gZc5kM9TnjQrW2Zkjyq7pIU2iR6+9bQ+z3wwax
+YGR5fdtF3dA2qZW7kBifWRSBk14ePipU+i6DUH0KYP3pDZq+uIGkg8BT9DCn
+ov+ebAEb7pc/3NsdQhj3+zmygaOUzAKWdPqKiAYiyBmfQIzyARMUStRohDS0
+q729VVAWCS4mydrY9tyPsuRXFwYnv1ICtISczzJ3J0LbLgdTZEuBhPBj+SC/
+Ow9cJ16PI3F6i2H1xA0mCW5zHEXmhHV8TYlIujbcTzbpmQcODz9CMZRTzEbW
+TDncIZcxqmhUKgVAApY5E/OZurRMtmjdT2YTeUHQs7G36mK29ie/Wq2Y/EoR
+tEqug9SJxFt5pVJL5K+rEBPB0xHosNWSjx+83lkX6NFu2OvODTFjwBsbcFG6
+3QUtJB8cUpO9H0mLpnV2i8HFYFylay6uhOQwavm9Ypo9Tvffv4UobxiejNTW
+xa/kS5NfrZInv2otuitul8YdIITASkAbMK6PpWsulEb7W2hefZEdjsQYl3pj
+vEIsFApFOtmfZoHobnwhsoLPMyx38GRU/TZMnvwKGFLl92VO4FaPS+eOOj8M
+TixubVM7AA6V6WbKxjLf1+sOLr89MK5vjadrUNbzkrohppPpCKg5t7jWP+B2
+tNeesttfyZ7a/EOW/Io4Gsmvxkm+r9cdjc3SteGIl7HwTIlMLavj6tOMF5Q3
+XMRngwZGPEjoE1pTM7+NkdhANJUnv+Jm/K7P5FfjLN/X6w6IIp9QKpEFGvDP
+zjcjmkRn1DZrN1gNR1Wwmh+S6Gdu9VVofT0tOadKaTVQf/KrvQOTXxWP6Fwi
+HpvBYDBlgA1evyMaP/m+JgxAe4Q8plldTUX61MTtMUhW4Al4nNpGgbopIp1d
+4toGAewDfIBg2aQ/tREEIEEJRRpXDnYL61sK/Acmv/IeZvIr6WgPFocAi8ES
+6H10GJN8XwaC6vqW+MwK6GhTtwEpqoAtWI/kI86Jp66lgZ2BvyYDk1zB/kCn
+hGcVWiw872quaH7uWftgRX/yq1+0Tn71KvN9GSxABnCa2qgl9UCVoPiia+FU
+e98MY5ck3A2Sgx/ZNSgbSvAJRfAttbReL0/SASJOHu+ZU03w91onv3oF+b5Q
+jCF6JOL2mnQu6RQz6Jv+5FcndEl+hXJj4kHS3SGsiG94chRJfiUsJ2hXDyo2
+JjAkIr6gJEzSpaXnQomBQh1QbqBQB9SnoFAHlBgo1AHlBgp1QLmBQh1QvYFC
+HVBioFAHlBuGDjE7qn+1GJ484GEu6lMMHGzZajGeuLeFTsBgnBkK0wpQYhg4
+eHQymS6bjC+iYjBYxdngKDcMCurmffX2ckJxGKwfRXE2EsoNg4LKeV8i2XJm
+ezxFaZoaOu/LwCFiEmWrCKUqVMfFYigmFkTEAavF7PW1ohkFChQoUKBAgQIF
+ChQohon/B6NCaMg=
     "], {{0, 111}, {180, 0}}, {0, 255},
     ColorFunction->RGBColor],
    BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
@@ -18856,13 +19037,13 @@ sQIZb6woGShQoECBAgUKFChQDML/A0mdZN4=
   ImageSize->Automatic,
   ImageSizeRaw->{180, 111},
   PlotRange->{{0, 180}, {0, 111}}]], "Output",
- CellChangeTimes->{3.7310630896791983`*^9},
+ CellChangeTimes->{3.7310630896791983`*^9, 3.763964201754673*^9},
  ImageSize->{184, 111},
  ImageMargins->{{0, 0}, {0, 0}},
  ImageRegion->{{0, 1}, {0, 1}},
- CellLabel->"Out[86]=",
- CellID->2063651801,
- ExpressionUUID -> "5efe7bf7-c4ed-4ff7-8808-fe1f3d263514"]
+ CellLabel->"Out[11]=",
+ CellID->225032924,
+ ExpressionUUID -> "0988ee03-d4d0-4d7e-995b-32420d8ec84a"]
 }, Open  ]]
 }, Open  ]],
 
@@ -19354,7 +19535,7 @@ Cell[BoxData[
 
 Cell[BoxData[
  RowBox[{"Needs", "[", "\"\<MaTeX`\>\"", "]"}]], "Input",
- CellLabel->"In[7]:=",
+ CellLabel->"In[8]:=",
  CellID->1205457212,
  ExpressionUUID -> "12c8e78c-8a87-41c9-92f8-b24b68e4ccc3"],
 
@@ -19384,17 +19565,17 @@ Cell[CellGroupData[{
 Cell[BoxData[
  RowBox[{"?", "MaTeX`Developer`Texify"}]], "Input",
  CellChangeTimes->{{3.719933618394603*^9, 3.71993361857692*^9}},
- CellLabel->"In[8]:=",
+ CellLabel->"In[9]:=",
  CellID->804059592,
  ExpressionUUID -> "97fdc876-ccd3-43f2-bb5f-da4b52b0da43"],
 
 Cell[BoxData[
  StyleBox["\<\"MaTeX`Developer`Texify[expr] converts expr to TeX code \
 suitable for MateX.\"\>", "MSG"]], "Print", "PrintUsage",
- CellChangeTimes->{3.7199336208770103`*^9},
- CellTags->"Info3719937220-9215291",
- CellID->165714787,
- ExpressionUUID -> "a1a0357e-d8bf-4b7b-b7f9-3e1b721e68ec"]
+ CellChangeTimes->{3.763963264923419*^9},
+ CellTags->"Info3763970464-3971552",
+ CellID->1120873905,
+ ExpressionUUID -> "b2515e55-7690-47ba-9739-9c769eec023f"]
 }, Open  ]],
 
 Cell[TextData[{
@@ -19420,7 +19601,7 @@ Cell[BoxData[{
   RowBox[{"ToString", "[", "code", "]"}]}]}], "Input",
  CellChangeTimes->{{3.719933607916926*^9, 3.719933614785036*^9}, 
    3.71993378172258*^9, 3.7199339889474173`*^9},
- CellLabel->"In[13]:=",
+ CellLabel->"In[10]:=",
  CellID->804262116,
  ExpressionUUID -> "bf3ef5ce-5091-44a0-afd9-fde1c0e3fb20"],
 
@@ -19484,15 +19665,12 @@ Cell[BoxData[
 \\sin\\phi & \\cos\\phi \\\\
 \\end{array}
 \\right)\
-\>", "InlineFormula",
-   ExpressionUUID -> "c1b7eb31-037a-43ac-807d-41e77bde24a0"], 
-  "\[IndentingNewLine]", "]"}]], "Input",
+\>", "InlineFormula"], "\[IndentingNewLine]", "]"}]], "Input",
  CellChangeTimes->{{3.714746977201536*^9, 3.714747042299603*^9}, {
   3.71474710243722*^9, 3.714747143468405*^9}, {3.7147481804401493`*^9, 
   3.7147482897414618`*^9}, {3.719933792756133*^9, 3.719933793658572*^9}},
- CellLabel->"In[19]:=",
- CellID->1544413660,
- ExpressionUUID -> "5179fb34-d568-46e7-b83e-da5b59f94e38"],
+ CellLabel->"In[12]:=",
+ CellID->1544413660],
 
 Cell[BoxData[
  GraphicsBox[
@@ -19857,9 +20035,10 @@ Ttwa4g==
  CellChangeTimes->{{3.714746996762122*^9, 3.714747042964252*^9}, {
    3.7147470782965927`*^9, 3.7147471442201557`*^9}, {3.714748210558489*^9, 
    3.7147482319112186`*^9}, {3.714748280994481*^9, 3.7147482905764437`*^9}, 
-   3.7147591355036383`*^9, 3.719933794935274*^9, 3.7199338377732697`*^9},
- CellLabel->"Out[19]=",
- CellID->769266912,
+   3.7147591355036383`*^9, 3.719933794935274*^9, 3.7199338377732697`*^9, 
+   3.763963272316794*^9},
+ CellLabel->"Out[12]=",
+ CellID->1834466879,
  ExpressionUUID -> "e18f1b88-7cb1-4f4c-bc60-2b200c0f3b09"]
 }, Open  ]],
 
@@ -23166,10 +23345,10 @@ WM6ua1FQ6Ig/92p+mwA9rP0BDsi6ujAby1nI3I9zKVT5pp236BfgQzZzSCDq
 V9RjXKJZQeGu+N50CKP3xeF+fm8iMvd/IbL8nvJ8nfB9ld/bf7lmeJI=
     "]], 
    FilledCurveBox[{{{1, 4, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1,
-     3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
+     3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3},
+     {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 
     3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 
-    3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {
-    1, 3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}}}, CompressedData["
+    3, 3}, {1, 3, 3}, {1, 3, 3}, {1, 3, 3}}}, CompressedData["
 1:eJx1lGlIVFEUx3U0JTCXsBTT1ByhyNGWGcwtj6SlaPe1O0lzXXJUSrNMS8Qi
 NdMioVzSNDWx0KBSwiKkrA9a4lIRgxkttii0IOaCImp23503HvzQhfvhx3v3
 nnP+53+ua1zqHq2JkZGRMdtqtmVsu3yYPnvkFoXkpdM3E/MIGPjpGactiZcJ
@@ -25552,3 +25731,4 @@ FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
 StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "FunctionPageStyles.nb", 
   CharacterEncoding -> "UTF-8"]
 ]
+
