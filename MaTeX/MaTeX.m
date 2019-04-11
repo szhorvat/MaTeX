@@ -8,26 +8,10 @@
 (* :Date: 2015-03-04 *)
 
 (* :Mathematica Version: %%mathversion%% *)
-(* :Copyright: (c) 2018 Szabolcs Horvát *)
-
-
-(* Abort for old, unsupported versions of Mathematica *)
-If[$VersionNumber < 10,
-  Print["MaTeX requires Mathematica 10.0 or later."];
-  Abort[]
-]
-
-If[$OperatingSystem === "Windows" && $VersionNumber == 10.0 && $SystemWordLength == 32,
-  Print[
-    "WARNING: MaTeX may not work with 32-bit versions of Mathematica 10.0 on Windows. " <>
-    "If you encounter problems, consider using a 64-bit version or upgrading to a later Mathematica version."
-  ]
-]
+(* :Copyright: (c) 2019 Szabolcs Horvát *)
 
 
 BeginPackage["MaTeX`"];
-
-Unprotect["MaTeX`*", "MaTeX`Developer`*", "MaTeX`Information`*"];
 
 MaTeX::usage = "\
 MaTeX[\"texcode\"] compiles texcode using LaTeX and returns the result as Mathematica graphics.  texcode must be valid inline math-mode LaTeX code.
@@ -603,12 +587,6 @@ MaTeX[tex_, opt:OptionsPattern[]] := With[{result = MaTeX[{tex}, opt]}, If[resul
 
 
 BlackFrame = Directive[AbsoluteThickness[0.5], Black];
-
-
-(* Protect all package symbols *)
-With[{syms = Join @@ Names /@ {"MaTeX`*", "MaTeX`Developer`*", "MaTeX`Information`*"}},
-  SetAttributes[syms, {Protected, ReadProtected}]
-];
 
 End[]; (* End Private Context *)
 
