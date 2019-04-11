@@ -173,8 +173,14 @@ checkConfig[] :=
     pdflatex = $config["pdfLaTeX"];
     If[StringQ[pdflatex],
       If[fileQ[pdflatex],
-        pdflatexOK = True,
+        pdflatexOK = True
+        ,
+        If[DirectoryQ[pdflatex],
+          Print["The path to pdfLaTeX must point to an executable file, not a directory."];
+          Print["The following path was given: " <> pdflatex]
+          ,
         Print["pdfLaTeX is not found at " <> pdflatex];
+        ];
         pdflatexOK = False
       ],
       Print["The path to pdfLaTeX is not configured."];
@@ -186,8 +192,14 @@ checkConfig[] :=
     gs = $config["Ghostscript"];
     If[StringQ[gs],
       If[fileQ[gs],
-        gsOK = True,
+        gsOK = True
+        ,
+        If[DirectoryQ[gs],
+          Print["The path to Ghostscript must point to an executable file, not a directory."];
+          Print["The following path was given: " <> gs]
+          ,
         Print["Ghostscript is not found at " <> gs];
+        ];
         gsOK = False
       ],
       Print["The path to Ghostscript is not configured."];
