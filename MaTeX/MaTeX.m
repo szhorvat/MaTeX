@@ -179,7 +179,7 @@ checkConfig[] :=
           Print["The path to pdfLaTeX must point to an executable file, not a directory."];
           Print["The following path was given: " <> pdflatex]
           ,
-        Print["pdfLaTeX is not found at " <> pdflatex];
+          Print["pdfLaTeX is not found at " <> pdflatex];
         ];
         pdflatexOK = False
       ],
@@ -198,7 +198,7 @@ checkConfig[] :=
           Print["The path to Ghostscript must point to an executable file, not a directory."];
           Print["The following path was given: " <> gs]
           ,
-        Print["Ghostscript is not found at " <> gs];
+          Print["Ghostscript is not found at " <> gs];
         ];
         gsOK = False
       ],
@@ -286,7 +286,7 @@ ConfigureMaTeX[rules : (_Rule|_RuleDelayed)...] :=
       checkConfig[];
       fixSystemPath[];
       If[KeyExistsQ[{rules}, "WorkingDirectory"],
-        dirpath = getWorkingDir[] (* immediately refresh the working directory if setting has changed *)
+        $dirpath = getWorkingDir[] (* immediately refresh the working directory if setting has changed *)
       ];
       Put[$config, $configFile];
       Normal[$config]
@@ -302,16 +302,16 @@ getWorkingDir[] :=
     ];
 
 (* Create temporary directory *)
-dirpath := dirpath = getWorkingDir[]
+$dirpath := $dirpath = getWorkingDir[]
 
 
 (* This is a function, not a variable, to ensure that users do not try to set it. *)
-MaTeX`Developer`WorkingDirectory[] := dirpath
+MaTeX`Developer`WorkingDirectory[] := $dirpath
 
 
 (* Thank you to David Carlisle and Tom Hejda for help with the LaTeX code in template.tex. *)
 (* Warning: Do not use FileTemplate because it mishandles CR/LF. *)
-template := template = StringTemplate@Import[FileNameJoin[{$packageDirectory, "template.tex"}], "Text", CharacterEncoding -> "UTF-8"];
+$template := $template = StringTemplate@Import[FileNameJoin[{$packageDirectory, "template.tex"}], "Text", CharacterEncoding -> "UTF-8"];
 
 
 (* Interprets a UTF-8 encoded string stored as a byte sequence *)
@@ -438,15 +438,15 @@ iMaTeX[tex:{__String}, preamble_, display_, fontsize_, strut_, ls : {lsmult_, ls
           "fontsize" -> fontsize,
           "skipsize" -> lsmult fontsize + lsadd
           |>;
-      texfile = Export[FileNameJoin[{dirpath, name <> ".tex"}], template[content], "Text", CharacterEncoding -> "UTF-8"];
+      texfile = Export[FileNameJoin[{$dirpath, name <> ".tex"}], $template[content], "Text", CharacterEncoding -> "UTF-8"];
       If[texFileFun =!= None, With[{str = Import[texfile, "Text", CharacterEncoding -> "UTF-8"]}, texFileFun[str]]];
 
-      pdffile = FileNameJoin[{dirpath, name <> ".pdf"}];
-      pdfgsfile = FileNameJoin[{dirpath, name <> "-gs.pdf"}];
-      logfile = FileNameJoin[{dirpath, name <> ".log"}];
-      auxfile = FileNameJoin[{dirpath, name <> ".aux"}];
+      pdffile = FileNameJoin[{$dirpath, name <> ".pdf"}];
+      pdfgsfile = FileNameJoin[{$dirpath, name <> "-gs.pdf"}];
+      logfile = FileNameJoin[{$dirpath, name <> ".log"}];
+      auxfile = FileNameJoin[{$dirpath, name <> ".aux"}];
 
-      return = runProcess[{$config["pdfLaTeX"], "-halt-on-error", "-interaction=nonstopmode", texfile}, ProcessDirectory -> dirpath];
+      return = runProcess[{$config["pdfLaTeX"], "-halt-on-error", "-interaction=nonstopmode", texfile}, ProcessDirectory -> $dirpath];
       If[logFileFun =!= None, With[{str = Import[logfile, "Text", CharacterEncoding -> "UTF-8"]}, logFileFun[str]]];
 
       If[
@@ -479,7 +479,7 @@ iMaTeX[tex:{__String}, preamble_, display_, fontsize_, strut_, ls : {lsmult_, ls
       height += depth+2;
       {width, height, depth} *= $psfactor; (* correct for PostScript point *)
 
-      return = runProcess[{$config["Ghostscript"], "-q", "-o", pdfgsfile, "-dNoOutputFonts", "-sDEVICE=pdfwrite", pdffile}, ProcessDirectory -> dirpath];
+      return = runProcess[{$config["Ghostscript"], "-q", "-o", pdfgsfile, "-dNoOutputFonts", "-sDEVICE=pdfwrite", pdffile}, ProcessDirectory -> $dirpath];
       (* Note: Up to at least Mathematica 11.3, if the process crashes, RunProcess returns ExitCode -> None.
          Thus we must check the exit code not with != but with =!= *)
       If[return["ExitCode"] =!= 0,
