@@ -255,7 +255,7 @@ Cell[CellGroupData[{
 
 Cell["\<\
 MaTeX needs to know the location of the pdfLaTeX and Ghostscript executables \
-in order to function. On most systems, these will be automatically detected. \
+in order to function. On most systems, these will be detected automatically. \
 If auto-detection fails, you will see the following messages after loading \
 MaTeX:\
 \>", "Text",
@@ -263,7 +263,8 @@ MaTeX:\
    3.6880510591543283`*^9, 3.688051059994138*^9}, {3.688052295827531*^9, 
    3.688052337882386*^9}, {3.704257427133894*^9, 3.704257427469924*^9}, {
    3.763996712189818*^9, 3.763996739954974*^9}, {3.763996809361758*^9, 
-   3.7639968137605057`*^9}, 3.763996872791319*^9},
+   3.7639968137605057`*^9}, 3.763996872791319*^9, {3.7640373026515007`*^9, 
+   3.764037306645853*^9}},
  CellID->1534169418],
 
 Cell[CellGroupData[{
@@ -352,6 +353,7 @@ Cell[BoxData[
    ",", 
    RowBox[{"\"\<Ghostscript\>\"", "\[Rule]", "\"\</usr/local/bin/gs\>\""}]}], 
   "\[IndentingNewLine]", "]"}]], "Input",
+ Evaluatable->False,
  CellChangeTimes->{{3.688051014610641*^9, 3.688051024643964*^9}, {
   3.688052365697544*^9, 3.68805237140901*^9}, {3.688106514918579*^9, 
   3.688106516972529*^9}},
@@ -373,6 +375,53 @@ Cell[BoxData[
    3.688192909017131*^9, 3.719909869323029*^9, 3.721375101791277*^9},
  CellLabel->"Out[2]=",
  CellID->1899709450]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+On Windows with MiKTeX, the paths may be similar to the following:\
+\>", "Text",
+ CellChangeTimes->{{3.764037044528747*^9, 3.7640370507220573`*^9}, {
+   3.764037206215925*^9, 3.764037228518857*^9}, 3.7640373857065277`*^9, {
+   3.764037710963854*^9, 3.7640377135364447`*^9}},
+ CellID->1721985055],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ConfigureMaTeX", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+   "\"\<pdfLaTeX\>\"", "\[Rule]", 
+    "\"\<C:\\\\Program Files\\\\MiKTeX \
+2.9\\\\miktex\\\\bin\\\\x64\\\\pdflatex.exe\>\""}], ",", 
+   RowBox[{
+   "\"\<Ghostscript\>\"", "\[Rule]", 
+    "\"\<C:\\\\Program Files\\\\gs\\\\gs9.27\\\\bin\\\\gswin64c.exe\>\""}]}], 
+  "\[IndentingNewLine]", "]"}]], "Input",
+ Evaluatable->False,
+ CellChangeTimes->{{3.688051014610641*^9, 3.688051024643964*^9}, {
+  3.688052365697544*^9, 3.68805237140901*^9}, {3.688106514918579*^9, 
+  3.688106516972529*^9}, {3.764036965020771*^9, 3.7640369821183157`*^9}, {
+  3.764037023162528*^9, 3.7640370378742943`*^9}},
+ CellLabel->"In[2]:=",
+ CellID->1654212509],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"\<\"CacheSize\"\>", "\[Rule]", "100"}], ",", 
+   RowBox[{"\<\"WorkingDirectory\"\>", "\[Rule]", "Automatic"}], ",", 
+   RowBox[{"\<\"pdfLaTeX\"\>", 
+    "\[Rule]", "\<\"C:\\\\Program Files\\\\MiKTeX 2.9\\\\miktex\\\\bin\\\\x64\
+\\\\pdflatex.exe\"\>"}], ",", 
+   RowBox[{"\<\"Ghostscript\"\>", 
+    "\[Rule]", "\<\"C:\\\\Program \
+Files\\\\gs\\\\gs9.27\\\\bin\\\\gswin64c.exe\"\>"}]}], "}"}]], "Output",
+ CellLabel->"Out[2]=",
+ CellID->1026344701]
 }, Open  ]]
 }, Open  ]],
 
@@ -543,6 +592,61 @@ Cell[TextData[{
 
 Cell[CellGroupData[{
 
+Cell["Resetting the configuration", "Section",
+ CellChangeTimes->{{3.693726157453189*^9, 3.6937261612848253`*^9}},
+ CellID->378763460],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "To reset the configuration to its default, and try to auto-detect the \
+location of Ghostscript and ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"L", 
+     StyleBox[
+      AdjustmentBox["A",
+       BoxBaselineShift->-0.4,
+       BoxMargins->{{-0.5, -0.3}, {0, 0}}],
+      FontSize->Smaller], "T", 
+     AdjustmentBox["E",
+      BoxBaselineShift->0.5,
+      BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}],
+    SingleLetterItalics->False], TraditionalForm]]],
+ " again, evaluate"
+}], "Text",
+ CellChangeTimes->{{3.693726197317436*^9, 3.6937262341523046`*^9}},
+ CellID->2138547774],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MaTeX`Developer`ResetConfiguration", "[", "]"}]], "Input",
+ CellChangeTimes->{{3.69372624030219*^9, 3.6937262600633097`*^9}},
+ CellLabel->"In[7]:=",
+ CellID->1892413021],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"\<\"pdfLaTeX\"\>", 
+    "\[Rule]", "\<\"/Library/TeX/texbin/pdflatex\"\>"}], ",", 
+   RowBox[{"\<\"Ghostscript\"\>", "\[Rule]", "\<\"/usr/local/bin/gs\"\>"}], 
+   ",", 
+   RowBox[{"\<\"CacheSize\"\>", "\[Rule]", "100"}], ",", 
+   RowBox[{"\<\"WorkingDirectory\"\>", "\[Rule]", "Automatic"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.693726263733511*^9, 3.715069486163286*^9, 
+  3.72137513516133*^9},
+ CellLabel->"Out[7]=",
+ CellID->1986698626]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
 Cell["Uninstalling or upgrading MaTeX", "Section",
  CellChangeTimes->{{3.688197691767721*^9, 3.6881977086333313`*^9}},
  CellID->857614431],
@@ -652,61 +756,6 @@ Cell[BoxData[
   3.7213751283205633`*^9},
  CellLabel->"Out[6]=",
  CellID->1636294454]
-}, Open  ]]
-}, Open  ]]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell["Resetting the configuration", "Section",
- CellChangeTimes->{{3.693726157453189*^9, 3.6937261612848253`*^9}},
- CellID->378763460],
-
-Cell[CellGroupData[{
-
-Cell[TextData[{
- "To reset the configuration to its default, and try to auto-detect the \
-location of Ghostscript and ",
- Cell[BoxData[
-  FormBox[
-   StyleBox[
-    RowBox[{"L", 
-     StyleBox[
-      AdjustmentBox["A",
-       BoxBaselineShift->-0.4,
-       BoxMargins->{{-0.5, -0.3}, {0, 0}}],
-      FontSize->Smaller], "T", 
-     AdjustmentBox["E",
-      BoxBaselineShift->0.5,
-      BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}],
-    SingleLetterItalics->False], TraditionalForm]]],
- " again, evaluate"
-}], "Text",
- CellChangeTimes->{{3.693726197317436*^9, 3.6937262341523046`*^9}},
- CellID->2138547774],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"MaTeX`Developer`ResetConfiguration", "[", "]"}]], "Input",
- CellChangeTimes->{{3.69372624030219*^9, 3.6937262600633097`*^9}},
- CellLabel->"In[7]:=",
- CellID->1892413021],
-
-Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{
-   RowBox[{"\<\"pdfLaTeX\"\>", 
-    "\[Rule]", "\<\"/Library/TeX/texbin/pdflatex\"\>"}], ",", 
-   RowBox[{"\<\"Ghostscript\"\>", "\[Rule]", "\<\"/usr/local/bin/gs\"\>"}], 
-   ",", 
-   RowBox[{"\<\"CacheSize\"\>", "\[Rule]", "100"}], ",", 
-   RowBox[{"\<\"WorkingDirectory\"\>", "\[Rule]", "Automatic"}]}], 
-  "}"}]], "Output",
- CellChangeTimes->{3.693726263733511*^9, 3.715069486163286*^9, 
-  3.72137513516133*^9},
- CellLabel->"Out[7]=",
- CellID->1986698626]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
