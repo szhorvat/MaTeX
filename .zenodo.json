@@ -1,0 +1,18 @@
+{
+    "title": "MaTeX",
+    "upload_type": "software",
+    "keywords": [
+        "figure preparation",
+        "typesetting",
+        "LaTeX",
+        "Mathematica",
+        "Wolfram Language"
+    ],
+    "creators": [
+        {
+            "orcid": "0000-0002-3100-523X",
+            "name": "Szabolcs Horv\u00e1t"
+        }
+    ],
+    "notes" : "Please go to the GitHub repository to download an immediately usable version of this software."
+}
