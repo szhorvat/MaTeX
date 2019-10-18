@@ -12,6 +12,10 @@ See [the blog post](http://szhorvat.net/pelican/latex-typesetting-in-mathematica
 
 ## Installation
 
+In Mathematica 11.3 or later, [simply evaluate `ResourceFunction["MaTeXInstall"][]`](https://resources.wolframcloud.com/FunctionRepository/resources/MaTeXInstall) to install or upgrade MaTeX.
+
+In older versions,
+
  - [Download the latest release](https://github.com/szhorvat/MaTeX/releases), distributed as a `.paclet` file, and install it using the `PacletInstall` function in Mathematica.  For example, assuming that the file `MaTeX-1.7.5.paclet` was downloaded into the directory `~/Downloads`, evaluate
 
         Needs["PacletManager`"]
