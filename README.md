@@ -12,16 +12,18 @@ See [the blog post](http://szhorvat.net/pelican/latex-typesetting-in-mathematica
 
 ## Installation
 
-In Mathematica 11.3 or later, [simply evaluate `ResourceFunction["MaTeXInstall"][]`](https://resources.wolframcloud.com/FunctionRepository/resources/MaTeXInstall) to install or upgrade MaTeX.
+**In Mathematica 11.3 or later, simply evaluate `ResourceFunction["MaTeXInstall"][]` to install or upgrade MaTeX.**
 
-In older versions,
+In older versions that do not support resource functions, follow the manual installation instructions:
 
  - [Download the latest release](https://github.com/szhorvat/MaTeX/releases), distributed as a `.paclet` file, and install it using the `PacletInstall` function in Mathematica.  For example, assuming that the file `MaTeX-1.7.5.paclet` was downloaded into the directory `~/Downloads`, evaluate
 
         Needs["PacletManager`"]
         PacletInstall["~/Downloads/MaTeX-1.7.5.paclet"]
+        
+    The most convenient way to obtain the path to a file is Mathematica's Insert → File Path... menu command.
 
- - Make sure that a TeX system and Ghostscript 9.15 or later are installed.  
+ - Make sure that [a TeX system](https://tug.org/begin.html) and Ghostscript 9.15 or later are installed.  
 
      For Windows and Linux, the latest Ghostscript is available from [its official download page](http://ghostscript.com/download/gsdnld.html).  
 
