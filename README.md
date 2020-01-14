@@ -4,6 +4,12 @@
 [![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](https://github.com/szhorvat/MaTeX/issues)
 [![DOI](https://zenodo.org/badge/31675019.svg)](https://zenodo.org/badge/latestdoi/31675019)
 
+----
+
+[English](README.md) | [中文](README.zh_cn.md)
+
+----
+
 # MaTeX
 
 Create LaTeX labels in *Mathematica*.
