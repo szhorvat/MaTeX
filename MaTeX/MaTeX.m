@@ -302,7 +302,12 @@ ranid[] := StringJoin@RandomChoice[CharacterRange["a", "z"], 16]
 getWorkingDir[] :=
     Replace[
       $config["WorkingDirectory"],
-      Automatic :> AbsoluteFileName@CreateDirectory@FileNameJoin[{$TemporaryDirectory, StringJoin["MaTeX_", ranid[]]}]
+      Automatic :>
+          BlockRandom[
+            (* Do not allow externally set random seeds to affect the directory name, as this may cause name conflicts. *)
+            SeedRandom[];
+            AbsoluteFileName@CreateDirectory@FileNameJoin[{$TemporaryDirectory, StringJoin["MaTeX_", ranid[]]}]
+          ]
     ];
 
 (* Create temporary directory *)
