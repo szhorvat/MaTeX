@@ -111,6 +111,10 @@ The limiting factor in the speed of `MaTeX` calls is running the `pdflatex` proc
 
 ## Revision history
 
+#### Version 1.7.7
+
+ - Fix compatibility with Ghostscript 9.53.1
+
 #### Version 1.7.6
 
  - Improved compatibility with Mathematica 12.0 and 12.1
