@@ -22,11 +22,11 @@
 
 在不支持资源功能的旧版本中，请遵循手动安装说明：
 
-- [下载最新版本](https://github.com/szhorvat/MaTeX/releases)，以 `.paclet` 文件形式分发，并使用 Mathematica 中的 `PacletInstall` 函数进行安装。例如，假设文件 "MaTeX-1.7.6.paclet" 已下载到目录 `~/Downloads` 中，请执行
+- [下载最新版本](https://github.com/szhorvat/MaTeX/releases)，以 `.paclet` 文件形式分发，并使用 Mathematica 中的 `PacletInstall` 函数进行安装。例如，假设文件 "MaTeX-1.7.7.paclet" 已下载到目录 `~/Downloads` 中，请执行
 
     ```mathematica
     Needs["PacletManager`"]
-    PacletInstall["~/Downloads/MaTeX-1.7.6.paclet"]
+    PacletInstall["~/Downloads/MaTeX-1.7.7.paclet"]
     ```
 
     获取文件路径的最便捷方法是 Mathematica 的 插入→文件路径。.. 菜单命令。
