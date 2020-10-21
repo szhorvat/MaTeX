@@ -2,7 +2,7 @@
 
 Paclet[
   Name -> "MaTeX",
-  Version -> "1.7.7",
+  Version -> "1.7.8",
   MathematicaVersion -> "10.0+",
   Description -> "Create LaTeX-typeset labels within Mathematica.",
   "Keywords" -> {"LaTeX", "Typesetting", "Graphics"},
