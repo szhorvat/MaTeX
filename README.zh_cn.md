@@ -22,11 +22,11 @@
 
 在不支持资源功能的旧版本中，请遵循手动安装说明：
 
-- [下载最新版本](https://github.com/szhorvat/MaTeX/releases)，以 `.paclet` 文件形式分发，并使用 Mathematica 中的 `PacletInstall` 函数进行安装。例如，假设文件 "MaTeX-1.7.7.paclet" 已下载到目录 `~/Downloads` 中，请执行
+- [下载最新版本](https://github.com/szhorvat/MaTeX/releases)，以 `.paclet` 文件形式分发，并使用 Mathematica 中的 `PacletInstall` 函数进行安装。例如，假设文件 "MaTeX-1.7.8.paclet" 已下载到目录 `~/Downloads` 中，请执行
 
     ```mathematica
     Needs["PacletManager`"]
-    PacletInstall["~/Downloads/MaTeX-1.7.7.paclet"]
+    PacletInstall["~/Downloads/MaTeX-1.7.8.paclet"]
     ```
 
     获取文件路径的最便捷方法是 Mathematica 的 插入→文件路径。.. 菜单命令。
@@ -125,6 +125,10 @@ LaTeX 代码以数学模式解释。在 Mathematica 字符串中编写 LaTeX 代
 `MaTeX` 调用速度的瓶颈是运行 `pdflatex` 进程，该过程可能需要一秒钟的时间，无法进一步加快。但是，MaTeX 会缓存结果，从而使得使用相同 TeX 代码的后续调用几乎是瞬时的。 MaTeX 还可以使用 LaTeX 一次性运行处理表达式列表，这比分别处理每个表达式要快得多。
 
 ## 修订记录
+
+#### 版本 1.7.8
+
+ - 提高与未来 Mathematica 版本的兼容性
 
 #### 版本 1.7.7
 
