@@ -500,7 +500,7 @@ iMaTeX[tex:{__String}, preamble_, display_, fontsize_, strut_, ls : {lsmult_, ls
         Return[$Failed]
       ];
 
-      results = Import[pdfgsfile, "PDF"];
+      results = Import[pdfgsfile, {"PDF", "Pages"}];
       cleanup[];
       If[results === $Failed,
         Message[MaTeX::importerr];
