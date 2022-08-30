@@ -1,8 +1,7 @@
-[![Join the chat at https://gitter.im/MaTeX-help/Lobby](https://badges.gitter.im/MaTeX-help/Lobby.svg)](https://gitter.im/MaTeX-help/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![GitHub (pre-)release](https://img.shields.io/github/release/szhorvat/MaTeX/all.svg)](https://github.com/szhorvat/MaTeX/releases)
 [![Github All Releases](https://img.shields.io/github/downloads/szhorvat/MaTeX/total.svg)](https://github.com/szhorvat/MaTeX/releases)
 [![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](https://github.com/szhorvat/MaTeX/issues)
-[![DOI](https://zenodo.org/badge/31675019.svg)](https://zenodo.org/badge/latestdoi/31675019)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.883841.svg)](https://doi.org/10.5281/zenodo.883841)
 
 ----
 
