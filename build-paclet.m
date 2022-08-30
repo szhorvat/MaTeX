@@ -21,7 +21,7 @@ If[Not@DirectoryQ[$appName], printAbort["Application directory not found."]]
 
 
 Check[
-  PacletDirectoryAdd[$appName];
+  Quiet[PacletDirectoryAdd[$appName], PacletDirectoryAdd::expobs];
   Needs[$appName <> "`"],
   printAbort["Cannot add paclet directory and load package."]
 ]
