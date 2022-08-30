@@ -22,10 +22,10 @@ See [the blog post](http://szhorvat.net/pelican/latex-typesetting-in-mathematica
 
 In older versions that do not support resource functions, follow the manual installation instructions:
 
- - [Download the latest release](https://github.com/szhorvat/MaTeX/releases), distributed as a `.paclet` file, and install it using the `PacletInstall` function in Mathematica.  For example, assuming that the file `MaTeX-1.7.8.paclet` was downloaded into the directory `~/Downloads`, evaluate
+ - [Download the latest release](https://github.com/szhorvat/MaTeX/releases), distributed as a `.paclet` file, and install it using the `PacletInstall` function in Mathematica.  For example, assuming that the file `MaTeX-1.7.9.paclet` was downloaded into the directory `~/Downloads`, evaluate
 
         Needs["PacletManager`"]
-        PacletInstall["~/Downloads/MaTeX-1.7.8.paclet"]
+        PacletInstall["~/Downloads/MaTeX-1.7.9.paclet"]
 
     The most convenient way to obtain the path to a file is Mathematica's Insert → File Path... menu command.
 
@@ -110,6 +110,10 @@ For many usage instructions, search for "MaTeX" in the documentation center.
 The limiting factor in the speed of `MaTeX` calls is running the `pdflatex` process, which might take as long as a second and cannot be sped up further.  However, MaTeX caches results, making subsequent calls with the same TeX code near-instantaneous.  MaTeX can also process a list of expressions using a single run of LaTeX, which is much faster than processing each separately.
 
 ## Revision history
+
+#### Version 1.7.9
+
+ - Invalid entries in the system `PATH` no longer cause MaTeX to issue messages with Mathematica 13.1 and later
 
 #### Version 1.7.8
 
