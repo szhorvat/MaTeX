@@ -258,13 +258,8 @@ fixSystemPath[] :=
       If[Not[$configOK], Return[$Failed]];
       texpath = AbsoluteFileName@DirectoryName@ExpandFileName[$config["pdfLaTeX"]];
       pathSeparator = If[$OperatingSystem === "Windows", ";", ":"];
-      (* Suppress messages generated when the path does not exist (::nffil in 10.0, ::fdnfnd in 10.3+)
-         or when the path is an empty string "" (::fstr in 11.3-, ::badfile in 12.0+).
-         Use General:: because different M versions associate the message with different heads. *)
-      pathList = Quiet[
-        AbsoluteFileName /@ StringSplit[$environment["PATH"], pathSeparator],
-        {General::nffil, General::fdnfnd, General::fstr, General::badfile}
-      ];
+      (* Filter out non-exsitent paths to prevent errors from AbsoluteFileName *)
+      pathList = AbsoluteFileName /@ Select[StringSplit[$environment["PATH"], pathSeparator], FileExistsQ];
       If[Not@MemberQ[pathList, texpath],
         $environment["PATH"] = $environment["PATH"] <> pathSeparator <> texpath
       ];
