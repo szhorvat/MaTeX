@@ -486,7 +486,10 @@ iMaTeX[tex:{__String}, preamble_, display_, fontsize_, strut_, ls : {lsmult_, ls
       height += depth+2;
       {width, height, depth} *= $psfactor; (* correct for PostScript point *)
 
-      return = runProcess[{$config["Ghostscript"], "-q", "-o", pdfgsfile, "-dNoOutputFonts", "-sDEVICE=pdfwrite", pdffile}, ProcessDirectory -> $dirpath];
+      (* Ghostscript 10.03.0 writes PDF files with XRef streams and ObjStm streams
+       * Mathematica cannot read the former, unclear if it can read the latter.
+       * We disable both with -dWriteXRefStm=false -dWriteObjStms=false *)
+      return = runProcess[{$config["Ghostscript"], "-q", "-o", pdfgsfile, "-dNoOutputFonts", "-sDEVICE=pdfwrite", "-dWriteXRefStm=false", "-dWriteObjStms=false", pdffile}, ProcessDirectory -> $dirpath];
       (* Note: Up to at least Mathematica 11.3, if the process crashes, RunProcess returns ExitCode -> None.
          Thus we must check the exit code not with != but with =!= *)
       If[return["ExitCode"] =!= 0,
