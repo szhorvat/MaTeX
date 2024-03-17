@@ -125,6 +125,10 @@ LaTeX 代码以数学模式解释。在 Mathematica 字符串中编写 LaTeX 代
 
 ## 修订记录
 
+#### 版本 1.7.10
+
+ - 与 Ghostscript 10.03.0 及更高版本的兼容性
+
 #### 版本 1.7.9
 
  - 系统 `PATH` 中的无效条目不再导致 MaTeX 使用 Mathematica 13.1 及更高版本发出消息

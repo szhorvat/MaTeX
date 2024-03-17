@@ -110,6 +110,10 @@ The limiting factor in the speed of `MaTeX` calls is running the `pdflatex` proc
 
 ## Revision history
 
+#### Version 1.7.10
+
+ - Compatibility with Ghostscript 10.03.0 and later
+
 #### Version 1.7.9
 
  - Invalid entries in the system `PATH` no longer cause MaTeX to issue messages with Mathematica 13.1 and later
