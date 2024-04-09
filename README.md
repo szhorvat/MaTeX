@@ -21,10 +21,10 @@ See [the blog post](http://szhorvat.net/pelican/latex-typesetting-in-mathematica
 
 In older versions that do not support resource functions, follow the manual installation instructions:
 
- - [Download the latest release](https://github.com/szhorvat/MaTeX/releases), distributed as a `.paclet` file, and install it using the `PacletInstall` function in Mathematica.  For example, assuming that the file `MaTeX-1.7.9.paclet` was downloaded into the directory `~/Downloads`, evaluate
+ - [Download the latest release](https://github.com/szhorvat/MaTeX/releases), distributed as a `.paclet` file, and install it using the `PacletInstall` function in Mathematica.  For example, assuming that the file `MaTeX-1.7.10.paclet` was downloaded into the directory `~/Downloads`, evaluate
 
         Needs["PacletManager`"]
-        PacletInstall["~/Downloads/MaTeX-1.7.9.paclet"]
+        PacletInstall["~/Downloads/MaTeX-1.7.10.paclet"]
 
     The most convenient way to obtain the path to a file is Mathematica's Insert → File Path... menu command.
 
