@@ -23,8 +23,10 @@ In older versions that do not support resource functions, follow the manual inst
 
  - [Download the latest release](https://github.com/szhorvat/MaTeX/releases), distributed as a `.paclet` file, and install it using the `PacletInstall` function in Mathematica.  For example, assuming that the file `MaTeX-1.7.10.paclet` was downloaded into the directory `~/Downloads`, evaluate
 
-        Needs["PacletManager`"]
-        PacletInstall["~/Downloads/MaTeX-1.7.10.paclet"]
+    ```mma
+    Needs["PacletManager`"]
+    PacletInstall["~/Downloads/MaTeX-1.7.10.paclet"]
+    ```
 
     The most convenient way to obtain the path to a file is Mathematica's Insert → File Path... menu command.
 
@@ -46,40 +48,50 @@ A newer version can be safely installed when an older version is already present
 
 A list of all installed versions can be retrieved using
 
-    PacletFind["MaTeX"]
+```mma
+PacletFind["MaTeX"]
+```
 
 Any of the items in the list can be uninstalled by applying `PacletUninstall` to it.  To uninstall all versions at once, use
 
-    PacletUninstall["MaTeX"]
+```mma
+PacletUninstall["MaTeX"]
+```
 
 To see more information about the version that gets loaded by `Needs`, use
 
-    PacletInformaton["MaTeX"]
+```mma
+PacletInformaton["MaTeX"]
+```
 
 **Note:** If you installed MaTeX before it started using the paclet distribution format (i.e. version 1.6.2), uninstall it by removing the `MaTeX` directory from the following location:
 
-    SystemOpen@FileNameJoin[{$UserBaseDirectory, "Applications"}]
+```mma
+SystemOpen@FileNameJoin[{$UserBaseDirectory, "Applications"}]
+```
 
 ----
 
 The following function will automatically download the latest release of MaTeX and install it:
 
-    updateMaTeX[] :=
-      Module[{json, download, target},
-        Check[
-          json = Import["https://api.github.com/repos/szhorvat/MaTeX/releases/latest", "JSON"];
-          download = Lookup[First@Lookup[json, "assets"], "browser_download_url"];
-          target = FileNameJoin[{CreateDirectory[], "MaTeX.paclet"}];
-          If[$Notebooks,
-            PrintTemporary@Labeled[ProgressIndicator[Appearance -> "Necklace"], "Downloading...", Right],
-            Print["Downloading..."]
-          ];
-          URLSave[download, target]
-          ,
-          Return[$Failed]
-        ];
-        If[FileExistsQ[target], PacletManager`PacletInstall[target], $Failed]
-      ]
+```mma
+updateMaTeX[] :=
+  Module[{json, download, target},
+    Check[
+      json = Import["https://api.github.com/repos/szhorvat/MaTeX/releases/latest", "JSON"];
+      download = Lookup[First@Lookup[json, "assets"], "browser_download_url"];
+      target = FileNameJoin[{CreateDirectory[], "MaTeX.paclet"}];
+      If[$Notebooks,
+        PrintTemporary@Labeled[ProgressIndicator[Appearance -> "Necklace"], "Downloading...", Right],
+        Print["Downloading..."]
+      ];
+      URLSave[download, target]
+      ,
+      Return[$Failed]
+    ];
+    If[FileExistsQ[target], PacletManager`PacletInstall[target], $Failed]
+  ]
+```
 
 After evaluating the function definition above, just run `updateMaTeX[]`, then ``<<MaTeX` `` to load the updated version.
 
@@ -90,15 +102,19 @@ Use `MaTeX[texcode]` or `MaTeX[expression]` to typeset using LaTeX.  The latter 
 
 The LaTeX code is interpreted in math mode.  Remember to escape backlashes (i.e. type *two* `\` characters when you mean one) when writing LaTeX code in Mathematica strings, e.g.
 
-    MaTeX["\\sum_{k=1}^{\\infty} \\frac{1}{k}"]
+```mma
+MaTeX["\\sum_{k=1}^{\\infty} \\frac{1}{k}"]
+```
 
 Multiple expressions can also be processed in one go:
 
-    MaTeX[{
-      "\\frac{x^2}{\\sqrt{3}}",
-      HoldForm[Integrate[Sin[x], {x, 0, 2 Pi}]],
-      Expand[(1 + x)^5]
-    }]
+```mma
+MaTeX[{
+  "\\frac{x^2}{\\sqrt{3}}",
+  HoldForm[Integrate[Sin[x], {x, 0, 2 Pi}]],
+  Expand[(1 + x)^5]
+}]
+```
 
 Processing a list of expressions together involves a single run of LaTeX, thus is much faster than processing each separately.
 
